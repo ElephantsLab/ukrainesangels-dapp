@@ -17,10 +17,6 @@ export default {
                     localStorage.setItem("account", accounts[0]);
                 }
             }
-        },
-        mintNFT({ commit }, address) {
-            console.log(commit);
-            console.log(address);
         }
     },
     getters: {
