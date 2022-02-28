@@ -155,13 +155,18 @@ header .btn {
     float: left;
     padding: 16px 32px;
 }
-.section-main .btn-wrapper .btn.btn-yellow {
+.section-main .btn-wrapper .btn.btn-blue {
     background-color: #0487cf;
     color: #ffffff;
 }
-.section-main .btn-wrapper .btn.btn-blue {
+.section-main .btn-wrapper .btn.btn-yellow,
+.input-count .btn.btn-plus,
+.btn-submit {
     background-color: #efcf46;
     color: #0f1010;
+}
+.input-count .btn.btn-minus{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .section-main .title1 {
     font-size: 56px;
@@ -182,4 +187,121 @@ header .btn {
 .describe {
     color: #ffffff;
     line-height: 150%;
+}
+.section-block {
+    float: left;
+}
+.section-block.section-block-content {
+    max-width: calc(100% - 520px - 140px);
+}
+.section-block.section-block-card {
+    margin-left: 140px;
+}
+.card {
+    background-color: rgba(15, 16, 16, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+.card.card-main {
+    border-radius: 24px;
+    float: right;
+    width: 520px;
+}
+.card-main .card-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.card-main .card-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card-main .card-section,
+.card-main .card-footer {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.card-main .card-footer {
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+.card-main-img {
+    background-position: center;
+    background-image: url(../images/main-card.png);
+    width: 100%;
+    height: 316px;
+}
+.input-wrapper {
+    position: relative;
+    z-index: 0;
+}
+.input {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    height: 56px;
+    z-index: inherit;
+}
+.input-count .input {
+    padding-left: 56px;
+    padding-right: 56px;
+}
+.input-wrapper.input-count .btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    font-size: 26px;
+    z-index: 2;
+
+}
+.input-wrapper.input-count .btn.btn-minus {
+    left: 8px;
+}
+.input-wrapper.input-count .btn.btn-plus {
+    right: 8px;
+}
+.input-title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.card-main .card-footer .input-wrapper.input-count,
+.card-main .card-footer .btn.btn-submit {
+    width: calc(50% - 8px);
+}
+.card-main .card-footer .btn.btn-submit {
+    margin-left: auto;
+}
+.input-wrapper.input-count .input {
+    text-align: center;
+    width: 100%;
+}
+.input-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.input-total {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+.input-total span {
+    font-weight: 500;
+    color: #ffffff;
+}
+.card-main .input-total{
+    text-align: center;
+    margin-top: 24px;
 }
