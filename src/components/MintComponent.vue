@@ -21,7 +21,7 @@ export default {
     async mint() {
       const userAddress = localStorage.getItem("account");
       if (userAddress) {
-        await this.$root.core.mint(this.mintVal, userAddress);
+        await this.$root.core.mint(this.mintVal);
       }
     }
   }

@@ -96,9 +96,9 @@ export default class Core {
         }
     }
 
-    async mint(mintVal, userAddress) {
+    async mint(mintVal) {
         try {
-            await this[`token_${this.currentBlockchain}`].mint(userAddress, {value: ethers.BigNumber.from(mintVal)});
+            await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
         } catch (error) {
             console.log(error);
         }
