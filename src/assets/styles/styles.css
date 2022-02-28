@@ -1,0 +1,71 @@
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    align-items: center;
+    align-content: stretch;
+    background-color: burlywood;
+}
+.header-nav {
+    display: flex;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-view {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.ul-drop-down,
+.ul-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+ul.ul-drop-down li > a,
+ul.ul-flex-column li > a,
+ul.ul-drop-down li > button,
+ul.ul-flex-column li > button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.header-nav > a {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.header-main-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mobile-menu{
+    position: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.title {
+    font-size: 70px;
+    color: black;
+}
