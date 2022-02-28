@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <header>
-    <a href="" class="header-logo">
+    <a href="" class="header-logo logo">
       logo
     </a>
     <nav class="header-nav">

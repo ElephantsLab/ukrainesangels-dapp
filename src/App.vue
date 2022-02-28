@@ -1,15 +1,18 @@
 <template>
 <!--  <img alt="Vue logo" src="./assets/logo.png">-->
   <main-view class="main-view"/>
+  <footer-component/>
 </template>
 
 <script>
 import MainView from "@/views/MainView";
+import FooterComponent from "@/components/FooterComponent";
 
 export default {
   name: 'App',
   components: {
-    MainView
+    MainView,
+    FooterComponent
   }
 }
 </script>
