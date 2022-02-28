@@ -5,11 +5,15 @@
 
 <script>
 import MainView from "@/views/MainView";
+import Core from "./core/core";
 
 export default {
   name: 'App',
   components: {
     MainView
+  },
+  mounted() {
+    this.$root.core = new Core();
   }
 }
 </script>
