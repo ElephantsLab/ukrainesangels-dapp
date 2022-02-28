@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    background-color: burlywood;
 }
 
 header{
@@ -13,7 +14,6 @@ header{
     justify-content: stretch;
     align-items: center;
     align-content: stretch;
-    background-color: burlywood;
 }
 .header-nav {
     display: flex;
@@ -25,6 +25,9 @@ header{
     /* display: flex;
     flex-direction: column;
     align-items: center; */
+}
+.footer{
+    margin-top: auto;
 }
 .ul-drop-down,
 .ul-flex-column {
@@ -58,8 +61,8 @@ ul.ul-flex-column li > button {
     justify-content: flex-end;
 }
 .mobile-menu{
-    position: block;
-    top: 0;
+    position: fixed;
+    top: 64px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -68,4 +71,10 @@ ul.ul-flex-column li > button {
 .title {
     font-size: 70px;
     color: black;
+}
+
+.logo{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

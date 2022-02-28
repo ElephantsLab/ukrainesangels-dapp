@@ -1,16 +1,19 @@
 <template>
     <!--  <img alt="Vue logo" src="./assets/logo.png">-->
     <main-view />
+    <footer-component/>
 </template>
 
 <script>
     import MainView from "@/views/MainView";
     import Core from "../src/core/core.js";
+    import FooterComponent from "@/components/FooterComponent";
 
     export default {
         name: "App",
         components: {
             MainView,
+            FooterComponent
         },
         methods: {
             checkWalletOption(wallet) {
