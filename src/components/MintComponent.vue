@@ -6,15 +6,11 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-
 export default {
   methods: {
-    ...mapActions(["mintNFT"]),
     mint() {
       const userAddress = localStorage.getItem("account");
       if (userAddress) {
-        this.mintNFT(userAddress);
       }
     }
   }
