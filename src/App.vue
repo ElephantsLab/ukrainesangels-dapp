@@ -1,7 +1,7 @@
 <template>
-    <!--  <img alt="Vue logo" src="./assets/logo.png">-->
-    <main-view />
-    <footer-component/>
+  <!--  <img alt="Vue logo" src="./assets/logo.png">-->
+  <main-view />
+  <footer-component />
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
   name: "App",
   components: {
     MainView,
-    FooterComponent
+    FooterComponent,
   },
   methods: {
     checkWalletOption(wallet) {
@@ -97,6 +97,9 @@ export default {
       // We recommend reloading the page, unless you must do otherwise
 
       window.location.reload();
+    },
+    async changeNetwork(blockchain) {
+      await this.$root.core.changeNetwork(this, blockchain);
     },
   },
   async mounted() {
@@ -202,7 +205,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
