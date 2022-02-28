@@ -209,7 +209,7 @@ export default {
   font-family: 'Readex Pro', Helvetica, Arial,  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: rgba(225,225, 225, 0.5);
   background-color: #131313;
 }
 </style>
