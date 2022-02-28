@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <h2>Mint</h2>
+  <div class="main-wrapper">
+    <div class="container">
+    <div class="title">Mint</div>
     <button v-on:click="mint">mint</button>
+
+    </div>
   </div>
 </template>
 
