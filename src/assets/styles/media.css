@@ -1,10 +1,8 @@
-.header-wrapper,
 .container
 {
     width: 100%;
     margin: 0 auto;
 }
-header,
 .container{
     padding: 0 15px;
 }
@@ -27,9 +25,8 @@ header,
         max-width: 1200px;
         padding: 0 32px;
     }
-    header nav.header-nav a {
-        padding: 5px;
-        margin: auto 2px;
+    header nav.header-nav li {
+        margin: auto 10px;
     }
 }
 @media (min-width: 1440px) {
@@ -39,49 +36,41 @@ header,
         padding-right: 64px;
     }
     header {
-        height: 64px;
+        height: 88px;
     }
     .main-wrapper{
-        margin-top: 64px;
+        margin-top: 88px;
     }
     .collection-bg {
         height: calc((100vw - 240px) / 6.2 - 1px);
         max-height: 450px;
     }
 }
-@media (min-width: 992px) and (max-width: 1439px) {
+@media (max-width: 1439px){
     header {
-        max-width: 1900px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    header {
-        height: 64px;
+        height: 88px;
     }
     .main-wrapper{
-        margin-top: 64px;
+        margin-top: 88px;
     }
+
 }
 @media screen and (min-width: 769px) and (max-width: 991px) {
-    header,
     .container {
         max-width: calc(100% - 30px * 2);
         padding: 0 30px;
     }
-    header nav.header-nav a {
-        padding: 5px 10px;
+    header nav.header-nav li {
         margin: auto 4px;
     }
 }
 @media screen and (min-width: 440px) and (max-width: 768px) {
-    header,
     .container {
         max-width: 680px;
         padding: 0 30px;
     }
 }
 @media screen and (max-width: 439px) {
-    header,
     .container {
         max-width: 100%;
         padding: 0 12px;

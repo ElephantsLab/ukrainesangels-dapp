@@ -2,7 +2,7 @@
     <div class="footer">
         <footer>
             <a class="logo" href="#"></a>
-            footer
+            <div></div>
         </footer>
     </div>
 </template>
