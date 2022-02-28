@@ -1,0 +1,106 @@
+.header-wrapper,
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+}
+header,
+.container{
+    padding: 0 15px;
+}
+@media screen and (min-width: 1921px) {
+    .container {
+        width: calc(1440px + 1.25rem * 2);
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        max-width: 1816px;
+    }
+}
+@media screen and (min-width: 1299px) and (max-width: 1920px) {
+    .container {
+        max-width: calc(1440px + 64px * 2);
+        padding: 0 64px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1298px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 32px;
+    }
+    header nav.header-nav a {
+        padding: 5px;
+        margin: auto 2px;
+    }
+}
+@media (min-width: 1440px) {
+    header {
+        max-width: 1900px;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    header {
+        height: 64px;
+    }
+    .main-wrapper{
+        margin-top: 64px;
+    }
+    .collection-bg {
+        height: calc((100vw - 240px) / 6.2 - 1px);
+        max-height: 450px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1439px) {
+    header {
+        max-width: 1900px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    header {
+        height: 64px;
+    }
+    .main-wrapper{
+        margin-top: 64px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    header,
+    .container {
+        max-width: calc(100% - 30px * 2);
+        padding: 0 30px;
+    }
+    header nav.header-nav a {
+        padding: 5px 10px;
+        margin: auto 4px;
+    }
+}
+@media screen and (min-width: 440px) and (max-width: 768px) {
+    header,
+    .container {
+        max-width: 680px;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 439px) {
+    header,
+    .container {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+}
+
+@media (min-width: 991px){
+    .mobile-menu-status,
+    .mobile-menu{
+        display: none;
+    }
+}
+
+@media (max-width: 990.5px){
+    .mobile-menu-status,
+    .mobile-menu{
+        display: block;
+    }
+    .header-nav{
+        display: none;
+    }
+}
