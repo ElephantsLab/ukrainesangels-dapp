@@ -103,7 +103,7 @@ export default {
     },
   },
   async mounted() {
-    this.lang.init();
+    // this.lang.init();
 
     window.addEventListener("message", async function (e) {
       if (e.data && e.data.data && e.data.data.data && e.data.data.data.method === "metamask_unlockStateChanged") {
@@ -159,10 +159,10 @@ export default {
               throw Error();
             }
             if (currentAccount) {
-              _this.$root.core.fetchActiveClaims(currentAccount, 10000);
-              _this.$root.core.fetchContractsReserves(10000);
+              // _this.$root.core.fetchActiveClaims(currentAccount, 10000);
+              // _this.$root.core.fetchContractsReserves(10000);
             } else {
-              _this.$root.core.fetchContractsReserves(10000);
+              // _this.$root.core.fetchContractsReserves(10000);
             }
           } else {
             _this.noWallet = true;

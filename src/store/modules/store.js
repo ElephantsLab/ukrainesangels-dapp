@@ -1,9 +1,15 @@
 export default {
     state: {
-
+        address: undefined,
+        chainId: undefined
     },
     mutations: {
-
+        setCurrentAddress(state, val) {
+            state.address = val;
+        },
+        setChainId(state, val) {
+            state.chainId = val;
+        }
     },
     actions: {
         connectWallet() {

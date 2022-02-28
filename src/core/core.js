@@ -95,4 +95,8 @@ export default class Core {
             // handle other "switch" errors
         }
     }
+
+    async mint(mintVal) {
+        console.log(mintVal);
+    }
 }
