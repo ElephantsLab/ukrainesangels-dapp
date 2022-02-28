@@ -15,29 +15,27 @@
         "1666700000": "Harmony testnet",
         "1666600000": "Harmony Mainnet"
     },
-    "SUPPORTED_BLOCKCHAINS": [56, 1666600000],
+    "SUPPORTED_BLOCKCHAINS": [97, 1666700000],
     "1": {
         "NAME": "Ethereum Ropsten",
         "SYMBOL": "eth",
         "CHAIN_ID": "3",
-        "CONTRACT_ADDRESS": "0xA0A383c9A9c68F8Ff2ee044620818e89DB7D5FbC",
         "TOKEN_ADDRESS": "0x2eD5Cf532F18F1DC600c6edD039D19D3F1525f23",
         "DEFAULT_GAS_PRICE_GWEI": "30",
         "NODE": "https://ropsten.infura.io/v3/20fbb64f53694038b851785e3cffe4bf"
     },
-    "56": {
+    "97": {
         "NAME": "BSC Mainnet",
         "SYMBOL": "BSC",
-        "CHAIN_ID": "56",
-        "CONTRACT_ADDRESS": "0x1633F28AB8da5bE8880b11bB45aeB31F948c11E8",
-        "TOKEN_ADDRESS": "0x939d5a13cf0074586a2dcf17bc692b2d3ccdd517",
+        "CHAIN_ID": "97",
+        "TOKEN_ADDRESS": "0x36bF69760B0F96a553BEb9798F91e06b320B1cdc",
         "DEFAULT_GAS_PRICE_GWEI": "30",
         "NODE": "https://bsc-dataseed.binance.org/"
     },
-    "1666600000": {
+    "1666700000": {
         "NAME": "Harmony Mainnet",
         "SYMBOL": "HARM",
-        "CHAIN_ID": "1666600000",
+        "CHAIN_ID": "1666700000",
         "CONTRACT_ADDRESS": "0x28d4E9E26b67a9FEb2faA872Dc94237c105666Ce",
         "TOKEN_ADDRESS": "0x3ecb96039340630c8b82e5a7732bc88b2aeade82",
         "DEFAULT_GAS_PRICE_GWEI": "30",
