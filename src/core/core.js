@@ -45,4 +45,55 @@ export default class Core {
         // console.log(this);
         return true;
     }
+
+    async changeNetwork(context, blockchain) {
+        let _this = context;
+        const networkObject = conf.NETWORK_PARAMS.find((el) => el.symbol === blockchain);
+
+        const params = [
+            {
+                chainId: networkObject.params.chainId,
+                chainName: networkObject.params.chainName,
+                nativeCurrency: networkObject.params.nativeCurrency,
+                rpcUrls: networkObject.params.rpcUrls,
+                blockExplorerUrls: networkObject.params.blockExplorerUrls,
+            },
+        ];
+        const switchParams = [{ chainId: networkObject.params.chainId }];
+
+        try {
+            await window.ethereum.request({
+                method: "wallet_switchEthereumChain",
+                params: switchParams,
+            });
+            _this.$emit("close");
+            const highestId = window.setTimeout(() => {
+                for (let i = highestId; i >= 0; i--) {
+                    console.log(i);
+                    window.clearInterval(i);
+                }
+            }, 0);
+        } catch (switchError) {
+            // This error code indicates that the chain has not been added to MetaMask.
+            if (switchError.code === 4902) {
+                try {
+                    await window.ethereum.request({
+                        method: "wallet_addEthereumChain",
+                        params: params,
+                    });
+                    _this.$emit("close");
+                    const highestId = window.setTimeout(() => {
+                        for (let i = highestId; i >= 0; i--) {
+                            console.log(i);
+                            window.clearInterval(i);
+                        }
+                    }, 0);
+                } catch (addError) {
+                    console.log(addError);
+                }
+            }
+
+            // handle other "switch" errors
+        }
+    }
 }
