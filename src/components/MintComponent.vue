@@ -38,7 +38,7 @@
                   <button class="btn btn-minus" v-on:click="decrementVal">
                     <i class="i-subtract-line"></i>
                   </button>
-                  <input class="input" min="0" max="10" step="1" type="number" oninput="this.value = Math.round(this.value);" v-model="mintVal">
+                  <input class="input" min="1" max="10" step="1" type="number" oninput="this.value = Math.round(this.value);" v-model="mintVal">
                   <button class="btn btn-plus" v-on:click="incrementVal">
                     <i class="i-add-line"></i>
                   </button>
@@ -237,7 +237,7 @@
                   <button class="btn btn-minus" v-on:click="decrementVal">
                     <i class="i-subtract-line"></i>
                   </button>
-                  <input class="input" min="0" max="10" step="1" type="number" v-model="mintVal">
+                  <input class="input" min="1" max="10" step="1" type="number" v-model="mintVal">
                   <button class="btn btn-plus" v-on:click="incrementVal">
                     <i class="i-add-line"></i>
                   </button>
@@ -349,7 +349,7 @@ export default {
   },
   methods: {
     async mint() {
-      if (this.mintVal < 0) {
+      if (this.mintVal < 1) {
         alert("enter positive amount only");
         return;
       }
@@ -365,7 +365,7 @@ export default {
       }
     },
     decrementVal() {
-      if (this.mintVal > 0) {
+      if (this.mintVal > 1) {
         this.mintVal--;
       }
     },
