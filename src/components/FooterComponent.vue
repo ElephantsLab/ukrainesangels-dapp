@@ -8,17 +8,17 @@
                 <div class="footer-block">
                     <span class="footer-block-name">Navigation</span>
                     <ul class="ul-flex-column">
-                        <li><a class="footer-link" href="">Our mission</a></li>
-                        <li><a class="footer-link" href="">Situation in Ukraine</a></li>
-                        <li><a class="footer-link" href="">Collection</a></li>
-                        <li><a class="footer-link" href="">Donation</a></li>
+                        <li><a class="footer-link" href="#our-mission">Our mission</a></li>
+                        <li><a class="footer-link" href="#situation">Situation in Ukraine</a></li>
+                        <li><a class="footer-link" href="#angel-collection">Collection</a></li>
+                        <li><a class="footer-link" href="#your-donate">Donation</a></li>
                     </ul>
                 </div>
                 <div class="footer-block">
                     <span class="footer-block-name">useful links</span>
                     <ul class="ul-flex-column">
-                        <li><a class="footer-link" href="">If you need help</a></li>
-                        <li><a class="footer-link" href="">If you want help</a></li>
+                        <li><a class="footer-link" href="#need-help">If you need help</a></li>
+                        <li><a class="footer-link" href="#need-help">If you want help</a></li>
                         <li><a class="footer-link" href="">Name 1</a></li>
                     </ul>
                 </div>

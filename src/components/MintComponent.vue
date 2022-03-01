@@ -1,6 +1,6 @@
 <template>
   <div class="main-wrapper">
-    <section class="section-main">
+    <section class="section-main" id="our-mission">
       <div class="container">
         <div class="section-block-container">
          <div class="section-block section-block-content">
@@ -64,7 +64,7 @@
       <button v-on:click="mint">mint</button>
     </form>
     </div> -->
-    <section class="section section-buy">
+    <section class="section section-buy" id="buy">
       <div class="container">
         <div class="section-content">
           <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
@@ -122,7 +122,7 @@
         </button>
       </div>
     </section>
-    <section class="section section-donate">
+    <section class="section section-donate" id="your-donate">
       <div class="container">
         <div class="section-content">
           <h2 class="heading2">You Can Donate Crypto Via the Platform</h2>
@@ -158,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-situation">
+    <section class="section section-situation"  id="situation">
       <div class="container">
         <div class="section-block-container">
         <div class="section-block section-block-content">
@@ -182,7 +182,7 @@
         </div>
       </div>
     </section>
-    <section class="section-stop-war">
+    <section class="section-stop-war"  id="stop-war">
       <div class="container-img">
         <img src="@/assets/images/set_war/1.png" alt="">
         <img src="@/assets/images/set_war/2.png" alt="">
@@ -213,7 +213,7 @@
         <span>STOP WAR</span>
       </div>
     </section>
-    <section class="section section-collection">
+    <section class="section section-collection"  id="angel-collection">
       <div class="container">
         <div class="section-block-container">
           <div class="section-block section-block-content">
@@ -324,7 +324,7 @@
         </div>
       </div>      
     </section>
-    <section class="section section-angels">
+    <section class="section section-angels"  id="help-in-numbers">
       <div class="container">
         <div class="section-content">
           <h2 class="subtitle">help in numbers</h2>
@@ -358,7 +358,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-team">
+    <section class="section section-team" id="our-team">
       <div class="container">
         <div class="section-block-container">
           <div class="section-block section-block-content">
@@ -380,7 +380,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-help">
+    <section class="section section-help" id="need-help">
       <div class="container">
         <div class="cards-help-wrapper">
           <div class="card card-help card-help-1">

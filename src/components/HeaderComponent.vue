@@ -3,11 +3,11 @@
     <header class="container">
     <a href="" class="header-logo logo"></a>
     <nav class="header-nav">
-      <li><a class="header-link" href="">Our Mission</a></li>
-      <li><a class="header-link" href="">Situation in Ukraine</a></li>
-      <li><a class="header-link" href="">Collection</a></li>
-      <li><a class="header-link" href="">Donation</a></li>
-      <li><a class="header-link" href="">Our Team</a></li>
+      <li><a class="header-link" href="#our-mission">Our Mission</a></li>
+      <li><a class="header-link" href="#situation">Situation in Ukraine</a></li>
+      <li><a class="header-link" href="#angel-collection">Collection</a></li>
+      <li><a class="header-link" href="#your-donate">Donation</a></li>
+      <li><a class="header-link" href="#our-team">Our Team</a></li>
     </nav>
     <div class="header-main-buttons">
       <button class="btn btn-connect" v-on:click="connectWallet">
