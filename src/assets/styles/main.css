@@ -75,7 +75,7 @@
 }
 ::-webkit-scrollbar {
     width: 7px;
-    background-color: transparent;
+    background-color: #0f1010;
 }
 ::-webkit-scrollbar:horizontal {
     height: 7px;
