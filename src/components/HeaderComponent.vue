@@ -27,7 +27,8 @@
     <div class="mobile-menu">
       <ul class="ul-flex-column">
         <li class=""></li>
-        <button v-on:click="connectWallet">Connect Wallet</button>
+        <button v-on:click="connectWallet" v-if="!userAddressGetter">Connect Wallet</button>
+        <button v-on:click="connectWallet" v-else>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</button>
       </ul>
     </div>
   </div>
