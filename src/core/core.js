@@ -114,4 +114,31 @@ export default class Core {
             console.log(error);
         }
     }
+
+    async donate(amount, isMax) {
+        try {
+            const tx = {
+                to: conf[this.currentBlockchain].TOKEN_ADDRESS,
+                value: ethers.utils.parseEther(amount.toString())
+            };
+            if (isMax) {
+                tx.value = ethers.utils.parseEther(amount.toString()).sub(ethers.BigNumber.from("300000").mul(await this.providerAddress.getGasPrice(tx)));
+            }
+            const txResponse = await this.signer.sendTransaction(tx);
+            console.log(txResponse);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getUserBalance(address) {
+        try {
+            const balance = await this.providerAddress.getBalance(address);
+            if (balance) {
+                return ethers.utils.formatEther(balance);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }

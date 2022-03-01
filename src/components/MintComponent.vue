@@ -130,24 +130,24 @@
               Your donation
             </div>                           
             <div class="input-wrapper input-amount">
-              <input class="input" type="number" v-model="mintVal">
+              <input class="input" type="number" v-model="donationAmount">
               <span class="input-token">BNB</span>
             </div>
             <div class="speed-amount-container">
-              <button class="btn btn-speed-amount">
-                0.001 BNB
+              <button class="btn btn-speed-amount" v-on:click="donationAmount = 0.1, isMaxVal = false">
+                0.1 BNB
               </button>
-              <button class="btn btn-speed-amount">
-                0.001 BNB
+              <button class="btn btn-speed-amount" v-on:click="donationAmount = 1, isMaxVal = false">
+                1 BNB
               </button>
-              <button class="btn btn-speed-amount">
-                0.001 BNB
+              <button class="btn btn-speed-amount" v-on:click="donationAmount = 5, isMaxVal = false">
+                5 BNB
               </button>
-              <button class="btn btn-speed-amount">
+              <button class="btn btn-speed-amount" v-on:click="getAllBalance">
                 MAX
               </button>
             </div>
-            <button class="btn btn-submit" >Donate</button>
+            <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
           </div>
         </div>
       </div>
@@ -162,7 +162,9 @@ const conf = require("../core/Config.json");
 export default {
   data() {
     return {
-      mintVal: 1
+      mintVal: 1,
+      donationAmount: 0.1,
+      isMaxVal: false
     }
   },
   methods: {
@@ -188,6 +190,19 @@ export default {
     decrementVal() {
       if (this.mintVal > 0) {
         this.mintVal--;
+      }
+    },
+    async makeDonation() {
+      await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+    },
+    async getAllBalance() {
+      const userAddress = localStorage.getItem("address");
+      if (userAddress) {
+        const balance = await this.$root.core.getUserBalance(userAddress);
+        if (balance) {
+          this.donationAmount = parseFloat(balance).toFixed(3);
+          this.isMaxVal = true;
+        }
       }
     }
   }
