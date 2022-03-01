@@ -1,7 +1,18 @@
-#app {
+#app,
+.section-collection::before {
     background-image: url(../images/main-bg.png);
     background-repeat: no-repeat;
     background-position: top center;
+}
+.section-collection::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    z-index: -1;
 }
 .header-wrapper {
     position: fixed;
@@ -10,6 +21,7 @@
     width: 100%;
     background: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 30;
 }
 header {
     height: 100%;
@@ -30,11 +42,11 @@ header {
 .header-nav li {
     margin: 0 20px;
 }
-.main-wrapper {
+/* .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-}
+} */
 .footer {
     margin-top: auto;
 }
@@ -137,7 +149,7 @@ input,
     line-height: 24px;
     color: #ffffff;
 }
-.input-token{
+.input-token {
     text-align: right;
 }
 .heading1 {
@@ -152,6 +164,9 @@ input,
 .section-main .heading1 span:first-child {
     color: #0487cf;
 }
+.title-date {
+    color: #efcf46;
+}
 .section-main .heading1 span:nth-child(2) {
     color: #efcf46;
 }
@@ -165,6 +180,7 @@ input,
     letter-spacing: 1px;
     color: #ffffff;
 }
+.total-supply,
 .title1 {
     font-weight: bold;
     font-size: 28px;
@@ -172,6 +188,11 @@ input,
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ffffff;
+}
+.total-supply,
+.section-collection .heading1,
+.section-angels .heading1 {
+    color: #efcf46;
 }
 .body1 {
     color: #ffffff;
@@ -202,7 +223,8 @@ input,
     text-transform: uppercase;
     color: #ffffff;
 }
-.input-label {
+.input-label,
+.supply-label {
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
@@ -237,7 +259,11 @@ input,
     margin-bottom: 40px;
 }
 .section-buy .section-content,
-.section-donate .section-content {
+.section-donate .section-content,
+.card-collection .card-section,
+.card-main .card-section,
+.section-angels .section-content,
+.section-angels {
     text-align: center;
     display: flex;
     align-items: center;
@@ -268,11 +294,14 @@ input,
 .btn-speed-amount {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+.card.card-buy:hover,
 .btn-speed-amount:hover {
     border-color: #efcf46;
 }
-.section-block {
-    float: left;
+.section-block-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .section-block.section-block-content {
     max-width: calc(100% - 520px - 140px);
@@ -284,49 +313,58 @@ input,
     background-color: rgba(15, 16, 16, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.card {
+.card ,
+.block-nft{
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     align-content: stretch;
 }
+.card.card-angel{
+    align-items: center;
+}
 .card.card-buy,
+.card.card-angel,
 .card.card-donate {
     background-color: #0f1010;
 }
-.card-insert {
+.card-insert,
+.card-angel .icon {
     background: #131313;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
 .card.card-main,
+.card.card-collection,
 .card.card-donate {
     border-radius: 24px;
     width: 520px;
-}
-.card.card-main {
-    float: right;
 }
 .card.card-donate {
     padding: 40px 32px;
     margin-left: auto;
     margin-right: auto;
 }
+.card-collection .card-section,
 .card-main .card-section {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.card-main .card-footer {
+.card-main .card-footer,
+.card-collection .card-footer {
     margin-top: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .card-main .card-section,
-.card-main .card-footer {
+.card-main .card-footer,
+.card-collection .card-section,
+.card-collection .card-footer {
     padding-left: 32px;
     padding-right: 32px;
 }
-.card-main .card-footer {
+.card-main .card-footer,
+.card-collection .card-footer {
     padding-top: 24px;
     padding-bottom: 40px;
 }
@@ -335,6 +373,13 @@ input,
     background-image: url(../images/main-card.png);
     width: 100%;
     height: 316px;
+}
+.card-main-img + .supply-label,
+.card-main-img + .total-supply {
+    margin-top: 24px;
+}
+.card-donate .title1 + .card-input {
+    margin-top: 12px;
 }
 .input-wrapper {
     position: relative;
@@ -381,10 +426,13 @@ input,
     right: 8px;
 }
 .card-main .card-footer .input-wrapper.input-count,
-.card-main .card-footer .btn.btn-submit {
+.card-main .card-footer .btn.btn-submit,
+.card-collection .card-footer .input-wrapper.input-count,
+.card-collection .card-footer .btn.btn-submit {
     width: calc(50% - 8px);
 }
-.card-main .card-footer .btn.btn-submit {
+.card-main .card-footer .btn.btn-submit,
+.card-collection .card-footer .btn.btn-submit {
     margin-left: auto;
 }
 .input-wrapper.input-count .input {
@@ -406,7 +454,8 @@ input,
     font-weight: 500;
     color: #ffffff;
 }
-.card-main .input-total {
+.card-main .input-total,
+.card-collection .input-total {
     text-align: center;
     margin-top: 24px;
 }
@@ -416,17 +465,20 @@ input,
 .section-donate {
     padding-top: 0;
 }
-.cards-buy-wrapper {
+.cards-buy-wrapper,
+.cards-angels-wrapper {
     display: flex;
     justify-content: center;
     margin: -20px -15px 20px;
     flex-wrap: wrap;
+    width: calc(100% + 30px);
 }
-.cards-buy-wrapper > .card {
+.cards-buy-wrapper > .card ,
+.cards-angels-wrapper > .card {
     border-radius: 16px;
     margin: 20px 15px;
     padding: 24px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: calc(100% / 3 - 30px);
 }
 .card-label {
@@ -436,6 +488,15 @@ input,
 }
 .card-label i {
     font-size: 24px;
+}
+.card-label i.i-share-box-fill{
+    color: #C4C4C4;
+    width: 24px;
+    display: block;
+    height: 24px;
+}
+.card.card-buy:hover i.i-share-box-fill{
+    color: #EFCF46;
 }
 .card-label .tiny-text i {
     margin-right: 7px;
@@ -450,12 +511,25 @@ input,
     margin: 16px 0;
 }
 .card-buy .card-insert > div {
-    background-image: url(../images/save-live.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 65px;
     width: 100%;
+}
+.card-angel .icon{
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+}
+.card-buy .card-insert.savelife > div {
+    background-image: url(../images/save-live.png);
+}
+.card-buy .card-insert.unchain > div {
+    /* background-image: url(../images/save-live.png); */
+}
+.card-buy .card-insert.savelife > div {
+    /* background-image: url(../images/save-live.png); */
 }
 .card-buy .card-content {
     text-align: center;
@@ -473,6 +547,12 @@ input,
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
+}
+.section-angels .container{
+    background-image: url(../images/uk-map-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center ;
 }
 .speed-amount-container {
     width: calc(100% + 8px);
@@ -495,4 +575,88 @@ input,
     margin: 0 4px 4px;
     flex-grow: 1;
     padding: 12px;
+}
+.section-angels,
+.section-situation {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #515952;
+}
+.section-collection,
+.title-date {
+    position: relative;
+    z-index: 1;
+}
+.title-date{
+    width: fit-content;
+
+}
+.title-date::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: url(../images/date.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 7px 108px 14px 86px;
+    z-index: -1;
+}
+.section-situation .container {
+    margin-bottom: 40px;
+}
+.card-angel .icon{
+    margin-bottom: 24px;
+}
+.container-stop-war,
+.container-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.container-img {
+    height: 240px;
+}
+.container-img img {
+    height: 100%;
+    width: auto;
+    margin: 0 2px;
+}
+.container-stop-war {
+    background: #efcf46;
+    padding: 0 20px;
+}
+.container-stop-war span {
+    display: block;
+    width: auto;
+    height: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f1010;
+    margin: 20px;
+    white-space: nowrap;
+}
+.section-block-nft{
+    display: flex;
+    justify-content: stretch;
+    margin-top: 64px;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    flex-wrap: wrap;
+}
+.section-block-nft .block-nft {
+    margin: 0 15px 30px;
+    width: calc(100% / 6 - 30px );
+}
+.block-nft{
+    text-align: center;
+}
+.nft-img-mask{
+    height: 307px;
+    width: 100%;
 }
