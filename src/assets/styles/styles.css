@@ -42,14 +42,6 @@ header {
 .header-nav li {
     margin: 0 20px;
 }
-/* .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-} */
-.footer {
-    margin-top: auto;
-}
 .ul-drop-down,
 .ul-flex-column {
     display: flex;
@@ -96,14 +88,17 @@ ul.ul-flex-column li > button {
 header .btn {
     padding: 12px 24px;
 }
-.header-link {
+.header-link,
+.footer-link {
     color: rgba(255, 255, 255, 1);
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
 }
 .header-link:hover,
-.header-link:active {
+.header-link:active,
+.footer-link:hover,
+.footer-link:active {
     color: #efcf46;
     transition: 0.2s;
 }
@@ -125,6 +120,7 @@ header .btn {
     background-image: url(../images/Logo.svg);
     width: 171px;
     height: 100%;
+    min-height: 56px;
     min-height: 48px;
 }
 .metamask-img {
@@ -471,7 +467,7 @@ input,
 .section.section-help {
     padding-top: 0;
 }
-.section.section-help .container{
+.section.section-help .container {
     padding-top: 100px;
 }
 .section-donate {
@@ -499,7 +495,7 @@ input,
     margin: 15px 15px;
     width: calc(100% / 2 - 30px);
 }
-.card-help{
+.card-help {
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
@@ -751,7 +747,35 @@ input,
     width: fit-content;
     margin-top: auto;
 }
-.card-help .title{
+.card-help .title {
     color: #fff;
     padding-right: 160px;
+}
+.footer .container {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+.footer-block-name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.footer-block {
+    padding-right: 140px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.footer-link {
+    margin-top: 16px;
+}
+.footer-block-name + .ul-social-list{
+    
 }
