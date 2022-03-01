@@ -8,6 +8,7 @@
 import MainView from "@/views/MainView";
 import Core from "../src/core/core.js";
 import FooterComponent from "@/components/FooterComponent";
+import conf from "./core/Config.json";
 
 export default {
   name: "App",
@@ -133,11 +134,15 @@ export default {
             //won't commit address without these checks
             if (window.ethereum) {
               window.ethereum.on("chainChanged", async (_chainId) => {
+                if (conf.NETWORK !== parseInt(_chainId)) {
+                  alert("Change your wallet extension to Binance Smart Chain network");
+                  window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS.params });
+                }
                 _this.$root.core = null;
                 _this.$root.core = new Core(_this, Number(_chainId));
 
-                _this.$root.core.fetchActiveClaims(currentAccount, 10000);
-                _this.$root.core.fetchContractsReserves(10000);
+                // _this.$root.core.fetchActiveClaims(currentAccount, 10000);
+                // _this.$root.core.fetchContractsReserves(10000);
                 _this.startAutoClaim = true;
               });
               window.ethereum.on("isConnected", () => window.location.reload());
