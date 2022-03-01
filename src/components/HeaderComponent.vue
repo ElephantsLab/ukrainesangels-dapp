@@ -11,7 +11,8 @@
     </nav>
     <div class="header-main-buttons">
       <button class="btn btn-connect" v-on:click="connectWallet">
-        <span>Connect Wallet</span>
+        <span v-if="!userAddressGetter">Connect Wallet</span>
+        <span v-else>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
         <span class="icon metamask-img"></span>
       </button>
     </div>
@@ -33,11 +34,12 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   methods: {
     ...mapActions(["connectWallet"])
-  }
+  },
+  computed: mapGetters(["userAddressGetter"])
 }
 </script>

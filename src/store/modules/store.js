@@ -26,6 +26,8 @@ export default {
         }
     },
     getters: {
-
+        userAddressGetter(state) {
+            return state.address;
+        }
     }
 }
