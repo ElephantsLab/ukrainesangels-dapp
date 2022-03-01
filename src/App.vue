@@ -62,6 +62,9 @@ export default {
 
         // For now, 'eth_accounts' will continue to always return an array
         function handleAccountsChanged(accounts) {
+          if (!accounts.length) {
+            localStorage.removeItem("account");
+          }
           let currentAccount = localStorage.getItem("address");
           if (accounts.length === 0) {
             _this.walletUnlocked = false;

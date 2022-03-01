@@ -169,17 +169,14 @@ export default {
   },
   methods: {
     async mint() {
-      const userAddress = localStorage.getItem("account");
-      if (userAddress) {
-        if (this.mintVal < 0) {
-          alert("enter positive amount only");
-          return;
-        }
-        if (this.mintVal <= 1) {
-          await this.$root.core.mint(conf.BNBVal);
-        } else {
-          await this.$root.core.buyMore(this.mintVal);
-        }
+      if (this.mintVal < 0) {
+        alert("enter positive amount only");
+        return;
+      }
+      if (this.mintVal <= 1) {
+        await this.$root.core.mint(conf.BNBVal);
+      } else {
+        await this.$root.core.buyMore(this.mintVal);
       }
     },
     incrementVal() {

@@ -96,11 +96,47 @@ export default class Core {
         }
     }
 
+    connectWallet() {
+        if (!localStorage.getItem("address")) {
+            window.ethereum
+                .request({ method: "eth_requestAccounts" })
+                .then(handleAccountsChanged)
+                .catch((err) => {
+                    console.log(err);
+                    localStorage.removeItem("address");
+                });
+
+            function handleAccountsChanged(accounts) {
+                if (!accounts.length) {
+                    localStorage.removeItem("account");
+                }
+                let currentAccount = localStorage.getItem("address");
+                if (accounts.length === 0) {
+                    _this.walletUnlocked = false;
+                    localStorage.removeItem("address");
+                    _this.$store.commit("setCurrentAddress", "");
+
+                    // MetaMask is locked or the user has not connected any accounts
+                    // alert('Please connect to MetaMask.');
+                } else if (accounts[0] !== currentAccount) {
+                    currentAccount = accounts[0];
+                    localStorage.setItem("address", currentAccount);
+
+                    // _this.$root.core.setLangForAddress(localStorage.getItem("lang"), localStorage.getItem('address'));
+                    location.reload();
+                } else if (accounts.length > 0) {
+                    _this.walletUnlocked = true;
+                }
+            }
+        }
+    }
+
     async mint(mintVal) {
         try {
             const txResponce = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
             console.log(txResponce);
         } catch (error) {
+            this.connectWallet();
             console.log(error);
         }
     }
@@ -111,6 +147,7 @@ export default class Core {
             const txResponce = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
             console.log(txResponce);
         } catch (error) {
+            this.connectWallet();
             console.log(error);
         }
     }
@@ -127,6 +164,7 @@ export default class Core {
             const txResponse = await this.signer.sendTransaction(tx);
             console.log(txResponse);
         } catch (error) {
+            this.connectWallet();
             console.log(error);
         }
     }
