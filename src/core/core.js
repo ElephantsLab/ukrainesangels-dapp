@@ -133,8 +133,10 @@ export default class Core {
 
     async mint(mintVal) {
         try {
-            const txResponce = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
-            console.log(txResponce);
+            const txResponse = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
+            const txReceipt = await txResponse.wait();
+            console.log(txReceipt);
+            if (txReceipt.status) alert("transaction confirmed");
         } catch (error) {
             this.connectWallet();
             console.log(error);
@@ -144,8 +146,10 @@ export default class Core {
     async buyMore(amountOfNFT) {
         try {
             const bnbVal = amountOfNFT * conf.BNBVal;
-            const txResponce = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
-            console.log(txResponce);
+            const txResponse = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
+            const txReceipt = await txResponse.wait();
+            console.log(txReceipt);
+            if (txReceipt.status) alert("transaction confirmed");
         } catch (error) {
             this.connectWallet();
             console.log(error);
@@ -162,7 +166,9 @@ export default class Core {
                 tx.value = ethers.utils.parseEther(amount.toString()).sub(ethers.BigNumber.from("300000").mul(await this.providerAddress.getGasPrice(tx)));
             }
             const txResponse = await this.signer.sendTransaction(tx);
-            console.log(txResponse);
+            const txReceipt = await txResponse.wait();
+            console.log(txReceipt);
+            if (txReceipt.status) alert("transaction confirmed");
         } catch (error) {
             this.connectWallet();
             console.log(error);
