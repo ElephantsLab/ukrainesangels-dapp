@@ -31,11 +31,11 @@
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
-                  <button class="btn btn-minus">
+                  <button class="btn btn-minus" v-on:click="decrementVal">
                     <i class="i-subtract-line"></i>
                   </button>
                   <input class="input" type="number" v-model="mintVal">
-                  <button class="btn btn-plus">
+                  <button class="btn btn-plus" v-on:click="incrementVal">
                     <i class="i-add-line"></i>
                   </button>
                 </div>
@@ -95,17 +95,31 @@
 </template>
 
 <script>
+const conf = require("../core/Config.json");
+
 export default {
   data() {
     return {
-      mintVal: 0
+      mintVal: 1
     }
   },
   methods: {
     async mint() {
       const userAddress = localStorage.getItem("account");
       if (userAddress) {
-        await this.$root.core.mint(this.mintVal);
+        if (this.mintVal <= 1) {
+          await this.$root.core.mint(conf.BNBVal);
+        } else {
+          await this.$root.core.buyMore(this.mintVal);
+        }
+      }
+    },
+    incrementVal() {
+      this.mintVal++;
+    },
+    decrementVal() {
+      if (this.mintVal > 0) {
+        this.mintVal--;
       }
     }
   }
