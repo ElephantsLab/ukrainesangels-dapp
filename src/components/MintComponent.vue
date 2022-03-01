@@ -3,18 +3,18 @@
     <section class="section-main">
       <div class="container">
         <div class="section-block section-block-content">
-          <div class="title0">Our mission</div>
-          <div class="title1"> 
+          <div class="subtitle">Our mission</div>
+          <h1 class="heading1"> 
             <span>help to SAVE </span>
             <span>UKRAINian people</span>
-          </div>
-          <div class="describe">
+          </h1>
+          <h4 class="body1">
             Our primary mission is to help the people of Ukraine in these difficult times together with the crypto community.
             <br>
             <br>
             Each sold NFT from the collection will be sent to help wounded soldiers, refugees, doctors and other war-affected residents of Ukraine, as well
             as to rehabilitation of settlements, infrastructure, roads, houses damaged by shells and military equipment.
-          </div>
+          </h4>
           <div class="btn-wrapper">
             <button class="btn btn-yellow">Watch Collection</button>
             <button class="btn btn-blue">Make donation</button>
@@ -26,7 +26,7 @@
               <div class="card-main-img"></div>
             </div>
             <div class="card-footer">
-              <div class="input-title">
+              <div class="input-label">
                 Count of NFT’s
               </div>
               <div class="input-container">                              
@@ -44,20 +44,53 @@
               <div class="input-total">
                 Mint 1 NFT using
                 <span>0.5 BNB</span>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-<!--    <div class="container">-->
-<!--    <div class="title">Mint</div>-->
-<!--    <form v-on:submit.prevent>-->
-<!--      <input type="number" v-model="mintVal">-->
-<!--      <button v-on:click="mint">mint</button>-->
-<!--    </form>-->
-<!--    </div>-->
+    <!-- <div class="container">
+    <div class="title">Mint</div>
+    <form v-on:submit.prevent>
+      <input type="number" v-model="mintVal">
+      <button v-on:click="mint">mint</button>
+    </form>
+    </div> -->
+    <section class="section section-buy">
+      <div class="container">
+        <div class="section-content">
+          <h2 class="heading2">If you don't want to buy NFT</h2>
+          <p class="body2">Donate to Official Ukrainian Funds or volunteer organizations below</p>
+        </div>
+        <div class="cards-buy-wrapper">
+          <a href="" class="card card-buy">
+            <div class="card-label">
+              <span class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Vereficated
+              </span>
+              <i class="share-box-fill"></i>
+            </div>
+          </a>
+          <a href="" class="card card-buy">
+            <div class="card-label">
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Vereficated
+              </p>
+              <i class="share-box-fill"></i>
+            </div>
+          </a>
+          <a href="" class="card card-buy">
+            <div class="card-label">
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Vereficated
+              </p>
+              <i class="share-box-fill"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 

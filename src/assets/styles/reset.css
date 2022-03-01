@@ -6,6 +6,10 @@
     font-family: inherit;
     font-size: inherit;
     font-style: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 html,
 body,

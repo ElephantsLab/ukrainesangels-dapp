@@ -211,7 +211,9 @@ export default {
 
 <style>
 #app {
-  font-family: 'Readex Pro', Helvetica, Arial,  sans-serif;
+  font-family: 'e-Ukraine Head', Helvetica, Arial,  sans-serif; 
+  /* font-family: 'e-Ukraine Head', Helvetica, Arial,  sans-serif; */
+  font-style: 'bold';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(225,225, 225, 0.5);
