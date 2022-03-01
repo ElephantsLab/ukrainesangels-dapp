@@ -34,7 +34,7 @@
                   <button class="btn btn-minus" v-on:click="decrementVal">
                     <i class="i-subtract-line"></i>
                   </button>
-                  <input class="input" type="number" v-model="mintVal">
+                  <input class="input" min="0" max="10" step="1" type="number" oninput="this.value = Math.round(this.value);" v-model="mintVal">
                   <button class="btn btn-plus" v-on:click="incrementVal">
                     <i class="i-add-line"></i>
                   </button>
@@ -74,6 +74,10 @@ export default {
     async mint() {
       const userAddress = localStorage.getItem("account");
       if (userAddress) {
+        if (this.mintVal < 0) {
+          alert("enter positive amount only");
+          return;
+        }
         if (this.mintVal <= 1) {
           await this.$root.core.mint(conf.BNBVal);
         } else {
@@ -82,7 +86,9 @@ export default {
       }
     },
     incrementVal() {
-      this.mintVal++;
+      if (this.mintVal < 10) {
+        this.mintVal++;
+      }
     },
     decrementVal() {
       if (this.mintVal > 0) {
