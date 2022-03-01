@@ -108,7 +108,7 @@
               </p>
               <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert"><div></div></div>
+            <div class="card-insert btc-alpha"><div></div></div>
             <div class="card-content">
               <p class="body3">Unchain</p>
               <p class="short-descr">
@@ -325,17 +325,71 @@
       </div>      
     </section>
     <section class="section section-angels">
-        <div class="container">
+      <div class="container">
         <div class="section-content">
           <h2 class="subtitle">Donation</h2>
           <p class="heading1">our angels</p>
         </div>
         <div class="cards-angels-wrapper">
           <div class="card card-angel">
-            <div class="icon"></div>
+            <div class="icon intersect"></div>
+            <div class="title1">1 874 nft’s</div>
+            <div class="short-descr">
+              Sold NFTLorem Ipsum
+            </div>
+            <button class="btn btn-yellow">Go to collection</button>
+          </div>
+          <div class="card card-angel">
+            <div class="icon uk-angels"></div>
+            <div class="title1">1 874 nft’s</div>
+            <div class="short-descr">
+              Become An Angel
+            </div>
+            <button class="btn btn-yellow">Go to collection</button>
+          </div>
+          <div class="card card-angel">
+            <div class="icon bnb"></div>
+            <div class="title1">1 874 nft’s</div>
+            <div class="short-descr">
+              Donate
+            </div>
+            <button class="btn btn-blue">Go to collection</button>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="section section-team">
+      <div class="container">
+        <div class="section-block-container">
+          <div class="section-block section-block-content">
+            <div class="subtitle">our team</div>
+            <a href="https://elephantslab.com/" class="link-team" target="_blank" rel="nofollow"></a>
+            <p class="body1">        
+              Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+              <br>
+              <br>
+              Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. 
+            </p>
+          </div>
+          <div class="section-block section-block-card">
+            <div class="photo-team"></div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="section section-help">
+      <div class="container">
+        <div class="cards-help-wrapper">
+          <div class="card card-help card-help-1">
+            <p class="title">If you need help</p>
+            <a href="" class="btn btn-yellow">Become an angel</a>
+          </div>
+          <div class="card card-help card-help-2">
+            <p class="title">If you want help</p>
+            <a href="" class="btn btn-yellow">Become an angel</a>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
