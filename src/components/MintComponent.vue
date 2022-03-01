@@ -135,7 +135,7 @@
               Your donation
             </div>                           
             <div class="input-wrapper input-amount">
-              <input class="input" type="number" v-model="donationAmount">
+              <input class="input" type="number" min="1" oninput="this.value = Math.round(this.value);" v-model="donationAmount">
               <span class="input-token">BNB</span>
             </div>
             <div class="speed-amount-container">
