@@ -71,13 +71,12 @@
               </span>
               <i class="share-box-fill"></i>
             </div>
-          </a>
-          <a href="" class="card card-buy">
-            <div class="card-label">
-              <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Vereficated
+            <div class="card-insert"><div></div></div>
+            <div class="card-content">
+              <p class="body3">Name of organization 1</p>
+              <p class="short-descr">
+                Short description what this organization doing
               </p>
-              <i class="share-box-fill"></i>
             </div>
           </a>
           <a href="" class="card card-buy">
@@ -86,11 +85,74 @@
                 <i class="i-checkbox-circle-fill "></i>  Vereficated
               </p>
               <i class="share-box-fill"></i>
+            </div>
+            <div class="card-insert"><div></div></div>
+            <div class="card-content">
+              <p class="body3">Name of organization 1</p>
+              <p class="short-descr">
+                and what kind of help can it be.
+              </p>
+            </div>
+          </a>
+          <a href="" class="card card-buy">
+            <div class="card-label">
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Vereficated
+              </p>
+              <i class="share-box-fill"></i>
+            </div>
+            <div class="card-insert"><div></div></div>
+            <div class="card-content">
+              <p class="body3">Name of organization 1</p>
+              <p class="short-descr">
+                Maybe 3rd row
+              </p>
             </div>
           </a>
         </div>
+        <button class="btn btn-see-all">
+          See all resources
+        </button>
       </div>
     </section>
+    <section class="section section-donate">
+      <div class="container">
+        <div class="section-content">
+          <h2 class="heading2">Or donate trough our platform</h2>
+          <p class="body2">
+            If Funds and volunteer organization sites not work 
+            you can make donation trough our service</p>
+        </div>
+        <div class="card card-donate">
+          <div class="title1">make donation</div>
+          <div class="card-footer">
+            <div class="input-label">
+              Your donation
+            </div>                           
+            <div class="input-wrapper input-amount">
+              <input class="input" type="number" v-model="mintVal">
+              <span class="input-token">BNB</span>
+            </div>
+            <div class="speed-amount-container">
+              <button class="btn btn-speed-amount">
+                0.001 BNB
+              </button>
+              <button class="btn btn-speed-amount">
+                0.001 BNB
+              </button>
+              <button class="btn btn-speed-amount">
+                0.001 BNB
+              </button>
+              <button class="btn btn-speed-amount">
+                MAX
+              </button>
+            </div>
+            <button class="btn btn-submit" >Donate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </div>
 </template>
 
