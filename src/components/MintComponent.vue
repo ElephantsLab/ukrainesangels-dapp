@@ -1,6 +1,6 @@
 <template>
-  <div class="main-wrapper">
-    <section class="section-main" id="our-mission">
+  <div class="main-wrapper" id="our-mission">
+    <section class="section-main">
       <div class="container">
         <div class="section-block-container">
          <div class="section-block section-block-content">
@@ -360,8 +360,7 @@
               <br>
               This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.<br>And we deliver.
             </p>
-                    <social-links/>
-
+            <social-links/>
           </div>
           <div class="section-block section-block-card">
             <div class="photo-team"></div>
@@ -388,11 +387,11 @@
 
 <script>
 const conf = require("../core/Config.json");
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks from "@/components/SocialLinks.vue";
 
 export default {
-  components:{
-    SocialLinks
+  components: {
+    SocialLinks,
   },
   data() {
     return {
