@@ -163,9 +163,9 @@
         <div class="section-block-container">
         <div class="section-block section-block-content">
           <div class="subtitle">Situation in Ukraine</div>
-          <div class="title-date heading1">24.02.2022</div>
+          <div class="title-date heading1">Feb. 24, 2022</div>
             <h4 class="body1">        
-              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration
+              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration.
               <br>
               <br>
               The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
