@@ -595,10 +595,9 @@ input,
     background-position: center;
 }
 .card-help {
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: contain;
+    background-size: 100% 100%;
 }
 .card-help.card-help-1 {
     background-image: url(../images/help1.png);
@@ -749,7 +748,7 @@ input,
 }
 .card-help .title {
     color: #fff;
-    padding-right: 160px;
+    padding-right: 10%;
 }
 .footer .container {
     padding-top: 80px;
@@ -777,6 +776,41 @@ input,
 .footer-link {
     margin-top: 16px;
 }
-.footer-block-name + .ul-social-list{
-    
+.footer-block-name + .ul-social-list {
+}
+.section-situation iframe {
+    width: 520px;
+    height: 292px;
+}
+.ul-social-list {
+    margin-left: -12px;
+    margin-bottom: -12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ul-social-list li {
+    margin: 12px;
+}
+.ul-social-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+
+.ul-social-list a {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ul-social-list a svg{
+    fill: rgba(255, 255, 255, 0.5);
+}
+.ul-social-list a:hover {
+    border: 1px solid #EFCF46;
+}
+.ul-social-list a:hover svg{
+    fill: #EFCF46;
 }

@@ -176,7 +176,10 @@
         </div>
         <div class="section-block section-block-card">
           <!-- <video src=""></video> -->
-        <img src="@/assets/images/set_war/4.png" alt="">
+
+          <!-- https://youtu.be/FYlg-7AsGlY -->
+          <iframe src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
         </div>
         </div>
@@ -357,6 +360,8 @@
               <br>
               This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.<br>And we deliver.
             </p>
+                    <social-links/>
+
           </div>
           <div class="section-block section-block-card">
             <div class="photo-team"></div>
@@ -383,8 +388,12 @@
 
 <script>
 const conf = require("../core/Config.json");
+import SocialLinks from "@/components/SocialLinks";
 
 export default {
+  components:{
+    SocialLinks
+  },
   data() {
     return {
       mintVal: 1,
