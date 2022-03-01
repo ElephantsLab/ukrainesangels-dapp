@@ -129,12 +129,16 @@ header .btn {
 }
 .btn,
 input,
-.input {
+.input,
+.input-token {
     font-weight: 500;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
+}
+.input-token{
+    text-align: right;
 }
 .heading1 {
     font-weight: bold;
@@ -205,6 +209,12 @@ input,
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.5);
 }
+.short-descr {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.5);
+}
 .tiny-text {
     font-weight: normal;
     font-size: 12px;
@@ -217,14 +227,21 @@ input,
 .heading2 + .body2 {
     margin-top: 16px;
 }
+.body3 + .short-descr {
+    margin-top: 8px;
+}
 .section-main {
     padding-top: 64px;
 }
 .section-content {
     margin-bottom: 40px;
 }
-.section-buy .section-content {
+.section-buy .section-content,
+.section-donate .section-content {
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .section-main .btn-wrapper {
     margin-top: 24px;
@@ -233,7 +250,6 @@ input,
     margin-top: 24px;
     margin-right: 24px;
     float: left;
-    padding: 16px 32px;
 }
 .section-main .btn-wrapper .btn.btn-blue {
     background-color: #0487cf;
@@ -241,12 +257,19 @@ input,
 }
 .section-main .btn-wrapper .btn.btn-yellow,
 .input-count .btn.btn-plus,
+.btn-see-all,
 .btn-submit {
     background-color: #efcf46;
     color: #0f1010;
 }
 .input-count .btn.btn-minus {
     background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-speed-amount {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-speed-amount:hover {
+    border-color: #efcf46;
 }
 .section-block {
     float: left;
@@ -268,10 +291,27 @@ input,
     align-items: stretch;
     align-content: stretch;
 }
-.card.card-main {
+.card.card-buy,
+.card.card-donate {
+    background-color: #0f1010;
+}
+.card-insert {
+    background: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+.card.card-main,
+.card.card-donate {
     border-radius: 24px;
-    float: right;
     width: 520px;
+}
+.card.card-main {
+    float: right;
+}
+.card.card-donate {
+    padding: 40px 32px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .card-main .card-section {
     padding-top: 40px;
@@ -308,10 +348,24 @@ input,
     height: 56px;
     z-index: inherit;
 }
+.input-amount .input {
+    padding: 16px calc(16px + 16px + 40px + 16px) 16px 16px;
+    width: 100%;
+}
 .input-count .input {
     padding-left: 56px;
     padding-right: 56px;
 }
+.input-amount {
+    padding-left: calc();
+}
+.input-amount .input-token {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
 .input-wrapper.input-count .btn {
     width: 40px;
     height: 40px;
@@ -342,7 +396,8 @@ input,
     align-items: flex-start;
     justify-content: flex-start;
 }
-.input-total {
+.input-total,
+.btn-speed-amount {
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
@@ -358,10 +413,13 @@ input,
 .section {
     padding: 80px 0;
 }
+.section-donate {
+    padding-top: 0;
+}
 .cards-buy-wrapper {
     display: flex;
     justify-content: center;
-    margin: -20px -15px 0;
+    margin: -20px -15px 20px;
     flex-wrap: wrap;
 }
 .cards-buy-wrapper > .card {
@@ -369,8 +427,9 @@ input,
     margin: 20px 15px;
     padding: 24px;
     flex-grow: 1;
+    width: calc(100% / 3 - 30px);
 }
-.card-label{
+.card-label {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -378,10 +437,62 @@ input,
 .card-label i {
     font-size: 24px;
 }
-.card-label .tiny-text i{
+.card-label .tiny-text i {
     margin-right: 7px;
 }
-.card-buy .tiny-text{
+.card-buy .tiny-text {
     display: flex;
     align-items: center;
+}
+.card-buy .card-insert {
+    padding: 20px;
+    width: 100%;
+    margin: 16px 0;
+}
+.card-buy .card-insert > div {
+    background-image: url(../images/save-live.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65px;
+    width: 100%;
+}
+.card-buy .card-content {
+    text-align: center;
+}
+.section-main .btn-wrapper .btn,
+.section .btn {
+    padding: 16px 32px;
+}
+.section-buy .btn.btn-see-all {
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-donate {
+    background-image: url(../images/screen-donate.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.speed-amount-container {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: -4px;
+
+    display: flex;
+    justify-content: stretch;
+    flex-grow: 1;
+}
+.input-wrapper + .speed-amount-container {
+    margin-top: 16px;
+}
+.speed-amount-container + .btn.btn-submit {
+    margin-top: 24px;
+    width: 100%;
+}
+.btn.btn-speed-amount {
+    margin: 0 4px 4px;
+    flex-grow: 1;
+    padding: 12px;
 }
