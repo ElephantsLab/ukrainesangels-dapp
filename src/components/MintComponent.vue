@@ -10,14 +10,16 @@
             <span>UKRAINian people</span>
           </h1>
           <h4 class="body1">
-            Our primary mission is to help the people of Ukraine in these difficult times together with the crypto community.
+            We’re here to help Ukrainian people fight off the plague of war afflicting their communities right now. This is the world’s crypto family’s contribution to #StopTheWar.
             <br>
             <br>
-            Each sold NFT from the collection will be sent to help wounded soldiers, refugees, doctors and other war-affected residents of Ukraine, as well
-            as to rehabilitation of settlements, infrastructure, roads, houses damaged by shells and military equipment.
+           Buying an NFT from this collection, you save lives. The funds will reinforce Ukraine’s army selflessly defending their home. Your financial aid will help sustain those who need it most: the injured, the refugees, and all other Ukrainians affected by indiscriminate Russian aggression.
+            <br>
+            <br>
+            Once the hostilities are quenched, the donations will then be used to rebuild the vital infrastructure: roads, bridges, hospitals, educational facilities, etc., ruined by Russian war criminals.
           </h4>
           <div class="btn-wrapper">
-            <button class="btn btn-yellow">Watch Collection</button>
+            <button class="btn btn-yellow">Explore Collection</button>
             <button class="btn btn-blue">Make donation</button>
           </div>
         </div>
@@ -25,13 +27,13 @@
           <div class="card card-main">
             <div class="card-section">
               <div class="card-main-img"></div>
-              <p class="supply-label">Total supply</p>
+              <p class="supply-label">Total Supply</p>
               <div class="total-supply">10 000 nft’s</div>
 
             </div>
             <div class="card-footer">
               <div class="input-label">
-                Count of NFT’s
+                NFT Quantity 
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
@@ -46,7 +48,7 @@
                 <button class="btn btn-submit" v-on:click="mint">Mint</button>
               </div>
               <div class="input-total">
-                Mint 1 NFT using
+                Mint 1 NFT for
                 <span>0.5 BNB</span>
               </div>
             </div>
@@ -65,8 +67,8 @@
     <section class="section section-buy">
       <div class="container">
         <div class="section-content">
-          <h2 class="heading2">If you don't want to buy NFT</h2>
-          <p class="body2">Donate to Official Ukrainian Funds or volunteer organizations below</p>
+          <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
+          <p class="body2">You Can Donate to Ukraine’s Leading Charitable Foundations and<br> Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
           <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
@@ -78,9 +80,9 @@
             </div>
             <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
-              <p class="body3">UNCHAIN</p>
+              <p class="body3">Savelife</p>
               <p class="short-descr">
-                Short description what this organization doing
+                The foundation works to make the Ukrainian<br> Army effective, strengthening it with millions of<br> contributions.
               </p>
             </div>
           </a>
@@ -93,9 +95,9 @@
             </div>
             <div class="card-insert savelife"><div></div></div>
             <div class="card-content">
-              <p class="body3">savelife</p>
+              <p class="body3">BTC-Alpha</p>
               <p class="short-descr">
-                and what kind of help can it be.
+                A European cryptocurrency exchange. Accepts<br> crypto-donations to protect against the war in<br> Ukraine.
               </p>
             </div>
           </a>
@@ -108,9 +110,9 @@
             </div>
             <div class="card-insert"><div></div></div>
             <div class="card-content">
-              <p class="body3">btc-alpha</p>
+              <p class="body3">Unchain</p>
               <p class="short-descr">
-                Maybe 3rd row
+                A charity project created by blockchain activists<br> to support Ukrainian people in these crisis times.
               </p>
             </div>
           </a>
@@ -123,16 +125,15 @@
     <section class="section section-donate">
       <div class="container">
         <div class="section-content">
-          <h2 class="heading2">Or donate trough our platform</h2>
+          <h2 class="heading2">You Can Donate Crypto Via the Platform</h2>
           <p class="body2">
-            If Funds and volunteer organization sites not work 
-            you can make donation trough our service</p>
+           We will make sure each bit of your donation is accounted for and<br>ends up supporting Ukraine’s people and army </p>
         </div>
         <div class="card card-donate">
-          <div class="title1">make donation</div>
+          <div class="title1">make a donation</div>
           <div class="card-input">
             <div class="input-label">
-              Your donation
+              You Will Save Lives No Matter the Amount
             </div>                           
             <div class="input-wrapper input-amount">
               <input class="input" type="number" min="1" oninput="this.value = Math.round(this.value);" v-model="donationAmount">
@@ -164,10 +165,13 @@
           <div class="subtitle">Situation in Ukraine</div>
           <div class="title-date heading1">24.02.2022</div>
             <h4 class="body1">        
-              Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+              The date Ukraine was stripped of its peaceful existance by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration.
               <br>
               <br>
-              Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. 
+              The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
+              <br>
+              <br>
+              For that, the two agressors are now determined to soak Ukraine in blood of its own people. Invaders kill and maim civillians, women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity considers normal life. They torchure Ukraine.
             </h4>
         </div>
         <div class="section-block section-block-card">
@@ -217,10 +221,10 @@
           <h1 class="heading1"> 10 000 nft’s
           </h1>
           <h4 class="body1">
-            Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+            Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
             <br>
             <br>
-            Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. </h4>
+            Buying one of the collection’s NFTs you become an Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole. </h4>
           </div>
           <div class="section-block section-block-card">
           <div class="card card-collection">
