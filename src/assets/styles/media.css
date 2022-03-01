@@ -1,10 +1,6 @@
-.container
-{
+.container {
     width: 100%;
     margin: 0 auto;
-}
-.container{
-    padding: 0 15px;
 }
 @media screen and (min-width: 1921px) {
     .container {
@@ -38,7 +34,7 @@
     header {
         height: 88px;
     }
-    .main-wrapper{
+    .main-wrapper {
         margin-top: 88px;
     }
     .collection-bg {
@@ -46,14 +42,13 @@
         max-height: 450px;
     }
 }
-@media (max-width: 1439px){
+@media (max-width: 1439px) {
     header {
         height: 88px;
     }
-    .main-wrapper{
+    .main-wrapper {
         margin-top: 88px;
     }
-
 }
 @media screen and (min-width: 769px) and (max-width: 991px) {
     .container {
@@ -77,19 +72,20 @@
     }
 }
 
-@media (min-width: 991px){
+@media (min-width: 991px) {
     .mobile-menu-status,
-    .mobile-menu{
+    .mobile-menu {
         display: none;
     }
 }
 
-@media (max-width: 990.5px){
+@media (max-width: 990.5px) {
     .mobile-menu-status,
-    .mobile-menu{
+    .mobile-menu {
         display: block;
+        display: none;
     }
-    .header-nav{
+    .header-nav {
         display: none;
     }
 }
