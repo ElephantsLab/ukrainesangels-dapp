@@ -74,7 +74,7 @@
           <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <span class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Vereficated
+                <i class="i-checkbox-circle-fill "></i> Verified
               </span>
               <i class="i-share-box-fill"></i>
             </div>
@@ -89,7 +89,7 @@
           <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Vereficated
+                <i class="i-checkbox-circle-fill "></i> Verified
               </p>
               <i class="i-share-box-fill"></i>
             </div>
@@ -104,7 +104,7 @@
           <a href="https://btc-alpha.com/en/news/dear-crypto-community-around-the-world-1" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Vereficated
+                <i class="i-checkbox-circle-fill "></i>  Verified
               </p>
               <i class="i-share-box-fill"></i>
             </div>
@@ -165,13 +165,13 @@
           <div class="subtitle">Situation in Ukraine</div>
           <div class="title-date heading1">24.02.2022</div>
             <h4 class="body1">        
-              The date Ukraine was stripped of its peaceful existance by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration.
+              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration
               <br>
               <br>
               The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
               <br>
               <br>
-              For that, the two agressors are now determined to soak Ukraine in blood of its own people. Invaders kill and maim civillians, women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity considers normal life. They torchure Ukraine.
+              For that, the two aggressors are now determined to soak Ukraine in the blood of its own people. Invaders kill and maim civilians, women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity considers normal life. They torchure Ukraine.
             </h4>
         </div>
         <div class="section-block section-block-card">
@@ -327,7 +327,7 @@
     <section class="section section-angels">
       <div class="container">
         <div class="section-content">
-          <h2 class="subtitle">Donation</h2>
+          <h2 class="subtitle">help in numbers</h2>
           <p class="heading1">our angels</p>
         </div>
         <div class="cards-angels-wrapper">
@@ -335,25 +335,25 @@
             <div class="icon intersect"></div>
             <div class="title1">1 874 nft’s</div>
             <div class="short-descr">
-              Sold NFTLorem Ipsum
+              Have been bought by people from around the<br> world to make their solidarity palpable
             </div>
-            <button class="btn btn-yellow">Go to collection</button>
+            <button class="btn btn-yellow">View collection</button>
           </div>
           <div class="card card-angel">
             <div class="icon uk-angels"></div>
-            <div class="title1">1 874 nft’s</div>
+            <div class="title1">3 000 angels</div>
             <div class="short-descr">
-              Become An Angel
+              Have contributed to turn the Ukrainian sky<br> clear and blue again
             </div>
-            <button class="btn btn-yellow">Go to collection</button>
+            <button class="btn btn-yellow">Become an Angel</button>
           </div>
           <div class="card card-angel">
             <div class="icon bnb"></div>
-            <div class="title1">1 874 nft’s</div>
+            <div class="title1">2.945 BNB</div>
             <div class="short-descr">
-              Donate
+              This much funds have already been sent to the persevering people of Ukraine
             </div>
-            <button class="btn btn-blue">Go to collection</button>
+            <button class="btn btn-blue">Donate</button>
           </div>
         </div>
       </div>
@@ -365,10 +365,13 @@
             <div class="subtitle">our team</div>
             <a href="https://elephantslab.com/" class="link-team" target="_blank" rel="nofollow"></a>
             <p class="body1">        
-              Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+              We are a blockchain research and product development company based in Ukraine.
               <br>
               <br>
-              Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. 
+              Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It’s true. Yet today we are up against a life-threatening challenge. And it’s our duty to deal with it, applying blockchain technology, of course.
+              <br>
+              <br>
+              This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.<br>And we deliver.
             </p>
           </div>
           <div class="section-block section-block-card">
@@ -382,7 +385,7 @@
         <div class="cards-help-wrapper">
           <div class="card card-help card-help-1">
             <p class="title">If you need help</p>
-            <a href="" class="btn btn-yellow">Become an angel</a>
+            <a href="" class="btn btn-yellow">Information for Asylum-Seekers</a>
           </div>
           <div class="card card-help card-help-2">
             <p class="title">If you want help</p>
