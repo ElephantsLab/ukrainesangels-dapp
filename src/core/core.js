@@ -98,7 +98,18 @@ export default class Core {
 
     async mint(mintVal) {
         try {
-            await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
+            const txResponce = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
+            console.log(txResponce);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async buyMore(amountOfNFT) {
+        try {
+            const bnbVal = amountOfNFT * conf.BNBVal;
+            const txResponce = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
+            console.log(txResponce);
         } catch (error) {
             console.log(error);
         }

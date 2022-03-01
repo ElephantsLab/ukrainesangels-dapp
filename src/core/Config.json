@@ -83,5 +83,6 @@
       }
     }
   ],
-  "baseUrl": "https://bridge.bring.finance/api/"
+  "baseUrl": "https://bridge.bring.finance/api/",
+  "BNBVal": 0.5
 }
