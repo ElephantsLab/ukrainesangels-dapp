@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
-.section-collection::before{
+.section-collection::before {
     position: absolute;
     content: "";
     top: 0;
@@ -122,8 +122,8 @@ header .btn {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(../images/Logo.png);
-    width: 161px;
+    background-image: url(../images/Logo.svg);
+    width: 171px;
     height: 100%;
     min-height: 48px;
 }
@@ -232,6 +232,7 @@ input,
     color: rgba(255, 255, 255, 0.5);
 }
 .short-descr {
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.02em;
@@ -246,7 +247,8 @@ input,
 .heading1 + .body1 {
     margin-top: 24px;
 }
-.heading2 + .body2 {
+.heading2 + .body2,
+.title1 + .short-descr {
     margin-top: 16px;
 }
 .body3 + .short-descr {
@@ -277,10 +279,13 @@ input,
     margin-right: 24px;
     float: left;
 }
+.card-angel .btn.btn-blue,
 .section-main .btn-wrapper .btn.btn-blue {
     background-color: #0487cf;
     color: #ffffff;
 }
+.card-angel .btn.btn-yellow,
+.card-help .btn.btn-yellow,
 .section-main .btn-wrapper .btn.btn-yellow,
 .input-count .btn.btn-plus,
 .btn-see-all,
@@ -295,7 +300,9 @@ input,
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .card.card-buy:hover,
-.btn-speed-amount:hover {
+.btn-speed-amount:hover,
+.card-help:hover,
+.link-team:hover {
     border-color: #efcf46;
 }
 .section-block-container {
@@ -313,20 +320,21 @@ input,
     background-color: rgba(15, 16, 16, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.card ,
-.block-nft{
+.card,
+.block-nft {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
     align-content: stretch;
 }
-.card.card-angel{
+.card.card-angel {
     align-items: center;
 }
 .card.card-buy,
 .card.card-angel,
-.card.card-donate {
+.card.card-donate,
+.card.card-help {
     background-color: #0f1010;
 }
 .card-insert,
@@ -401,9 +409,6 @@ input,
     padding-left: 56px;
     padding-right: 56px;
 }
-.input-amount {
-    padding-left: calc();
-}
 .input-amount .input-token {
     position: absolute;
     right: 16px;
@@ -418,6 +423,7 @@ input,
     top: 8px;
     font-size: 26px;
     z-index: 2;
+    padding: 0;
 }
 .input-wrapper.input-count .btn.btn-minus {
     left: 8px;
@@ -462,24 +468,41 @@ input,
 .section {
     padding: 80px 0;
 }
+.section.section-help {
+    padding-top: 0;
+}
+.section.section-help .container{
+    padding-top: 100px;
+}
 .section-donate {
     padding-top: 0;
 }
 .cards-buy-wrapper,
-.cards-angels-wrapper {
+.cards-angels-wrapper,
+.cards-help-wrapper {
     display: flex;
     justify-content: center;
     margin: -20px -15px 20px;
     flex-wrap: wrap;
     width: calc(100% + 30px);
 }
-.cards-buy-wrapper > .card ,
+.cards-buy-wrapper > .card,
 .cards-angels-wrapper > .card {
     border-radius: 16px;
     margin: 20px 15px;
     padding: 24px;
-    /* flex-grow: 1; */
     width: calc(100% / 3 - 30px);
+}
+.cards-help-wrapper > .card {
+    height: 422px;
+    flex-grow: 1;
+    margin: 15px 15px;
+    width: calc(100% / 2 - 30px);
+}
+.card-help{
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 .card-label {
     display: flex;
@@ -489,14 +512,14 @@ input,
 .card-label i {
     font-size: 24px;
 }
-.card-label i.i-share-box-fill{
-    color: #C4C4C4;
+.card-label i.i-share-box-fill {
+    color: #c4c4c4;
     width: 24px;
     display: block;
     height: 24px;
 }
-.card.card-buy:hover i.i-share-box-fill{
-    color: #EFCF46;
+.card.card-buy:hover i.i-share-box-fill {
+    color: #efcf46;
 }
 .card-label .tiny-text i {
     margin-right: 7px;
@@ -517,19 +540,31 @@ input,
     height: 65px;
     width: 100%;
 }
-.card-angel .icon{
+.card-angel .icon {
     width: 80px;
     height: 80px;
     margin-top: 8px;
+    background-size: 48px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-angel .icon.intersect {
+    background-image: url(../images/intersect.svg);
+}
+.card-angel .icon.uk-angels {
+    background-image: url(../images/uk-angels.svg);
+}
+.card-angel .icon.bnb {
+    background-image: url(../images/bnb.svg);
 }
 .card-buy .card-insert.savelife > div {
     background-image: url(../images/save-live.png);
 }
 .card-buy .card-insert.unchain > div {
-    /* background-image: url(../images/save-live.png); */
+    background-image: url(../images/unchain.jpg);
 }
-.card-buy .card-insert.savelife > div {
-    /* background-image: url(../images/save-live.png); */
+.card-buy .card-insert.btc-alpha > div {
+    background-image: url(../images/btc-alpha.png);
 }
 .card-buy .card-content {
     text-align: center;
@@ -537,6 +572,9 @@ input,
 .section-main .btn-wrapper .btn,
 .section .btn {
     padding: 16px 32px;
+}
+.card-help {
+    padding: 42px;
 }
 .section-buy .btn.btn-see-all {
     margin-left: auto;
@@ -548,11 +586,29 @@ input,
     background-repeat: no-repeat;
     background-position: center bottom;
 }
-.section-angels .container{
+.section-help {
+    background-image: url(../images/bg-help.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.section-angels .container {
     background-image: url(../images/uk-map-front.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position:center ;
+    background-position: center;
+}
+.card-help {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+}
+.card-help.card-help-1 {
+    background-image: url(../images/help1.png);
+}
+.card-help.card-help-2 {
+    background-image: url(../images/help2.png);
 }
 .speed-amount-container {
     width: calc(100% + 8px);
@@ -585,9 +641,8 @@ input,
     position: relative;
     z-index: 1;
 }
-.title-date{
+.title-date {
     width: fit-content;
-
 }
 .title-date::before {
     position: absolute;
@@ -605,7 +660,7 @@ input,
 .section-situation .container {
     margin-bottom: 40px;
 }
-.card-angel .icon{
+.card-angel .icon {
     margin-bottom: 24px;
 }
 .container-stop-war,
@@ -640,7 +695,7 @@ input,
     margin: 20px;
     white-space: nowrap;
 }
-.section-block-nft{
+.section-block-nft {
     display: flex;
     justify-content: stretch;
     margin-top: 64px;
@@ -651,12 +706,52 @@ input,
 }
 .section-block-nft .block-nft {
     margin: 0 15px 30px;
-    width: calc(100% / 6 - 30px );
+    width: calc(100% / 6 - 30px);
 }
-.block-nft{
+.block-nft {
     text-align: center;
 }
-.nft-img-mask{
+.nft-img-mask {
     height: 307px;
     width: 100%;
+}
+.card-angel .btn {
+    width: 100%;
+    margin-top: 24px;
+}
+.cards-angels-wrapper {
+    padding-bottom: 76px;
+    padding-top: 24px;
+}
+.link-team {
+    display: block;
+    background-color: #0f1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: url(../images/logo_team.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    margin-top: 24px;
+    width: 228px;
+    height: 64px;
+}
+.link-team + .body1 {
+    margin-top: 32px;
+}
+.photo-team {
+    width: 518.23px;
+    height: 422px;
+    background-image: url(../images/team.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card-help .btn {
+    width: fit-content;
+    margin-top: auto;
+}
+.card-help .title{
+    color: #fff;
+    padding-right: 160px;
 }
