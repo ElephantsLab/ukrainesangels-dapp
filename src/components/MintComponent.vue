@@ -2,7 +2,8 @@
   <div class="main-wrapper">
     <section class="section-main">
       <div class="container">
-        <div class="section-block section-block-content">
+        <div class="section-block-container">
+         <div class="section-block section-block-content">
           <div class="subtitle">Our mission</div>
           <h1 class="heading1"> 
             <span>help to SAVE </span>
@@ -24,6 +25,9 @@
           <div class="card card-main">
             <div class="card-section">
               <div class="card-main-img"></div>
+              <p class="supply-label">Total supply</p>
+              <div class="total-supply">10 000 nft’s</div>
+
             </div>
             <div class="card-footer">
               <div class="input-label">
@@ -48,6 +52,7 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
     </section>
     <!-- <div class="container">
@@ -64,46 +69,46 @@
           <p class="body2">Donate to Official Ukrainian Funds or volunteer organizations below</p>
         </div>
         <div class="cards-buy-wrapper">
-          <a href="" class="card card-buy">
+          <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <span class="tiny-text">
                 <i class="i-checkbox-circle-fill "></i>  Vereficated
               </span>
-              <i class="share-box-fill"></i>
+              <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert"><div></div></div>
+            <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
-              <p class="body3">Name of organization 1</p>
+              <p class="body3">UNCHAIN</p>
               <p class="short-descr">
                 Short description what this organization doing
               </p>
             </div>
           </a>
-          <a href="" class="card card-buy">
+          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <p class="tiny-text">
                 <i class="i-checkbox-circle-fill "></i>  Vereficated
               </p>
-              <i class="share-box-fill"></i>
+              <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert"><div></div></div>
+            <div class="card-insert savelife"><div></div></div>
             <div class="card-content">
-              <p class="body3">Name of organization 1</p>
+              <p class="body3">savelife</p>
               <p class="short-descr">
                 and what kind of help can it be.
               </p>
             </div>
           </a>
-          <a href="" class="card card-buy">
+          <a href="https://btc-alpha.com/en/news/dear-crypto-community-around-the-world-1" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <p class="tiny-text">
                 <i class="i-checkbox-circle-fill "></i>  Vereficated
               </p>
-              <i class="share-box-fill"></i>
+              <i class="i-share-box-fill"></i>
             </div>
             <div class="card-insert"><div></div></div>
             <div class="card-content">
-              <p class="body3">Name of organization 1</p>
+              <p class="body3">btc-alpha</p>
               <p class="short-descr">
                 Maybe 3rd row
               </p>
@@ -125,7 +130,7 @@
         </div>
         <div class="card card-donate">
           <div class="title1">make donation</div>
-          <div class="card-footer">
+          <div class="card-input">
             <div class="input-label">
               Your donation
             </div>                           
@@ -152,7 +157,182 @@
         </div>
       </div>
     </section>
-    
+    <section class="section section-situation">
+      <div class="container">
+        <div class="section-block-container">
+        <div class="section-block section-block-content">
+          <div class="subtitle">Situation in Ukraine</div>
+          <div class="title-date heading1">24.02.2022</div>
+            <h4 class="body1">        
+              Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+              <br>
+              <br>
+              Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. 
+            </h4>
+        </div>
+        <div class="section-block section-block-card">
+          <!-- <video src=""></video> -->
+        <img src="@/assets/images/set_war/4.png" alt="">
+
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-stop-war">
+      <div class="container-img">
+        <img src="@/assets/images/set_war/1.png" alt="">
+        <img src="@/assets/images/set_war/2.png" alt="">
+        <img src="@/assets/images/set_war/4.png" alt="">
+        <img src="@/assets/images/set_war/5.png" alt="">
+        <img src="@/assets/images/set_war/6.png" alt="">        
+        <img src="@/assets/images/set_war/7.png" alt="">        
+        <img src="@/assets/images/set_war/8.png" alt="">
+        <!-- src="@/assets/src/images/image-card.svg"  -->
+      </div>
+      <div class="container-stop-war">
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+        <span>STOP WAR</span>
+      </div>
+    </section>
+    <section class="section section-collection">
+      <div class="container">
+        <div class="section-block-container">
+          <div class="section-block section-block-content">
+          <div class="subtitle">Collection</div>
+          <h1 class="heading1"> 10 000 nft’s
+          </h1>
+          <h4 class="body1">
+            Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. Tellus at quam pellentesque lorem sapien, elementum.
+            <br>
+            <br>
+            Phasellus id lectus aliquam aliquet viverra ut pellentesque integer neque. Tempor eu non elit amet. Mauris amet imperdiet tincidunt fames tincidunt. Id tempor leo mauris, et suspendisse. Elit iaculis amet quis faucibus etiam purus. </h4>
+          </div>
+          <div class="section-block section-block-card">
+          <div class="card card-collection">
+            <div class="card-section">
+              <p class="supply-label">Total supply</p>
+              <div class="total-supply">10 000 nft’s</div>
+            </div>
+            <div class="card-footer">
+              <div class="input-label">
+                Count of NFT’s
+              </div>
+              <div class="input-container">                              
+                <div class="input-wrapper input-count">
+                  <button class="btn btn-minus" v-on:click="decrementVal">
+                    <i class="i-subtract-line"></i>
+                  </button>
+                  <input class="input" min="0" max="10" step="1" type="number">
+                  <button class="btn btn-plus" >
+                    <i class="i-add-line"></i>
+                  </button>
+                </div>
+                <button class="btn btn-submit">Mint</button>
+              </div>
+              <div class="input-total">
+                Mint 1 NFT using
+                <span>0.5 BNB</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="section-block-nft">
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0001
+            </div>
+            <div class="nft-img-mask">
+              <img src="@/assets/images/mask-nft.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+    <section class="section section-angels">
+        <div class="container">
+        <div class="section-content">
+          <h2 class="subtitle">Donation</h2>
+          <p class="heading1">our angels</p>
+        </div>
+        <div class="cards-angels-wrapper">
+          <div class="card card-angel">
+            <div class="icon"></div>
+          </div>
+        </div>
+        </div>
+    </section>
   </div>
 </template>
 
