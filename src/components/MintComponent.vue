@@ -237,12 +237,12 @@
                   <button class="btn btn-minus" v-on:click="decrementVal">
                     <i class="i-subtract-line"></i>
                   </button>
-                  <input class="input" min="0" max="10" step="1" type="number">
-                  <button class="btn btn-plus" >
+                  <input class="input" min="0" max="10" step="1" type="number" v-model="mintVal">
+                  <button class="btn btn-plus" v-on:click="incrementVal">
                     <i class="i-add-line"></i>
                   </button>
                 </div>
-                <button class="btn btn-submit">Mint</button>
+                <button class="btn btn-submit" v-on:click="mint">Mint</button>
               </div>
               <div class="input-total">
                 Mint 1 NFT using
