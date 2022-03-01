@@ -370,7 +370,11 @@ export default {
       }
     },
     async makeDonation() {
-      await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+      if (this.donationAmount > 0) {
+        await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+      } else {
+        alert("enter positive amount only");
+      }
     },
     async getAllBalance() {
       const userAddress = localStorage.getItem("address");
