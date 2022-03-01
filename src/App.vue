@@ -64,6 +64,13 @@ export default {
         function handleAccountsChanged(accounts) {
           if (!accounts.length) {
             localStorage.removeItem("account");
+            window.ethereum
+                .request({ method: "eth_requestAccounts" })
+                .then(handleAccountsChanged)
+                .catch((err) => {
+                  console.log(err);
+                  localStorage.removeItem("address");
+                });
           }
           let currentAccount = localStorage.getItem("address");
           if (accounts.length === 0) {
