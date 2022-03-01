@@ -71,6 +71,36 @@
           <p class="body2">You Can Donate to Ukraine’s Leading Charitable Foundations and<br> Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
+          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
+            <div class="card-label">
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Verified
+              </p>
+              <i class="i-share-box-fill"></i>
+            </div>
+            <div class="card-insert savelife"><div></div></div>
+            <div class="card-content">
+              <p class="body3">Savelife</p>
+              <p class="short-descr">
+                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
+              </p>
+            </div>
+          </a>
+          <a href="https://nowarua.com/" target="_blank" rel="nofollow" class="card card-buy">
+            <div class="card-label">
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i> Verified
+              </p>
+              <i class="i-share-box-fill"></i>
+            </div>
+            <div class="card-insert btc-alpha"><div></div></div>
+            <div class="card-content">
+              <p class="body3">BTC-Alpha</p>
+              <p class="short-descr">
+                A European cryptocurrency exchange. Accepts crypto-donations to protect against the war in Ukraine.
+              </p>
+            </div>
+          </a>
           <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <span class="tiny-text">
@@ -80,39 +110,9 @@
             </div>
             <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
-              <p class="body3">Savelife</p>
-              <p class="short-descr">
-                The foundation works to make the Ukrainian<br> Army effective, strengthening it with millions of<br> contributions.
-              </p>
-            </div>
-          </a>
-          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
-            <div class="card-label">
-              <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i> Verified
-              </p>
-              <i class="i-share-box-fill"></i>
-            </div>
-            <div class="card-insert savelife"><div></div></div>
-            <div class="card-content">
-              <p class="body3">BTC-Alpha</p>
-              <p class="short-descr">
-                A European cryptocurrency exchange. Accepts<br> crypto-donations to protect against the war in<br> Ukraine.
-              </p>
-            </div>
-          </a>
-          <a href="https://btc-alpha.com/en/news/dear-crypto-community-around-the-world-1" target="_blank" rel="nofollow" class="card card-buy">
-            <div class="card-label">
-              <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Verified
-              </p>
-              <i class="i-share-box-fill"></i>
-            </div>
-            <div class="card-insert btc-alpha"><div></div></div>
-            <div class="card-content">
               <p class="body3">Unchain</p>
               <p class="short-descr">
-                A charity project created by blockchain activists<br> to support Ukrainian people in these crisis times.
+                A charity project created by blockchain activists to support Ukrainian people in these crisis times.
               </p>
             </div>
           </a>
@@ -163,9 +163,9 @@
         <div class="section-block-container">
         <div class="section-block section-block-content">
           <div class="subtitle">Situation in Ukraine</div>
-          <div class="title-date heading1">24.02.2022</div>
+          <div class="title-date heading1">Feb. 24, 2022</div>
             <h4 class="body1">        
-              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration
+              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration.
               <br>
               <br>
               The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
@@ -257,22 +257,6 @@
           </div>
         </div>
         <div class="section-block-nft">
-          <div class="block-nft">
-            <div class="body3">
-              Angel #0001
-            </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
-            </div>
-          </div>
-          <div class="block-nft">
-            <div class="body3">
-              Angel #0001
-            </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
-            </div>
-          </div>
           <div class="block-nft">
             <div class="body3">
               Angel #0001
