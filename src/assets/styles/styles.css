@@ -15,7 +15,7 @@ header {
     height: 100%;
     display: flex;
     width: 100%;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
     align-content: stretch;
 }
@@ -30,10 +30,10 @@ header {
 .header-nav li {
     margin: 0 20px;
 }
-.main-view {
-    /* display: flex;
+.main-wrapper {
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: stretch;
 }
 .footer {
     margin-top: auto;
@@ -85,7 +85,10 @@ header .btn {
     padding: 12px 24px;
 }
 .header-link {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 }
 .header-link:hover,
 .header-link:active {
@@ -122,29 +125,106 @@ header .btn {
 }
 .btn {
     height: 56px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
     border-radius: 8px;
 }
-.title0 {
+.btn,
+input,
+.input {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 5px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+.heading1 {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
     text-transform: uppercase;
+}
+.section-main .heading1 span {
+    display: block;
+}
+.section-main .heading1 span:first-child {
+    color: #0487cf;
+}
+.section-main .heading1 span:nth-child(2) {
+    color: #efcf46;
+}
+.subtitle + .heading1 {
+    margin-top: 16px;
+}
+.heading2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 1px;
     color: #ffffff;
 }
 .title1 {
     font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: #ffffff;
 }
-.title0 + .title1 {
+.body1 {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+}
+.body2 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.body3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+.subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.input-label {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.tiny-text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #55c100;
+}
+.heading1 + .body1 {
+    margin-top: 24px;
+}
+.heading2 + .body2 {
     margin-top: 16px;
 }
-.title1 + .describe {
-    margin-top: 24px;
+.section-main {
+    padding-top: 64px;
+}
+.section-content {
+    margin-bottom: 40px;
+}
+.section-buy .section-content {
+    text-align: center;
 }
 .section-main .btn-wrapper {
     margin-top: 24px;
@@ -165,28 +245,8 @@ header .btn {
     background-color: #efcf46;
     color: #0f1010;
 }
-.input-count .btn.btn-minus{
+.input-count .btn.btn-minus {
     background-color: rgba(255, 255, 255, 0.1);
-}
-.section-main .title1 {
-    font-size: 56px;
-    line-height: 70px;
-}
-.section-main .title1 span {
-    display: block;
-}
-.section-main .title1 span:first-child {
-    color: #0487cf;
-}
-.section-main .title1 span:nth-child(2) {
-    color: #efcf46;
-}
-.section-main {
-    padding-top: 64px;
-}
-.describe {
-    color: #ffffff;
-    line-height: 150%;
 }
 .section-block {
     float: left;
@@ -242,9 +302,6 @@ header .btn {
 }
 .input {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
     color: #ffffff;
     padding: 8px;
     border-radius: 8px;
@@ -262,19 +319,12 @@ header .btn {
     top: 8px;
     font-size: 26px;
     z-index: 2;
-
 }
 .input-wrapper.input-count .btn.btn-minus {
     left: 8px;
 }
 .input-wrapper.input-count .btn.btn-plus {
     right: 8px;
-}
-.input-title {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 8px;
 }
 .card-main .card-footer .input-wrapper.input-count,
 .card-main .card-footer .btn.btn-submit {
@@ -295,13 +345,43 @@ header .btn {
 .input-total {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: normal;
 }
 .input-total span {
     font-weight: 500;
     color: #ffffff;
 }
-.card-main .input-total{
+.card-main .input-total {
     text-align: center;
     margin-top: 24px;
+}
+.section {
+    padding: 80px 0;
+}
+.cards-buy-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: -20px -15px 0;
+    flex-wrap: wrap;
+}
+.cards-buy-wrapper > .card {
+    border-radius: 16px;
+    margin: 20px 15px;
+    padding: 24px;
+    flex-grow: 1;
+}
+.card-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-label i {
+    font-size: 24px;
+}
+.card-label .tiny-text i{
+    margin-right: 7px;
+}
+.card-buy .tiny-text{
+    display: flex;
+    align-items: center;
 }
