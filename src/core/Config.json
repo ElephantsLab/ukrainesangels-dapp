@@ -28,7 +28,7 @@
     "NAME": "BSC Testnett",
     "SYMBOL": "BSC",
     "CHAIN_ID": "97",
-    "TOKEN_ADDRESS": "0x4b34589951CD91b21575470dFB5ed7e3d3Cb9114",
+    "TOKEN_ADDRESS": "0xC2f35dF9bbfEE0D9D0662A0C0E592C2a0733fff7",
     "DEFAULT_GAS_PRICE_GWEI": "30",
     "NODE": "https://data-seed-prebsc-1-s1.binance.org:8545/"
   },
@@ -84,7 +84,7 @@
     }
   ],
   "baseUrl": "https://bridge.bring.finance/api/",
-  "BNBVal": 0.5,
+  "BNBVal": 1,
   "NETWORK": 97,
   "NETWORK_PARAMS": {"params":
   [
