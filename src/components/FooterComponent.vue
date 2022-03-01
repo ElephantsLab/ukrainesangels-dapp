@@ -24,13 +24,19 @@
                 </div>
                 <div class="footer-block">
                     <span class="footer-block-name">Social links</span>
-                    <ul class="ul-social-list">
-                        <li><a class="twitter" href=""></a></li>
-                        <li><a class="telegram" href=""></a></li>
-                        <li><a class="facebook" href=""></a></li>
-                    </ul>
+                    <social-links/>
                 </div>
             </div>
         </div>
     </footer>
 </template>
+
+<script>
+import SocialLinks from "@/components/SocialLinks";
+
+export default {
+  components: {
+    SocialLinks,
+  }
+}
+</script>
