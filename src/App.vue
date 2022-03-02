@@ -1,6 +1,6 @@
 <template>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
-  <!-- <cancel-modal/> -->
+   <cancel-modal v-if="txFailedGetter" />
    <success-modal v-if="txModalStatusGetter" />
    <transaction-modal v-if="txModalGetter" />
   <router-view/>
@@ -27,7 +27,7 @@ export default {
     CancelModal,
   },
   methods: {
-    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx"]),
+    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason"]),
     checkWalletOption(wallet) {
       let _this = this;
 
@@ -124,7 +124,7 @@ export default {
       await this.$root.core.changeNetwork(this, blockchain);
     },
   },
-  computed: mapGetters(["txModalGetter", "txModalStatusGetter"]),
+  computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter"]),
   async mounted() {
     setTimeout(async () => {
       if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {

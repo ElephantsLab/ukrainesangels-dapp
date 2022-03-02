@@ -20,8 +20,13 @@
     left: 0;
     width: 100%;
     background: #0f1010;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 30;
+}
+footer{
+    background: #0f1010;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 header {
     height: 100%;
@@ -94,13 +99,6 @@ header .btn {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-}
-.header-link:hover,
-.header-link:active,
-.footer-link:hover,
-.footer-link:active {
-    color: #efcf46;
-    transition: 0.2s;
 }
 .btn.btn-connect {
     border: 1px solid #efcf46;
@@ -302,12 +300,6 @@ input,
 .btn-speed-amount {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.card.card-buy:hover,
-.btn-speed-amount:hover,
-.card-help:hover,
-.link-team:hover {
-    border-color: #efcf46;
-}
 .section-block-container {
     display: flex;
     justify-content: flex-start;
@@ -398,13 +390,13 @@ input,
 .card-main-img div:nth-child(1) {
     background-image: url(../images/set_nft/27.png);
     left: 0;
-    transform: translate(0, -50%) rotateY(180deg);
+    transform: translate(0, -50%) ;
 }
 .card-main-img div:nth-child(2) {
     background-image: url(../images/set_nft/21.png);
     left: 50%;
     z-index: 2;
-    transform: translate(-50%, -50%) scale(1.2) rotateY(180deg);
+    transform: translate(-50%, -50%) scale(1.2) ;
     filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2)) drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.9));
 }
 .card-main-img div:nth-child(3) {
@@ -547,9 +539,6 @@ input,
     width: 24px;
     display: block;
     height: 24px;
-}
-.card.card-buy:hover i.i-share-box-fill {
-    color: #efcf46;
 }
 .card-label .tiny-text i {
     margin-right: 7px;
@@ -862,12 +851,6 @@ input,
 }
 .ul-social-list a svg {
     fill: rgba(255, 255, 255, 0.5);
-}
-.ul-social-list a:hover {
-    border: 1px solid #efcf46;
-}
-.ul-social-list a:hover svg {
-    fill: #efcf46;
 }
 .modal {
     position: fixed;

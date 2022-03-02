@@ -142,9 +142,19 @@ export default class Core {
                 this.context.updateTxModal(false);
                 this.context.updatetxStatusModal(true);
                 this.context.updateTx(txReceipt.transactionHash);
+            } else {
+                this.context.updateTxFailed(true);
+                this.context.updateTx(txReceipt.transactionHash);
             }
         } catch (error) {
             this.connectWallet();
+            this.context.updateTxFailed(true);
+            if (error.data && error.data.message) {
+                this.context.updateRevertReason(error.data.message);
+            }
+            if (error.message) {
+                this.context.updateRevertReason(error.message);
+            }
             console.log(error);
         }
     }
@@ -161,9 +171,19 @@ export default class Core {
                 this.context.updateTxModal(false);
                 this.context.updatetxStatusModal(true);
                 this.context.updateTx(txReceipt.transactionHash);
+            } else {
+                this.context.updateTxFailed(true);
+                this.context.updateTx(txReceipt.transactionHash);
             }
         } catch (error) {
             this.connectWallet();
+            this.context.updateTxFailed(true);
+            if (error.data && error.data.message) {
+                this.context.updateRevertReason(error.data.message);
+            }
+            if (error.message) {
+                this.context.updateRevertReason(error.message);
+            }
             console.log(error);
         }
     }
@@ -186,9 +206,19 @@ export default class Core {
                 this.context.updateTxModal(false);
                 this.context.updatetxStatusModal(true);
                 this.context.updateTx(txReceipt.transactionHash);
+            } else {
+                this.context.updateTxFailed(true);
+                this.context.updateTx(txReceipt.transactionHash);
             }
         } catch (error) {
             this.connectWallet();
+            this.context.updateTxFailed(true);
+            if (error.data && error.data.message) {
+                this.context.updateRevertReason(error.data.message);
+            }
+            if (error.message) {
+                this.context.updateRevertReason(error.message);
+            }
             console.log(error);
         }
     }
