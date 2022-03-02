@@ -337,7 +337,7 @@
         <div class="cards-angels-wrapper">
           <div class="card card-angel">
             <div class="icon intersect"></div>
-            <div class="title1">1 874 nft’s</div>
+            <div class="title1">{{ totalSupply }} nft’s</div>
             <div class="short-descr">
               Have been bought by people from around the<br> world to make their solidarity palpable
             </div>
@@ -345,7 +345,7 @@
           </div>
           <div class="card card-angel">
             <div class="icon uk-angels"></div>
-            <div class="title1">3 000 angels</div>
+            <div class="title1">{{ nftOwnersCount }} angels</div>
             <div class="short-descr">
               Have contributed to turn the Ukrainian sky<br> clear and blue again
             </div>
@@ -353,7 +353,7 @@
           </div>
           <div class="card card-angel">
             <div class="icon bnb"></div>
-            <div class="title1">2.945 BNB</div>
+            <div class="title1">{{ totalDonated }} BNB</div>
             <div class="short-descr">
               This much funds have already been sent to the persevering people of Ukraine
             </div>
@@ -415,6 +415,9 @@ export default {
       mintVal: 1,
       donationAmount: 0.1,
       isMaxVal: false,
+      totalSupply: 0,
+      nftOwnersCount: 0,
+      totalDonated: 0
     }
   },
   methods: {
@@ -456,6 +459,25 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    const savedTotalSupply = localStorage.getItem("totalSupply");
+    const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");
+    const savedTotalDonated = localStorage.getItem("totalDonated");
+    if (savedTotalSupply) {
+      this.totalSupply = savedTotalSupply;
+    }
+    if (savedNftOwnersCount) {
+      this.nftOwnersCount = savedNftOwnersCount;
+    }
+    if (savedTotalDonated) {
+      this.totalDonated = savedTotalDonated;
+    }
+    setTimeout(async () => {
+      this.totalSupply = await this.$root.core.getTotalSupply();
+      this.nftOwnersCount = await this.$root.core.getNftOwnersCount();
+      this.totalDonated = await this.$root.core.getTotalDonated();
+    }, 1500);
   }
 }
 </script>

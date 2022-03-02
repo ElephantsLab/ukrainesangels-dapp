@@ -134,9 +134,14 @@ export default class Core {
     async mint(mintVal) {
         try {
             const txResponse = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
+            this.context.updateTxModal(true);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
-            if (txReceipt.status) alert("transaction confirmed");
+            if (txReceipt.status) {
+                this.context.updateTxModal(false);
+                this.context.updatetxStatusModal(true);
+                this.context.updateTx(txReceipt.transactionHash);
+            }
         } catch (error) {
             this.connectWallet();
             console.log(error);
@@ -147,9 +152,14 @@ export default class Core {
         try {
             const bnbVal = amountOfNFT * conf.BNBVal;
             const txResponse = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
+            this.context.updateTxModal(true);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
-            if (txReceipt.status) alert("transaction confirmed");
+            if (txReceipt.status) {
+                this.context.updateTxModal(false);
+                this.context.updatetxStatusModal(true);
+                this.context.updateTx(txReceipt.transactionHash);
+            }
         } catch (error) {
             this.connectWallet();
             console.log(error);
@@ -166,9 +176,14 @@ export default class Core {
                 tx.value = ethers.utils.parseEther(amount.toString()).sub(ethers.BigNumber.from("300000").mul(await this.providerAddress.getGasPrice(tx)));
             }
             const txResponse = await this.signer.sendTransaction(tx);
+            this.context.updateTxModal(true);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
-            if (txReceipt.status) alert("transaction confirmed");
+            if (txReceipt.status) {
+                this.context.updateTxModal(false);
+                this.context.updatetxStatusModal(true);
+                this.context.updateTx(txReceipt.transactionHash);
+            }
         } catch (error) {
             this.connectWallet();
             console.log(error);
@@ -181,6 +196,36 @@ export default class Core {
             if (balance) {
                 return ethers.utils.formatEther(balance);
             }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getTotalSupply() {
+        try {
+            const totalSupply = await this[`token_${this.currentBlockchain}`].totalSupply();
+            localStorage.setItem("totalSupply", parseInt(totalSupply, 16).toString());
+            return parseInt(totalSupply, 16);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getNftOwnersCount() {
+        try {
+            const nftOwnersCount = await this[`token_${this.currentBlockchain}`].nftOwnersCount();
+            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount, 16).toString());
+            return parseInt(nftOwnersCount, 16);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getTotalDonated() {
+        try {
+            const totalDonated = await this[`token_${this.currentBlockchain}`].totalDonated();
+            localStorage.setItem("totalDonated", ethers.utils.formatEther(totalDonated));
+            return ethers.utils.formatEther(totalDonated);
         } catch (error) {
             console.log(error);
         }
