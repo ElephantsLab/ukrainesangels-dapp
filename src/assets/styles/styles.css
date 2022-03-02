@@ -709,6 +709,27 @@ input,
 .nft-img-mask {
     height: 307px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+.nft-img-mask.nft-img-mask-1{
+    background-image: url(@/assets/images/set_nft/14.png);
+}
+.nft-img-mask.nft-img-mask-2{
+    background-image: url(@/assets/images/set_nft/21.png);
+}
+.nft-img-mask.nft-img-mask-3{
+    background-image: url(@/assets/images/set_nft/27.png);
+}
+.nft-img-mask.nft-img-mask-4{
+    background-image: url(@/assets/images/set_nft/28.png);
+}
+.nft-img-mask.nft-img-mask-5{
+    background-image: url(@/assets/images/set_nft/59.png);
+}
+.nft-img-mask.nft-img-mask-6{
+    background-image: url(@/assets/images/set_nft/66.png);
 }
 .card-angel .btn {
     width: 100%;

@@ -264,48 +264,61 @@
             <div class="body3">
               Angel #0001
             </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
+            <div class="nft-img-mask nft-img-mask-1" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
             </div>
           </div>
           <div class="block-nft">
             <div class="body3">
-              Angel #0001
+              Angel #0002
             </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
-            </div>
-          </div>
-          <div class="block-nft">
-            <div class="body3">
-              Angel #0001
-            </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
+            <div class="nft-img-mask nft-img-mask-2" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
             </div>
           </div>
           <div class="block-nft">
             <div class="body3">
-              Angel #0001
+              Angel #0003
             </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
-            </div>
-          </div>
-          <div class="block-nft">
-            <div class="body3">
-              Angel #0001
-            </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
+            <div class="nft-img-mask nft-img-mask-3" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
             </div>
           </div>
           <div class="block-nft">
             <div class="body3">
-              Angel #0001
+              Angel #0004
             </div>
-            <div class="nft-img-mask">
-              <img src="@/assets/images/mask-nft.png" alt="">
+            <div class="nft-img-mask nft-img-mask-4" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
+            </div>
+          </div>
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0005
+            </div>
+            <div class="nft-img-mask nft-img-mask-5" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
+            </div>
+          </div>
+          
+          <div class="block-nft">
+            <div class="body3">
+              Angel #0006
+            </div>
+            <div class="nft-img-mask nft-img-mask-6" 
+            >
+              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
+              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
             </div>
           </div>
         </div>
@@ -397,7 +410,7 @@ export default {
     return {
       mintVal: 1,
       donationAmount: 0.1,
-      isMaxVal: false
+      isMaxVal: false,
     }
   },
   methods: {
