@@ -186,7 +186,7 @@ input[type="number"]:hover,
 input[type="number"]:focus {
     -moz-appearance: number-input;
 }
-a:not(.card) {
+a:not(.card, .organization__block) {
     text-overflow: ellipsis;
     white-space: nowrap;
 }

@@ -191,13 +191,13 @@
     </section>
     <section class="section-stop-war"  id="stop-war">
       <div class="container-img">
-        <img src="@/assets/images/set_war/1.png" alt="">
-        <img src="@/assets/images/set_war/2.png" alt="">
-        <img src="@/assets/images/set_war/4.png" alt="">
-        <img src="@/assets/images/set_war/5.png" alt="">
-        <img src="@/assets/images/set_war/6.png" alt="">        
-        <img src="@/assets/images/set_war/7.png" alt="">        
-        <img src="@/assets/images/set_war/8.png" alt="">
+        <img src="@/assets/images/set_war/1.webp" alt="">
+        <img src="@/assets/images/set_war/2.webp" alt="">
+        <img src="@/assets/images/set_war/4.webp" alt="">
+        <img src="@/assets/images/set_war/5.webp" alt="">
+        <img src="@/assets/images/set_war/6.webp" alt="">        
+        <img src="@/assets/images/set_war/7.webp" alt="">        
+        <img src="@/assets/images/set_war/8.webp" alt="">
         <!-- src="@/assets/src/images/image-card.svg"  -->
       </div>
       <div class="container-stop-war">
