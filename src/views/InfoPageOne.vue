@@ -3,7 +3,7 @@
     <div class="need__help">
       <div class="need__help__inner">
         <div class="to__main">
-          <div>
+          <div v-on:click="toMain">
             <i class="i-arrow-drop-left-line"></i>
           </div>
           <p class="title__nav">To main page</p>
@@ -140,5 +140,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    toMain() {
+      this.$router.push("/");
+    }
+  }
+}
 </script>

@@ -3,7 +3,7 @@
     <div class="need__help">
       <div class="need__help__inner">
         <div class="to__main">
-          <div>
+          <div v-on:click="toMain">
             <i class="i-arrow-drop-left-line"></i>
           </div>
           <p class="title__nav">To main page</p>
@@ -171,8 +171,33 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(true)
+  data() {
+    return {
+      donationAmount: 0.1,
+      isMaxVal: false,
+    }
+  },
+  methods: {
+    toMain() {
+      this.$router.push("/");
+    },
+    async makeDonation() {
+      if (this.donationAmount > 0) {
+        await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+      } else {
+        alert("enter positive amount only");
+      }
+    },
+    async getAllBalance() {
+      const userAddress = localStorage.getItem("address");
+      if (userAddress) {
+        const balance = await this.$root.core.getUserBalance(userAddress);
+        if (balance) {
+          this.donationAmount = parseFloat(balance).toFixed(3);
+          this.isMaxVal = true;
+        }
+      }
+    }
   }
 }
 </script>
