@@ -89,3 +89,26 @@
         display: none;
     }
 }
+
+@media (min-width: 768px) {
+    /* .input-wrapper.input-count .btn:hover {
+        background: #FFCF00;
+    } */
+
+    .card-angel .btn.btn-yellow:hover,
+    .card-help .btn.btn-yellow:hover,
+    .btn.btn-connect.btn-connected:hover,
+    .section-main .btn-wrapper .btn.btn-yellow:hover,
+    .input-count .btn.btn-plus:hover,
+    .modal-main-btn:hover,
+    .btn-see-all:hover,
+    .btn-submit:hover {
+        background: #FFCF00;
+    }
+
+    .card-angel .btn.btn-blue:hover,
+    .section-main .btn-wrapper .btn.btn-blue:hover {
+        background: #00A5FF;
+    }
+
+}
