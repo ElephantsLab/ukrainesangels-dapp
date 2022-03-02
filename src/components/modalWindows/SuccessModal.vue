@@ -15,7 +15,7 @@
                     <!-- <p class="modal-p">
                         1234
                     </p> -->
-                    <a class="btn modal-main-btn">Check my NFT</a><a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
+                    <a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
                 </div>
             </div>
             <div class="modal-footer">
