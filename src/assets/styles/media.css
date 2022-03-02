@@ -91,24 +91,49 @@
 }
 
 @media (min-width: 768px) {
-    /* .input-wrapper.input-count .btn:hover {
-        background: #FFCF00;
-    } */
 
     .card-angel .btn.btn-yellow:hover,
     .card-help .btn.btn-yellow:hover,
-    .btn.btn-connect.btn-connected:hover,
+    .btn.btn-connect:not(.btn-connected):hover,
     .section-main .btn-wrapper .btn.btn-yellow:hover,
     .input-count .btn.btn-plus:hover,
+    .input-wrapper.input-count .btn:hover,
     .modal-main-btn:hover,
     .btn-see-all:hover,
     .btn-submit:hover {
         background: #FFCF00;
+        color: #0F1010;
+        transition: 0.2s;
     }
-
+    .header-link:hover,
+    .header-link:active,
+    .footer-link:hover,
+    .footer-link:active {
+        color: #efcf46;
+        transition: 0.2s;
+    }
     .card-angel .btn.btn-blue:hover,
     .section-main .btn-wrapper .btn.btn-blue:hover {
         background: #00A5FF;
+        transition: 0.2s;
     }
-
+    .card.card-buy:hover i.i-share-box-fill {
+        color: #efcf46;
+        transition: 0.2s;
+    }
+    .card.card-buy:hover,
+    .btn-speed-amount:hover,
+    .card-help:hover,
+    .link-team:hover {
+        border-color: #efcf46;
+        transition: 0.2s;
+    }
+    .ul-social-list a:hover {
+        border: 1px solid #efcf46;
+        transition: 0.2s;
+    }
+    .ul-social-list a:hover svg {
+        fill: #efcf46;
+        transition: 0.2s;
+    }
 }
