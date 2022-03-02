@@ -10,18 +10,18 @@
                         <i class="i-checkbox-circle-fill"></i>
                     </div>
                     <div class="modal-name">
-                        Your transaction is success 
+                        Transaction Successful
                     </div>
-                    <p class="modal-p">
-                        Thanks for supporting Ukraine. Lorem Ipsum Dolores
-                    </p>
-                    <a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
+                    <!-- <p class="modal-p">
+                        1234
+                    </p> -->
+                    <a class="btn modal-main-btn">Check my NFT</a><a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
                 </div>
             </div>
             <div class="modal-footer">
                 <div class="modal-center">
                     <p class="modal-p">
-                        Tell your firends about us
+                        Share theTell your friends about us
                     </p>
                     <social-links/>
                 </div>
