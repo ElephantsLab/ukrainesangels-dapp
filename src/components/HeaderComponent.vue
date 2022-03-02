@@ -14,10 +14,10 @@
         <span >Connect Wallet</span>
         <span class="icon metamask-img"></span>
       </button>
-      <button v-else class="btn btn-connect connected" v-on:click="connectWallet">
+      <div v-else class="btn btn-connect connected" v-on:click="connectWallet">
         <span>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
         <span class="icon metamask-img"></span>
-      </button>
+      </div>
 
     </div>
     
