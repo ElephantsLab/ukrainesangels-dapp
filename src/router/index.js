@@ -10,13 +10,13 @@ const routes = [
         component: MainView
     },
     {
-        path: '/InfoPageOne',
-        name: 'InfoPageOne',
+        path: '/InfoCenter',
+        name: 'InfoCenter',
         component: () => import("../views/InfoPageOne")
     },
     {
-        path: '/InfoPageTwo',
-        name: 'InfoPageTwo',
+        path: '/Donate',
+        name: 'Donate',
         component: () => import("../views/InfoPageTwo")
     }
 ];
