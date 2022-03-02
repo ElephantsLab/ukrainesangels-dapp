@@ -19,8 +19,8 @@
             Once the hostilities are quenched, the donations will then be used to rebuild the vital infrastructure: roads, bridges, hospitals, educational facilities, etc., ruined by Russian war criminals.
           </h4>
           <div class="btn-wrapper">
-            <button class="btn btn-yellow">Explore Collection</button>
-            <button class="btn btn-blue">Make donation</button>
+            <a href="#angel-collection" class="btn btn-yellow">Explore Collection</a>
+            <a href="#your-donate" class="btn btn-blue">Make donation</a>
           </div>
         </div>
         <div class="section-block section-block-card">

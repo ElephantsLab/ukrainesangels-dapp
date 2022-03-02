@@ -6,24 +6,18 @@
             </button>
             <div class="modal-content">
                 <div class="modal-center">
-                    <div class="modal-main-icon modal-icon-success">
-                        <i class="i-checkbox-circle-fill"></i>
+                    <div class="modal-main-icon modal-icon-cancel">
+                        <i class="i-close-circle-fill"></i>
                     </div>
                     <div class="modal-name">
-                        Transaction Successful
+                        Transaction Failed
                     </div>
-                    <!-- <p class="modal-p">
-                        1234
-                    </p> -->
-                    <a class="btn modal-main-btn">Check my NFT</a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="modal-center">
                     <p class="modal-p">
-                        Share theTell your friends about us
+                        Something went worng.
+                        <br>
+                        Most likely, you don’t have enough BNB in your wallet.
                     </p>
-                    <social-links/>
+                    <a class="btn modal-main-btn">Try again</a>
                 </div>
             </div>
         </div>
