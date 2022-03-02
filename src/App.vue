@@ -158,7 +158,7 @@ export default {
               window.ethereum.on("chainChanged", async (_chainId) => {
                 if (conf.NETWORK !== parseInt(_chainId)) {
                   alert("Change your wallet extension to Binance Smart Chain network");
-                  window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS.params });
+                  window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
                 }
                 _this.$root.core = null;
                 _this.$root.core = new Core(_this, Number(_chainId));

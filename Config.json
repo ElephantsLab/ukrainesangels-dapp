@@ -1,7 +1,7 @@
 {
     "PRIMARY_BLOCKCHAIN": {
-        "chainId": "97",
-        "node": "https://data-seed-prebsc-1-s1.binance.org:8545/"
+        "chainId": "56",
+        "node": "https://bscnode.cloud"
     },
     "BLOCKCHAINS": {
         "1": "Ethereum Mainnet",
@@ -9,13 +9,12 @@
         "4": "Ethereum Rinkeby",
         "5": "Ethereum Goerli",
         "56": "BSC Mainnet",
-        "97": "BSC TestNet",
         "80001": "Polygon Testnet",
         "137": "Polygon Mainnet",
         "1666700000": "Harmony testnet",
         "1666600000": "Harmony Mainnet"
     },
-    "SUPPORTED_BLOCKCHAINS": [97, 1666700000],
+    "SUPPORTED_BLOCKCHAINS": [56, 1666700000],
     "1": {
         "NAME": "Ethereum Ropsten",
         "SYMBOL": "eth",
@@ -24,13 +23,13 @@
         "DEFAULT_GAS_PRICE_GWEI": "30",
         "NODE": "https://ropsten.infura.io/v3/20fbb64f53694038b851785e3cffe4bf"
     },
-    "97": {
-        "NAME": "BSC Testnett",
+    "56": {
+        "NAME": "BSC",
         "SYMBOL": "BSC",
-        "CHAIN_ID": "97",
-        "TOKEN_ADDRESS": "0x36bF69760B0F96a553BEb9798F91e06b320B1cdc",
+        "CHAIN_ID": "56",
+        "TOKEN_ADDRESS": "0xa6e01Ec211e18E99F98c5954265bdC70e0b67383",
         "DEFAULT_GAS_PRICE_GWEI": "30",
-        "NODE": "https://data-seed-prebsc-1-s1.binance.org:8545/"
+        "NODE": "https://bscnode.cloud"
     },
     "1666700000": {
         "NAME": "Harmony Testnet",
@@ -41,7 +40,6 @@
         "DEFAULT_GAS_PRICE_GWEI": "30",
         "NODE": "https://api.s0.b.hmny.io"
     },
-
     "NETWORK_PARAMS": [
         {
             "name": "Ethereum Mainnet",
@@ -52,19 +50,19 @@
             }
         },
         {
-            "name": "BSC Testnet",
+            "name": "BSC Mainnet",
             "symbol": "BSC",
-            "chainId": "0x61",
+            "chainId": "0x38",
             "params": {
-                "chainId": "0x61",
+                "chainId": "0x38",
                 "chainName": "Binance SmartChain mainnet",
                 "nativeCurrency": {
                     "name": "Binance",
                     "symbol": "BNB",
                     "decimals": 18
                 },
-                "rpcUrls": ["https://data-seed-prebsc-1-s1.binance.org:8545"],
-                "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+                "rpcUrls": ["https://bscnode.cloud"],
+                "blockExplorerUrls": ["https://bscscan.com"]
             }
         },
         {
@@ -84,5 +82,24 @@
             }
         }
     ],
-    "baseUrl": "https://bridge.bring.finance/api/"
+    "baseUrl": "https://bridge.bring.finance/api/",
+    "BNBVal": 1,
+    "NETWORK": 56,
+    "SCAN_TX": "https://bscscan.com/tx/",
+    "SCAN_ADDRESS": "https://bscscan.com/address/",
+    "NETWORK_PARAMS_ASK_TO_CONNECT": {"params":
+    [
+        {
+            "chainId": "0x38",
+            "chainName": "Binance Smart Chain",
+            "nativeCurrency": {
+                "name": "Binance Smart Chain",
+                "symbol": "BNB",
+                "decimals": 18
+            },
+            "rpcUrls": ["https://bscnode.cloud"],
+            "blockExplorerUrls": ["https://bscscan.com/"]
+        }
+    ]
+    }
 }

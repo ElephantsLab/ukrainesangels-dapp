@@ -9,7 +9,6 @@
     "4": "Ethereum Rinkeby",
     "5": "Ethereum Goerli",
     "56": "BSC Mainnet",
-    "97": "BSC TestNet",
     "80001": "Polygon Testnet",
     "137": "Polygon Mainnet",
     "1666700000": "Harmony testnet",
@@ -28,7 +27,7 @@
     "NAME": "BSC",
     "SYMBOL": "BSC",
     "CHAIN_ID": "56",
-    "TOKEN_ADDRESS": "0x0E96ddb2edEC7d2140B7642E9A2eD947BdBBF466",
+    "TOKEN_ADDRESS": "0xa6e01Ec211e18E99F98c5954265bdC70e0b67383",
     "DEFAULT_GAS_PRICE_GWEI": "30",
     "NODE": "https://bscnode.cloud"
   },
@@ -51,18 +50,18 @@
       }
     },
     {
-      "name": "BSC Testnet",
+      "name": "BSC Mainnet",
       "symbol": "BSC",
-      "chainId": "0x61",
+      "chainId": "0x38",
       "params": {
-        "chainId": "0x61",
+        "chainId": "0x38",
         "chainName": "Binance SmartChain mainnet",
         "nativeCurrency": {
           "name": "Binance",
           "symbol": "BNB",
           "decimals": 18
         },
-        "rpcUrls": ["https://data-seed-prebsc-1-s1.binance.org:8545"],
+        "rpcUrls": ["https://bscnode.cloud"],
         "blockExplorerUrls": ["https://bscscan.com"]
       }
     },
@@ -88,7 +87,7 @@
   "NETWORK": 56,
   "SCAN_TX": "https://bscscan.com/tx/",
   "SCAN_ADDRESS": "https://bscscan.com/address/",
-  "NETWORK_PARAMS": {"params":
+  "NETWORK_PARAMS_ASK_TO_CONNECT": {"params":
   [
     {
       "chainId": "0x38",
