@@ -26,7 +26,11 @@
         <div class="section-block section-block-card">
           <div class="card card-main">
             <div class="card-section">
-              <div class="card-main-img"></div>
+              <div class="card-main-img">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
               <p class="supply-label">Total Supply</p>
               <div class="total-supply">10 000 nft’s</div>
 
