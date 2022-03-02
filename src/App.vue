@@ -3,7 +3,7 @@
   <!-- <cancel-modal/> -->
    <success-modal v-if="txModalStatusGetter" />
    <transaction-modal v-if="txModalGetter" />
-  <main-view />
+  <router-view/>
   <footer-component />
 </template>
 
