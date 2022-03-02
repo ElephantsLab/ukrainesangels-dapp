@@ -4,25 +4,9 @@
     "node": "https://bscnode.cloud"
   },
   "BLOCKCHAINS": {
-    "1": "Ethereum Mainnet",
-    "3": "Ethereum Ropsten",
-    "4": "Ethereum Rinkeby",
-    "5": "Ethereum Goerli",
-    "56": "BSC Mainnet",
-    "80001": "Polygon Testnet",
-    "137": "Polygon Mainnet",
-    "1666700000": "Harmony testnet",
-    "1666600000": "Harmony Mainnet"
+    "56": "BSC Mainnet"
   },
-  "SUPPORTED_BLOCKCHAINS": [56, 1666700000],
-  "1": {
-    "NAME": "Ethereum Ropsten",
-    "SYMBOL": "eth",
-    "CHAIN_ID": "3",
-    "TOKEN_ADDRESS": "0x2eD5Cf532F18F1DC600c6edD039D19D3F1525f23",
-    "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://ropsten.infura.io/v3/20fbb64f53694038b851785e3cffe4bf"
-  },
+  "SUPPORTED_BLOCKCHAINS": [56],
   "56": {
     "NAME": "BSC",
     "SYMBOL": "BSC",
@@ -31,24 +15,7 @@
     "DEFAULT_GAS_PRICE_GWEI": "30",
     "NODE": "https://bscnode.cloud"
   },
-  "1666700000": {
-    "NAME": "Harmony Testnet",
-    "SYMBOL": "HARM",
-    "CHAIN_ID": "1666700000",
-    "CONTRACT_ADDRESS": "0x28d4E9E26b67a9FEb2faA872Dc94237c105666Ce",
-    "TOKEN_ADDRESS": "0x3ecb96039340630c8b82e5a7732bc88b2aeade82",
-    "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://api.s0.b.hmny.io"
-  },
   "NETWORK_PARAMS": [
-    {
-      "name": "Ethereum Mainnet",
-      "symbol": "eth",
-      "chainId": "0x1",
-      "params": {
-        "chainId": "0x1"
-      }
-    },
     {
       "name": "BSC Mainnet",
       "symbol": "BSC",
@@ -63,22 +30,6 @@
         },
         "rpcUrls": ["https://bscnode.cloud"],
         "blockExplorerUrls": ["https://bscscan.com"]
-      }
-    },
-    {
-      "name": "Harmony Testnet",
-      "symbol": "HARM",
-      "chainId": "0x6357D2E0",
-      "params": {
-        "chainId": "0x6357D2E0",
-        "chainName": "Harmony Testnet",
-        "nativeCurrency": {
-          "name": "One",
-          "symbol": "ONE",
-          "decimals": 18
-        },
-        "rpcUrls": ["https://api.s0.b.hmny.io"],
-        "blockExplorerUrls": ["https://explorer.pops.one/"]
       }
     }
   ],
