@@ -12,16 +12,18 @@
                     <div class="modal-name">
                         Transaction Successful
                     </div>
-                    <!-- <p class="modal-p">
-                        1234
-                    </p> -->
-                    <a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
+                    <p class="modal-p">
+                        Congratulations on joining the ranks of Ukraine`s Angels.
+                        <br/>
+                        Glory to Ukraine!
+                    </p>
+                    <a v-on:click="openTx" class="btn modal-main-btn">See My Angel</a>
                 </div>
             </div>
             <div class="modal-footer">
                 <div class="modal-center">
                     <p class="modal-p">
-                        Share theTell your friends about us
+                        Tell Everybody, Let`s Save Ukraine Together!
                     </p>
                     <social-links/>
                 </div>
