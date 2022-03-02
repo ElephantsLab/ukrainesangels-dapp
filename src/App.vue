@@ -1,6 +1,7 @@
 <template>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
-  <transaction-modal/>
+  <!-- <success-modal/> -->
+  <!-- <transaction-modal/> -->
   <main-view />
   <footer-component />
 </template>
@@ -10,6 +11,7 @@ import MainView from "@/views/MainView";
 import Core from "../src/core/core.js";
 import FooterComponent from "@/components/FooterComponent";
 import TransactionModal from "@/components/modalWindows/TransactionModal";
+import SuccessModal from "@/components/modalWindows/SuccessModal";
 import conf from "./core/Config.json";
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     MainView,
     FooterComponent,
-    TransactionModal
+    TransactionModal,
+    SuccessModal,
   },
   methods: {
     checkWalletOption(wallet) {
