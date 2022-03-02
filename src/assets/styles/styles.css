@@ -1,0 +1,966 @@
+#app,
+.section-collection::before {
+    background-image: url(../images/main-bg.webp);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.section-collection::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    z-index: -1;
+}
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0f1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 30;
+}
+header {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+.header-nav {
+    display: flex;
+    flex-grow: 1;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+    margin-left: 60px;
+}
+.header-nav li {
+    margin: 0 20px;
+}
+.ul-drop-down,
+.ul-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+ul.ul-drop-down li > a,
+ul.ul-flex-column li > a,
+ul.ul-drop-down li > button,
+ul.ul-flex-column li > button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.header-nav > a {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.header-main-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.title {
+    font-size: 70px;
+    color: black;
+}
+header .btn {
+    padding: 12px 24px;
+}
+.header-link,
+.footer-link {
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.header-link:hover,
+.header-link:active,
+.footer-link:hover,
+.footer-link:active {
+    color: #efcf46;
+    transition: 0.2s;
+}
+.btn.btn-connect {
+    border: 1px solid #efcf46;
+    color: #fff;
+}
+.btn.btn-connect > .icon {
+    width: 36px;
+    height: 32px;
+}
+.btn.btn-connect span + span.icon {
+    margin-left: 16px;
+}
+.logo {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/Logo.svg);
+    width: 183px;
+    height: 100%;
+    min-height: 56px;
+    min-height: 48px;
+}
+.metamask-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.metamask-img {
+    background-image: url(../images/metamask.svg);
+}
+.btn {
+    height: 56px;
+    border-radius: 8px;
+}
+.btn,
+input,
+.input,
+.input-token {
+    font-weight: 500;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+.input-token {
+    text-align: right;
+}
+.heading1 {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+.section-main .heading1 span {
+    display: block;
+}
+.section-main .heading1 span:first-child {
+    color: #0487cf;
+}
+.title-date {
+    color: #efcf46;
+}
+.section-main .heading1 span:nth-child(2) {
+    color: #efcf46;
+}
+.subtitle + .heading1 {
+    margin-top: 16px;
+}
+.heading2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.total-supply,
+.title1,
+.modal-name {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.total-supply,
+.title1 {
+    text-transform: uppercase;
+}
+.total-supply,
+.section-collection .heading1,
+.section-angels .heading1 {
+    color: #efcf46;
+}
+.body1 {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+}
+.body2,
+.modal-p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.body3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+.subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.input-label,
+.supply-label {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.short-descr {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.5);
+}
+.tiny-text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #55c100;
+}
+.heading1 + .body1 {
+    margin-top: 24px;
+}
+.heading2 + .body2,
+.title1 + .short-descr {
+    margin-top: 16px;
+}
+.body3 + .short-descr {
+    margin-top: 8px;
+}
+.section-main {
+    padding-top: 64px;
+}
+.section-content {
+    margin-bottom: 40px;
+}
+.section-buy .section-content,
+.section-donate .section-content,
+.card-collection .card-section,
+.card-main .card-section,
+.section-angels .section-content,
+.section-angels {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.section-main .btn-wrapper {
+    margin-top: 24px;
+}
+.section-main .btn-wrapper .btn {
+    margin-top: 24px;
+    margin-right: 24px;
+    float: left;
+}
+.card-angel .btn.btn-blue,
+.section-main .btn-wrapper .btn.btn-blue {
+    background-color: #0487cf;
+    color: #ffffff;
+}
+.card-angel .btn.btn-yellow,
+.card-help .btn.btn-yellow,
+.btn.btn-connect.btn-connected,
+.section-main .btn-wrapper .btn.btn-yellow,
+.input-count .btn.btn-plus,
+.modal-main-btn,
+.btn-see-all,
+.btn-submit {
+    background-color: #efcf46;
+    color: #0f1010;
+}
+.input-count .btn.btn-minus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-speed-amount {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card.card-buy:hover,
+.btn-speed-amount:hover,
+.card-help:hover,
+.link-team:hover {
+    border-color: #efcf46;
+}
+.section-block-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section-block.section-block-content {
+    max-width: calc(100% - 520px - 140px);
+}
+.section-block.section-block-card {
+    margin-left: 140px;
+}
+.card {
+    background-color: rgba(15, 16, 16, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card,
+.block-nft {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+.card.card-angel {
+    align-items: center;
+}
+.card.card-buy,
+.card.card-angel,
+.card.card-donate,
+.card.card-help {
+    background-color: #0f1010;
+}
+.card-insert,
+.card-angel .icon {
+    background: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+.card.card-main,
+.card.card-collection,
+.card.card-donate {
+    border-radius: 24px;
+    width: 520px;
+}
+.card.card-donate {
+    padding: 40px 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-collection .card-section,
+.card-main .card-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.card-main .card-footer,
+.card-collection .card-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card-main .card-section,
+.card-main .card-footer,
+.card-collection .card-section,
+.card-collection .card-footer {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.card-main .card-footer,
+.card-collection .card-footer {
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+.card-main-img {
+    height: 316px;
+    position: relative;
+    width: 100%;
+}
+.card-main-img div {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(../images/main-card.png);
+    height: 231px;
+    width: 160px;
+    position: absolute;
+    background-size: contain;
+    top: 50%;
+    filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2));
+}
+.card-main-img div:nth-child(1) {
+    background-image: url(../images/set_nft/27.png);
+    left: 0;
+    transform: translate(0, -50%) rotateY(180deg);
+}
+.card-main-img div:nth-child(2) {
+    background-image: url(../images/set_nft/21.png);
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%) scale(1.2)  rotateY(180deg);
+    filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2)) drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.9));
+}
+.card-main-img div:nth-child(3) {
+    background-image: url(../images/set_nft/14.png);
+    right: 0;
+    transform: translate(0, -50%);
+}
+.card-main-img + .supply-label,
+.card-main-img + .total-supply {
+    margin-top: 24px;
+}
+.card-donate .title1 + .card-input {
+    margin-top: 12px;
+}
+.input-wrapper {
+    position: relative;
+    z-index: 0;
+}
+.input {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    height: 56px;
+    z-index: inherit;
+}
+.input-amount .input {
+    padding: 16px calc(16px + 16px + 40px + 16px) 16px 16px;
+    width: 100%;
+}
+.input-count .input {
+    padding-left: 56px;
+    padding-right: 56px;
+}
+.input-amount .input-token {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.input-wrapper.input-count .btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    font-size: 26px;
+    z-index: 2;
+    padding: 0;
+}
+.input-wrapper.input-count .btn.btn-minus {
+    left: 8px;
+}
+.input-wrapper.input-count .btn.btn-plus {
+    right: 8px;
+}
+.card-main .card-footer .input-wrapper.input-count,
+.card-main .card-footer .btn.btn-submit,
+.card-collection .card-footer .input-wrapper.input-count,
+.card-collection .card-footer .btn.btn-submit {
+    width: calc(50% - 8px);
+}
+.card-main .card-footer .btn.btn-submit,
+.card-collection .card-footer .btn.btn-submit {
+    margin-left: auto;
+}
+.input-wrapper.input-count .input {
+    text-align: center;
+    width: 100%;
+}
+.input-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.input-total,
+.btn-speed-amount {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+.input-total span {
+    font-weight: 500;
+    color: #ffffff;
+}
+.card-main .input-total,
+.card-collection .input-total {
+    text-align: center;
+    margin-top: 24px;
+}
+.section {
+    padding: 88px 0;
+}
+.section.section-help {
+    padding-top: 0;
+}
+.section.section-help .container {
+    padding-top: 100px;
+}
+.section-donate {
+    padding-top: 0;
+}
+.cards-buy-wrapper,
+.cards-angels-wrapper,
+.cards-help-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: -20px -15px 20px;
+    flex-wrap: wrap;
+    width: calc(100% + 30px);
+}
+.cards-buy-wrapper > .card,
+.cards-angels-wrapper > .card {
+    border-radius: 16px;
+    margin: 20px 15px;
+    padding: 24px;
+    width: calc(100% / 3 - 30px);
+}
+.cards-help-wrapper > .card {
+    height: 422px;
+    flex-grow: 1;
+    margin: 15px 15px;
+    width: calc(100% / 2 - 30px);
+}
+.card-help {
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.card-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-label i {
+    font-size: 24px;
+}
+.card-label i.i-share-box-fill {
+    color: #c4c4c4;
+    width: 24px;
+    display: block;
+    height: 24px;
+}
+.card.card-buy:hover i.i-share-box-fill {
+    color: #efcf46;
+}
+.card-label .tiny-text i {
+    margin-right: 7px;
+}
+.card-buy .tiny-text {
+    display: flex;
+    align-items: center;
+}
+.card-buy .card-insert {
+    padding: 20px;
+    width: 100%;
+    margin: 16px 0;
+}
+.card-buy .card-insert > div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65px;
+    width: 100%;
+}
+.card-angel .icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    background-size: 48px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-angel .icon.intersect {
+    background-image: url(../images/intersect.svg);
+}
+.card-angel .icon.uk-angels {
+    background-image: url(../images/uk-angels.svg);
+}
+.card-angel .icon.bnb {
+    background-image: url(../images/bnb.svg);
+}
+.card-buy .card-insert.savelife > div {
+    background-image: url(../images/save-live.png);
+}
+.card-buy .card-insert.unchain > div {
+    background-image: url(../images/unchain.jpg);
+}
+.card-buy .card-insert.btc-alpha > div {
+    background-image: url(../images/btc-alpha.png);
+}
+.card-buy .card-content {
+    text-align: center;
+}
+.section-main .btn-wrapper .btn,
+.section .btn {
+    padding: 16px 32px;
+}
+.card-help {
+    padding: 42px;
+}
+.section-buy .btn.btn-see-all {
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-donate {
+    background-image: url(../images/screen-donate.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.section-help {
+    background-image: url(../images/bg-help.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.section-angels .container {
+    background-image: url(../images/uk-map-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-help {
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 100% 100%;
+}
+.card-help.card-help-1 {
+    background-image: url(../images/help1.png);
+}
+.card-help.card-help-2 {
+    background-image: url(../images/help2.png);
+}
+.speed-amount-container {
+    width: calc(100% + 8px);
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-bottom: -4px;
+
+    display: flex;
+    justify-content: stretch;
+    flex-grow: 1;
+}
+.input-wrapper + .speed-amount-container {
+    margin-top: 16px;
+}
+.speed-amount-container + .btn.btn-submit {
+    margin-top: 24px;
+    width: 100%;
+}
+.btn.btn-speed-amount {
+    margin: 0 4px 4px;
+    flex-grow: 1;
+    padding: 12px;
+}
+.section-angels,
+.section-situation {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #515952;
+}
+.section-collection,
+.title-date {
+    position: relative;
+    z-index: 1;
+}
+.title-date {
+    width: fit-content;
+}
+.title-date::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: url(../images/date.png) no-repeat center;
+    background-size: 100% 100%;
+    padding: 7px 108px 14px 86px;
+    z-index: -1;
+}
+.section-situation .container {
+    margin-bottom: 40px;
+}
+.card-angel .icon {
+    margin-bottom: 24px;
+}
+.container-stop-war,
+.container-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.container-img {
+    height: 240px;
+}
+.container-img img {
+    height: 100%;
+    width: auto;
+    margin: 0 2px;
+}
+.container-stop-war {
+    background: #efcf46;
+    padding: 0 20px;
+}
+.container-stop-war span {
+    display: block;
+    width: auto;
+    height: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0f1010;
+    margin: 20px;
+    white-space: nowrap;
+}
+.section-block-nft {
+    display: flex;
+    justify-content: stretch;
+    margin-top: 64px;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    flex-wrap: wrap;
+}
+.section-block-nft .block-nft {
+    margin: 0 15px 30px;
+    width: calc(100% / 6 - 30px);
+}
+.block-nft {
+    text-align: center;
+}
+.nft-img-mask {
+    margin-top: 24px;
+    height: 307px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.nft-img-mask.nft-img-mask-1 {
+    background-image: url(@/assets/images/set_nft/66.png);
+}
+.nft-img-mask.nft-img-mask-2 {
+    background-image: url(@/assets/images/set_nft/21.png);
+}
+.nft-img-mask.nft-img-mask-3 {
+    background-image: url(@/assets/images/set_nft/27.png);
+}
+.nft-img-mask.nft-img-mask-4 {
+    background-image: url(@/assets/images/set_nft/28.png);
+}
+.nft-img-mask.nft-img-mask-5 {
+    background-image: url(@/assets/images/set_nft/14.png);
+}
+.nft-img-mask.nft-img-mask-6 {
+    background-image: url(@/assets/images/set_nft/59.png);
+}
+.card-angel .btn {
+    width: 100%;
+    margin-top: 24px;
+}
+.cards-angels-wrapper {
+    padding-bottom: 76px;
+    padding-top: 24px;
+}
+.link-team {
+    display: block;
+    background-color: #0f1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: url(../images/logo_team.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    margin-top: 24px;
+    width: 228px;
+    height: 64px;
+}
+.link-team + .body1 {
+    margin-top: 32px;
+}
+.photo-team {
+    width: 518.23px;
+    height: 422px;
+    background-image: url(../images/team.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card-help .btn {
+    width: fit-content;
+    margin-top: auto;
+}
+.card-help .title {
+    color: #fff;
+    padding-right: 10%;
+}
+.footer .container {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+.footer-block-name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.footer-block {
+    padding-right: 140px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.footer-link {
+    margin-top: 16px;
+}
+.footer-block-name + .ul-social-list {
+}
+.section-situation iframe {
+    width: 520px;
+    height: 292px;
+}
+.ul-social-list {
+    margin-left: -12px;
+    margin-bottom: -12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ul-social-list li {
+    margin: 12px;
+}
+.ul-social-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+.ul-social-list a {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ul-social-list a svg {
+    fill: rgba(255, 255, 255, 0.5);
+}
+.ul-social-list a:hover {
+    border: 1px solid #efcf46;
+}
+.ul-social-list a:hover svg {
+    fill: #efcf46;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+}
+.modal-wrapper {
+    background: #0f1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    max-width: 630px;
+    border-radius: 24px;
+}
+.modal-wrapper .modal-content,
+.modal-wrapper .modal-footer {
+    padding: 40px;
+}
+.modal-wrapper .modal-footer {
+    padding-top: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-modal-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.btn-modal-close {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #c4c4c4;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 24px;
+    z-index: 2;
+}
+.modal-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+.modal-center .modal-main-btn {
+    width: fit-content;
+    padding: 16px 32px;
+}
+.modal-main-icon {
+    background: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.modal-main-icon i {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    margin: auto;
+    text-align: center;
+}
+.modal-main-icon.modal-icon-trans-proces {
+    background-size: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/uk-angels.svg);
+}
+.modal-icon-success i {
+    color: #efcf46;
+}
+.modal-main-btn {
+    margin-top: auto;
+}
+.modal-name + .modal-p {
+    margin-top: 16px;
+}
+.modal-name + .modal-main-btn,
+.modal-p + .modal-main-btn {
+    margin-top: 40px;
+}

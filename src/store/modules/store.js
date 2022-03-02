@@ -1,9 +1,15 @@
 export default {
     state: {
-
+        address: undefined,
+        chainId: undefined
     },
     mutations: {
-
+        setCurrentAddress(state, val) {
+            state.address = val;
+        },
+        setChainId(state, val) {
+            state.chainId = val;
+        }
     },
     actions: {
         connectWallet() {
@@ -17,13 +23,11 @@ export default {
                     localStorage.setItem("account", accounts[0]);
                 }
             }
-        },
-        mintNFT({ commit }, address) {
-            console.log(commit);
-            console.log(address);
         }
     },
     getters: {
-
+        userAddressGetter(state) {
+            return state.address;
+        }
     }
 }
