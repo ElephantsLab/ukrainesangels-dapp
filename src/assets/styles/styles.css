@@ -378,7 +378,7 @@ input,
 .card-main-img div {
     background-position: top center;
     background-repeat: no-repeat;
-    background-image: url(../images/main-card.png);
+    background-image: url(../images/main-card.webp);
     height: 231px;
     width: 160px;
     position: absolute;
@@ -579,13 +579,13 @@ input,
     background-image: url(../images/bnb.svg);
 }
 .card-buy .card-insert.savelife > div {
-    background-image: url(../images/save-live.png);
+    background-image: url(../images/save-live.webp);
 }
 .card-buy .card-insert.unchain > div {
-    background-image: url(../images/unchain.jpg);
+    background-image: url(../images/unchain.webp);
 }
 .card-buy .card-insert.btc-alpha > div {
-    background-image: url(../images/btc-alpha.png);
+    background-image: url(../images/btc-alpha.webp);
 }
 .card-buy .card-content {
     text-align: center;
@@ -602,19 +602,19 @@ input,
     margin-right: auto;
 }
 .section-donate {
-    background-image: url(../images/screen-donate.png);
+    background-image: url(../images/screen-donate.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 .section-help {
-    background-image: url(../images/bg-help.png);
+    background-image: url(../images/bg-help.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
 }
 .section-angels .container {
-    background-image: url(../images/uk-map-front.png);
+    background-image: url(../images/uk-map-front.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -622,13 +622,13 @@ input,
 .card-help {
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 100% 100%;
+    background-size: contain;
 }
 .card-help.card-help-1 {
-    background-image: url(../images/help1.png);
+    background-image: url(../images/help1.webp);
 }
 .card-help.card-help-2 {
-    background-image: url(../images/help2.png);
+    background-image: url(../images/help2.webp);
 }
 .speed-amount-container {
     width: calc(100% + 8px);
@@ -672,7 +672,7 @@ input,
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    background: url(../images/date.png) no-repeat center;
+    background: url(../images/date.webp) no-repeat center;
     background-size: 100% 100%;
     padding: 7px 108px 14px 86px;
     z-index: -1;
@@ -769,7 +769,7 @@ input,
     display: block;
     background-color: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-image: url(../images/logo_team.png);
+    background-image: url(../images/logo_team.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -784,7 +784,7 @@ input,
 .photo-team {
     width: 518.23px;
     height: 422px;
-    background-image: url(../images/team.png);
+    background-image: url(../images/team.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1008,7 +1008,7 @@ input,
     display: block;
     min-width: 56px;
     min-height: 23px;
-    background-image: url(/src/assets/images/save-live.png);
+    background-image: url(/src/assets/images/save-live.webp);
     background-size: contain;
     background-repeat: no-repeat;
     top: 40%;
