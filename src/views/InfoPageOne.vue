@@ -1,4 +1,7 @@
 <template>
+<div>
+  <header-component/>
+  <div  class="main-wrapper info-page-wrapper">
   <div class="container">
     <div class="need__help">
       <div class="need__help__inner">
@@ -137,10 +140,17 @@
       </div>
     </div>
   </div>
+  </div>
+</div>
 </template>
 
 <script>
+import HeaderComponent from "@/components/HeaderComponent";
+
 export default {
+  components: {
+    HeaderComponent
+  },
   methods: {
     toMain() {
       this.$router.push("/");

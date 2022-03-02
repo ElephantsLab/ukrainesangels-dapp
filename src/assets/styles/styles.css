@@ -490,6 +490,9 @@ input,
 .section {
     padding: 88px 0;
 }
+.info-page-wrapper{
+    padding-bottom: 88px;
+}
 .section.section-help {
     padding-top: 0;
 }
