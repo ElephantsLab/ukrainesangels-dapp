@@ -72,7 +72,7 @@
       <div class="container">
         <div class="section-content">
           <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
-          <p class="body2">You Can Donate to Ukraine’s Leading Charitable Foundations and<br> Volunteer Organizations</p>
+          <p class="body2">You Can Donate to the World`s Leading Charitable Foundations and<br>Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
           <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
@@ -228,10 +228,11 @@
           <h1 class="heading1"> 10 000 nft’s
           </h1>
           <h4 class="body1">
-            Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
+            Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.  
             <br>
             <br>
-            Buying one of the collection’s NFTs you become an Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole. </h4>
+            Buying one of the collection’s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.
+          </h4>
           </div>
           <div class="section-block section-block-card">
           <div class="card card-collection">
