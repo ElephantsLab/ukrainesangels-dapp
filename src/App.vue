@@ -1,7 +1,7 @@
 <template>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
-  <!-- <success-modal/> -->
-  <!-- <transaction-modal/> -->
+   <success-modal v-if="txModalStatusGetter" />
+   <transaction-modal v-if="txModalGetter" />
   <main-view />
   <footer-component />
 </template>
@@ -13,6 +13,7 @@ import FooterComponent from "@/components/FooterComponent";
 import TransactionModal from "@/components/modalWindows/TransactionModal";
 import SuccessModal from "@/components/modalWindows/SuccessModal";
 import conf from "./core/Config.json";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "App",
@@ -23,6 +24,7 @@ export default {
     SuccessModal,
   },
   methods: {
+    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx"]),
     checkWalletOption(wallet) {
       let _this = this;
 
@@ -119,6 +121,7 @@ export default {
       await this.$root.core.changeNetwork(this, blockchain);
     },
   },
+  computed: mapGetters(["txModalGetter", "txModalStatusGetter"]),
   async mounted() {
     // this.lang.init();
 

@@ -473,7 +473,7 @@ export default {
       this.totalSupply = await this.$root.core.getTotalSupply();
       this.nftOwnersCount = await this.$root.core.getNftOwnersCount();
       this.totalDonated = await this.$root.core.getTotalDonated();
-    }, 1000);
+    }, 1500);
   }
 }
 </script>

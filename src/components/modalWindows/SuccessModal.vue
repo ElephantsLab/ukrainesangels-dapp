@@ -1,7 +1,7 @@
 <template>
     <div class="modal">
         <div class="modal-wrapper">
-            <button class="btn-modal-close">
+            <button class="btn-modal-close" v-on:click="updatetxStatusModal(false)">
                 <i class="i-close-fill"></i>
             </button>
             <div class="modal-content">
@@ -15,7 +15,7 @@
                     <p class="modal-p">
                         Thanks for supporting Ukraine. Lorem Ipsum Dolores
                     </p>
-                    <a class="btn modal-main-btn">Check my NFT</a>
+                    <a v-on:click="openTx" class="btn modal-main-btn">Check my NFT</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -31,11 +31,24 @@
 </template>
 <script>
 import SocialLinks from '@/components/SocialLinks.vue'
+import { mapMutations, mapGetters } from "vuex";
+import conf from "../../core/Config.json";
 
 export default ({
-    components: {
-        SocialLinks,
-    },
-
+  data() {
+    return {
+      conf: conf
+    }
+  },
+  components: {
+    SocialLinks,
+  },
+  methods: {
+      ...mapMutations(["updatetxStatusModal"]),
+    openTx() {
+        window.open(conf.SCAN_TX + this.statusTxGetter);
+    }
+  },
+  computed: mapGetters(["statusTxGetter"])
 })
 </script>

@@ -86,6 +86,8 @@
   "baseUrl": "https://bridge.bring.finance/api/",
   "BNBVal": 1,
   "NETWORK": 97,
+  "SCAN_TX": "https://testnet.bscscan.com/tx/",
+  "SCAN_ADDRESS": "https://testnet.bscscan.com/address/",
   "NETWORK_PARAMS": {"params":
   [
     {
