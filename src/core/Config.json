@@ -1,7 +1,7 @@
 {
   "PRIMARY_BLOCKCHAIN": {
-    "chainId": "97",
-    "node": "https://data-seed-prebsc-1-s1.binance.org:8545/"
+    "chainId": "56",
+    "node": "https://bscnode.cloud"
   },
   "BLOCKCHAINS": {
     "1": "Ethereum Mainnet",
@@ -15,7 +15,7 @@
     "1666700000": "Harmony testnet",
     "1666600000": "Harmony Mainnet"
   },
-  "SUPPORTED_BLOCKCHAINS": [97, 1666700000],
+  "SUPPORTED_BLOCKCHAINS": [56, 1666700000],
   "1": {
     "NAME": "Ethereum Ropsten",
     "SYMBOL": "eth",
@@ -24,13 +24,13 @@
     "DEFAULT_GAS_PRICE_GWEI": "30",
     "NODE": "https://ropsten.infura.io/v3/20fbb64f53694038b851785e3cffe4bf"
   },
-  "97": {
-    "NAME": "BSC Testnett",
+  "56": {
+    "NAME": "BSC",
     "SYMBOL": "BSC",
-    "CHAIN_ID": "97",
-    "TOKEN_ADDRESS": "0xC2f35dF9bbfEE0D9D0662A0C0E592C2a0733fff7",
+    "CHAIN_ID": "56",
+    "TOKEN_ADDRESS": "0x0E96ddb2edEC7d2140B7642E9A2eD947BdBBF466",
     "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://data-seed-prebsc-1-s1.binance.org:8545/"
+    "NODE": "https://bscnode.cloud"
   },
   "1666700000": {
     "NAME": "Harmony Testnet",
@@ -63,7 +63,7 @@
           "decimals": 18
         },
         "rpcUrls": ["https://data-seed-prebsc-1-s1.binance.org:8545"],
-        "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+        "blockExplorerUrls": ["https://bscscan.com"]
       }
     },
     {
@@ -85,21 +85,21 @@
   ],
   "baseUrl": "https://bridge.bring.finance/api/",
   "BNBVal": 1,
-  "NETWORK": 97,
-  "SCAN_TX": "https://testnet.bscscan.com/tx/",
-  "SCAN_ADDRESS": "https://testnet.bscscan.com/address/",
+  "NETWORK": 56,
+  "SCAN_TX": "https://bscscan.com/tx/",
+  "SCAN_ADDRESS": "https://bscscan.com/address/",
   "NETWORK_PARAMS": {"params":
   [
     {
-      "chainId": "0x61",
-      "chainName": "Binance Smart Chain Testnet",
+      "chainId": "0x38",
+      "chainName": "Binance Smart Chain",
       "nativeCurrency": {
-        "name": "Binance Smart Chain Testnet",
+        "name": "Binance Smart Chain",
         "symbol": "BNB",
         "decimals": 18
       },
-      "rpcUrls": ["https://data-seed-prebsc-2-s2.binance.org:8545/"],
-      "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+      "rpcUrls": ["https://bscnode.cloud"],
+      "blockExplorerUrls": ["https://bscscan.com/"]
     }
   ]
   }
