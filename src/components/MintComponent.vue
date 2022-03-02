@@ -136,7 +136,7 @@
               You Will Save Lives No Matter the Amount
             </div>                           
             <div class="input-wrapper input-amount">
-              <input class="input" type="number" min="1" oninput="this.value = Math.round(this.value);" v-model="donationAmount">
+              <input class="input" type="number" min="1" onkeypress="return (event.charCode !== 45 && event.charCode !== 43 && event.charCode !== 101)" v-model="donationAmount">
               <span class="input-token">BNB</span>
             </div>
             <div class="speed-amount-container">
