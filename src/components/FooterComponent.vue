@@ -12,6 +12,7 @@
                         <li><a class="footer-link" href="#situation">Situation in Ukraine</a></li>
                         <li><a class="footer-link" href="#angel-collection">Collection</a></li>
                         <li><a class="footer-link" href="#your-donate">Donation</a></li>
+                        <li><a class="footer-link" href="#our-team">Our Team</a></li>
                     </ul>
                 </div>
                 <div class="footer-block">
