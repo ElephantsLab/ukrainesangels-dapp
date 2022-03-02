@@ -8,12 +8,12 @@
                 <div class="modal-center">
                     <div class="modal-main-icon modal-icon-trans-proces"></div>
                     <div class="modal-name">
-                        Your Transaction Is Being Processed 
+                        Your Transaction Is Being Processed
                     </div>
                     <p class="modal-p">
-                        We’re grateful for your involvement.
+                        Thank you for being there in times of need.
                         <br>
-                        Your transaction won’t take longer than half a minute.
+                        Your charity will take effect in less than half a minute.
                     </p>
                     <a v-on:click="openTx" class="btn modal-main-btn">Transaction</a>
                 </div>

@@ -117,6 +117,7 @@
         background: #00A5FF;
         transition: 0.2s;
     }
+    a.organization__block:hover i.i-share-box-fill ,
     .card.card-buy:hover i.i-share-box-fill {
         color: #efcf46;
         transition: 0.2s;
@@ -124,7 +125,9 @@
     .card.card-buy:hover,
     .btn-speed-amount:hover,
     .card-help:hover,
-    .link-team:hover {
+    .link-team:hover ,
+    .to__main:hover div,
+    a.organization__block:hover {
         border-color: #efcf46;
         transition: 0.2s;
     }

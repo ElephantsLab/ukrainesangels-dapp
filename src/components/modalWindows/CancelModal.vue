@@ -13,12 +13,12 @@
                         Transaction Failed
                     </div>
                     <p class="modal-p" v-if="!revertReasonGetter" >
-                        Something went worng.
-                        <br>
-                        Most likely, you don’t have enough BNB in your wallet.
+                        Oops! Something went wrong.
+                        <br>                     
+                        Most likely, you don`t have enough BNB in your wallet.
                     </p>
                   <p class="modal-p" v-else>{{ revertReasonGetter }}</p>
-                    <a v-if="statusTxGetter" v-on:click="openTx" class="btn modal-main-btn">Transaction</a>
+                    <a v-if="statusTxGetter" v-on:click="openTx" class="btn modal-main-btn">Try Again</a>
                 </div>
             </div>
         </div>

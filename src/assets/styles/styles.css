@@ -23,10 +23,9 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 30;
 }
-footer{
+footer {
     background: #0f1010;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 header {
     height: 100%;
@@ -390,13 +389,13 @@ input,
 .card-main-img div:nth-child(1) {
     background-image: url(../images/set_nft/27.png);
     left: 0;
-    transform: translate(0, -50%) ;
+    transform: translate(0, -50%);
 }
 .card-main-img div:nth-child(2) {
     background-image: url(../images/set_nft/21.png);
     left: 50%;
     z-index: 2;
-    transform: translate(-50%, -50%) scale(1.2) ;
+    transform: translate(-50%, -50%) scale(1.2);
     filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2)) drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.9));
 }
 .card-main-img div:nth-child(3) {
@@ -489,6 +488,9 @@ input,
 }
 .section {
     padding: 88px 0;
+}
+.info-page-wrapper {
+    padding-bottom: 88px;
 }
 .section.section-help {
     padding-top: 0;
@@ -951,7 +953,6 @@ input,
     margin-top: 40px;
 }
 
-
 /* IF YOU NEED HELP */
 
 .need__help {
@@ -961,7 +962,6 @@ input,
 /* .need__help__inner {
     padding-top: 44px;
 } */
-
 
 .need__help_title {
     font-weight: bold;
@@ -974,14 +974,14 @@ input,
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
     padding-top: 32px;
     max-width: 640px;
 }
 
 .organization .organization__block:first-child {
-   padding-top: 64px;
+    padding-top: 64px;
 }
 
 .organization__block {
@@ -991,7 +991,6 @@ input,
     padding-bottom: 24px;
     padding-top: 40px;
 }
-
 .organization__logo {
     min-width: 80px;
     min-height: 80px;
@@ -1004,7 +1003,7 @@ input,
 }
 
 .organization__logo::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     min-width: 56px;
@@ -1013,19 +1012,14 @@ input,
     background-size: contain;
     background-repeat: no-repeat;
     top: 40%;
-
-
 }
-
-.organization__disc__title{
+.organization__disc__title {
     font-weight: bold;
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
-
+    color: #ffffff;
 }
-
 .organization__disc__about {
     color: white;
     line-height: 20px;
@@ -1037,54 +1031,48 @@ input,
     font-size: 14px;
     margin-right: 43px;
 }
-
-.organization__block .organization__link i.i-share-box-fill{
+.organization__block .organization__link i.i-share-box-fill {
     font-size: 18px;
     color: rgba(196, 196, 196, 1);
     cursor: pointer;
 }
-
 .to__main {
-    padding-top: 40px;
-    padding-bottom: 48px;
+    margin-top: 40px;
+    margin-bottom: 48px;
     align-items: center;
     display: flex;
 }
-
 .to__main div {
-   background: #0F1010;
+    background: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
-
-.to__main div i.i-arrow-drop-left-line {
+.to__main i.i-arrow-drop-left-line {
     font-size: 24px;
     padding: 7px;
     position: absolute;
+    color: white;
 }
-
 .title__nav {
     font-weight: bold;
     font-size: 18px;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-left: 16px;
 }
-
 .want__help {
     padding-top: 120px;
     margin-left: 130px;
 }
-
 .card__title {
     font-weight: bold;
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding-bottom: 40px;
     max-width: 520px;
 }
