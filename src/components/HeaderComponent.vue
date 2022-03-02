@@ -10,11 +10,15 @@
       <li><a class="header-link" href="#our-team">Our Team</a></li>
     </nav>
     <div class="header-main-buttons">
-      <button class="btn btn-connect" v-on:click="connectWallet">
-        <span v-if="!userAddressGetter">Connect Wallet</span>
-        <span v-else>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
+      <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
+        <span >Connect Wallet</span>
         <span class="icon metamask-img"></span>
       </button>
+      <button v-else class="btn btn-connect connected" v-on:click="connectWallet">
+        <span>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
+        <span class="icon metamask-img"></span>
+      </button>
+
     </div>
     
     <!-- ----------mobile-menu---------- -->

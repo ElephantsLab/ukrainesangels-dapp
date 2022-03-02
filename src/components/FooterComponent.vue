@@ -19,7 +19,6 @@
                     <ul class="ul-flex-column">
                         <li><a class="footer-link" href="#need-help">If you need help</a></li>
                         <li><a class="footer-link" href="#need-help">If you want help</a></li>
-                        <li><a class="footer-link" href="">Name 1</a></li>
                     </ul>
                 </div>
                 <div class="footer-block">
