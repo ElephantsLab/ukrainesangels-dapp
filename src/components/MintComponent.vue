@@ -390,11 +390,11 @@
         <div class="cards-help-wrapper">
           <div class="card card-help card-help-1">
             <p class="title">If you need help</p>
-            <a href="" class="btn btn-yellow">Information for Asylum-Seekers</a>
+            <a href="https://ukrainesangels.com/InfoCenter" class="btn btn-yellow">Information for Asylum-Seekers</a>
           </div>
           <div class="card card-help card-help-2">
             <p class="title">If you want help</p>
-            <a href="" class="btn btn-yellow">Become an angel</a>
+            <a href="https://ukrainesangels.com/Donate" class="btn btn-yellow">Become an angel</a>
           </div>
         </div>
       </div>

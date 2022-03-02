@@ -967,3 +967,141 @@ input,
 .modal-p + .modal-main-btn {
     margin-top: 40px;
 }
+
+
+/* IF YOU NEED HELP */
+
+.need__help {
+    display: flex;
+}
+
+/* .need__help__inner {
+    padding-top: 44px;
+} */
+
+
+.need__help_title {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    color: white;
+}
+
+.need__help__disc {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    opacity: 0.8;
+    padding-top: 32px;
+    max-width: 640px;
+}
+
+.organization .organization__block:first-child {
+   padding-top: 64px;
+}
+
+.organization__block {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    max-width: 630px;
+    display: flex;
+    padding-bottom: 24px;
+    padding-top: 40px;
+}
+
+.organization__logo {
+    min-width: 80px;
+    min-height: 80px;
+    background: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-right: 24px;
+    position: relative;
+    padding: 29px 12px;
+}
+
+.organization__logo::before {
+    content: '';
+    position: absolute;
+    display: block;
+    min-width: 56px;
+    min-height: 23px;
+    background-image: url(/src/assets/images/save-live.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 40%;
+
+
+}
+
+.organization__disc__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+
+}
+
+.organization__disc__about {
+    color: white;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    opacity: 0.5;
+    padding-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin-right: 43px;
+}
+
+.organization__block .organization__link i.i-share-box-fill{
+    font-size: 18px;
+    color: rgba(196, 196, 196, 1);
+    cursor: pointer;
+}
+
+.to__main {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    align-items: center;
+    display: flex;
+}
+
+.to__main div {
+   background: #0F1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.to__main div i.i-arrow-drop-left-line {
+    font-size: 24px;
+    padding: 7px;
+    position: absolute;
+}
+
+.title__nav {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-left: 16px;
+}
+
+.want__help {
+    padding-top: 120px;
+    margin-left: 130px;
+}
+
+.card__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+    max-width: 520px;
+}
