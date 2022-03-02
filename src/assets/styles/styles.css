@@ -864,8 +864,13 @@ input,
     max-width: 630px;
     border-radius: 24px;
 }
-.modal-wrapper .modal-content {
+.modal-wrapper .modal-content,
+.modal-wrapper .modal-footer {
     padding: 40px;
+}
+.modal-wrapper .modal-footer {
+    padding-top: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .btn-modal-close {
     position: absolute;
@@ -877,7 +882,7 @@ input,
     color: #c4c4c4;
     padding: 8px;
     border-radius: 8px;
-    font-size: 30px;
+    font-size: 24px;
     z-index: 2;
 }
 .modal-center {
@@ -899,13 +904,27 @@ input,
     height: 80px;
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.modal-main-icon i {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    margin: auto;
+    text-align: center;
 }
 .modal-main-icon.modal-icon-trans-proces {
-    margin-bottom: 40px;
     background-size: 48px;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../images/uk-angels.svg);
+}
+.modal-icon-success i {
+    color: #efcf46;
 }
 .modal-main-btn {
     margin-top: auto;
