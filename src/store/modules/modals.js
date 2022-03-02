@@ -2,7 +2,9 @@ export default {
     state: {
         txModal: false,
         txStatus: false,
-        statusTx: undefined
+        statusTx: undefined,
+        txFailed: false,
+        revertReason: undefined
     },
     mutations: {
        updateTxModal(state, val) {
@@ -13,6 +15,12 @@ export default {
        },
        updateTx(state, val) {
            state.statusTx = val;
+       },
+       updateTxFailed(state, val) {
+           state.txFailed = val;
+       },
+       updateRevertReason(state, val) {
+           state.revertReason = val;
        }
     },
     actions: {},
@@ -25,6 +33,12 @@ export default {
         },
         statusTxGetter(state) {
             return state.statusTx;
+        },
+        txFailedGetter(state) {
+            return state.txFailed;
+        },
+        revertReasonGetter(state) {
+            return state.revertReason;
         }
     }
 }
