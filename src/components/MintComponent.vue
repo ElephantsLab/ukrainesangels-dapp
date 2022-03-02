@@ -95,7 +95,7 @@
             </div>
             <div class="card-insert btc-alpha"><div></div></div>
             <div class="card-content">
-              <p class="body3">BTC-Alpha</p>
+              <p class="body3">#nowarua</p>
               <p class="short-descr">
                 A European cryptocurrency exchange. Accepts crypto-donations to protect against the war in Ukraine.
               </p>
