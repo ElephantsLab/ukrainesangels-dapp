@@ -1,5 +1,6 @@
 <template>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
+  <!-- <cancel-modal/> -->
    <success-modal v-if="txModalStatusGetter" />
    <transaction-modal v-if="txModalGetter" />
   <main-view />
@@ -12,6 +13,7 @@ import Core from "../src/core/core.js";
 import FooterComponent from "@/components/FooterComponent";
 import TransactionModal from "@/components/modalWindows/TransactionModal";
 import SuccessModal from "@/components/modalWindows/SuccessModal";
+import CancelModal from "@/components/modalWindows/CancelModal";
 import conf from "./core/Config.json";
 import { mapGetters, mapMutations } from "vuex";
 
@@ -22,6 +24,7 @@ export default {
     FooterComponent,
     TransactionModal,
     SuccessModal,
+    CancelModal,
   },
   methods: {
     ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx"]),

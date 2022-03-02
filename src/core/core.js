@@ -135,6 +135,7 @@ export default class Core {
         try {
             const txResponse = await this[`token_${this.currentBlockchain}`].buy({value: ethers.utils.parseEther(mintVal.toString())});
             this.context.updateTxModal(true);
+            this.context.updateTx(txResponse.hash);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
             if (txReceipt.status) {
@@ -153,6 +154,7 @@ export default class Core {
             const bnbVal = amountOfNFT * conf.BNBVal;
             const txResponse = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
             this.context.updateTxModal(true);
+            this.context.updateTx(txResponse.hash);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
             if (txReceipt.status) {
@@ -177,6 +179,7 @@ export default class Core {
             }
             const txResponse = await this.signer.sendTransaction(tx);
             this.context.updateTxModal(true);
+            this.context.updateTx(txResponse.hash);
             const txReceipt = await txResponse.wait();
             console.log(txReceipt);
             if (txReceipt.status) {
@@ -224,8 +227,9 @@ export default class Core {
     async getTotalDonated() {
         try {
             const totalDonated = await this[`token_${this.currentBlockchain}`].totalDonated();
-            localStorage.setItem("totalDonated", ethers.utils.formatEther(totalDonated));
-            return ethers.utils.formatEther(totalDonated);
+            const totalSupply = Number(parseFloat(ethers.utils.formatEther(totalDonated)).toFixed(4)).toString();
+            localStorage.setItem("totalDonated", totalSupply);
+            return totalSupply;
         } catch (error) {
             console.log(error);
         }

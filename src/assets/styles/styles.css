@@ -404,7 +404,7 @@ input,
     background-image: url(../images/set_nft/21.png);
     left: 50%;
     z-index: 2;
-    transform: translate(-50%, -50%) scale(1.2)  rotateY(180deg);
+    transform: translate(-50%, -50%) scale(1.2) rotateY(180deg);
     filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2)) drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.9));
 }
 .card-main-img div:nth-child(3) {
@@ -953,6 +953,9 @@ input,
 }
 .modal-icon-success i {
     color: #efcf46;
+}
+.modal-icon-cancel i {
+    color: #e73827;
 }
 .modal-main-btn {
     margin-top: auto;
