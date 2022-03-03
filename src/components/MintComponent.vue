@@ -61,13 +61,6 @@
         </div>
       </div>
     </section>
-    <!-- <div class="container">
-    <div class="title">Mint</div>
-    <form v-on:submit.prevent>
-      <input type="number" v-model="mintVal">
-      <button v-on:click="mint">mint</button>
-    </form>
-    </div> -->
     <section class="section section-buy" id="buy">
       <div class="container">
         <div class="section-content">
@@ -184,7 +177,15 @@
           <!-- https://youtu.be/FYlg-7AsGlY -->
           <iframe src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
+            <h4 class="body1">        
+              The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a declaration.
+              <br>
+              <br>
+              The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
+              <br>
+              <br>
+              For that, the two aggressors are now determined to soak Ukraine in the blood of its own people. Invaders kill and maim civilians, women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity considers normal life. They torchure Ukraine.
+            </h4>
         </div>
         </div>
       </div>
@@ -261,7 +262,7 @@
           <h1 class="heading1"> 10 000 nft`s
           </h1>
           <h4 class="body1">
-            Each NFT portrays a character of Ukraine`s heroic defender: either a man or a woman in front of one of the world`s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.  
+            Each NFT portrays a character of Ukraine`s heroic defender: either a man or a woman in front of one of the world`s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
             <br>
             <br>
             Buying one of the collection`s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.

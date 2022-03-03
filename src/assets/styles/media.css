@@ -82,12 +82,17 @@
 @media (max-width: 990.5px) {
     .mobile-menu-status {
         display: flex;
+        font-size: 38px;
+        margin-left: 24px;
     }
     .mobile-menu {
         display: none;
     }
     .header-nav {
         display: none;
+    }
+    .header-main-buttons {
+        margin-left: auto;
     }
 }
 
@@ -217,19 +222,94 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1100px){
+    .section-block-container {
+        text-align: center;
+    }.section-main .btn-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .section-main .btn-wrapper .btn{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
 @media (max-width: 991px) {
     .footer-block {
         padding-right: 40px;
     }
     .cards-buy-wrapper,
-    .cards-angels-wrapper,
-    .cards-help-wrapper {
+    .cards-angels-wrapper {
         margin: -20px -10px 20px;
         width: calc(100% + 20px);
     }
     .cards-buy-wrapper > .card,
     .cards-angels-wrapper > .card {
         width: calc(100% / 3 - 20px);
-        margin: 20px 10px;
+        margin: 10px 10px;
+        min-width: 340px;
+    }
+    .cards-help-wrapper {
+        margin: -20px auto 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .cards-help-wrapper > .card {
+        margin: 15px auto;
+        width: 100%;
+    }
+    .cards-angels-wrapper {
+        padding-bottom: 0;
+    }
+    .section-situation .section-block.section-block-card .body1 {
+        display: block;
+        margin-top: 24px;
+    }
+    .section-situation .section-block.section-block-card {
+        margin-top: 16px;
+    }
+    .section-situation .section-block.section-block-content .body1 {
+        display: none;
+    }
+    .section-situation iframe {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-block.section-block-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* __________font___________ */
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .heading1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .heading1 + .body1 {
+        margin-top: 16px;
+    }
+    .body1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .total-supply,
+    .title1,
+    .modal-name,
+    .card-help .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .input-label,
+    .supply-label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .cards-help-wrapper > .card{
+        height: 340px;
+        max-width: 520px;
     }
 }
