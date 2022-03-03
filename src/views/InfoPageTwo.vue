@@ -13,7 +13,7 @@
         </a>
         <p class="need__help_title">Donate to<br>Charitable Organization</p>
         <p class="need__help__disc">
-          Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now! 
+          Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here`s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now! 
         </p>
           <div class="organization">
            <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization__block">

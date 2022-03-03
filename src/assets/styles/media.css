@@ -222,14 +222,15 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1100px){
+@media (min-width: 768px) and (max-width: 1100px) {
     .section-block-container {
         text-align: center;
-    }.section-main .btn-wrapper{
+    }
+    .section-main .btn-wrapper {
         display: flex;
         justify-content: center;
     }
-    .section-main .btn-wrapper .btn{
+    .section-main .btn-wrapper .btn {
         margin-left: 12px;
         margin-right: 12px;
     }
@@ -308,8 +309,108 @@
         font-size: 14px;
         line-height: 20px;
     }
-    .cards-help-wrapper > .card{
+    .cards-help-wrapper > .card {
         height: 340px;
         max-width: 520px;
+    }
+    .footer-wrapper {
+        flex-wrap: wrap;
+    }
+    .footer .container {
+        padding-bottom: 88px;
+    }
+    .footer-block {
+        margin-bottom: 48px;
+        flex-grow: 1;
+    }
+    .footer-block:first-child {
+        width: 100%;
+        height: 89px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-block {
+        padding-right: 40px;
+    }
+    .cards-buy-wrapper,
+    .cards-angels-wrapper {
+        margin: -20px -10px 20px;
+        width: calc(100% + 20px);
+    }
+    .cards-buy-wrapper > .card,
+    .cards-angels-wrapper > .card {
+        width: 100%;
+        margin: 10px 10px;
+        min-width: unset;
+    }
+    .card.card-main,
+    .card.card-collection,
+    .card.card-donate,
+    .cards-buy-wrapper > .card,
+    .cards-angels-wrapper > .card {
+        width: 100%;
+        max-width: 520px;
+    }
+    .section-block.section-block-card {
+        width: 100%;
+    }
+    .cards-help-wrapper {
+        margin: -20px auto 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .section-situation .section-block-container{
+        align-items: flex-start;
+    }
+    .header-main-buttons {
+        display: none;
+    }
+}
+@media (max-width: 580px) {
+    .card-main-img div {
+        height: 160px;
+        width: 110px;
+    }
+    .card-main-img {
+        height: 200px;
+        max-width: 290px;
+    }
+    .card-collection .card-section,
+    .card-main .card-section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .card-main .card-section,
+    .card-main .card-footer,
+    .card-collection .card-section,
+    .card-collection .card-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .card-main .card-footer .input-wrapper.input-count,
+    .card-main .card-footer .btn.btn-submit,
+    .card-collection .card-footer .input-wrapper.input-count,
+    .card-collection .card-footer .btn.btn-submit {
+        width: 100%;
+    }
+    .input-container{
+        flex-direction: column;
+    }
+    .input-container .btn.btn-submit{
+        margin-top: 16px;
+    }
+    .section-block.section-block-card{
+
+    }
+    .section-block-nft .block-nft{
+        width: calc(100% / 2 - 30px);
+    }
+
+    .photo-team{
+        width: 100%;
+    }
+    .section-situation iframe{
+        width: calc(100vw - 60px);
     }
 }
