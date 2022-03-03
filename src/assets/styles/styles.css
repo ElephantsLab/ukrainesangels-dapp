@@ -35,6 +35,14 @@ header {
     align-items: center;
     align-content: stretch;
 }
+.header-mobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    height: 88px;
+}
 .header-nav {
     display: flex;
     flex-grow: 1;
@@ -79,11 +87,18 @@ ul.ul-flex-column li > button {
 }
 .mobile-menu {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: black;
+}
+.header-mobile .container{
+    display: flex;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 .title {
     font-size: 70px;
@@ -958,6 +973,7 @@ input,
     top: 40px;
     right: 40px;
 }
+.btn-mobile-close,
 .btn-modal-close {
     background-color: rgba(255, 255, 255, 0.1);
     color: #c4c4c4;
@@ -965,6 +981,8 @@ input,
     border-radius: 8px;
     font-size: 24px;
     z-index: 2;
+    height: 40px;
+    width: 40px;
 }
 .modal-center {
     display: flex;
