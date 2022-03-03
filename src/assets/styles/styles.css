@@ -697,10 +697,10 @@ input,
     width: 100%;
 }
 .stop-war-wrapper:nth-child(1) {
-    animation: marquee1 10s linear infinite;
+    /* animation: marquee1 10s linear infinite; */
 }
 .stop-war-wrapper:nth-child(2) {
-    animation: marquee2 10s linear infinite;
+    /* animation: marquee2 10s linear infinite; */
 }
 .container-stop-war,
 .container-img {
