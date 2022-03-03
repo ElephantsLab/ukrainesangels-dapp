@@ -65,7 +65,7 @@
       <div class="container">
         <div class="section-content">
           <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
-          <p class="body2">You Can Donate to the World`s Leading Charitable Foundations and<br>Volunteer Organizations</p>
+          <p class="body2">You Can Donate to the World`s Leading Charitable Foundations and Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
           <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
@@ -124,7 +124,7 @@
         <div class="section-content">
           <h2 class="heading2">You Can Donate Crypto Via the Platform</h2>
           <p class="body2">
-           We will make sure each bit of your donation is accounted for and<br>ends up supporting Ukraine`s people and army </p>
+           We will make sure each bit of your donation is accounted for and ends up supporting Ukraine`s people and army </p>
         </div>
         <div class="card card-donate">
           <div class="title1">make a donation</div>
@@ -374,7 +374,7 @@
             <div class="icon intersect"></div>
             <div class="title1">{{ totalSupply }} nft`s</div>
             <div class="short-descr">
-              Have been bought by people from around the<br> world to make their solidarity palpable
+              Have been bought by people from around the world to make their solidarity palpable
             </div>
             <button class="btn btn-yellow">View collection</button>
           </div>
@@ -382,7 +382,7 @@
             <div class="icon uk-angels"></div>
             <div class="title1">{{ nftOwnersCount }} angels</div>
             <div class="short-descr">
-              Have contributed to turn the Ukrainian sky<br> clear and blue again
+              Have contributed to turn the Ukrainian sky clear and blue again
             </div>
             <button class="btn btn-yellow">Become an Angel</button>
           </div>
@@ -410,7 +410,7 @@
               Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It`s true. Yet today we are up against a life-threatening challenge. And it`s our duty to deal with it, applying blockchain technology, of course.
               <br>
               <br>
-              This project is part of a swift response pack our team undertook to save Ukraine, ease our people`s suffering and protect Europe`s easternmost borders. We are Ukraine`s vigilant cyber force, we`re its reliable home front. Today, we`re fighting for its digital freedom. Today, Ukraine needs our involvement most.<br>And we deliver.
+              This project is part of a swift response pack our team undertook to save Ukraine, ease our people`s suffering and protect Europe`s easternmost borders. We are Ukraine`s vigilant cyber force, we`re its reliable home front. Today, we`re fighting for its digital freedom. Today, Ukraine needs our involvement most.And we deliver.
             </p>
             <ul class="ul-social-list">
                 <li>
