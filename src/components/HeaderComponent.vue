@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <header class="container">
-      <a href="" class="header-logo logo"></a>
+      <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
       <nav class="header-nav">
         <li><a class="header-link" v-on:click="this.$router.push('/')" href="#our-mission">Our Mission</a></li>
         <li><a class="header-link" v-on:click="this.$router.push('/')" href="#situation">Situation in Ukraine</a></li>
