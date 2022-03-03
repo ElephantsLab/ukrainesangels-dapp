@@ -9,11 +9,11 @@
           <div>
             <i class="i-arrow-drop-left-line"></i>
           </div>
-          <p class="title__nav">To main page</p>
+          <p class="title__nav">Go to Home Page</p>
         </a>
-        <p class="need__help_title">If you want help</p>
+        <p class="need__help_title">Donate to<br>Charitable Organization</p>
         <p class="need__help__disc">
-          Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. 
+          Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now! 
         </p>
           <div class="organization">
            <a href="" target="_blank" rel="nofollow" class="organization__block">
@@ -71,7 +71,10 @@
         </div>
       </div>
       <div class="want__help">
-        <p class="card__title">Or donate trough<br> our platform</p>
+        <p class="card__title">Donate Crypto Via the Platform</p>
+        <p class="card__disc">
+          Your donation will be sent only to trusted crypto charities that sustain Ukraine’s people and army
+        </p>
         <div class="card card-donate">
           <div class="title1">make a donation</div>
             <div class="card-input">

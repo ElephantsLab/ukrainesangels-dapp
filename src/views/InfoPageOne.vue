@@ -9,11 +9,12 @@
           <div >
             <i class="i-arrow-drop-left-line"></i>
           </div>
-          <p class="title__nav">To main page</p>
+          <p class="title__nav">Go to Home Page</p>
         </a>
-        <p class="need__help_title">If you need help</p>
+        <p class="need__help_title">Get Help From<br>Charitable Organization</p>
         <p class="need__help__disc">
-          Elit nisl, maecenas hac sit ut. Blandit orci urna netus sit neque sit laoreet eget urna. Commodo massa eros, molestie fermentum posuere sed. Sit vel, ultrices sed est malesuada suspendisse. 
+          First of all, stay strong, we are here to get you the help you need.<br> Click any charity link to receive aid your situation requires.<br>
+          Never give up, together we’ll surmount any obstacle. 
         </p>
           <div class="organization">
             <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization__block">
