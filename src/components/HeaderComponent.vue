@@ -23,7 +23,7 @@
     
     <!-- ----------mobile-menu---------- -->
     <div class="mobile-menu-status">
-      <button class="btn btn-mob-menu">
+      <button class="btn-mob-menu">
         <i class="i-menu-3-fill"></i>
       </button>
     </div>

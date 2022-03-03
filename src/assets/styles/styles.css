@@ -621,7 +621,7 @@ input,
 }
 .card-help {
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: top right;
     background-size: cover;
 }
 .card-help.card-help-1 {
@@ -676,6 +676,7 @@ input,
     background-size: 100% 100%;
     padding: 7px 108px 14px 86px;
     z-index: -1;
+    opacity: .2;
 }
 .section-situation .container {
     margin-bottom: 40px;
@@ -886,6 +887,9 @@ input,
 .section-situation iframe {
     width: 520px;
     height: 292px;
+}
+.section-situation .section-block.section-block-card .body1{
+    display: none;
 }
 .ul-social-list {
     margin-left: -12px;
