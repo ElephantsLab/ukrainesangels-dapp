@@ -3,15 +3,15 @@
   <header-component/>
   <div  class="main-wrapper info-page-wrapper">
 <div class="container">
-    <div class="need__help">
-      <div class="need__help__inner">
+    <div class="section-block-container">
+      <div class="section-block section-block-content">
         <a class="to__main" v-on:click="toMain">
           <div>
             <i class="i-arrow-drop-left-line"></i>
           </div>
           <p class="title__nav">Go to Home Page</p>
         </a>
-        <p class="need__help_title">Donate to<br>Charitable Organization</p>
+        <p class="heading1">Donate to<br>Charitable Organization</p>
         <p class="need__help__disc">
           Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here`s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now! 
         </p>
@@ -29,8 +29,8 @@
            </a>
         </div>
       </div>
-      <div class="want__help">
-        <p class="card__title">Donate Crypto Via the Platform</p>
+      <div class="section-block section-block-card">
+        <p class="heading2">Donate Crypto Via the Platform</p>
         <p class="card__disc">
           Your donation will be sent only to trusted crypto charities that sustain Ukraine’s people and army
         </p>

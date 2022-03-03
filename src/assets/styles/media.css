@@ -158,7 +158,6 @@
     .card.card-main,
     .card.card-collection,
     .card.card-donate,
-    .card__title,
     .photo-team,
     .section-situation iframe {
         max-width: 480px;
@@ -262,13 +261,23 @@
     .cards-angels-wrapper {
         padding-bottom: 0;
     }
+    .section-block-nft:not(.section-block-nft-desktop) {
+        display: flex;
+    }
+    .photo-team.photo-team-mobile,
     .section-situation .section-block.section-block-card .body1 {
         display: block;
+    }
+    .section-block-nft:not(.section-block-nft-desktop),
+    .section-situation .section-block.section-block-card .body1 {
         margin-top: 24px;
     }
     .section-situation .section-block.section-block-card {
         margin-top: 16px;
     }
+    .section-block-nft.section-block-nft-desktop,
+    .photo-team:not(.photo-team-mobile),
+    .section-team .section-block.section-block-card,
     .section-situation .section-block.section-block-content .body1 {
         display: none;
     }
@@ -360,11 +369,14 @@
         width: 100%;
         flex-direction: column;
     }
-    .section-situation .section-block-container{
+    .section-situation .section-block-container {
         align-items: flex-start;
     }
     .header-main-buttons {
         display: none;
+    }
+    .card-help {
+        border-color: #efcf46;
     }
 }
 @media (max-width: 580px) {
@@ -394,23 +406,38 @@
     .card-collection .card-footer .btn.btn-submit {
         width: 100%;
     }
-    .input-container{
+    .input-container {
         flex-direction: column;
     }
-    .input-container .btn.btn-submit{
+    .input-container .btn.btn-submit {
         margin-top: 16px;
     }
-    .section-block.section-block-card{
-
+    .section-block.section-block-card {
+        margin-top: 36px;
     }
-    .section-block-nft .block-nft{
-        width: calc(100% / 2 - 30px);
-    }
-
-    .photo-team{
+    .photo-team {
         width: 100%;
     }
-    .section-situation iframe{
+    .section-situation iframe {
         width: calc(100vw - 60px);
+    }
+    .section-block-nft .block-nft {
+        width: calc(100% / 2 - 16px);
+        margin: 0 8px 23px;
+    }
+    .section-block-nft {
+        margin-left: -8px;
+        margin-right: -8px;
+        width: calc(100% + 16px);
+    }
+    .nft-img-mask {
+        height: 224px;
+    }
+    .section-angels .container {
+        /* 
+        width: 188px;
+height: 125.04px; */
+        background-size: 188px 125.04px;
+        background-position: top center;
     }
 }

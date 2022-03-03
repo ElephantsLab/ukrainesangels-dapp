@@ -258,15 +258,53 @@
       <div class="container">
         <div class="section-block-container">
           <div class="section-block section-block-content">
-          <div class="subtitle">Collection</div>
-          <h1 class="heading1"> 10 000 nft`s
-          </h1>
-          <h4 class="body1">
-            Each NFT portrays a character of Ukraine`s heroic defender: either a man or a woman in front of one of the world`s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
-            <br>
-            <br>
-            Buying one of the collection`s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.
-          </h4>
+            <div class="subtitle">Collection</div>
+            <h1 class="heading1"> 10 000 nft`s
+            </h1>
+            <h4 class="body1">
+              Each NFT portrays a character of Ukraine`s heroic defender: either a man or a woman in front of one of the world`s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
+              <br>
+              <br>
+              Buying one of the collection`s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.
+            </h4>            
+            <div class="section-block-nft">
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0001
+                </div>
+                <div class="nft-img-mask nft-img-mask-1"></div>
+              </div>
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0002
+                </div>
+                <div class="nft-img-mask nft-img-mask-2"></div>
+              </div>
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0003
+                </div>
+                <div class="nft-img-mask nft-img-mask-3"></div>
+              </div>
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0004
+                </div>
+                <div class="nft-img-mask nft-img-mask-4"></div>
+              </div>
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0005
+                </div>
+                <div class="nft-img-mask nft-img-mask-5"></div>
+              </div>          
+              <div class="block-nft">
+                <div class="body3">
+                  Angel #0006
+                </div>
+                <div class="nft-img-mask nft-img-mask-6"></div>
+              </div>
+            </div>
           </div>
           <div class="section-block section-block-card">
           <div class="card card-collection">
@@ -298,67 +336,42 @@
           </div>
           </div>
         </div>
-        <div class="section-block-nft">
+        <div class="section-block-nft section-block-nft-desktop">
           <div class="block-nft">
             <div class="body3">
               Angel #0001
             </div>
-            <div class="nft-img-mask nft-img-mask-1" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
+            <div class="nft-img-mask nft-img-mask-1"></div>
           </div>
           <div class="block-nft">
             <div class="body3">
               Angel #0002
             </div>
-            <div class="nft-img-mask nft-img-mask-2" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
+            <div class="nft-img-mask nft-img-mask-2"></div>
           </div>
           <div class="block-nft">
             <div class="body3">
               Angel #0003
             </div>
-            <div class="nft-img-mask nft-img-mask-3" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
+            <div class="nft-img-mask nft-img-mask-3"></div>
           </div>
           <div class="block-nft">
             <div class="body3">
               Angel #0004
             </div>
-            <div class="nft-img-mask nft-img-mask-4" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
+            <div class="nft-img-mask nft-img-mask-4"></div>
           </div>
           <div class="block-nft">
             <div class="body3">
               Angel #0005
             </div>
-            <div class="nft-img-mask nft-img-mask-5" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
-          </div>
-          
+            <div class="nft-img-mask nft-img-mask-5"></div>
+          </div>          
           <div class="block-nft">
             <div class="body3">
               Angel #0006
             </div>
-            <div class="nft-img-mask nft-img-mask-6" 
-            >
-              <!-- style="background-image: url('@/assets/images/set_nft/14.png')" -->
-              <!-- <img src="@/assets/images/set_nft/14.png" alt=""> -->
-            </div>
+            <div class="nft-img-mask nft-img-mask-6"></div>
           </div>
         </div>
       </div>      
@@ -403,6 +416,7 @@
           <div class="section-block section-block-content">
             <div class="subtitle">our team</div>
             <a href="https://elephantslab.com/" class="link-team" target="_blank" rel="nofollow"></a>
+             <div class="photo-team photo-team-mobile"></div>
             <p class="body1">        
               We are a blockchain research and product development company based in Ukraine.
               <br>
