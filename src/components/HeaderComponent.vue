@@ -21,20 +21,20 @@
       </div>
       <div class="mobile-menu-status">
         <!-- TODO: если нажимаем сюда <div class="mobile-menu"> показать -->
-        <button class="btn-mob-menu">
+        <button v-on:click="mobileMenu = true" class="btn-mob-menu">
           <i class="i-menu-3-fill"></i>
         </button>
       </div>
     </header>
       
       <!-- ----------mobile-menu---------- -->
-    <div class="mobile-menu">
+    <div v-if="mobileMenu" class="mobile-menu">
       <header class="header-mobile">
         <div class="container">
           <a href="" class="header-logo logo"></a>  
-          <div class="mobile-menu-status">            
+          <div class="mobile-menu-status">
             <!-- TODO: если нажимаем сюда <div class="mobile-menu"> спрятать -->
-            <button class="btn-mobile-close">
+            <button v-on:click="mobileMenu = false" class="btn-mobile-close ">
               <i class="i-close-fill"></i>
             </button>
           </div>
@@ -58,6 +58,11 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
+  data() {
+    return {
+      mobileMenu: false
+    }
+  },
   methods: {
     ...mapActions(["connectWallet"]),
     logOut() {
