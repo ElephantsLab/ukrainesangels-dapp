@@ -3,15 +3,15 @@
   <header-component/>
   <div  class="main-wrapper info-page-wrapper">
   <div class="container">
-    <div class="need__help">
-      <div class="need__help__inner">
+    <div class="section-block-container">
+      <div class="section-block section-block-content">
         <a class="to__main" v-on:click="toMain">
           <div >
             <i class="i-arrow-drop-left-line"></i>
           </div>
           <p class="title__nav">Go to Home Page</p>
         </a>
-        <p class="need__help_title">Get Help From<br>Charitable Organization</p>
+        <p class="heading1">Get Help From<br>Charitable Organization</p>
         <p class="need__help__disc">
           First of all, stay strong, we are here to get you the help you need.<br> Click any charity link to receive aid your situation requires.<br>
           Never give up, together we’ll surmount any obstacle. 
