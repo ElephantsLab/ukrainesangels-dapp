@@ -23,9 +23,9 @@
     
     <!-- ----------mobile-menu---------- -->
     <div class="mobile-menu-status">
-          <button class="btn btn-mob-menu">
-      mob-men
-    </button>
+      <button class="btn btn-mob-menu">
+        <i class="i-menu-3-fill"></i>
+      </button>
     </div>
     </header>
     <div class="mobile-menu">
