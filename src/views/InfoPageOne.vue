@@ -17,7 +17,7 @@
         </p>
           <div class="organization">
             <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization__block">
-              <div class="organization__logo"></div>
+              <div class="organization__logo" v-bind:style="{ 'background-image': parseUrl(link[1]) }"></div>
               <div class="organization__disc">
                 <p class="organization__disc__title">{{ link[0] }}</p>
                 <p class="organization__disc__about"
@@ -57,6 +57,9 @@ export default {
       if (data.length) {
         this.links = data;
       }
+    },
+    parseUrl(url) {
+      return `url('${url}')`;
     }
   },
   async mounted() {
