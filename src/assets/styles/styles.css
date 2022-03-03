@@ -1059,6 +1059,7 @@ input,
     margin-right: 24px;
     position: relative;
     padding: 29px 12px;
+    background-size: contain;
 }
 
 .organization__logo::before {
@@ -1067,7 +1068,7 @@ input,
     display: block;
     min-width: 56px;
     min-height: 23px;
-    background-image: url(/src/assets/images/save-live.webp);
+    /* background-image: url(/src/assets/images/save-live.webp); */
     background-size: contain;
     background-repeat: no-repeat;
     top: 40%;
