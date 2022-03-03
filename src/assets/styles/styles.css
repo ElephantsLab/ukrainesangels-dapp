@@ -688,6 +688,7 @@ input,
     height: 304px;
     overflow: hidden;
     background: #0f1010;
+    width: 100%;
 }
 .stop-war-wrapper {
     position: absolute;
@@ -695,42 +696,71 @@ input,
     left: 0;
     width: 100%;
 }
-.stop-war-wrapper:nth-child(1) {
-    animation: marquee1 10s linear infinite;
-}
-.stop-war-wrapper:nth-child(2) {
-    animation: marquee2 10s linear infinite;
-}
+
+ /* .stop-war-wrapper:nth-child(2) {
+    animation: marquee2 0.8s linear infinite;
+}  */
 .container-stop-war,
 .container-img {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
     align-content: stretch;
     flex-wrap: nowrap;
     overflow: hidden;
-    animation-play-state: running;
+    /* animation-play-state: running;
+    animation: marquee1 10s linear infinite; */
+    animation: marquee1 10s linear infinite;
+    
 }
+
+
+.section-stop-war {
+    animation-name: marquee-infinite;
+}
+
+
+
 @keyframes marquee1 {
-    0%{
-        transform: translate3d(00%, 0, 0);
-        /* opacity: 0; */
-    }    
-    49.9%{
-        transform: translate3d(100%, 0, 0);
-        /* opacity: 0; */
+    
+    0% {
+        transform: translateX(100%)
     }
-    50%{
-        transform: translate3d(100%, 0, 0);
-        opacity: 1;
-    }
+
     100%  {
-        transform: translate3d(-100%, 0, 0);
-        opacity: 1;        
+        transform: translateX(-100%);
     } 
 }
-@keyframes marquee2 {
-    0%{
+
+
+@keyframes marquee-infinite {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* @keyframes marquee2 {
+     0%{
         transform: translate3d(0%, 0, 0);
         opacity: 1;
     }
@@ -741,12 +771,12 @@ input,
     99.9%  {
         transform: translate3d(-100%, 0, 0);
         opacity: 0;        
-    }
+    } 
     100%  {
-        transform: translate3d(0%, 0, 0);
-        opacity: 0;        
+        transform: translateX(-100%);
+         opacity: 0;         
     }
-}
+}  */
 .container-img {
     height: 240px;
 }

@@ -189,70 +189,72 @@
         </div>
       </div>
     </section>
-    <section class="section-stop-war"  id="stop-war">
-      <div class="stop-war-wrapper">
-        <div class="container-img">
-        <img src="@/assets/images/set_war/1.webp" alt="">
-        <img src="@/assets/images/set_war/2.webp" alt="">
-        <img src="@/assets/images/set_war/4.webp" alt="">
-        <img src="@/assets/images/set_war/5.webp" alt="">
-        <img src="@/assets/images/set_war/6.webp" alt="">        
-        <img src="@/assets/images/set_war/7.webp" alt="">        
-        <img src="@/assets/images/set_war/8.webp" alt="">
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-      </div>
-      </div>
-      <div class="stop-war-wrapper">
-        <div class="container-img">
-        <img src="@/assets/images/set_war/1.webp" alt="">
-        <img src="@/assets/images/set_war/2.webp" alt="">
-        <img src="@/assets/images/set_war/4.webp" alt="">
-        <img src="@/assets/images/set_war/5.webp" alt="">
-        <img src="@/assets/images/set_war/6.webp" alt="">        
-        <img src="@/assets/images/set_war/7.webp" alt="">        
-        <img src="@/assets/images/set_war/8.webp" alt="">
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-      </div>
-      </div>
-    </section>
+    <div class="container">
+      <section class="section-stop-war"  id="stop-war">
+        <div class="stop-war-wrapper">
+          <div class="container-img">
+          <img src="@/assets/images/set_war/1.webp" alt="">
+          <img src="@/assets/images/set_war/2.webp" alt="">
+          <img src="@/assets/images/set_war/4.webp" alt="">
+          <img src="@/assets/images/set_war/5.webp" alt="">
+          <img src="@/assets/images/set_war/6.webp" alt="">        
+          <img src="@/assets/images/set_war/7.webp" alt="">        
+          <img src="@/assets/images/set_war/8.webp" alt="">
+          <!-- src="@/assets/src/images/image-card.svg"  -->
+        </div>
+        <div class="container-stop-war">
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+        </div>
+        </div>
+        <div class="stop-war-wrapper">
+          <div class="container-img">
+          <img src="@/assets/images/set_war/1.webp" alt="">
+          <img src="@/assets/images/set_war/2.webp" alt="">
+          <img src="@/assets/images/set_war/4.webp" alt="">
+          <img src="@/assets/images/set_war/5.webp" alt="">
+          <img src="@/assets/images/set_war/6.webp" alt="">        
+          <img src="@/assets/images/set_war/7.webp" alt="">        
+          <img src="@/assets/images/set_war/8.webp" alt="">
+          <!-- src="@/assets/src/images/image-card.svg"  -->
+        </div>
+        <div class="container-stop-war">
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+          <span>STOP WAR</span>
+        </div>
+        </div>
+      </section>
+    </div>
     <section class="section section-collection"  id="angel-collection">
       <div class="container">
         <div class="section-block-container">
