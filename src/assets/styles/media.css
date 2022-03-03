@@ -80,18 +80,23 @@
 }
 
 @media (max-width: 990.5px) {
-    .mobile-menu-status,
+    .mobile-menu-status {
+        display: flex;
+        font-size: 38px;
+        margin-left: 24px;
+    }
     .mobile-menu {
-        display: block;
         display: none;
     }
     .header-nav {
         display: none;
     }
+    .header-main-buttons {
+        margin-left: auto;
+    }
 }
 
 @media (min-width: 768px) {
-
     .card-angel .btn.btn-yellow:hover,
     .card-help .btn.btn-yellow:hover,
     .btn.btn-connect:not(.btn-connected):hover,
@@ -101,8 +106,8 @@
     .modal-main-btn:hover,
     .btn-see-all:hover,
     .btn-submit:hover {
-        background: #FFCF00;
-        color: #0F1010;
+        background: #ffcf00;
+        color: #0f1010;
         transition: 0.2s;
     }
     .header-link:hover,
@@ -114,10 +119,10 @@
     }
     .card-angel .btn.btn-blue:hover,
     .section-main .btn-wrapper .btn.btn-blue:hover {
-        background: #00A5FF;
+        background: #00a5ff;
         transition: 0.2s;
     }
-    a.organization__block:hover i.i-share-box-fill ,
+    a.organization__block:hover i.i-share-box-fill,
     .card.card-buy:hover i.i-share-box-fill {
         color: #efcf46;
         transition: 0.2s;
@@ -125,7 +130,7 @@
     .card.card-buy:hover,
     .btn-speed-amount:hover,
     .card-help:hover,
-    .link-team:hover ,
+    .link-team:hover,
     .to__main:hover div,
     a.organization__block:hover {
         border-color: #efcf46;
@@ -138,5 +143,173 @@
     .ul-social-list a:hover svg {
         fill: #efcf46;
         transition: 0.2s;
+    }
+}
+
+@media (max-width: 1440px) {
+    .section-block.section-block-card {
+        margin-left: 70px;
+    }
+    .section-block.section-block-content {
+        max-width: calc(100% - 520px - 70px);
+    }
+}
+@media (min-width: 991px) and (max-width: 1298px) {
+    .card.card-main,
+    .card.card-collection,
+    .card.card-donate,
+    .card__title,
+    .photo-team,
+    .section-situation iframe {
+        max-width: 480px;
+    }
+    .section-block.section-block-content {
+        max-width: calc(100% - 480px - 70px);
+    }
+    header .btn {
+        padding: 12px;
+    }
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1298px) {
+    .section-block-nft .block-nft {
+        width: calc(100% / 3 - 30px);
+        margin-bottom: 60px;
+    }
+    .header-nav {
+        margin-left: 30px;
+    }
+    header nav.header-nav li {
+        margin: 0 7px;
+    }
+    .footer-block {
+        padding-right: 70px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .section-block-nft .block-nft {
+        width: calc(100% / 3 - 30px);
+        margin-bottom: 60px;
+    }
+    .header-nav {
+        margin-left: 20px;
+    }
+    header nav.header-nav li {
+        margin: 0 6px;
+    }
+    .footer-block {
+        padding-right: 60px;
+    }
+    .header-link,
+    .footer-link {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .section-block.section-block-content {
+        max-width: 100%;
+    }
+    .section-block-container {
+        flex-direction: column;
+    }
+    .section-block.section-block-card {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px){
+    .section-block-container {
+        text-align: center;
+    }.section-main .btn-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .section-main .btn-wrapper .btn{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+@media (max-width: 991px) {
+    .footer-block {
+        padding-right: 40px;
+    }
+    .cards-buy-wrapper,
+    .cards-angels-wrapper {
+        margin: -20px -10px 20px;
+        width: calc(100% + 20px);
+    }
+    .cards-buy-wrapper > .card,
+    .cards-angels-wrapper > .card {
+        width: calc(100% / 3 - 20px);
+        margin: 10px 10px;
+        min-width: 340px;
+    }
+    .cards-help-wrapper {
+        margin: -20px auto 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .cards-help-wrapper > .card {
+        margin: 15px auto;
+        width: 100%;
+    }
+    .cards-angels-wrapper {
+        padding-bottom: 0;
+    }
+    .section-situation .section-block.section-block-card .body1 {
+        display: block;
+        margin-top: 24px;
+    }
+    .section-situation .section-block.section-block-card {
+        margin-top: 16px;
+    }
+    .section-situation .section-block.section-block-content .body1 {
+        display: none;
+    }
+    .section-situation iframe {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-block.section-block-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* __________font___________ */
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .heading1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .heading1 + .body1 {
+        margin-top: 16px;
+    }
+    .body1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .total-supply,
+    .title1,
+    .modal-name,
+    .card-help .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .input-label,
+    .supply-label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .cards-help-wrapper > .card{
+        height: 340px;
+        max-width: 520px;
     }
 }

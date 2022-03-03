@@ -15,7 +15,7 @@ import TransactionModal from "@/components/modalWindows/TransactionModal";
 import SuccessModal from "@/components/modalWindows/SuccessModal";
 import CancelModal from "@/components/modalWindows/CancelModal";
 import conf from "./core/Config.json";
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
   name: "App",
@@ -27,6 +27,7 @@ export default {
     CancelModal,
   },
   methods: {
+    ...mapActions(["fetchHelpCenters"]),
     ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason"]),
     checkWalletOption(wallet) {
       let _this = this;
@@ -149,7 +150,8 @@ export default {
 
     let tronConnectAttemptsCounter = 0;
     let _this = this;
-    const walletOpiton = _this.getWalletOption();
+    // const walletOpiton = _this.getWalletOption();
+    const walletOpiton = localStorage.getItem("selectedWallet");
     setTimeout(async function initContract() {
       try {
         // _this.$root.core = new Core(_this, )

@@ -151,8 +151,7 @@ export default class Core {
             this.context.updateTxFailed(true);
             if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
-            }
-            if (error.message) {
+            } else if (error.message) {
                 this.context.updateRevertReason(error.message);
             }
             console.log(error);
@@ -180,8 +179,7 @@ export default class Core {
             this.context.updateTxFailed(true);
             if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
-            }
-            if (error.message) {
+            } else if (error.message) {
                 this.context.updateRevertReason(error.message);
             }
             console.log(error);
@@ -215,8 +213,7 @@ export default class Core {
             this.context.updateTxFailed(true);
             if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
-            }
-            if (error.message) {
+            } else if (error.message) {
                 this.context.updateRevertReason(error.message);
             }
             console.log(error);
