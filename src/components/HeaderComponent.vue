@@ -43,11 +43,23 @@
       <div class="menu-wrapper">
         <div class="container">
           
-      <ul class="ul-flex-column">
-        <li class=""></li>
-        <button class="btn btn-connect connected" v-on:click="connectWallet" v-if="!userAddressGetter">Connect Wallet</button>
-        <button class="btn btn-connect connected" v-on:click="connectWallet" v-else>{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</button>
-      </ul>
+          <ul class="ul-flex-column">
+            <li><a class="nav-mob-link" v-on:click="this.$router.push('/')" href="#our-mission">Our Mission</a></li>
+            <li><a class="nav-mob-link" v-on:click="this.$router.push('/')" href="#situation">Situation in Ukraine</a></li>
+            <li><a class="nav-mob-link" v-on:click="this.$router.push('/')" href="#angel-collection">Collection</a></li>
+            <li><a class="nav-mob-link" v-on:click="this.$router.push('/')" href="#your-donate">Donation</a></li>
+            <li><a class="nav-mob-link" v-on:click="this.$router.push('/')" href="#our-team">Our Team</a></li>
+          </ul> 
+          <div class="ul-flex-column menu-btn-wrapper">                 
+            <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">
+              <span >Connect Wallet</span>
+              <span class="icon metamask-img"></span>
+            </button>
+            <div v-else class="btn btn-connect connected" v-on:click="logOut">
+              <span >{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
+              <span class="icon metamask-img"></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
