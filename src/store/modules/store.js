@@ -20,7 +20,9 @@ export default {
 
             function handleAccountsChanged(accounts) {
                 if (accounts.length > 0) {
-                    localStorage.setItem("account", accounts[0]);
+                    localStorage.setItem("selectedWallet", "metamask");
+                    localStorage.setItem("address", accounts[0]);
+                    location.reload();
                 }
             }
         }

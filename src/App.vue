@@ -142,7 +142,8 @@ export default {
 
     let tronConnectAttemptsCounter = 0;
     let _this = this;
-    const walletOpiton = _this.getWalletOption();
+    // const walletOpiton = _this.getWalletOption();
+    const walletOpiton = localStorage.getItem("selectedWallet");
     setTimeout(async function initContract() {
       try {
         // _this.$root.core = new Core(_this, )
