@@ -621,8 +621,8 @@ input,
 }
 .card-help {
     background-repeat: no-repeat;
-    background-position: center right;
-    background-size: contain;
+    background-position: bottom right;
+    background-size: cover;
 }
 .card-help.card-help-1 {
     background-image: url(../images/help1.webp);
@@ -814,7 +814,10 @@ input,
 }
 .card-angel .btn {
     width: 100%;
-    margin-top: 24px;
+    margin-top: auto;
+}
+.card-angel .short-descr{
+    margin-bottom: 24px;
 }
 .cards-angels-wrapper {
     padding-bottom: 76px;
@@ -991,6 +994,7 @@ input,
     background-repeat: no-repeat;
     background-image: url(../images/uk-angels.svg);
 }
+.btn-mob-menu i,
 .modal-icon-success i {
     color: #efcf46;
 }
@@ -1129,5 +1133,5 @@ input,
     letter-spacing: 1px;
     color: #ffffff;
     padding-bottom: 40px;
-    max-width: 520px;
+    width: 520px;
 }
