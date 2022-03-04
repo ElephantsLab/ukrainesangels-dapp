@@ -454,11 +454,11 @@
         <div class="cards-help-wrapper">
           <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
             <p class="title">If you need help</p>
-            <div class="btn btn-yellow">Donate</div>
+            <div class="btn btn-yellow">Information desc</div>
           </a>
           <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
             <p class="title">If you want help</p>
-            <div class="btn btn-yellow">Become an angel</div>
+            <div class="btn btn-yellow">Donate</div>
           </a>
         </div>
       </div>

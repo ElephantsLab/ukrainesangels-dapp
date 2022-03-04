@@ -1104,12 +1104,13 @@ input,
 }
 .organization-logo {
     width: 80px;
+    min-width: 80px;
     height: 80px;
     background-color: #131313;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin-right: 24px;
-    background-size: calc(100% - 8px);
+    background-size: calc(100% - 16px);
     background-repeat: no-repeat;
     background-position: center;
 }
