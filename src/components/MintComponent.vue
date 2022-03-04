@@ -433,7 +433,7 @@
             <div class="short-descr">
               Have been bought by people from around the world to make their solidarity palpable
             </div>
-            <button class="btn btn-yellow" ><a href="#angel-collection">View collection</a></button>
+             <a class="btn btn-yellow" href="#angel-collection">View collection</a>
           </div>
           <div class="card card-angel">
             <div class="icon uk-angels"></div>
@@ -441,7 +441,7 @@
             <div class="short-descr">
               Have contributed to turn the Ukrainian sky clear and blue again
             </div>
-            <button class="btn btn-yellow"><a href="#our-mission">Become an Angel</a></button>
+             <a href="#our-mission" class="btn btn-yellow">Become an Angel</a>
           </div>
           <div class="card card-angel">
             <div class="icon bnb"></div>
@@ -449,7 +449,7 @@
             <div class="short-descr">
               This much funds have already been sent to the persevering people of Ukraine
             </div>
-            <button class="btn btn-blue"><a href="#your-donate">Donate</a></button>
+             <a href="#your-donate" class="btn btn-blue">Donate</a>
           </div>
         </div>
       </div>
