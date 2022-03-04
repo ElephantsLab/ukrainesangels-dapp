@@ -343,6 +343,9 @@ input,
     justify-content: flex-start;
     align-items: center;
 }
+.info-page-wrapper .section-block-container{
+    align-items: flex-start;
+}
 .section-block.section-block-content {
     max-width: calc(100% - 520px - 140px);
 }

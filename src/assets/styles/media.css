@@ -211,6 +211,9 @@
     .section-block.section-block-content {
         max-width: 100%;
     }
+    .info-page-wrapper .section-block-container{
+        align-items: center;
+    }
     .section-block-container {
         flex-direction: column;
     }
