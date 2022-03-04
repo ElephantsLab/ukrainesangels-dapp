@@ -12,7 +12,7 @@
                         <li><a class="footer-link" v-on:click="this.$router.push('/')"  href="#situation">Situation in Ukraine</a></li>
                         <li><a class="footer-link" v-on:click="this.$router.push('/')"  href="#angel-collection">Collection</a></li>
                         <li><a class="footer-link" v-on:click="this.$router.push('/')"  href="#your-donate">Donation</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desc</a></li>
+                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a></li>
                     </ul>
                 </div>
                 <div class="footer-block">
