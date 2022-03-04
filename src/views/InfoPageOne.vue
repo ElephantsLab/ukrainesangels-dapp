@@ -11,10 +11,9 @@
     </a>
     <div class="section-block-container">   
       <div class="section-block section-block-content">
-        <p class="heading1">Get Help From<br>Charitable Organization</p>
+        <p class="heading1">Благодійні організації та достовірна інформація</p>
         <p class="body2">
-          First of all, stay strong, we are here to get you the help you need.<br> Click any charity link to receive aid your situation requires.<br>
-          Never give up, together we’ll surmount any obstacle. 
+          Наша компанія зібрала для васнеобхідну інформацію яка може бути корисною в умовах війни. Ми постійно доповнюємо та актуалізовуємо список ресурсів які включають благодійні фонди,контакти волонтерів. та організації яким ми довіряємо. 
         </p>
           <div class="organization">
             <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization-block">
