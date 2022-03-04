@@ -185,7 +185,7 @@
         margin: 0 7px;
     }
     .footer-block {
-        padding-right: 70px;
+        padding-right: 40px;
     }
 }
 
@@ -201,7 +201,7 @@
         margin: 0 6px;
     }
     .footer-block {
-        padding-right: 60px;
+        padding-right:20px;
     }
     .header-link,
     .footer-link {
@@ -262,6 +262,7 @@
 @media (max-width: 991px) {
     .footer-block {
         padding-right: 40px;
+        width: calc(100% / 2);
     }
     .cards-buy-wrapper,
     .cards-angels-wrapper {
@@ -289,7 +290,7 @@
     }
     .section-block-nft:not(.section-block-nft-desktop) {
         display: flex;
-        margin-bottom: -70px;
+        margin-bottom: -30px;
     }
     .photo-team.photo-team-mobile,
     .section-situation .section-block.section-block-card .body1 {
@@ -549,5 +550,11 @@
     }
     .section-situation .container{
         margin-bottom: 0;
+    }
+    .footer-block {
+        padding-right: 25px;
+    }
+    .section-donate{
+        background-image: none;
     }
 }
