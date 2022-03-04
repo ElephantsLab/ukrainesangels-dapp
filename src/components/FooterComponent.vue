@@ -19,7 +19,7 @@
                     <span class="footer-block-name">useful links</span>
                     <ul class="ul-flex-column">
                         <li><a class="footer-link" v-on:click="this.$router.push('/')" href="https://ukrainesangels.com/InfoCenter">If You Need Help</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="https://ukrainesangels.com/Donate">If You Want Help</a></li>
+                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="https://ukrainesangels.com/Donate">If You Want to Help</a></li>
                     </ul>
                 </div>
                 <div class="footer-block">
