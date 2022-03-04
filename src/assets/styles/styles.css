@@ -1113,7 +1113,7 @@ input,
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin-right: 24px;
-    background-size: calc(100% - 16px);
+    background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
 }
