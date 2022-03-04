@@ -18,6 +18,11 @@ const routes = [
         path: '/Donate',
         name: 'Donate',
         component: () => import("../views/InfoPageTwo")
+    },
+    {
+        path: "/MyCollection",
+        name: "MyCollection",
+        component: () => import("../views/MyCollectionView")
     }
 ];
 
