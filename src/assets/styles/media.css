@@ -211,6 +211,9 @@
     .section-block.section-block-content {
         max-width: 100%;
     }
+    .info-page-wrapper .section-block-container{
+        align-items: center;
+    }
     .section-block-container {
         flex-direction: column;
     }
@@ -323,7 +326,6 @@
         height: 40px;
         min-width: 40px;
         margin-right: 16px;
-        background-size: calc(100% - 8px);
     }
     .organization-block {
         padding-top: 24px;
@@ -544,5 +546,8 @@
     .section-team .ul-social-list,
     .link-team {
         margin-left: 0;
+    }
+    .section-situation .container{
+        margin-bottom: 0;
     }
 }
