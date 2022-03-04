@@ -739,6 +739,12 @@ input,
     left: 0;
     width: 100%;
 }
+.container-stop-war-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
 .stop-war-wrapper:nth-child(1) {
     /* animation: marquee1 10s linear infinite; */
 }

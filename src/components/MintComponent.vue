@@ -192,61 +192,61 @@
     </section>
     <section class="section-stop-war"  id="stop-war">
       <div class="stop-war-wrapper">
-        <div class="container-img">
-          <a href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+        <marquee behavior="scroll"    class="container-img">
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
             <img src="@/assets/images/set_war/1.webp" alt="">
           </a>
-          <a href="https://www.bbc.com/news/world-60525350">
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
             <img src="@/assets/images/set_war/2.webp" alt="">
           </a>
-          <a href="https://www.washingtonpost.com/world/ukraine-russia/">
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
             <img src="@/assets/images/set_war/4.webp" alt="">
           </a>
-          <a href="https://www.nytimes.com/news-event/ukraine-russia">
+          <a rel="nofollow" target="_blank" href="https://www.nytimes.com/news-event/ukraine-russia">
             <img src="@/assets/images/set_war/5.webp" alt="">
           </a>
-          <a href="https://www.thetimes.co.uk/">
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
             <img src="@/assets/images/set_war/6.webp" alt="">
           </a> 
-          <a href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
             <img src="@/assets/images/set_war/7.webp" alt="">
           </a>
-          <a href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
             <img src="@/assets/images/set_war/8.webp" alt="">
           </a>
-          <a href="https://www.bbc.com/news/world-60525350">
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
             <img src="@/assets/images/set_war/9.png" alt="">
           </a>
-          <a href="https://www.washingtonpost.com/world/ukraine-russia/">
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
             <img src="@/assets/images/set_war/10.png" alt="">
           </a>
-          <a href="https://www.thetimes.co.uk/">
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
             <img src="@/assets/images/set_war/11.png" alt="">
           </a>
-          <a href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
             <img src="@/assets/images/set_war/12.png" alt="">
           </a>
-          <a href="https://www.washingtonpost.com/world/ukraine-russia/">
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
             <img src="@/assets/images/set_war/13.png" alt="">
           </a>
-          <a href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
             <img src="@/assets/images/set_war/14.png" alt="">
           </a>
-          <a href="https://www.thetimes.co.uk/">
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
             <img src="@/assets/images/set_war/15.png" alt="">
           </a>
-          <a href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
             <img src="@/assets/images/set_war/16.png" alt="">
           </a>
-          <a href="https://www.washingtonpost.com/world/ukraine-russia/">
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
             <img src="@/assets/images/set_war/17.png" alt="">
           </a>
-          <a href="https://www.thetimes.co.uk/">
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
             <img src="@/assets/images/set_war/18.png" alt="">
           </a>
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
+      </marquee>
+      <marquee behavior="scroll" class="container-stop-war">
+        <div class="container-stop-war-flex">        <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
@@ -264,20 +264,6 @@
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
-      </div>
-      </div>
-      <div class="stop-war-wrapper">
-        <div class="container-img">
-        <img src="@/assets/images/set_war/1.webp" alt="">
-        <img src="@/assets/images/set_war/2.webp" alt="">
-        <img src="@/assets/images/set_war/4.webp" alt="">
-        <img src="@/assets/images/set_war/5.webp" alt="">
-        <img src="@/assets/images/set_war/6.webp" alt="">        
-        <img src="@/assets/images/set_war/7.webp" alt="">        
-        <img src="@/assets/images/set_war/8.webp" alt="">
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
@@ -290,12 +276,8 @@
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-      </div>
+        <span>STOP WAR</span></div>
+      </marquee>
       </div>
     </section>
     <section class="section section-collection"  id="angel-collection">
