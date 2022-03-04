@@ -20,7 +20,7 @@
           </h4>
           <div class="btn-wrapper">
             <a href="#angel-collection" class="btn btn-yellow">Explore Collection</a>
-            <a href="#your-donate" class="btn btn-blue">Make donation</a>
+            <a href="#your-donate" class="btn btn-blue">Make Donation</a>
           </div>
         </div>
         <div class="section-block section-block-card">
@@ -37,7 +37,7 @@
             </div>
             <div class="card-footer">
               <div class="input-label">
-                NFT Quantity 
+                Count of nfts 
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
@@ -78,7 +78,7 @@
             <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
               <p class="body3">Unchain</p>
-              <p class="short-descr">
+              <p class="short-Deskr">
                 A charity project created by blockchain activists to support Ukrainian people in these crisis times.
               </p>
             </div>
@@ -98,7 +98,7 @@
               </p>
             </div>
           </a>
-          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
+          <a href="https://www.comebackalive.in.ua/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
               <p class="tiny-text">
                 <i class="i-checkbox-circle-fill "></i>  Verified
@@ -107,7 +107,7 @@
             </div>
             <div class="card-insert savelife"><div></div></div>
             <div class="card-content">
-              <p class="body3">Savelife</p>
+              <p class="body3">Come Back Alive</p>
               <p class="short-descr">
                 The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
               </p>
@@ -192,7 +192,7 @@
     </section>
     <section class="section-stop-war"  id="stop-war">
       <div class="stop-war-wrapper">
-        <div behavior="scroll"    class="container-img">
+        <div  class="container-img">
           <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
             <img src="@/assets/images/set_war/1.webp" alt="">
           </a>
@@ -244,40 +244,82 @@
           <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
             <img src="@/assets/images/set_war/18.png" alt="">
           </a>
-      </div>
-      <div behavior="scroll" class="container-stop-war">
-        <div class="container-stop-war-flex">       
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+                    <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/1.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
+            <img src="@/assets/images/set_war/2.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/4.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.nytimes.com/news-event/ukraine-russia">
+            <img src="@/assets/images/set_war/5.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/6.webp" alt="">
+          </a> 
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/7.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/8.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
+            <img src="@/assets/images/set_war/9.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/10.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/11.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/12.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/13.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/14.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/15.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/16.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/17.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/18.png" alt="">
+          </a>
         </div>
-      </div>
+        <div class="container-stop-war">      
+          <div class="text-wrapper">
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+            <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section section-collection"  id="angel-collection">
@@ -335,7 +377,7 @@
           <div class="section-block section-block-card">
           <div class="card card-collection">
             <div class="card-section">
-              <p class="supply-label">Total supply</p>
+              <p class="supply-label">Total Supply</p>
               <div class="total-supply">10 000 nfts</div>
             </div>
             <div class="card-footer">
@@ -355,7 +397,7 @@
                 <button class="btn btn-submit" v-on:click="mint">Mint</button>
               </div>
               <div class="input-total">
-                Mint 1 NFT using
+                Mint 1 NFT for
                 <span>1 BNB</span>
               </div>
             </div>
@@ -450,7 +492,10 @@
               Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It’s true. Yet today we are up against a life-threatening challenge. And it’s our duty to deal with it, applying blockchain technology, of course.
               <br>
               <br>
-              This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.And we deliver.
+              This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.
+              <br>
+              <br>
+              And we deliver.
             </p>
             <ul class="ul-social-list">
                 <li>
@@ -480,7 +525,7 @@
         <div class="cards-help-wrapper">
           <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
             <p class="title">If You Need Help</p>
-            <div class="btn btn-yellow">Information Desc</div>
+            <div class="btn btn-yellow">Information Desk</div>
           </a>
           <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
             <p class="title">If You Want to Help</p>
