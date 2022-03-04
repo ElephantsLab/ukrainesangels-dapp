@@ -876,6 +876,7 @@ input,
     margin-top: 24px;
     width: 228px;
     height: 64px;
+    margin-bottom: 32px;
 }
 
 .info-page-wrapper .heading1 + .body2,
@@ -925,6 +926,10 @@ input,
     margin-top: 16px;
 }
 .footer-block-name + .ul-social-list {
+}
+.section-team .ul-social-list {
+    margin-top: 20px;
+    width: fit-content;
 }
 .section-situation iframe {
     width: 520px;

@@ -68,18 +68,18 @@
           <p class="body2">You Can Donate to the World`s Leading Charitable Foundations and Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
-          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
+          <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
-              <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Verified
-              </p>
+              <span class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i> Verified
+              </span>
               <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert savelife"><div></div></div>
+            <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
-              <p class="body3">Savelife</p>
+              <p class="body3">Unchain</p>
               <p class="short-descr">
-                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
+                A charity project created by blockchain activists to support Ukrainian people in these crisis times.
               </p>
             </div>
           </a>
@@ -98,18 +98,18 @@
               </p>
             </div>
           </a>
-          <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
+          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
-              <span class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i> Verified
-              </span>
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Verified
+              </p>
               <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert unchain"><div></div></div>
+            <div class="card-insert savelife"><div></div></div>
             <div class="card-content">
-              <p class="body3">Unchain</p>
+              <p class="body3">Savelife</p>
               <p class="short-descr">
-                A charity project created by blockchain activists to support Ukrainian people in these crisis times.
+                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
               </p>
             </div>
           </a>
@@ -452,14 +452,14 @@
     <section class="section section-help" id="need-help">
       <div class="container">
         <div class="cards-help-wrapper">
-          <div class="card card-help card-help-1">
+          <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
             <p class="title">If you need help</p>
-            <a href="https://ukrainesangels.com/InfoCenter" class="btn btn-yellow">Information for Asylum-Seekers</a>
-          </div>
-          <div class="card card-help card-help-2">
+            <div class="btn btn-yellow">Donate</div>
+          </a>
+          <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
             <p class="title">If you want help</p>
-            <a href="https://ukrainesangels.com/Donate" class="btn btn-yellow">Become an angel</a>
-          </div>
+            <div class="btn btn-yellow">Become an angel</div>
+          </a>
         </div>
       </div>
     </section>

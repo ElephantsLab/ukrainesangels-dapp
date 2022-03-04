@@ -7,7 +7,7 @@
         <li><a class="header-link" v-on:click="this.$router.push('/')" href="#situation">Situation in Ukraine</a></li>
         <li><a class="header-link" v-on:click="this.$router.push('/')" href="#angel-collection">Collection</a></li>
         <li><a class="header-link" v-on:click="this.$router.push('/')" href="#your-donate">Donation</a></li>
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#our-team">Our Team</a></li>
+        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#need-help">Help desc</a></li>
       </nav>
       <div class="header-main-buttons">
         <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
