@@ -35,7 +35,7 @@
         height: 88px;
     }
     .main-wrapper {
-        margin-top: 88px;
+        padding-top: 88px;
     }
     .collection-bg {
         height: calc((100vw - 240px) / 6.2 - 1px);
@@ -47,7 +47,7 @@
         height: 88px;
     }
     .main-wrapper {
-        margin-top: 88px;
+        padding-top: 88px;
     }
 }
 @media screen and (min-width: 769px) and (max-width: 991px) {
@@ -556,5 +556,8 @@
     }
     .section-donate{
         background-image: none;
+    }
+    .section-main{
+        padding-top: 32px;
     }
 }
