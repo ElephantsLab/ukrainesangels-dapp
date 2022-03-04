@@ -4,16 +4,16 @@
       <div class="container">
         <div class="section-block-container">
          <div class="section-block section-block-content">
-          <div class="subtitle">Our mission</div>
+          <div class="subtitle">Our Mission</div>
           <h1 class="heading1"> 
-            <span>help to SAVE </span>
-            <span>UKRAINian people</span>
+            <span>Help Save</span>
+            <span>Ukrainian Nation</span>
           </h1>
           <h4 class="body1">
-            We`re here to help Ukrainian people fight off the plague of war afflicting their communities right now. This is the world`s crypto family`s contribution to #StopTheWar.
+            We’re here to help Ukrainian people fight off the plague of war afflicting their communities right now. This is the world’s crypto family’s contribution to #StopTheWar.
             <br>
             <br>
-           Buying an NFT from this collection, you save lives. The funds will reinforce Ukraine`s army selflessly defending their home. Your financial aid will help sustain those who need it most: the injured, the refugees, and all other Ukrainians affected by indiscriminate Russian aggression.
+           Buying an NFT from this collection, you save lives. The funds will reinforce Ukraine’s army selflessly defending their home. Your financial aid will help sustain those who need it most: the injured, the refugees, and all other Ukrainians affected by indiscriminate Russian aggression.
             <br>
             <br>
             Once the hostilities are quenched, the donations will then be used to rebuild the vital infrastructure: roads, bridges, hospitals, educational facilities, etc., ruined by Russian war criminals.
@@ -32,7 +32,7 @@
                 <div></div>
               </div>
               <p class="supply-label">Total Supply</p>
-              <div class="total-supply">10 000 nft`s</div>
+              <div class="total-supply">10 000 nfts</div>
 
             </div>
             <div class="card-footer">
@@ -65,21 +65,21 @@
       <div class="container">
         <div class="section-content">
           <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
-          <p class="body2">You Can Donate to the World`s Leading Charitable Foundations and Volunteer Organizations</p>
+          <p class="body2">You Can Donate to the World’s Leading Charitable Foundations and Volunteer Organizations</p>
         </div>
         <div class="cards-buy-wrapper">
-          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
+          <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
-              <p class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i>  Verified
-              </p>
+              <span class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i> Verified
+              </span>
               <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert savelife"><div></div></div>
+            <div class="card-insert unchain"><div></div></div>
             <div class="card-content">
-              <p class="body3">Savelife</p>
+              <p class="body3">Unchain</p>
               <p class="short-descr">
-                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
+                A charity project created by blockchain activists to support Ukrainian people in these crisis times.
               </p>
             </div>
           </a>
@@ -98,25 +98,25 @@
               </p>
             </div>
           </a>
-          <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
+          <a href="https://savelife.in.ua/donate/" target="_blank" rel="nofollow" class="card card-buy">
             <div class="card-label">
-              <span class="tiny-text">
-                <i class="i-checkbox-circle-fill "></i> Verified
-              </span>
+              <p class="tiny-text">
+                <i class="i-checkbox-circle-fill "></i>  Verified
+              </p>
               <i class="i-share-box-fill"></i>
             </div>
-            <div class="card-insert unchain"><div></div></div>
+            <div class="card-insert savelife"><div></div></div>
             <div class="card-content">
-              <p class="body3">Unchain</p>
+              <p class="body3">Savelife</p>
               <p class="short-descr">
-                A charity project created by blockchain activists to support Ukrainian people in these crisis times.
+                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
               </p>
             </div>
           </a>
         </div>
-        <button class="btn btn-see-all">
-          See all resources
-        </button>
+        <a href="https://ukrainesangels.com/Donate" class="btn btn-see-all">
+          See All Charities
+        </a>
       </div>
     </section>
     <section class="section section-donate" id="your-donate">
@@ -124,7 +124,7 @@
         <div class="section-content">
           <h2 class="heading2">You Can Donate Crypto Via the Platform</h2>
           <p class="body2">
-           We will make sure each bit of your donation is accounted for and ends up supporting Ukraine`s people and army </p>
+           We will make sure each bit of your donation is accounted for and ends up supporting Ukraine’s people and army </p>
         </div>
         <div class="card card-donate">
           <div class="title1">make a donation</div>
@@ -192,66 +192,92 @@
     </section>
     <section class="section-stop-war"  id="stop-war">
       <div class="stop-war-wrapper">
-        <div class="container-img">
-        <img src="@/assets/images/set_war/1.webp" alt="">
-        <img src="@/assets/images/set_war/2.webp" alt="">
-        <img src="@/assets/images/set_war/4.webp" alt="">
-        <img src="@/assets/images/set_war/5.webp" alt="">
-        <img src="@/assets/images/set_war/6.webp" alt="">        
-        <img src="@/assets/images/set_war/7.webp" alt="">        
-        <img src="@/assets/images/set_war/8.webp" alt="">
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-      </div>
-      </div>
-      <div class="stop-war-wrapper">
-        <div class="container-img">
-        <img src="@/assets/images/set_war/1.webp" alt="">
-        <img src="@/assets/images/set_war/2.webp" alt="">
-        <img src="@/assets/images/set_war/4.webp" alt="">
-        <img src="@/assets/images/set_war/5.webp" alt="">
-        <img src="@/assets/images/set_war/6.webp" alt="">        
-        <img src="@/assets/images/set_war/7.webp" alt="">        
-        <img src="@/assets/images/set_war/8.webp" alt="">
-        <!-- src="@/assets/src/images/image-card.svg"  -->
-      </div>
-      <div class="container-stop-war">
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-        <span>STOP WAR</span>
-      </div>
+        <marquee behavior="scroll"    class="container-img">
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/1.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
+            <img src="@/assets/images/set_war/2.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/4.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.nytimes.com/news-event/ukraine-russia">
+            <img src="@/assets/images/set_war/5.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/6.webp" alt="">
+          </a> 
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/7.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/8.webp" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
+            <img src="@/assets/images/set_war/9.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/10.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/11.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/12.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/13.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
+            <img src="@/assets/images/set_war/14.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/15.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646">
+            <img src="@/assets/images/set_war/16.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
+            <img src="@/assets/images/set_war/17.png" alt="">
+          </a>
+          <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
+            <img src="@/assets/images/set_war/18.png" alt="">
+          </a>
+      </marquee>
+      <marquee behavior="scroll" class="container-stop-war">
+        <div class="container-stop-war-flex">       
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+        </div>
+      </marquee>
       </div>
     </section>
     <section class="section section-collection"  id="angel-collection">
@@ -259,13 +285,13 @@
         <div class="section-block-container">
           <div class="section-block section-block-content">
             <div class="subtitle">Collection</div>
-            <h1 class="heading1"> 10 000 nft`s
+            <h1 class="heading1"> 10 000 nfts
             </h1>
             <h4 class="body1">
-              Each NFT portrays a character of Ukraine`s heroic defender: either a man or a woman in front of one of the world`s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
+              Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
               <br>
               <br>
-              Buying one of the collection`s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.
+              Buying one of the collection’s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of Ukraine and Europe on the whole.
             </h4>            
             <div class="section-block-nft">
               <div class="block-nft">
@@ -310,11 +336,11 @@
           <div class="card card-collection">
             <div class="card-section">
               <p class="supply-label">Total supply</p>
-              <div class="total-supply">10 000 nft`s</div>
+              <div class="total-supply">10 000 nfts</div>
             </div>
             <div class="card-footer">
               <div class="input-label">
-                Count of NFT`s
+                Count of nfts
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
@@ -385,11 +411,11 @@
         <div class="cards-angels-wrapper">
           <div class="card card-angel">
             <div class="icon intersect"></div>
-            <div class="title1">{{ totalSupply }} nft`s</div>
+            <div class="title1">{{ totalSupply }} nfts</div>
             <div class="short-descr">
               Have been bought by people from around the world to make their solidarity palpable
             </div>
-            <button class="btn btn-yellow">View collection</button>
+             <a class="btn btn-yellow" href="#angel-collection">View collection</a>
           </div>
           <div class="card card-angel">
             <div class="icon uk-angels"></div>
@@ -397,7 +423,7 @@
             <div class="short-descr">
               Have contributed to turn the Ukrainian sky clear and blue again
             </div>
-            <button class="btn btn-yellow">Become an Angel</button>
+             <a href="#our-mission" class="btn btn-yellow">Become an Angel</a>
           </div>
           <div class="card card-angel">
             <div class="icon bnb"></div>
@@ -405,7 +431,7 @@
             <div class="short-descr">
               This much funds have already been sent to the persevering people of Ukraine
             </div>
-            <button class="btn btn-blue">Donate</button>
+             <a href="#your-donate" class="btn btn-blue">Donate</a>
           </div>
         </div>
       </div>
@@ -421,10 +447,10 @@
               We are a blockchain research and product development company based in Ukraine.
               <br>
               <br>
-              Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It`s true. Yet today we are up against a life-threatening challenge. And it`s our duty to deal with it, applying blockchain technology, of course.
+              Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It’s true. Yet today we are up against a life-threatening challenge. And it’s our duty to deal with it, applying blockchain technology, of course.
               <br>
               <br>
-              This project is part of a swift response pack our team undertook to save Ukraine, ease our people`s suffering and protect Europe`s easternmost borders. We are Ukraine`s vigilant cyber force, we`re its reliable home front. Today, we`re fighting for its digital freedom. Today, Ukraine needs our involvement most.And we deliver.
+              This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital freedom. Today, Ukraine needs our involvement most.And we deliver.
             </p>
             <ul class="ul-social-list">
                 <li>
@@ -452,14 +478,14 @@
     <section class="section section-help" id="need-help">
       <div class="container">
         <div class="cards-help-wrapper">
-          <div class="card card-help card-help-1">
-            <p class="title">If you need help</p>
-            <a href="https://ukrainesangels.com/InfoCenter" class="btn btn-yellow">Information for Asylum-Seekers</a>
-          </div>
-          <div class="card card-help card-help-2">
-            <p class="title">If you want help</p>
-            <a href="https://ukrainesangels.com/Donate" class="btn btn-yellow">Become an angel</a>
-          </div>
+          <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
+            <p class="title">If You Need Help</p>
+            <div class="btn btn-yellow">Information Desc</div>
+          </a>
+          <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
+            <p class="title">If You Want Help</p>
+            <div class="btn btn-yellow">Donate</div>
+          </a>
         </div>
       </div>
     </section>
@@ -518,7 +544,7 @@ export default {
       if (userAddress) {
         const balance = await this.$root.core.getUserBalance(userAddress);
         if (balance) {
-          this.donationAmount = parseFloat(balance).toFixed(3);
+          this.donationAmount = parseFloat(balance);
           this.isMaxVal = true;
         }
       }

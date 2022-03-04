@@ -15,7 +15,7 @@
                     <p class="modal-p" v-if="!revertReasonGetter" >
                         Oops! Something went wrong.
                         <br>                     
-                        Most likely, you don`t have enough BNB in your wallet.
+                        Most likely, you don’t have enough BNB in your wallet.
                     </p>
                   <p class="modal-p" v-else>{{ revertReasonGetter }}</p>
                     <a v-if="statusTxGetter" v-on:click="openTx" class="btn modal-main-btn">Try Again</a>

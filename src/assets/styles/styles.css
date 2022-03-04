@@ -343,6 +343,9 @@ input,
     justify-content: flex-start;
     align-items: center;
 }
+.info-page-wrapper .section-block-container{
+    align-items: flex-start;
+}
 .section-block.section-block-content {
     max-width: calc(100% - 520px - 140px);
 }
@@ -640,6 +643,7 @@ input,
 .section-buy .btn.btn-see-all {
     margin-left: auto;
     margin-right: auto;
+    width: fit-content;
 }
 .section-donate {
     background-image: url(../images/screen-donate.webp);
@@ -734,6 +738,12 @@ input,
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+}
+.container-stop-war-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
 .stop-war-wrapper:nth-child(1) {
@@ -876,6 +886,7 @@ input,
     margin-top: 24px;
     width: 228px;
     height: 64px;
+    margin-bottom: 32px;
 }
 
 .info-page-wrapper .heading1 + .body2,
@@ -925,6 +936,10 @@ input,
     margin-top: 16px;
 }
 .footer-block-name + .ul-social-list {
+}
+.section-team .ul-social-list {
+    margin-top: 20px;
+    width: fit-content;
 }
 .section-situation iframe {
     width: 520px;
@@ -1051,10 +1066,11 @@ input,
     text-align: center;
 }
 .modal-main-icon.modal-icon-trans-proces {
-    background-size: 48px;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../images/uk-angels.svg);
+    background-image: url(../images/Gif-1.gif);
 }
 .btn-mob-menu i,
 .modal-icon-success i {
@@ -1099,12 +1115,13 @@ input,
 }
 .organization-logo {
     width: 80px;
+    min-width: 80px;
     height: 80px;
     background-color: #131313;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin-right: 24px;
-    background-size: calc(100% - 8px);
+    background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
 }
