@@ -518,7 +518,7 @@ export default {
       if (userAddress) {
         const balance = await this.$root.core.getUserBalance(userAddress);
         if (balance) {
-          this.donationAmount = parseFloat(balance).toFixed(3);
+          this.donationAmount = parseFloat(balance);
           this.isMaxVal = true;
         }
       }
