@@ -48,7 +48,7 @@
             <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#situation">Situation in Ukraine</a></li>
             <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#angel-collection">Collection</a></li>
             <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#your-donate">Donation</a></li>
-            <li><a class="header-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#need-help">Help desc</a></li>
+            <li><a class="header-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#need-help">Help Desc</a></li>
           </ul> 
           <div class="ul-flex-column menu-btn-wrapper">                 
             <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">

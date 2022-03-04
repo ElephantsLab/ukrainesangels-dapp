@@ -13,7 +13,7 @@
                         Transaction Successful
                     </div>
                     <p class="modal-p">
-                        Congratulations on joining the ranks of Ukraine`s Angels.
+                        Congratulations on joining the ranks of Ukraine’s Angels.
                         <br/>
                         Glory to Ukraine!
                     </p>
@@ -23,7 +23,7 @@
             <div class="modal-footer">
                 <div class="modal-center">
                     <p class="modal-p">
-                        Tell Everybody, Let`s Save Ukraine Together!
+                        Tell Everybody, Let’s Save Ukraine Together!
                     </p>
                     <social-links/>
                 </div>
