@@ -246,7 +246,7 @@
           </a>
       </marquee>
       <marquee behavior="scroll" class="container-stop-war">
-        <div class="container-stop-war-flex">        <span>STOP WAR</span>
+        <div class="container-stop-war-flex">       
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
@@ -276,7 +276,7 @@
         <span>STOP WAR</span>
         <span>STOP WAR</span>
         <span>STOP WAR</span>
-        <span>STOP WAR</span></div>
+        </div>
       </marquee>
       </div>
     </section>
