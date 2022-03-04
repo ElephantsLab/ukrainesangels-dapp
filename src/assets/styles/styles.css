@@ -876,6 +876,7 @@ input,
     margin-top: 24px;
     width: 228px;
     height: 64px;
+    margin-bottom: 32px;
 }
 
 .info-page-wrapper .heading1 + .body2,
@@ -925,6 +926,10 @@ input,
     margin-top: 16px;
 }
 .footer-block-name + .ul-social-list {
+}
+.section-team .ul-social-list {
+    margin-top: 20px;
+    width: fit-content;
 }
 .section-situation iframe {
     width: 520px;
@@ -1099,12 +1104,13 @@ input,
 }
 .organization-logo {
     width: 80px;
+    min-width: 80px;
     height: 80px;
     background-color: #131313;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin-right: 24px;
-    background-size: calc(100% - 8px);
+    background-size: calc(100% - 16px);
     background-repeat: no-repeat;
     background-position: center;
 }
