@@ -37,7 +37,7 @@
             </div>
             <div class="card-footer">
               <div class="input-label">
-                Count of nfts 
+                NFT Quantity 
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
@@ -131,7 +131,14 @@
           <div class="card-input">
             <div class="input-label">
               You Will Save Lives No Matter the Amount
-            </div>                           
+            </div>  
+            <div   class="address"> 
+              BSC:
+              <a href="https://bscscan.com/address/0x1cee20367ebda61500dd037a0ba2a9a2b733d391#code" target="_blank" rel="nofollow"> 
+               <span>0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391</span>
+              </a>           
+              <!-- <i class="i-checkbox-multiple-blank-line"></i>   -->
+            </div>                 
             <div class="input-wrapper input-amount">
               <input class="input" type="number" min="1" onkeypress="return (event.charCode !== 45 && event.charCode !== 43 && event.charCode !== 101)" v-model="donationAmount">
               <span class="input-token">BNB</span>
@@ -382,7 +389,7 @@
             </div>
             <div class="card-footer">
               <div class="input-label">
-                Count of nfts
+                NFT Quantity 
               </div>
               <div class="input-container">                              
                 <div class="input-wrapper input-count">
@@ -457,7 +464,7 @@
             <div class="short-descr">
               Have been bought by people from around the world to make their solidarity palpable
             </div>
-             <a class="btn btn-yellow" href="#angel-collection">View collection</a>
+             <a class="btn btn-yellow" href="#angel-collection">View Collection</a>
           </div>
           <div class="card card-angel">
             <div class="icon uk-angels"></div>
@@ -525,7 +532,7 @@
         <div class="cards-help-wrapper">
           <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
             <p class="title">If You Need Help</p>
-            <div class="btn btn-yellow">Information Desk</div>
+            <div class="btn btn-yellow">Help Desk</div>
           </a>
           <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
             <p class="title">If You Want to Help</p>

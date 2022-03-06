@@ -131,6 +131,8 @@
     .btn-speed-amount:hover,
     .card-help:hover,
     .link-team:hover,
+    input:active,
+    input:focus,
     .to-main:hover div,
     a.organization-block:hover {
         border-color: #efcf46;
@@ -339,6 +341,7 @@
         margin-top: 16px;
     }
     .to-main {
+        margin-top: 24px;
         margin-bottom: 24px;
     }
     /* -----font-----_ */
@@ -559,5 +562,12 @@
     }
     .section-main{
         padding-top: 32px;
+    }
+    .container-stop-war span{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .container-stop-war{
+        height: 45px;
     }
 }
