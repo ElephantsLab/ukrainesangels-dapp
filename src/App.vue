@@ -127,6 +127,13 @@ export default {
   },
   computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter"]),
   async mounted() {
+    setTimeout(async () => {
+      if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
+        alert("Change your wallet extension to Binance Smart Chain network");
+        await window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
+        location.reload();
+      }
+    }, 1000);
     // this.lang.init();
 
     window.addEventListener("message", async function (e) {
@@ -160,7 +167,8 @@ export default {
               window.ethereum.on("chainChanged", async (_chainId) => {
                 if (conf.NETWORK !== parseInt(_chainId)) {
                   alert("Change your wallet extension to Binance Smart Chain network");
-                  window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS.params });
+                  await window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
+                  location.reload();
                 }
                 _this.$root.core = null;
                 _this.$root.core = new Core(_this, Number(_chainId));

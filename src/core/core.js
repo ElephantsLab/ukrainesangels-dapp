@@ -34,12 +34,17 @@ export default class Core {
                     }
                 }
             }
-            // else {
-            //     let provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");;
-            //     this.providerAddress = provider;
-            //     // this.signer = provider.getSigner();
-            //     return true
-            // }
+            else {
+                let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
+                this.providerAddress = provider;
+                for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(
+                        provider
+                    );
+                }
+                // this.signer = provider.getSigner();
+                return true
+            }
         }
         // console.log(this);
         return true;
