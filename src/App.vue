@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     ...mapActions(["fetchHelpCenters"]),
-    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason"]),
+    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason", "updateBNBPrice"]),
     checkWalletOption(wallet) {
       let _this = this;
 
@@ -215,6 +215,8 @@ export default {
           return;
         }
       }
+
+      await _this.$root.core.getCurrentPrice();
     }, 400);
   },
   watch: {

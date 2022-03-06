@@ -53,7 +53,7 @@
               </div>
               <div class="input-total">
                 Mint 1 NFT for
-                <span>1 BNB</span>
+                <span>{{ bnbPriceGetter }} BNB</span>
               </div>
             </div>
           </div>
@@ -398,7 +398,7 @@
               </div>
               <div class="input-total">
                 Mint 1 NFT for
-                <span>1 BNB</span>
+                <span>{{ bnbPriceGetter }} BNB</span>
               </div>
             </div>
           </div>
@@ -540,6 +540,7 @@
 <script>
 const conf = require("../core/Config.json");
 import SocialLinks from "@/components/SocialLinks.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -562,7 +563,7 @@ export default {
         return;
       }
       if (this.mintVal <= 1) {
-        await this.$root.core.mint(conf.BNBVal);
+        await this.$root.core.mint(this.bnbPriceGetter);
       } else {
         await this.$root.core.buyMore(this.mintVal);
       }
@@ -595,6 +596,7 @@ export default {
       }
     }
   },
+  computed: mapGetters(["bnbPriceGetter", "bnbPriceGetter"]),
   mounted() {
     const savedTotalSupply = localStorage.getItem("totalSupply");
     const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");

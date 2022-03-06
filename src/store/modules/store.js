@@ -5,7 +5,8 @@ const API_KEY = "AIzaSyAajyuUom9NqV741oJjvAtS0xUgmwEyV4o";
 export default {
     state: {
         address: undefined,
-        chainId: undefined
+        chainId: undefined,
+        bnbPrice: 0.25
     },
     mutations: {
         setCurrentAddress(state, val) {
@@ -13,6 +14,9 @@ export default {
         },
         setChainId(state, val) {
             state.chainId = val;
+        },
+        updateBNBPrice(state, val) {
+            state.bnbPrice = val;
         }
     },
     actions: {
@@ -44,6 +48,9 @@ export default {
     getters: {
         userAddressGetter(state) {
             return state.address;
+        },
+        bnbPriceGetter(state) {
+            return state.bnbPrice;
         }
     }
 }
