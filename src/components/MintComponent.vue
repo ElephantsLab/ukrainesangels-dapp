@@ -190,6 +190,21 @@
         </div>
       </div>
     </section>
+    <Swiper
+        :spaceBetween="10"
+        :slidesPerView="3"
+        :autoplay="{delay: 2500}"
+        :loop="true"
+        :freeMode="true"
+        :modules="modules"
+        class="mySwiper"
+    >
+      <swiper-slide>Slide 1</swiper-slide><swiper-slide>Slide 2</swiper-slide
+    ><swiper-slide>Slide 3</swiper-slide><swiper-slide>Slide 4</swiper-slide
+    ><swiper-slide>Slide 5</swiper-slide><swiper-slide>Slide 6</swiper-slide
+    ><swiper-slide>Slide 7</swiper-slide><swiper-slide>Slide 8</swiper-slide
+    ><swiper-slide>Slide 9</swiper-slide>
+    </Swiper>
     <section class="section-stop-war"  id="stop-war">
       <div class="stop-war-wrapper">
         <div behavior="scroll"    class="container-img">
@@ -495,10 +510,20 @@
 <script>
 const conf = require("../core/Config.json");
 import SocialLinks from "@/components/SocialLinks.vue";
+import 'vue3-carousel/dist/carousel.css';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, FreeMode } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default {
   components: {
     SocialLinks,
+    Swiper,
+    SwiperSlide
   },
   data() {
     return {
@@ -549,6 +574,11 @@ export default {
         }
       }
     }
+  },
+  setup() {
+    return {
+      modules: [Autoplay, FreeMode],
+    };
   },
   mounted() {
     const savedTotalSupply = localStorage.getItem("totalSupply");
