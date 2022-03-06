@@ -379,6 +379,7 @@ input,
 .card {
     background-color: rgba(15, 16, 16, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0f1010;
 }
 .card,
 .block-nft {
@@ -390,12 +391,6 @@ input,
 }
 .card.card-angel {
     align-items: center;
-}
-.card.card-buy,
-.card.card-angel,
-.card.card-donate,
-.card.card-help {
-    background-color: #0f1010;
 }
 .card-insert,
 .card-angel .icon {
@@ -555,10 +550,15 @@ input,
 .section {
     padding: 88px 0;
 }
-.info-page-wrapper,
-.my-page-wrapper {
+.info-page-wrapper {
     padding-top: 40px;
     padding-bottom: 88px;
+}
+.my-page-wrapper {
+    padding-top: 40px;
+}
+.my-page-wrapper .get-more-container {
+    padding-bottom: 64px;
 }
 .section.section-help {
     padding-top: 0;
@@ -1189,4 +1189,143 @@ input,
 .nav-mob-link {
     margin-top: 12px;
     margin-bottom: 12px;
+}
+.main-part {
+    width: 410px;
+}
+.main-part .card:not(:first-child) {
+    margin-top: 24px;
+}
+.card.card-slider {
+    width: 100%;
+    padding: 24px;
+    height: 410px;
+}
+.card-slider-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-slider-container .card-slider-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.card-slider-container .card-slider-img img {
+    max-width: calc(100% - 32px * 2);
+    max-height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.screen-my-collection .heading1 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+.my-collection-wrapper .card {
+    border-radius: 16px;
+}
+.my-collection-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+}
+.btn-arrow {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    background: #0f1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 24px;
+}
+.set-part {
+    /* padding-left: 30px; */
+    width: calc(100% - 410px);
+}
+.set-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+}
+.set-card-wrapper .card {
+    width: calc(100% / 4);
+    margin: 0 0 30px 30px;
+    min-width: 190px;
+    max-width: 190px;
+    height: 190px;
+}
+.card-of-set {
+    padding: 24px;
+}
+.card-of-set,
+.img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%;
+}
+.card-of-set .add {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+}
+
+.section-get-more {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0;
+    overflow: hidden;
+    padding-left: 354px;
+    padding-right: 354px;
+}
+.section-get-more,
+.section-get-more .section-content,
+.section-get-more .section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-get-more .section-content {
+    margin-bottom: 16px;
+}
+.section-get-more::before,
+.section-get-more::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    content: "";
+    width: 354px;
+    height: 509px;
+    background-position: top center;
+    background-size: 100% auto;
+}
+.section-get-more::before {
+    background-image: url(../images/girl.png);
+    right: 0;
+}
+.section-get-more::after {
+    background-image: url(../images/boy.png);
+    left: 0;
 }
