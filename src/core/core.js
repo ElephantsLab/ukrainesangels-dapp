@@ -165,7 +165,8 @@ export default class Core {
 
     async buyMore(amountOfNFT) {
         try {
-            const bnbVal = amountOfNFT * conf.BNBVal;
+            const bnbPrice = await this.getCurrentPrice();
+            const bnbVal = amountOfNFT * bnbPrice;
             const txResponse = await this[`token_${this.currentBlockchain}`].buyMore(amountOfNFT, {value: ethers.utils.parseEther(bnbVal.toString())});
             this.context.updateTxModal(true);
             this.context.updateTx(txResponse.hash);
@@ -187,6 +188,16 @@ export default class Core {
             } else if (error.message) {
                 this.context.updateRevertReason(error.message);
             }
+            console.log(error);
+        }
+    }
+
+    async getCurrentPrice() {
+        try {
+            const bnbPrice = ethers.utils.formatEther(await this[`token_${this.currentBlockchain}`].price());
+            this.context.updateBNBPrice(bnbPrice);
+            return bnbPrice;
+        } catch (error) {
             console.log(error);
         }
     }

@@ -268,12 +268,36 @@ input,
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.5);
 }
+.address span,
 .short-descr {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.5);
+}
+.address span {
+    color: #fff;
+    max-width: calc(100% - 24px);
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+}
+.address {
+    display: block;
+    margin: 8px 0 24px;
+    width: 100%;
+}
+.address:hover i {
+    color: #efcf46;
+}
+.address:hover span {
+    text-decoration: underline;
+}
+.address i {
+    margin-left: 8px;
 }
 .tiny-text {
     font-weight: normal;
@@ -531,7 +555,8 @@ input,
 .section {
     padding: 88px 0;
 }
-.info-page-wrapper {
+.info-page-wrapper,
+.my-page-wrapper {
     padding-top: 40px;
     padding-bottom: 88px;
 }
@@ -1125,6 +1150,7 @@ input,
     cursor: pointer;
 }
 .to-main {
+    margin-top: 40px;
     margin-bottom: 48px;
     align-items: center;
     display: flex;
