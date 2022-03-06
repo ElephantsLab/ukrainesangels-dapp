@@ -11,7 +11,7 @@
     "NAME": "BSC",
     "SYMBOL": "BSC",
     "CHAIN_ID": "56",
-    "TOKEN_ADDRESS": "0xa6e01Ec211e18E99F98c5954265bdC70e0b67383",
+    "TOKEN_ADDRESS": "0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391",
     "DEFAULT_GAS_PRICE_GWEI": "30",
     "NODE": "https://bscnode.cloud"
   },
@@ -34,7 +34,7 @@
     }
   ],
   "baseUrl": "https://bridge.bring.finance/api/",
-  "BNBVal": 1,
+  "BNBVal": 0.25,
   "NETWORK": 56,
   "SCAN_TX": "https://bscscan.com/tx/",
   "SCAN_ADDRESS": "https://bscscan.com/address/",

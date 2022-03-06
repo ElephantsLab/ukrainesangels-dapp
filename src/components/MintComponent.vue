@@ -53,7 +53,7 @@
               </div>
               <div class="input-total">
                 Mint 1 NFT for
-                <span>1 BNB</span>
+                <span>0.25 BNB</span>
               </div>
             </div>
           </div>
