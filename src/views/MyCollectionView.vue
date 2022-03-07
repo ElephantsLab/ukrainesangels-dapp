@@ -20,9 +20,19 @@
                   <button class="btn-arrow" >
                     <i class="i-arrow-drop-left-line"></i>
                   </button>
-                  <div class="card-slider-img">
-                   <img src="@/assets/images/set_nft/14.png" alt="">                  
-                  </div>
+                  <swiper
+                    :slidesPerView="1"
+                    :spaceBetween="30"
+                    :navigation="true"
+                    :modules="modules"
+                    class="mySwiper"
+                  >
+                    <swiper-slide><img src="@/assets/images/set_nft/14.png" alt=""></swiper-slide>
+                    <swiper-slide><img src="@/assets/images/set_nft/14.png" alt=""></swiper-slide>
+                  </swiper>
+<!--                  <div class="card-slider-img">-->
+<!--                    <img src="@/assets/images/set_nft/14.png" alt="">-->
+<!--                  </div>-->
                   <button class="btn-arrow" >
                     <i class="i-arrow-drop-right-line"></i>
                   </button>
@@ -31,21 +41,22 @@
             </div>
             <div class="set-part">
               <div class="set-card-wrapper" v-if="userNFTsGetter">
-                <div v-for="nft in userNFTsGetter.NFTs" v-bind:key="nft" class="card card-of-set">
+                <div v-for="nft in userNFTsGetter" v-bind:key="nft" class="card card-of-set">
                   <div class="img-wrapper">
-                    <img src="@/assets/images/set_nft/14.png" alt="">
+                    <img v-bind:src="nft.image" alt="">
                   </div>                
                 </div>
+                <button disabled class="card card-of-set card-of-set-add">
+                    <div class="img-wrapper">
+                    <img src="@/assets/images/set_nft/14.png" alt="">
+                  </div>
+               </button>
                 <button class="card card-of-set card-of-set-add">
                     <div class="add">
                       <i class="i-add-line"></i>
                     </div>
                 </button>
-<!--                <button disabled class="card card-of-set card-of-set-add">-->
-<!--                    <div class="add">-->
-<!--                      <i class="i-add-line"></i>-->
-<!--                    </div>-->
-<!--                </button>-->
+
 <!--                <button disabled class="card card-of-set card-of-set-add">-->
 <!--                    <div class="add">-->
 <!--                      <i class="i-add-line"></i>-->
@@ -102,6 +113,13 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
 import { mapGetters, mapActions } from "vuex";
+import 'vue3-carousel/dist/carousel.css';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Navigation } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default {
   data() {
@@ -112,6 +130,13 @@ export default {
   },
   components: {
     HeaderComponent,
+    Swiper,
+    SwiperSlide
+  },
+  setup() {
+    return {
+      modules: [Pagination, Navigation],
+    };
   },
   methods: {
     ...mapActions(["fetchNFTByUser"]),

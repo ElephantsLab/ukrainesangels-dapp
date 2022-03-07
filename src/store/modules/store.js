@@ -62,11 +62,12 @@ export default {
             try {
                 const responseNFTs = await axios.get(BASE_URL + "getNFTByAddress?address=" + address.toLowerCase());
                 if (responseNFTs.data) {
-                    const NFTsFetchedData = [];
-                    for (const nft of Object.values(responseNFTs.data.NFTs)) {
-                        await fetchNFT(nft);
-                    }
-                    commit("updateUserNFTs", responseNFTs.data);
+                    const NFTsFetchedData = [JSON.parse('{"name":"0","description":"This collection is a charitable act by the crypto community to help Ukraine save its people, communities and culture, strengthen Ukrainian army.","file_url":"https://metadata.ukrainesangels.com/0","image":"https://metadata.ukrainesangels.com/img/0.png","tokenId":0,"custom_fields":{"edition":1,"date":"1646414167","compiler":"This collection was designed and composed by ElephantsLab, a Ukrainian blockchain research and development company."},"extrernal_url":"https://ukrainesangels.com/","sex":"woman","country":"Belgium"}')];
+                    // for (const nft of Object.values(responseNFTs.data.NFTs)) {
+                    //     await fetchNFT(nft);
+                    // }
+                    console.log(NFTsFetchedData);
+                    commit("updateUserNFTs", NFTsFetchedData);
                 }
             } catch (error) {
                 console.log(error);
