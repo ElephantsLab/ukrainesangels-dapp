@@ -32,7 +32,7 @@
                 <div></div>
               </div>
               <p class="supply-label">Total Supply</p>
-              <div class="total-supply">10 000 nfts</div>
+              <div class="total-supply">1000 nfts</div>
 
             </div>
             <div class="card-footer">
@@ -334,7 +334,7 @@
         <div class="section-block-container">
           <div class="section-block section-block-content">
             <div class="subtitle">Collection</div>
-            <h1 class="heading1"> 10 000 nfts
+            <h1 class="heading1"> 1000 nfts
             </h1>
             <h4 class="body1">
               Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
@@ -385,7 +385,7 @@
           <div class="card card-collection">
             <div class="card-section">
               <p class="supply-label">Total Supply</p>
-              <div class="total-supply">10 000 nfts</div>
+              <div class="total-supply">1000 nfts</div>
             </div>
             <div class="card-footer">
               <div class="input-label">
@@ -603,7 +603,7 @@ export default {
       }
     }
   },
-  computed: mapGetters(["bnbPriceGetter", "bnbPriceGetter"]),
+  computed: mapGetters(["bnbPriceGetter"]),
   mounted() {
     const savedTotalSupply = localStorage.getItem("totalSupply");
     const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");
