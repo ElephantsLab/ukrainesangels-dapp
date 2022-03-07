@@ -19,11 +19,11 @@ const routes = [
         name: 'Donate',
         component: () => import("../views/InfoPageTwo")
     },
-    // {
-    //     path: "/MyCollection",
-    //     name: "MyCollection",
-    //     component: () => import("../views/MyCollectionView")
-    // }
+    {
+        path: "/MyCollection",
+        name: "MyCollection",
+        component: () => import("../views/MyCollectionView")
+    }
 ];
 
 const router = createRouter({
