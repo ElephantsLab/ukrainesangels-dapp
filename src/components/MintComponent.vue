@@ -603,7 +603,7 @@ export default {
       }
     }
   },
-  computed: mapGetters(["bnbPriceGetter", "bnbPriceGetter"]),
+  computed: mapGetters(["bnbPriceGetter"]),
   mounted() {
     const savedTotalSupply = localStorage.getItem("totalSupply");
     const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");

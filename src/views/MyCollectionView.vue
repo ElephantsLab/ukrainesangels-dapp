@@ -67,7 +67,7 @@
               <div class="card card-collection">
                 <div class="card-section">
                   <p class="supply-label">Total Supply</p>
-                  <div class="total-supply">10 000 nfts</div>
+                  <div class="total-supply">1000 nfts</div>
                 </div>
                 <div class="card-footer">
                   <div class="input-label">
@@ -101,9 +101,44 @@
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
+import { mapGetters } from "vuex";
+
 export default {
+  data() {
+    return {
+      mintVal: 1,
+    }
+  },
   components: {
     HeaderComponent,
-  }
+  },
+  methods: {
+    async mint() {
+      if (this.mintVal < 1) {
+        alert("enter positive amount only");
+        return;
+      }
+      if (this.mintVal <= 1) {
+        console.log(this.bnbPriceGetter)
+        await this.$root.core.mint(this.bnbPriceGetter);
+      } else {
+        await this.$root.core.buyMore(this.mintVal);
+      }
+    },
+    incrementVal() {
+      if (this.mintVal < 10) {
+        this.mintVal++;
+      }
+    },
+    decrementVal() {
+      if (this.mintVal > 1) {
+        this.mintVal--;
+      }
+    },
+    toMain() {
+      this.$router.push("/");
+    }
+  },
+  computed: mapGetters(["bnbPriceGetter"]),
 }
 </script>
