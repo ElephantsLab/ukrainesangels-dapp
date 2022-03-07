@@ -250,8 +250,8 @@ export default class Core {
     async getTotalSupply() {
         try {
             const totalSupply = await this[`token_${this.currentBlockchain}`].totalSupply();
-            localStorage.setItem("totalSupply", parseInt(totalSupply, 16).toString());
-            return parseInt(totalSupply, 16);
+            localStorage.setItem("totalSupply", parseInt(totalSupply).toString());
+            return parseInt(totalSupply);
         } catch (error) {
             console.log(error);
         }
@@ -260,8 +260,8 @@ export default class Core {
     async getNftOwnersCount() {
         try {
             const nftOwnersCount = await this[`token_${this.currentBlockchain}`].nftOwnersCount();
-            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount, 16).toString());
-            return parseInt(nftOwnersCount, 16);
+            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount).toString());
+            return parseInt(nftOwnersCount);
         } catch (error) {
             console.log(error);
         }
