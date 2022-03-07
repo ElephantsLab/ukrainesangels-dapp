@@ -13,17 +13,23 @@
           <p class="heading1">My Angels</p>
           <div class="my-collection-wrapper">
             <div class="set-part">
-              <div class="set-card-wrapper">
-                <div class="card card-of-set">
+              <div class="set-card-wrapper" v-if="userNFTsGetter">
+                <div v-for="nft in userNFTsGetter.NFTs" v-bind:key="nft" class="card card-of-set">
                   <div class="img-wrapper">
+<<<<<<< HEAD
                     <img src="@/assets/images/set_nft/14.png" alt="" />
                   </div>
+=======
+                    <img src="@/assets/images/set_nft/14.png" alt="">
+                  </div>                
+>>>>>>> 49817f3e1d1e0f00ad688d5f7e4175c47db7c2fb
                 </div>
                 <button class="card card-of-set card-of-set-add">
                   <div class="add">
                     <i class="i-add-line"></i>
                   </div>
                 </button>
+<<<<<<< HEAD
                 <button disabled class="card card-of-set card-of-set-add">
                   <div class="add">
                     <i class="i-add-line"></i>
@@ -34,6 +40,18 @@
                     <i class="i-add-line"></i>
                   </div>
                 </button>
+=======
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <i class="i-add-line"></i>-->
+<!--                    </div>-->
+<!--                </button>-->
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <i class="i-add-line"></i>-->
+<!--                    </div>-->
+<!--                </button>-->
+>>>>>>> 49817f3e1d1e0f00ad688d5f7e4175c47db7c2fb
               </div>
             </div>
             <div class="main-part">
@@ -65,7 +83,7 @@
               <div class="card card-collection">
                 <div class="card-section">
                   <p class="supply-label">Total Supply</p>
-                  <div class="total-supply">10 000 nfts</div>
+                  <div class="total-supply">1000 nfts</div>
                 </div>
                 <div class="card-footer">
                   <div class="input-label">NFT Quantity</div>
@@ -106,9 +124,58 @@
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
+import { mapGetters, mapActions } from "vuex";
+
 export default {
+  data() {
+    return {
+      mintVal: 1,
+      NFTs: []
+    }
+  },
   components: {
     HeaderComponent,
   },
+<<<<<<< HEAD
 };
 </script>
+=======
+  methods: {
+    ...mapActions(["fetchNFTByUser"]),
+    async mint() {
+      if (this.mintVal < 1) {
+        alert("enter positive amount only");
+        return;
+      }
+      if (this.mintVal <= 1) {
+        console.log(this.bnbPriceGetter)
+        await this.$root.core.mint(this.bnbPriceGetter);
+      } else {
+        await this.$root.core.buyMore(this.mintVal);
+      }
+    },
+    incrementVal() {
+      if (this.mintVal < 10) {
+        this.mintVal++;
+      }
+    },
+    decrementVal() {
+      if (this.mintVal > 1) {
+        this.mintVal--;
+      }
+    },
+    toMain() {
+      this.$router.push("/");
+    }
+  },
+  watch: {
+    async userAddressGetter(newVal) {
+      if (newVal) {
+        await this.fetchNFTByUser(newVal);
+      }
+    }
+  },
+  computed: mapGetters(["bnbPriceGetter", "userAddressGetter", "userNFTsGetter"]),
+}
+</script>
+>>>>>>> 49817f3e1d1e0f00ad688d5f7e4175c47db7c2fb

@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     ...mapActions(["fetchHelpCenters"]),
-    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason", "updateBNBPrice"]),
+    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason", "updateBNBPrice", "setCurrentAddress"]),
     checkWalletOption(wallet) {
       let _this = this;
 
@@ -196,6 +196,7 @@ export default {
               throw Error();
             }
             if (currentAccount) {
+              _this.$store.commit("setCurrentAddress", currentAccount);
               // _this.$root.core.fetchActiveClaims(currentAccount, 10000);
               // _this.$root.core.fetchContractsReserves(10000);
             } else {
