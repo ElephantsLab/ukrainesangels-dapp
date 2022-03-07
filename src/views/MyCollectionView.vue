@@ -30,10 +30,10 @@
               </div>
             </div>
             <div class="set-part">
-              <div class="set-card-wrapper">
-                <div class="card card-of-set">
+              <div class="set-card-wrapper" v-if="userNFTsGetter">
+                <div v-for="nft in userNFTsGetter.NFTs" v-bind:key="nft" class="card card-of-set">
                   <div class="img-wrapper">
-                    <img src="@/assets/images/set_nft/14.png" alt="">  
+                    <img src="@/assets/images/set_nft/14.png" alt="">
                   </div>                
                 </div>
                 <button class="card card-of-set card-of-set-add">
@@ -41,16 +41,16 @@
                       <i class="i-add-line"></i>
                     </div>
                 </button>
-                <button disabled class="card card-of-set card-of-set-add">
-                    <div class="add">
-                      <i class="i-add-line"></i>
-                    </div>
-                </button>
-                <button disabled class="card card-of-set card-of-set-add">
-                    <div class="add">
-                      <i class="i-add-line"></i>
-                    </div>
-                </button>
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <i class="i-add-line"></i>-->
+<!--                    </div>-->
+<!--                </button>-->
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <i class="i-add-line"></i>-->
+<!--                    </div>-->
+<!--                </button>-->
               </div>
             </div>
           </div>
@@ -101,18 +101,20 @@
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   data() {
     return {
       mintVal: 1,
+      NFTs: []
     }
   },
   components: {
     HeaderComponent,
   },
   methods: {
+    ...mapActions(["fetchNFTByUser"]),
     async mint() {
       if (this.mintVal < 1) {
         alert("enter positive amount only");
@@ -139,6 +141,13 @@ export default {
       this.$router.push("/");
     }
   },
-  computed: mapGetters(["bnbPriceGetter"]),
+  watch: {
+    async userAddressGetter(newVal) {
+      if (newVal) {
+        await this.fetchNFTByUser(newVal);
+      }
+    }
+  },
+  computed: mapGetters(["bnbPriceGetter", "userAddressGetter", "userNFTsGetter"]),
 }
 </script>
