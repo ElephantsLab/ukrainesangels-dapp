@@ -1525,13 +1525,23 @@ i.i-logout-circle-line {
     min-width: 40px;
     min-height: 40px;
     padding: 8px;
-    background-color: rgba(239, 207, 70, 1);
+    background: #0F1010;
     opacity: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px
 }
 
-.swiper-button-prev.swiper-button-disabled {
+.swiper-button-prev:hover, .swiper-button-next:hover,
+.swiper-button-next.swiper-button-disabled:hover, .swiper-button-prev.swiper-button-disabled:hover,
+.swiper-button-next .swiper-button-prev.swiper-button-disabled {
+    background-color: #efcf46;
+}
+
+
+
+.swiper-button-prev.swiper-button-disabled:hover {
     opacity: 1;
 }
