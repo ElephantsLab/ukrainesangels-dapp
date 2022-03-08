@@ -13,10 +13,10 @@
           <p class="heading1">My Angels</p>
           <div class="my-collection-wrapper">
             <div class="set-part">
-              <div class="set-card-wrapper">
-                <div class="card card-of-set">
+              <div class="set-card-wrapper" v-if="userNFTsGetter">
+                <div v-for="nft in userNFTsGetter" v-bind:key="nft" class="card card-of-set">
                   <div class="img-wrapper">
-                    <img src="@/assets/images/set_nft/14.png" alt="" />
+                    <img v-bind:src="nft.image" alt="" />
                   </div>
                 </div>
                 <button class="card card-of-set card-of-set-add">
@@ -24,16 +24,16 @@
                     <i class="i-add-line"></i>
                   </div>
                 </button>
-                <button disabled class="card card-of-set card-of-set-add">
-                  <div class="add">
-                    <i class="i-add-line"></i>
-                  </div>
-                </button>
-                <button disabled class="card card-of-set card-of-set-add">
-                  <div class="add">
-                    <i class="i-add-line"></i>
-                  </div>
-                </button>
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                  <div class="add">-->
+<!--                    <i class="i-add-line"></i>-->
+<!--                  </div>-->
+<!--                </button>-->
+<!--                <button disabled class="card card-of-set card-of-set-add">-->
+<!--                  <div class="add">-->
+<!--                    <i class="i-add-line"></i>-->
+<!--                  </div>-->
+<!--                </button>-->
               </div>
             </div>
             <div class="main-part">
