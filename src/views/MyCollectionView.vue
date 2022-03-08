@@ -10,14 +10,14 @@
           <p class="body3">Go to Home Page</p>
         </a>
         <div class="status-block">
-          <section class="screen-my-collection">
+          <section class="screen-my-collection" v-if="userNFTsGetter && userNFTsGetter.length">
             <p class="heading1">My collection</p>
             <div class="my-collection-wrapper">
               <div class="set-part">
                 <div class="set-card-wrapper">
-                  <div class="card card-of-set">
+                  <div v-for="(nft, index) in userNFTsGetter" v-bind:key="nft" v-on:click="goToSelected(index, nft.name)" class="card card-of-set">
                     <div class="img-wrapper">
-                      <img src="@/assets/images/set_nft/14.png" alt="" />
+                      <img v-bind:src="nft.image" alt="" />
                     </div>
                   </div>
                   <button class="card card-of-set card-of-set-add">
@@ -27,20 +27,20 @@
                       </a>
                     </div>
                   </button>
-                  <button disabled class="card card-of-set card-of-set-add">
-                    <div class="add">
-                      <a href="#add-angel">
-                        <i class="i-add-line"></i>
-                      </a>
-                    </div>
-                  </button>
-                  <button disabled class="card card-of-set card-of-set-add">
-                    <div class="add">
-                      <a href="#add-angel">
-                        <i class="i-add-line"></i>
-                      </a>
-                    </div>
-                  </button>
+<!--                  <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <a href="#add-angel">-->
+<!--                        <i class="i-add-line"></i>-->
+<!--                      </a>-->
+<!--                    </div>-->
+<!--                  </button>-->
+<!--                  <button disabled class="card card-of-set card-of-set-add">-->
+<!--                    <div class="add">-->
+<!--                      <a href="#add-angel">-->
+<!--                        <i class="i-add-line"></i>-->
+<!--                      </a>-->
+<!--                    </div>-->
+<!--                  </button>-->
                 </div>
               </div>
               <div class="main-part">
@@ -53,12 +53,9 @@
                       :modules="modules"
                       class="mySwiper"
                     >
-                      <swiper-slide
-                        ><img src="@/assets/images/set_nft/14.png" alt=""
-                      /></swiper-slide>
-                      <swiper-slide
-                        ><img src="@/assets/images/set_nft/14.png" alt=""
-                      /></swiper-slide>
+                      <swiper-slide v-for="(nft, index) in userNFTsGetter" v-bind:key="index">
+                        <img v-bind:src="nft.image" alt=""/>
+                      </swiper-slide>
                     </swiper>
                     <!--<div class="card-slider-img">-->
                     <!--<img src="@/assets/images/set_nft/14.png" alt="">-->
@@ -67,7 +64,7 @@
                 </div>
                 <div class="info-about-angel">
                   <div class="info-about-name">
-                    <p>Angel #0001</p>
+                    <p>Angel #{{ selectedNft }}</p>
                   </div>
                   <div class="info-about-angel-disc">
                     <ul>
@@ -81,7 +78,7 @@
                       </li>
                       <li>
                         <p class="disc-name">Token ID</p>
-                        <p class="disc-name-info">1</p>
+                        <p class="disc-name-info">{{ tokenId }}</p>
                       </li>
                       <li>
                         <p class="disc-name">Token Standard</p>
@@ -166,6 +163,8 @@ export default {
     return {
       mintVal: 1,
       NFTs: [],
+      selectedNft: 0,
+      tokenId: 0
     };
   },
   components: {
@@ -192,6 +191,12 @@ export default {
         await this.$root.core.buyMore(this.mintVal);
       }
     },
+    goToSelected(index, tokenId) {
+      const swiper = document.querySelector('.mySwiper').swiper;
+      this.selectedNft = parseInt(tokenId);
+      this.tokenId = tokenId;
+      swiper.slideTo(index);
+    },
     incrementVal() {
       if (this.mintVal < 10) {
         this.mintVal++;
@@ -211,7 +216,7 @@ export default {
       if (newVal) {
         await this.fetchNFTByUser(newVal);
       }
-    },
+    }
   },
   computed: mapGetters([
     "bnbPriceGetter",
