@@ -205,6 +205,8 @@ input,
 .subtitle + .heading1 {
     margin-top: 16px;
 }
+
+.heading-angel-status,
 .heading2 {
     font-weight: bold;
     font-size: 40px;
@@ -1298,9 +1300,15 @@ input,
     z-index: 2;
     padding-bottom: 0;
     overflow: hidden;
-    padding-left: 354px;
-    padding-right: 354px;
+    /* padding-left: 354px;
+    padding-right: 354px; */
 }
+
+.center{
+    text-align: center;
+    margin: auto auto 40px auto;
+}
+
 .section-get-more,
 .section-get-more .section-content,
 .section-get-more .section-card {
@@ -1454,7 +1462,47 @@ i.i-logout-circle-line {
     color: rgba(239, 207, 70, 1);
 }
 
-
 .set-card-wrapper:first-child {
     margin-left: -15px;
+}
+
+/* there are no angels */
+
+.no-angel .screen-my-collection .my-collection-wrapper {
+    display: none;
+}
+
+.heading-angel-status {
+    display: none;
+    margin-bottom: 16px;
+}
+
+.no-angel .section-get-more .get-more-container .section-content .true {
+    display: none;
+}
+
+.no-angel .section-get-more .get-more-container  .true .heading-angel-status {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.no-angel .section-get-more .get-more-container .true .heading2 {
+    display: none;
+}
+
+.no-angel .section-get-more .get-more-container .section-content .heading-angel-status {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.heading-angel-status {
+    text-align: center;
+}
+
+.true .heading2{
+    margin-bottom: 16px;
+}
+
+.true .body2 {
+    margin-bottom: 40px;
 }
