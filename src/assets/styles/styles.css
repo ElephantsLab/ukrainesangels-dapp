@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
+
+
 .section-collection::before {
     position: absolute;
     content: "";
@@ -1505,4 +1507,31 @@ i.i-logout-circle-line {
 
 .true .body2 {
     margin-bottom: 40px;
+}
+
+.swiper-slide img {
+    width: 216px;
+}
+
+.swiper {
+    align-self: center;
+    text-align-last: center;
+}
+
+.swiper-button-prev, .swiper-button-next,
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.swiper-button-next .swiper-button-prev.swiper-button-disabled {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    background-color: rgba(239, 207, 70, 1);
+    opacity: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
 }
