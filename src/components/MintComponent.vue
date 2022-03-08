@@ -156,11 +156,11 @@
     </section>
     <section class="section section-donate" id="your-donate">
       <div class="container">
-        <div class="section-content">
-          <h2 class="heading2">You Can Donate Crypto Via the Platform</h2>
+        <div class="section-content center">
+          <h2 class="heading2">Or donate trough our platform</h2>
           <p class="body2">
-            We will make sure each bit of your donation is accounted for and
-            ends up supporting Ukraine’s people and army
+            If Funds and volunteer organization sites not work<br />
+            you can make donation trough our service
           </p>
         </div>
         <div class="card card-donate">
