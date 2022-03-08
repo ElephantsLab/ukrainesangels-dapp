@@ -11,38 +11,20 @@
         </a>
         <section class="screen-my-collection">
           <p class="heading1">My Angels</p>
-          <div class="my-collection-wrapper"><div class="main-part">
-              <div class="card card-slider">
-                <div class="card-slider-container">
-                  <button class="btn-arrow" >
-                    <i class="i-arrow-drop-left-line"></i>
-                  </button>
-                  <swiper
-                    :slidesPerView="1"
-                    :spaceBetween="30"
-                    :navigation="true"
-                    :modules="modules"
-                    class="mySwiper"
-                  >
-                    <swiper-slide><img src="@/assets/images/set_nft/14.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="@/assets/images/set_nft/14.png" alt=""></swiper-slide>
-                  </swiper>
-<!--                  <div class="card-slider-img">-->
-<!--                    <img src="@/assets/images/set_nft/14.png" alt="">-->
-<!--                  </div>-->
-                  <button class="btn-arrow" >
-                    <i class="i-arrow-drop-right-line"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div class="my-collection-wrapper">
             <div class="set-part">
-              <div class="set-card-wrapper" v-if="userNFTsGetter">
-                <div v-for="nft in userNFTsGetter" v-bind:key="nft" class="card card-of-set">
-                  <div class="img-wrapper"><img v-bind:src="nft.image" alt="">
-                  <img src="@/assets/images/set_nft/14.png" alt="">
+              <div class="set-card-wrapper">
+                <div class="card card-of-set">
+                  <div class="img-wrapper">
+                    <img src="@/assets/images/set_nft/14.png" alt="" />
                   </div>
-                  <button disabled class="card card-of-set card-of-set-add">
+                </div>
+                <button class="card card-of-set card-of-set-add">
+                  <div class="add">
+                    <i class="i-add-line"></i>
+                  </div>
+                </button>
+                <button disabled class="card card-of-set card-of-set-add">
                   <div class="add">
                     <i class="i-add-line"></i>
                   </div>
@@ -68,8 +50,32 @@
                   </button>
                 </div>
               </div>
+              <div class="info-about-angel">
+                <div class="info-about-name">
+                  <p>Angel #0001</p>
+                </div>
+                <div class="info-about-angel-disc">
+                  <ul>
+                    <li>
+                      <p class="disc-name">Contract Address</p>
+                      <p class="disc-name-info"><span>0x5ef...9459c</span></p>
+                    </li>
+                    <li>
+                      <p class="disc-name">Blockchain</p>
+                      <p class="disc-name-info">Binance Smart Chain</p>
+                    </li>
+                    <li>
+                      <p class="disc-name">Token ID</p>
+                      <p class="disc-name-info">1</p>
+                    </li>
+                    <li>
+                      <p class="disc-name">Token Standard</p>
+                      <p class="disc-name-info">ERC-721</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
           </div>
         </section>
         <section class="section section-get-more">
@@ -84,7 +90,7 @@
               <div class="card card-collection">
                 <div class="card-section">
                   <p class="supply-label">Total Supply</p>
-                  <div class="total-supply">1000 nfts</div>
+                  <div class="total-supply">10 000 nfts</div>
                 </div>
                 <div class="card-footer">
                   <div class="input-label">NFT Quantity</div>
@@ -123,10 +129,11 @@
   </div>
 </template>
 
+
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
 import { mapGetters, mapActions } from "vuex";
-import 'vue3-carousel/dist/carousel.css';
+import "vue3-carousel/dist/carousel.css";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper";
 // Import Swiper styles
@@ -138,13 +145,13 @@ export default {
   data() {
     return {
       mintVal: 1,
-      NFTs: []
-    }
+      NFTs: [],
+    };
   },
   components: {
     HeaderComponent,
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   setup() {
     return {
@@ -159,7 +166,7 @@ export default {
         return;
       }
       if (this.mintVal <= 1) {
-        console.log(this.bnbPriceGetter)
+        console.log(this.bnbPriceGetter);
         await this.$root.core.mint(this.bnbPriceGetter);
       } else {
         await this.$root.core.buyMore(this.mintVal);
@@ -177,15 +184,19 @@ export default {
     },
     toMain() {
       this.$router.push("/");
-    }
+    },
   },
   watch: {
     async userAddressGetter(newVal) {
       if (newVal) {
         await this.fetchNFTByUser(newVal);
       }
-    }
+    },
   },
-  computed: mapGetters(["bnbPriceGetter", "userAddressGetter", "userNFTsGetter"]),
-}
+  computed: mapGetters([
+    "bnbPriceGetter",
+    "userAddressGetter",
+    "userNFTsGetter",
+  ]),
+};
 </script>

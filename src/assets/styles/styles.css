@@ -1407,3 +1407,54 @@ i.i-logout-circle-line {
     height: 24px;
     background-image: url(../images/drop-icon.png);
 }
+
+.info-about-angel {
+    background: #0F1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+.info-about-name p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.info-about-name {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 32px;
+}
+
+.info-about-angel-disc ul li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.disc-name {
+    color: white;
+}
+
+.info-about-angel-disc {
+    padding: 24px;
+}
+
+.disc-name-info {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
+
+}
+
+.disc-name-info span {
+    color: rgba(239, 207, 70, 1);
+}
+
+
+.set-card-wrapper:first-child {
+    margin-left: -15px;
+}
