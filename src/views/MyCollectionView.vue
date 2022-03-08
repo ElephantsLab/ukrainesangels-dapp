@@ -46,15 +46,23 @@
               <div class="main-part">
                 <div class="card card-slider">
                   <div class="card-slider-container">
-                    <button class="btn-arrow">
-                      <i class="i-arrow-drop-left-line"></i>
-                    </button>
-                    <div class="card-slider-img">
-                      <img src="@/assets/images/set_nft/14.png" alt="" />
-                    </div>
-                    <button class="btn-arrow">
-                      <i class="i-arrow-drop-right-line"></i>
-                    </button>
+                    <swiper
+                      :slidesPerView="1"
+                      :spaceBetween="30"
+                      :navigation="true"
+                      :modules="modules"
+                      class="mySwiper"
+                    >
+                      <swiper-slide
+                        ><img src="@/assets/images/set_nft/14.png" alt=""
+                      /></swiper-slide>
+                      <swiper-slide
+                        ><img src="@/assets/images/set_nft/14.png" alt=""
+                      /></swiper-slide>
+                    </swiper>
+                    <!--<div class="card-slider-img">-->
+                    <!--<img src="@/assets/images/set_nft/14.png" alt="">-->
+                    <!--</div>-->
                   </div>
                 </div>
                 <div class="info-about-angel">
