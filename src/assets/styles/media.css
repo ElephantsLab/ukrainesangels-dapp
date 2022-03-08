@@ -62,8 +62,6 @@
            margin: 0 0 30px 24px;
     } */
 
-
-
     .my-collection-wrapper {
         display: block;
         flex-direction: row-reverse;
@@ -71,17 +69,15 @@
 
     .set-card-wrapper {
         display: flex;
-        justify-content: center;
-        margin-left: -15px;
-    }
-
-    .get-more-container .section-content .body2 {
-        text-align: center;
+        /* justify-content: center; */
+        /* margin-left: -15px; */
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 
     .set-part {
         width: 70%;
-        margin-left: -30px;
+        /*margin-left: -30px; */
         margin: auto;
     }
 
@@ -94,9 +90,8 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-
-
 }
+
 @media screen and (min-width: 769px) and (max-width: 991px) {
     .container {
         max-width: calc(100% - 30px * 2);
