@@ -53,7 +53,7 @@
           <span>Connect Wallet</span>
           <span class="icon metamask-img"></span>
         </button>
-        <div v-else class="btn btn-connect connected" v-on:click="logOut">
+        <div v-else class="btn btn-connect connected">
           <span
             >{{
               userAddressGetter[0] +
@@ -72,13 +72,13 @@
         <div class="dropdown-content">
           <div class="dropdown-content-inner">
             <div>
-              <a class="drop-link" href="">
+              <a class="drop-link" href="/MyCollection">
                 <span class="content-icon"></span>
                 <p class="dropdown-text">My collection</p>
               </a>
             </div>
             <div>
-              <a class="drop-link" href="">
+              <a class="drop-link" v-on:click="logOut">
                 <i class="i-logout-circle-line"></i>
                 <p class="dropdown-text">Disconnect</p>
               </a>

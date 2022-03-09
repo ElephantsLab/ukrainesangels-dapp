@@ -54,7 +54,7 @@
               <div class="main-part">
                 <div class="card card-slider">
                   <div class="card-slider-container">
-                    <button class="btn-arrow">
+                    <button v-on:click="swipe(false)" class="btn-arrow">
                       <i class="i-arrow-drop-left-line"></i>
                     </button>
                     <swiper
@@ -70,7 +70,7 @@
                         <img v-bind:src="nft.image" alt="" />
                       </swiper-slide>
                     </swiper>
-                    <button class="btn-arrow">
+                    <button v-on:click="swipe(true)" class="btn-arrow">
                       <i class="i-arrow-drop-right-line"></i>
                     </button>
                     <!--<div class="card-slider-img">-->
@@ -299,6 +299,15 @@ export default {
       return (
         year + " " + date + " " + month + " " + hour + ":" + min + ":" + sec
       );
+    },
+    swipe(dirrection) {
+      const swiper = document.querySelector('.mySwiper').swiper;
+      if (dirrection) {
+        swiper.slideNext();
+      } else {
+        swiper.slidePrev();
+      }
+      this.goToSelected(swiper.activeIndex, this.userNFTsGetter[swiper.activeIndex]);
     },
     goToSelected(index, nft) {
       const swiper = document.querySelector('.mySwiper').swiper;
