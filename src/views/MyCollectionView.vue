@@ -49,7 +49,6 @@
                     <swiper
                       :slidesPerView="1"
                       :spaceBetween="30"
-                      :navigation="true"
                       :modules="modules"
                       class="mySwiper"
                     >
