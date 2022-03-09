@@ -139,6 +139,7 @@ header .btn {
 .btn.btn-connect {
     border: 1px solid #efcf46;
     color: #fff;
+    cursor: pointer;
 }
 .btn.btn-connect > .icon {
     width: 36px;
@@ -1272,6 +1273,7 @@ input,
 }
 .card-of-set {
     padding: 24px;
+    cursor: pointer;
 }
 .card-of-set,
 .img-wrapper {
@@ -1289,6 +1291,7 @@ input,
     width: auto;
     height: 100%;
 }
+
 .card-of-set .add {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -1368,30 +1371,36 @@ i.i-logout-circle-line {
 
 .dropdown-content {
     display: none;
-    margin-top: 32px;
+
     position: absolute;
-    background: rgba(40, 40, 40, 1);
+
     z-index: 1;
+
+}
+
+.dropdown-content-inner {
+    margin-top: 32px;
+    background: rgba(40, 40, 40, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    display: block;
 }
 
-.dropdown-content div {
+.dropdown-content-inner div {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    display: flex;
-    cursor: pointer;
     padding: 20px 24px;
+    cursor: pointer;
+
 }
 
-.dropdown-content div:first-child {
+.dropdown-content-inner div:first-child {
     border-radius: 8px 8px 0px  0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.dropdown-content div:last-child {
+.dropdown-content-inner div:last-child {
     border-radius: 0px  0px 8px 8px ;
 }
 
@@ -1440,12 +1449,24 @@ i.i-logout-circle-line {
 
 .info-about-angel-disc ul li{
     display: flex;
-    justify-content: space-between;
     padding-bottom: 16px;
 }
 
 .disc-name {
     color: white;
+}
+
+.colum {
+    margin-right: 65px;
+}
+
+.colum-two {
+    margin-right: 86px;
+}
+
+.width {
+    width: 47%;
+    min-width: 100px;
 }
 
 .info-about-angel-disc {
@@ -1510,7 +1531,7 @@ i.i-logout-circle-line {
 }
 
 .swiper-slide img {
-    width: 216px;
+    width: 210px;
 }
 
 .swiper {
