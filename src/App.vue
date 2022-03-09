@@ -135,10 +135,12 @@ export default {
   computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter"]),
   async mounted() {
     setTimeout(async () => {
+      if (conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
+        localStorage.clear();
+      }
       if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
         alert("Change your wallet extension to Binance Smart Chain network");
         await window.ethereum.request({ method: 'wallet_addEthereumChain', params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
-        location.reload();
       }
     }, 1000);
     // this.lang.init();

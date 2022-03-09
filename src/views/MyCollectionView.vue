@@ -253,7 +253,15 @@ export default {
     },
     goToSelected(index, nft) {
       const swiper = document.querySelector('.mySwiper').swiper;
-      this.selectedNft = parseInt(nft.tokenId);
+      if (nft.tokenId.toString().length == 1) {
+        this.selectedNft = `000${nft.tokenId}`;
+      } else if (nft.tokenId.toString().length == 2) {
+        this.selectedNft = `00${nft.tokenId}`;
+      } else if (nft.tokenId.toString().length == 3) {
+        this.selectedNft = `0${nft.tokenId}`;
+      } else {
+        this.selectedNft = nft.tokenId;
+      }
       this.tokenId = nft.tokenId;
       this.nftParam.name = nft.name;
       this.nftParam.desc = nft.description;
@@ -280,7 +288,15 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.selectedNft = parseInt(this.userNFTsGetter[0].tokenId);
+      if (this.userNFTsGetter[0].tokenId.toString().length == 1) {
+        this.selectedNft = `000${this.userNFTsGetter[0].tokenId}`;
+      } else if (this.userNFTsGetter[0].tokenId.toString().length == 2) {
+        this.selectedNft = `00${this.userNFTsGetter[0].tokenId}`;
+      } else if (this.userNFTsGetter[0].tokenId.toString().length == 3) {
+        this.selectedNft = `0${this.userNFTsGetter[0].tokenId}`;
+      } else {
+        this.selectedNft = this.userNFTsGetter[0].tokenId;
+      }
       this.tokenId = this.userNFTsGetter[0].tokenId;
       this.nftParam.name = this.userNFTsGetter[0].name;
       this.nftParam.desc = this.userNFTsGetter[0].description;
@@ -289,7 +305,7 @@ export default {
       this.nftParam.compiler = this.userNFTsGetter[0].custom_fields.compiler;
       this.nftParam.sex = this.userNFTsGetter[0].sex;
       this.nftParam.country = this.userNFTsGetter[0].country;
-    }, 1000);
+    }, 1500);
   },
   watch: {
     async userAddressGetter(newVal) {
