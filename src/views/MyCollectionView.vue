@@ -10,12 +10,20 @@
           <p class="body3">Go to Home Page</p>
         </a>
         <div class="status-block">
-          <section class="screen-my-collection" v-if="userNFTsGetter && userNFTsGetter.length">
+          <section
+            class="screen-my-collection"
+            v-if="userNFTsGetter && userNFTsGetter.length"
+          >
             <p class="heading1">My collection</p>
             <div class="my-collection-wrapper">
               <div class="set-part">
                 <div class="set-card-wrapper">
-                  <div v-for="(nft, index) in userNFTsGetter" v-bind:key="nft" v-on:click="goToSelected(index, nft)" class="card card-of-set">
+                  <div
+                    v-for="(nft, index) in userNFTsGetter"
+                    v-bind:key="nft"
+                    v-on:click="goToSelected(index, nft)"
+                    class="card card-of-set"
+                  >
                     <div class="img-wrapper">
                       <img v-bind:src="nft.image" alt="" />
                     </div>
@@ -27,35 +35,44 @@
                       </a>
                     </div>
                   </button>
-<!--                  <button disabled class="card card-of-set card-of-set-add">-->
-<!--                    <div class="add">-->
-<!--                      <a href="#add-angel">-->
-<!--                        <i class="i-add-line"></i>-->
-<!--                      </a>-->
-<!--                    </div>-->
-<!--                  </button>-->
-<!--                  <button disabled class="card card-of-set card-of-set-add">-->
-<!--                    <div class="add">-->
-<!--                      <a href="#add-angel">-->
-<!--                        <i class="i-add-line"></i>-->
-<!--                      </a>-->
-<!--                    </div>-->
-<!--                  </button>-->
+                  <!--                  <button disabled class="card card-of-set card-of-set-add">-->
+                  <!--                    <div class="add">-->
+                  <!--                      <a href="#add-angel">-->
+                  <!--                        <i class="i-add-line"></i>-->
+                  <!--                      </a>-->
+                  <!--                    </div>-->
+                  <!--                  </button>-->
+                  <!--                  <button disabled class="card card-of-set card-of-set-add">-->
+                  <!--                    <div class="add">-->
+                  <!--                      <a href="#add-angel">-->
+                  <!--                        <i class="i-add-line"></i>-->
+                  <!--                      </a>-->
+                  <!--                    </div>-->
+                  <!--                  </button>-->
                 </div>
               </div>
               <div class="main-part">
                 <div class="card card-slider">
                   <div class="card-slider-container">
+                    <button class="btn-arrow">
+                      <i class="i-arrow-drop-left-line"></i>
+                    </button>
                     <swiper
                       :slidesPerView="1"
                       :spaceBetween="30"
                       :modules="modules"
                       class="mySwiper"
                     >
-                      <swiper-slide v-for="(nft, index) in userNFTsGetter" v-bind:key="index">
-                        <img v-bind:src="nft.image" alt=""/>
+                      <swiper-slide
+                        v-for="(nft, index) in userNFTsGetter"
+                        v-bind:key="index"
+                      >
+                        <img v-bind:src="nft.image" alt="" />
                       </swiper-slide>
                     </swiper>
+                    <button class="btn-arrow">
+                      <i class="i-arrow-drop-right-line"></i>
+                    </button>
                     <!--<div class="card-slider-img">-->
                     <!--<img src="@/assets/images/set_nft/14.png" alt="">-->
                     <!--</div>-->
@@ -68,48 +85,62 @@
                   <div class="info-about-angel-disc" v-if="nftParam.name">
                     <ul>
                       <li>
-                        <p class="disc-name">Contract Address</p>
-                        <p class="disc-name-info"><span>{{ contractAddressGetter[0] + contractAddressGetter[1] + contractAddressGetter[2] + contractAddressGetter[3] + contractAddressGetter[4] }}...{{ contractAddressGetter[39] + contractAddressGetter[40] + contractAddressGetter[41] }}</span></p>
+                        <p class="disc-name width">Contract Address</p>
+                        <p class="disc-name-info">
+                          <span
+                            >{{
+                              contractAddressGetter[0] +
+                              contractAddressGetter[1] +
+                              contractAddressGetter[2] +
+                              contractAddressGetter[3] +
+                              contractAddressGetter[4]
+                            }}...{{
+                              contractAddressGetter[39] +
+                              contractAddressGetter[40] +
+                              contractAddressGetter[41]
+                            }}</span
+                          >
+                        </p>
                       </li>
                       <li>
-                        <p class="disc-name">Blockchain</p>
+                        <p class="disc-name width">Blockchain</p>
                         <p class="disc-name-info">Binance Smart Chain</p>
                       </li>
                       <li>
-                        <p class="disc-name">Token ID</p>
+                        <p class="disc-name width">Token ID</p>
                         <p class="disc-name-info">{{ tokenId }}</p>
                       </li>
                       <li>
-                        <p class="disc-name">Token Standard</p>
+                        <p class="disc-name width">Token Standard</p>
                         <p class="disc-name-info">ERC-721</p>
                       </li>
                       <li>
-                        <p class="disc-name">Name</p>
-                        <p class="disc-name-info"> {{ nftParam.name }}</p>
+                        <p class="disc-name width">Name</p>
+                        <p class="disc-name-info">{{ nftParam.name }}</p>
+                      </li>
+                      <li class="stroke">
+                        <p class="disc-name colum">Description</p>
+                        <p class="disc-name-info">{{ nftParam.desc }}</p>
                       </li>
                       <li>
-                        <p class="disc-name">Description</p>
-                        <p class="disc-name-info"> {{ nftParam.desc }}</p>
+                        <p class="disc-name width">Edition</p>
+                        <p class="disc-name-info">{{ nftParam.edition }}</p>
                       </li>
                       <li>
-                        <p class="disc-name">Edition</p>
-                        <p class="disc-name-info"> {{ nftParam.edition }}</p>
+                        <p class="disc-name width">Date</p>
+                        <p class="disc-name-info">{{ nftParam.date }}</p>
+                      </li>
+                      <li class="stroke">
+                        <p class="disc-name colum-two">Compiler</p>
+                        <p class="disc-name-info">{{ nftParam.compiler }}</p>
                       </li>
                       <li>
-                        <p class="disc-name">Date</p>
-                        <p class="disc-name-info"> {{ nftParam.date }}</p>
+                        <p class="disc-name width">Sex</p>
+                        <p class="disc-name-info">{{ nftParam.sex }}</p>
                       </li>
                       <li>
-                        <p class="disc-name">Compiler</p>
-                        <p class="disc-name-info"> {{ nftParam.compiler }}</p>
-                      </li>
-                      <li>
-                        <p class="disc-name">Sex</p>
-                        <p class="disc-name-info"> {{ nftParam.sex }}</p>
-                      </li>
-                      <li>
-                        <p class="disc-name">Country</p>
-                        <p class="disc-name-info"> {{ nftParam.country }}</p>
+                        <p class="disc-name width">Country</p>
+                        <p class="disc-name-info">{{ nftParam.country }}</p>
                       </li>
                     </ul>
                   </div>
@@ -120,8 +151,13 @@
           <section class="section section-get-more" id="add-angel">
             <div class="get-more-container">
               <div class="section-content true">
-                <p v-if="userNFTsGetter && userNFTsGetter.length" class="heading2">Upgrade your collection</p>
-<!--                heading-angel-status-->
+                <p
+                  v-if="userNFTsGetter && userNFTsGetter.length"
+                  class="heading2"
+                >
+                  Upgrade your collection
+                </p>
+                <!--                heading-angel-status-->
                 <p v-else class="heading2">
                   You don’t have any NFT.<br />
                   Upgrade your collection
@@ -200,8 +236,8 @@ export default {
         date: undefined,
         compiler: undefined,
         sex: undefined,
-        country: undefined
-      }
+        country: undefined,
+      },
     };
   },
   components: {
@@ -228,11 +264,22 @@ export default {
         await this.$root.core.buyMore(this.mintVal);
       }
     },
-    formatTime (timestamp) {
+    formatTime(timestamp) {
       if (!timestamp) return;
       let a = new Date(timestamp * 1000);
       let months = [
-        'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
       ];
       let year = a.getFullYear();
       let month = months[a.getMonth()];
@@ -241,15 +288,17 @@ export default {
       let min = a.getMinutes();
       let sec = a.getSeconds();
       if (hour.toString().length === 1) {
-        hour = '0' + hour;
+        hour = "0" + hour;
       }
       if (min.toString().length === 1) {
-        min = '0' + min;
+        min = "0" + min;
       }
       if (sec.toString().length === 1) {
-        sec = '0' + sec;
+        sec = "0" + sec;
       }
-      return year + ' ' + date + ' ' + month + ' ' + hour + ':' + min + ':' + sec;
+      return (
+        year + " " + date + " " + month + " " + hour + ":" + min + ":" + sec
+      );
     },
     goToSelected(index, nft) {
       const swiper = document.querySelector('.mySwiper').swiper;
@@ -301,7 +350,9 @@ export default {
       this.nftParam.name = this.userNFTsGetter[0].name;
       this.nftParam.desc = this.userNFTsGetter[0].description;
       this.nftParam.edition = this.userNFTsGetter[0].custom_fields.edition;
-      this.nftParam.date = this.formatTime(this.userNFTsGetter[0].custom_fields.date);
+      this.nftParam.date = this.formatTime(
+        this.userNFTsGetter[0].custom_fields.date
+      );
       this.nftParam.compiler = this.userNFTsGetter[0].custom_fields.compiler;
       this.nftParam.sex = this.userNFTsGetter[0].sex;
       this.nftParam.country = this.userNFTsGetter[0].country;
@@ -312,13 +363,13 @@ export default {
       if (newVal) {
         await this.fetchNFTByUser(newVal);
       }
-    }
+    },
   },
   computed: mapGetters([
     "bnbPriceGetter",
     "userAddressGetter",
     "userNFTsGetter",
-    "contractAddressGetter"
+    "contractAddressGetter",
   ]),
 };
 </script>

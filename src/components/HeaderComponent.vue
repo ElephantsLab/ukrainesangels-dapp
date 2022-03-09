@@ -70,17 +70,19 @@
           <span class="icon metamask-img"></span>
         </div>
         <div class="dropdown-content">
-          <div>
-            <a class="drop-link" href="">
-              <span class="content-icon"></span>
-              <p class="dropdown-text">My collection</p>
-            </a>
-          </div>
-          <div>
-            <a class="drop-link" href="">
-              <i class="i-logout-circle-line"></i>
-              <p class="dropdown-text">Disconnect</p>
-            </a>
+          <div class="dropdown-content-inner">
+            <div>
+              <a class="drop-link" href="">
+                <span class="content-icon"></span>
+                <p class="dropdown-text">My collection</p>
+              </a>
+            </div>
+            <div>
+              <a class="drop-link" href="">
+                <i class="i-logout-circle-line"></i>
+                <p class="dropdown-text">Disconnect</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
