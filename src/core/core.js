@@ -19,6 +19,7 @@ export default class Core {
                 this.primaryPovider = new ethers.providers.Web3Provider(window.ethereum);
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
                         this[`provider_${chainId}`]
                     );
@@ -250,8 +251,8 @@ export default class Core {
     async getTotalSupply() {
         try {
             const totalSupply = await this[`token_${this.currentBlockchain}`].totalSupply();
-            localStorage.setItem("totalSupply", parseInt(totalSupply, 16).toString());
-            return parseInt(totalSupply, 16);
+            localStorage.setItem("totalSupply", parseInt(totalSupply).toString());
+            return parseInt(totalSupply);
         } catch (error) {
             console.log(error);
         }
@@ -260,8 +261,8 @@ export default class Core {
     async getNftOwnersCount() {
         try {
             const nftOwnersCount = await this[`token_${this.currentBlockchain}`].nftOwnersCount();
-            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount, 16).toString());
-            return parseInt(nftOwnersCount, 16);
+            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount).toString());
+            return parseInt(nftOwnersCount);
         } catch (error) {
             console.log(error);
         }

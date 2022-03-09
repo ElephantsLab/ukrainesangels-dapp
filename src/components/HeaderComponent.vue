@@ -3,22 +3,90 @@
     <header class="container">
       <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
       <nav class="header-nav">
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#our-mission">Our Mission</a></li>
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#situation">Situation in Ukraine</a></li>
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#angel-collection">Collection</a></li>
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#your-donate">Donation</a></li>
-        <li><a class="header-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a></li>
+        <li>
+          <a
+            class="header-link"
+            v-on:click="this.$router.push('/')"
+            href="#our-mission"
+            >Our Mission</a
+          >
+        </li>
+        <li>
+          <a
+            class="header-link"
+            v-on:click="this.$router.push('/')"
+            href="#situation"
+            >Situation in Ukraine</a
+          >
+        </li>
+        <li>
+          <a
+            class="header-link"
+            v-on:click="this.$router.push('/')"
+            href="#angel-collection"
+            >Collection</a
+          >
+        </li>
+        <li>
+          <a
+            class="header-link"
+            v-on:click="this.$router.push('/')"
+            href="#your-donate"
+            >Donation</a
+          >
+        </li>
+        <li>
+          <a
+            class="header-link"
+            v-on:click="this.$router.push('/')"
+            href="#need-help"
+            >Help Desk</a
+          >
+        </li>
       </nav>
       <div class="header-main-buttons">
-        <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
-          <span >Connect Wallet</span>
+        <button
+          v-if="!userAddressGetter"
+          class="btn btn-connect"
+          v-on:click="connectWallet"
+        >
+          <span>Connect Wallet</span>
           <span class="icon metamask-img"></span>
         </button>
-        <div v-else class="btn btn-connect connected" v-on:click="logOut">
-          <span >{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
+        <div v-else class="btn btn-connect connected">
+          <span
+            >{{
+              userAddressGetter[0] +
+              userAddressGetter[1] +
+              userAddressGetter[2] +
+              userAddressGetter[3] +
+              userAddressGetter[4]
+            }}...{{
+              userAddressGetter[39] +
+              userAddressGetter[40] +
+              userAddressGetter[41]
+            }}</span
+          >
           <span class="icon metamask-img"></span>
         </div>
+        <div class="dropdown-content">
+          <div class="dropdown-content-inner">
+            <div>
+              <a class="drop-link" href="/MyCollection">
+                <span class="content-icon"></span>
+                <p class="dropdown-text">My collection</p>
+              </a>
+            </div>
+            <div>
+              <a class="drop-link" v-on:click="logOut">
+                <i class="i-logout-circle-line"></i>
+                <p class="dropdown-text">Disconnect</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="mobile-menu-status">
         <!-- TODO: если нажимаем сюда <div class="mobile-menu"> показать -->
         <button v-on:click="mobileMenu = true" class="btn-mob-menu">
@@ -26,15 +94,15 @@
         </button>
       </div>
     </header>
-      
-      <!-- ----------mobile-menu---------- -->
+
+    <!-- ----------mobile-menu---------- -->
     <div v-if="mobileMenu" class="mobile-menu">
       <header class="header-mobile">
         <div class="container">
-          <a href="" class="header-logo logo"></a>  
+          <a href="" class="header-logo logo"></a>
           <div class="mobile-menu-status">
             <!-- TODO: если нажимаем сюда <div class="mobile-menu"> спрятать -->
-            <button v-on:click="mobileMenu = false" class="btn-mobile-close ">
+            <button v-on:click="mobileMenu = false" class="btn-mobile-close">
               <i class="i-close-fill"></i>
             </button>
           </div>
@@ -42,21 +110,71 @@
       </header>
       <div class="menu-wrapper">
         <div class="container">
-          
           <ul class="ul-flex-column">
-            <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#our-mission">Our Mission</a></li>
-            <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#situation">Situation in Ukraine</a></li>
-            <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#angel-collection">Collection</a></li>
-            <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#your-donate">Donation</a></li>
-            <li><a class="nav-mob-link" v-on:click="this.$router.push('/'), mobileMenu = false" href="#need-help">Help Desk</a></li>
-          </ul> 
-          <div class="ul-flex-column menu-btn-wrapper">                 
-            <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">
-              <span >Connect Wallet</span>
+            <li>
+              <a
+                class="nav-mob-link"
+                v-on:click="this.$router.push('/'), (mobileMenu = false)"
+                href="#our-mission"
+                >Our Mission</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-mob-link"
+                v-on:click="this.$router.push('/'), (mobileMenu = false)"
+                href="#situation"
+                >Situation in Ukraine</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-mob-link"
+                v-on:click="this.$router.push('/'), (mobileMenu = false)"
+                href="#angel-collection"
+                >Collection</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-mob-link"
+                v-on:click="this.$router.push('/'), (mobileMenu = false)"
+                href="#your-donate"
+                >Donation</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-mob-link"
+                v-on:click="this.$router.push('/'), (mobileMenu = false)"
+                href="#need-help"
+                >Help Desk</a
+              >
+            </li>
+          </ul>
+          <div class="ul-flex-column menu-btn-wrapper">
+            <button
+              v-if="!userAddressGetter"
+              class="btn btn-connect connected"
+              v-on:click="connectWallet"
+            >
+              <span>Connect Wallet</span>
               <span class="icon metamask-img"></span>
             </button>
             <div v-else class="btn btn-connect connected" v-on:click="logOut">
-              <span >{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{ userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41] }}</span>
+              <span
+                >{{
+                  userAddressGetter[0] +
+                  userAddressGetter[1] +
+                  userAddressGetter[2] +
+                  userAddressGetter[3] +
+                  userAddressGetter[4]
+                }}...{{
+                  userAddressGetter[39] +
+                  userAddressGetter[40] +
+                  userAddressGetter[41]
+                }}</span
+              >
               <span class="icon metamask-img"></span>
             </div>
           </div>
@@ -72,8 +190,8 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      mobileMenu: false
-    }
+      mobileMenu: false,
+    };
   },
   methods: {
     ...mapActions(["connectWallet"]),
@@ -81,8 +199,8 @@ export default {
       localStorage.removeItem("address");
       localStorage.removeItem("selectedWallet");
       location.reload();
-    }
+    },
   },
-  computed: mapGetters(["userAddressGetter"])
-}
+  computed: mapGetters(["userAddressGetter"]),
+};
 </script>

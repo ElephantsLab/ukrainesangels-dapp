@@ -1,10 +1,10 @@
 {
   "PRIMARY_BLOCKCHAIN": {
     "chainId": "56",
-    "node": "https://bscnode.cloud"
+    "node": "https://bscnode.cloud/"
   },
   "BLOCKCHAINS": {
-    "56": "BSC Mainnet"
+    "56": "BSC Testnet"
   },
   "SUPPORTED_BLOCKCHAINS": [56],
   "56": {
@@ -13,7 +13,7 @@
     "CHAIN_ID": "56",
     "TOKEN_ADDRESS": "0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391",
     "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://bscnode.cloud"
+    "NODE": "https://bscnode.cloud/"
   },
   "NETWORK_PARAMS": [
     {
@@ -28,8 +28,8 @@
           "symbol": "BNB",
           "decimals": 18
         },
-        "rpcUrls": ["https://bscnode.cloud"],
-        "blockExplorerUrls": ["https://bscscan.com"]
+        "rpcUrls": ["https://bscnode.cloud/"],
+        "blockExplorerUrls": ["https://bscscan.com/"]
       }
     }
   ],
@@ -48,7 +48,7 @@
         "symbol": "BNB",
         "decimals": 18
       },
-      "rpcUrls": ["https://bscnode.cloud"],
+      "rpcUrls": ["https://bscscan.com/"],
       "blockExplorerUrls": ["https://bscscan.com/"]
     }
   ]

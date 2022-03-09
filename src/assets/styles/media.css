@@ -50,6 +50,47 @@
         padding-top: 88px;
     }
 }
+
+@media (max-width: 1370px) {
+    .section-get-more::before, .section-get-more::after {
+        display: none;
+    }
+}
+
+@media (max-width: 969px) {
+    /* .set-card-wrapper .card {
+           margin: 0 0 30px 24px;
+    } */
+
+    .my-collection-wrapper {
+        display: block;
+        flex-direction: row-reverse;
+    }
+
+    .set-card-wrapper {
+        display: flex;
+        /* justify-content: center; */
+        /* margin-left: -15px; */
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .set-part {
+        width: 100%;
+        /*margin-left: -30px; */
+    }
+
+    .main-part {
+        margin: auto;
+    }
+
+    .section-get-more {
+        margin: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
 @media screen and (min-width: 769px) and (max-width: 991px) {
     .container {
         max-width: calc(100% - 30px * 2);
@@ -64,11 +105,86 @@
         max-width: 680px;
         padding: 0 30px;
     }
+
+    .set-part {
+        width: 100%;
+        margin-left: -30px;
+        margin: auto;
+    }
 }
-@media screen and (max-width: 439px) {
+@media screen and (max-width: 496px) {
     .container {
         max-width: 100%;
         padding: 0 12px;
+    }
+
+    .info-about-angel-disc ul li.stroke {
+        display: block;
+    }
+
+    .colum, .colum-two { margin-bottom: 8px;}
+
+    .width {
+        width: 45%;
+        min-width: 180px;
+    }
+    .set-card-wrapper .card {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        max-height: 70px;
+        margin: 0 0 24px 10px;
+    }
+
+    .set-part {
+        width: 100%;
+        margin: 0;
+    }
+
+    .set-card-wrapper {
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .main-part {
+        width: 100%;
+    }
+
+    .card.card-slider {
+        height: 328px;
+    }
+
+    .set-card-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .card-of-set {
+        padding: 8px 16px;
+    }
+
+    .card-of-set .add {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+}
+
+@media(max-width: 410px) {
+    .card-slider-container .card-slider-img {
+        min-width: 159px;
+        min-height: 228px;
+    }
+
+    .card-slider-container .card-slider-img img {
+       max-width: calc(100% - 16px * 2);
+    }
+
+    .card.card-slider {
+        padding: 50px 24px;
+    }
+
+    .card.card-slider {
+        height: 100%;
     }
 }
 

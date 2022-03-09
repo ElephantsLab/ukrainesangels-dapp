@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-position: top center;
 }
+
+
 .section-collection::before {
     position: absolute;
     content: "";
@@ -137,6 +139,7 @@ header .btn {
 .btn.btn-connect {
     border: 1px solid #efcf46;
     color: #fff;
+    cursor: pointer;
 }
 .btn.btn-connect > .icon {
     width: 36px;
@@ -205,6 +208,8 @@ input,
 .subtitle + .heading1 {
     margin-top: 16px;
 }
+
+.heading-angel-status,
 .heading2 {
     font-weight: bold;
     font-size: 40px;
@@ -448,7 +453,7 @@ input,
     filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2));
 }
 .card-main-img div:nth-child(1) {
-    background-image: url(../images/set_nft/27.png);
+    background-image: url(../images/set_nft/90.png);
     left: 0;
     transform: translate(0, -50%);
 }
@@ -460,7 +465,7 @@ input,
     filter: drop-shadow(0px 4px 80px rgba(239, 207, 70, 0.2)) drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.9));
 }
 .card-main-img div:nth-child(3) {
-    background-image: url(../images/set_nft/14.png);
+    background-image: url(../images/set_nft/100.png);
     right: 0;
     transform: translate(0, -50%);
 }
@@ -865,22 +870,22 @@ input,
     background-size: contain;
 }
 .nft-img-mask.nft-img-mask-1 {
-    background-image: url(@/assets/images/set_nft/66.png);
+    background-image: url(@/assets/images/set_nft/new_1.png);
 }
 .nft-img-mask.nft-img-mask-2 {
-    background-image: url(@/assets/images/set_nft/21.png);
+    background-image: url(@/assets/images/set_nft/100.png);
 }
 .nft-img-mask.nft-img-mask-3 {
-    background-image: url(@/assets/images/set_nft/27.png);
+    background-image: url(@/assets/images/set_nft/90.png);
 }
 .nft-img-mask.nft-img-mask-4 {
-    background-image: url(@/assets/images/set_nft/28.png);
+    background-image: url(@/assets/images/set_nft/new_2.png);
 }
 .nft-img-mask.nft-img-mask-5 {
-    background-image: url(@/assets/images/set_nft/14.png);
+    background-image: url(@/assets/images/set_nft/new_3.png);
 }
 .nft-img-mask.nft-img-mask-6 {
-    background-image: url(@/assets/images/set_nft/59.png);
+    background-image: url(@/assets/images/set_nft/21.png);
 }
 .card-angel .btn {
     width: 100%;
@@ -1232,6 +1237,7 @@ input,
 }
 .my-collection-wrapper {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -1267,6 +1273,7 @@ input,
 }
 .card-of-set {
     padding: 24px;
+    cursor: pointer;
 }
 .card-of-set,
 .img-wrapper {
@@ -1284,6 +1291,7 @@ input,
     width: auto;
     height: 100%;
 }
+
 .card-of-set .add {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -1297,9 +1305,15 @@ input,
     z-index: 2;
     padding-bottom: 0;
     overflow: hidden;
-    padding-left: 354px;
-    padding-right: 354px;
+    /* padding-left: 354px;
+    padding-right: 354px; */
 }
+
+.center{
+    text-align: center;
+    margin: auto auto 40px auto;
+}
+
 .section-get-more,
 .section-get-more .section-content,
 .section-get-more .section-card {
@@ -1328,4 +1342,227 @@ input,
 .section-get-more::after {
     background-image: url(../images/boy.png);
     left: 0;
+}
+
+.drop-link {
+    display: flex;
+}
+
+.dropdown-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    margin-left: 8px;
+}
+
+i.i-logout-circle-line {
+    font-size: 22px;
+    color: white;
+}
+
+.dropdown-content div{
+
+}
+
+.header-main-buttons {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    z-index: 1;
+
+}
+
+.dropdown-content-inner {
+    margin-top: 32px;
+    background: rgba(40, 40, 40, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: block;
+}
+
+.dropdown-content-inner div {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 20px 24px;
+    cursor: pointer;
+
+}
+
+.dropdown-content-inner div:first-child {
+    border-radius: 8px 8px 0px  0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content-inner div:last-child {
+    border-radius: 0px  0px 8px 8px ;
+}
+
+.header-main-buttons:hover .dropdown-content {
+    display: block;
+}
+
+.content-icon {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.content-icon::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    height: 24px;
+    background-image: url(../images/drop-icon.png);
+}
+
+.info-about-angel {
+    background: #0F1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+.info-about-name p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.info-about-name {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 32px;
+}
+
+.info-about-angel-disc ul li{
+    display: flex;
+    padding-bottom: 16px;
+}
+
+.disc-name {
+    color: white;
+}
+
+.colum {
+    margin-right: 65px;
+}
+
+.colum-two {
+    margin-right: 86px;
+}
+
+.width {
+    width: 47%;
+    min-width: 100px;
+}
+
+.info-about-angel-disc {
+    padding: 24px;
+}
+
+.disc-name-info {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
+
+}
+
+.disc-name-info span {
+    color: rgba(239, 207, 70, 1);
+}
+
+.set-card-wrapper:first-child {
+    margin-left: -15px;
+}
+
+/* there are no angels */
+
+.no-angel .screen-my-collection .my-collection-wrapper {
+    display: none;
+}
+
+.heading-angel-status {
+    display: none;
+    margin-bottom: 16px;
+}
+
+.no-angel .section-get-more .get-more-container .section-content .true {
+    display: none;
+}
+
+.no-angel .section-get-more .get-more-container  .true .heading-angel-status {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.no-angel .section-get-more .get-more-container .true .heading2 {
+    display: none;
+}
+
+.no-angel .section-get-more .get-more-container .section-content .heading-angel-status {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.heading-angel-status {
+    text-align: center;
+}
+
+.true .heading2{
+    margin-bottom: 16px;
+}
+
+.true .body2 {
+    margin-bottom: 40px;
+}
+
+.swiper-slide img {
+    width: 210px;
+}
+
+.swiper {
+    align-self: center;
+    text-align-last: center;
+}
+
+.swiper-button-prev, .swiper-button-next,
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.swiper-button-next .swiper-button-prev.swiper-button-disabled {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    background: #0F1010;
+    opacity: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover,
+.swiper-button-next.swiper-button-disabled:hover, .swiper-button-prev.swiper-button-disabled:hover,
+.swiper-button-next .swiper-button-prev.swiper-button-disabled {
+    background-color: #efcf46;
+}
+
+
+
+.swiper-button-prev.swiper-button-disabled:hover {
+    opacity: 1;
 }

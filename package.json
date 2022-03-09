@@ -11,8 +11,10 @@
     "axios": "^0.26.0",
     "core-js": "^3.8.3",
     "ethers": "^5.5.4",
+    "swiper": "^8.0.7",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13",
+    "vue3-carousel": "^0.1.36",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
