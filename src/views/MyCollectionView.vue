@@ -121,8 +121,9 @@
           <section class="section section-get-more" id="add-angel">
             <div class="get-more-container">
               <div class="section-content true">
-                <p class="heading2">Upgrade your collection</p>
-                <p class="heading-angel-status">
+                <p v-if="userNFTsGetter && userNFTsGetter.length" class="heading2">Upgrade your collection</p>
+<!--                heading-angel-status-->
+                <p v-else class="heading2">
                   You don’t have any NFT.<br />
                   Upgrade your collection
                 </p>
