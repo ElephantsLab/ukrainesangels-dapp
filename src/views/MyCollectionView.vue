@@ -170,7 +170,7 @@
                 <div class="card card-collection">
                   <div class="card-section">
                     <p class="supply-label">Total Supply</p>
-                    <div class="total-supply">10 000 nfts</div>
+                    <div class="total-supply">1000 nfts</div>
                   </div>
                   <div class="card-footer">
                     <div class="input-label">Count of NFT’s</div>
@@ -346,6 +346,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      if (!this.userNFTsGetter[0]) return;
       if (this.userNFTsGetter[0].tokenId.toString().length == 1) {
         this.selectedNft = `000${this.userNFTsGetter[0].tokenId}`;
       } else if (this.userNFTsGetter[0].tokenId.toString().length == 2) {

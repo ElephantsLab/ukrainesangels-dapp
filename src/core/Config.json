@@ -1,55 +1,55 @@
 {
   "PRIMARY_BLOCKCHAIN": {
-    "chainId": "97",
-    "node": "https://data-seed-prebsc-2-s2.binance.org:8545/"
+    "chainId": "56",
+    "node": "https://bscnode.cloud/"
   },
   "BLOCKCHAINS": {
-    "97": "BSC Testnet"
+    "56": "BSC Testnet"
   },
-  "SUPPORTED_BLOCKCHAINS": [97],
-  "97": {
+  "SUPPORTED_BLOCKCHAINS": [56],
+  "56": {
     "NAME": "BSC",
     "SYMBOL": "BSC",
-    "CHAIN_ID": "97",
-    "TOKEN_ADDRESS": "0x2724858eC44F20f5ac12fE90eE8cE0D99F77Ba7f",
+    "CHAIN_ID": "56",
+    "TOKEN_ADDRESS": "0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391",
     "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://data-seed-prebsc-2-s2.binance.org:8545/"
+    "NODE": "https://bscnode.cloud/"
   },
   "NETWORK_PARAMS": [
     {
       "name": "BSC Mainnet",
       "symbol": "BSC",
-      "chainId": "0x61",
+      "chainId": "0x38",
       "params": {
-        "chainId": "0x61",
-        "chainName": "Binance SmartChain testnet",
+        "chainId": "0x38",
+        "chainName": "Binance SmartChain mainnet",
         "nativeCurrency": {
           "name": "Binance",
           "symbol": "BNB",
           "decimals": 18
         },
-        "rpcUrls": ["https://data-seed-prebsc-2-s2.binance.org:8545/"],
-        "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+        "rpcUrls": ["https://bscnode.cloud/"],
+        "blockExplorerUrls": ["https://bscscan.com/"]
       }
     }
   ],
   "baseUrl": "https://bridge.bring.finance/api/",
   "BNBVal": 0.25,
-  "NETWORK": 97,
+  "NETWORK": 56,
   "SCAN_TX": "https://bscscan.com/tx/",
   "SCAN_ADDRESS": "https://bscscan.com/address/",
   "NETWORK_PARAMS_ASK_TO_CONNECT": {"params":
   [
     {
-      "chainId": "0x61",
+      "chainId": "0x38",
       "chainName": "Binance Smart Chain",
       "nativeCurrency": {
         "name": "Binance Smart Chain",
         "symbol": "BNB",
         "decimals": 18
       },
-      "rpcUrls": ["https://data-seed-prebsc-2-s2.binance.org:8545/"],
-      "blockExplorerUrls": ["https://testnet.bscscan.com/"]
+      "rpcUrls": ["https://bscscan.com/"],
+      "blockExplorerUrls": ["https://bscscan.com/"]
     }
   ]
   }
