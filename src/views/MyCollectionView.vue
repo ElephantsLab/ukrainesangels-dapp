@@ -15,7 +15,7 @@
             <div class="my-collection-wrapper">
               <div class="set-part">
                 <div class="set-card-wrapper">
-                  <div v-for="(nft, index) in userNFTsGetter" v-bind:key="nft" v-on:click="goToSelected(index, nft.name)" class="card card-of-set">
+                  <div v-for="(nft, index) in userNFTsGetter" v-bind:key="nft" v-on:click="goToSelected(index, nft)" class="card card-of-set">
                     <div class="img-wrapper">
                       <img v-bind:src="nft.image" alt="" />
                     </div>
@@ -66,11 +66,11 @@
                   <div class="info-about-name">
                     <p>Angel #{{ selectedNft }}</p>
                   </div>
-                  <div class="info-about-angel-disc">
+                  <div class="info-about-angel-disc" v-if="nftParam.name">
                     <ul>
                       <li>
                         <p class="disc-name">Contract Address</p>
-                        <p class="disc-name-info"><span>0x5ef...9459c</span></p>
+                        <p class="disc-name-info"><span>{{ contractAddressGetter[0] + contractAddressGetter[1] + contractAddressGetter[2] + contractAddressGetter[3] + contractAddressGetter[4] }}...{{ contractAddressGetter[39] + contractAddressGetter[40] + contractAddressGetter[41] }}</span></p>
                       </li>
                       <li>
                         <p class="disc-name">Blockchain</p>
@@ -83,6 +83,34 @@
                       <li>
                         <p class="disc-name">Token Standard</p>
                         <p class="disc-name-info">ERC-721</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Name</p>
+                        <p class="disc-name-info"> {{ nftParam.name }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Description</p>
+                        <p class="disc-name-info"> {{ nftParam.desc }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Edition</p>
+                        <p class="disc-name-info"> {{ nftParam.edition }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Date</p>
+                        <p class="disc-name-info"> {{ nftParam.date }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Compiler</p>
+                        <p class="disc-name-info"> {{ nftParam.compiler }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Sex</p>
+                        <p class="disc-name-info"> {{ nftParam.sex }}</p>
+                      </li>
+                      <li>
+                        <p class="disc-name">Country</p>
+                        <p class="disc-name-info"> {{ nftParam.country }}</p>
                       </li>
                     </ul>
                   </div>
@@ -164,7 +192,16 @@ export default {
       mintVal: 1,
       NFTs: [],
       selectedNft: 0,
-      tokenId: 0
+      tokenId: 0,
+      nftParam: {
+        name: undefined,
+        desc: undefined,
+        edition: undefined,
+        date: undefined,
+        compiler: undefined,
+        sex: undefined,
+        country: undefined
+      }
     };
   },
   components: {
@@ -191,10 +228,40 @@ export default {
         await this.$root.core.buyMore(this.mintVal);
       }
     },
-    goToSelected(index, tokenId) {
+    formatTime (timestamp) {
+      if (!timestamp) return;
+      let a = new Date(timestamp * 1000);
+      let months = [
+        'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'
+      ];
+      let year = a.getFullYear();
+      let month = months[a.getMonth()];
+      let date = a.getDate();
+      let hour = a.getHours();
+      let min = a.getMinutes();
+      let sec = a.getSeconds();
+      if (hour.toString().length === 1) {
+        hour = '0' + hour;
+      }
+      if (min.toString().length === 1) {
+        min = '0' + min;
+      }
+      if (sec.toString().length === 1) {
+        sec = '0' + sec;
+      }
+      return year + ' ' + date + ' ' + month + ' ' + hour + ':' + min + ':' + sec;
+    },
+    goToSelected(index, nft) {
       const swiper = document.querySelector('.mySwiper').swiper;
-      this.selectedNft = parseInt(tokenId);
-      this.tokenId = tokenId;
+      this.selectedNft = parseInt(nft.tokenId);
+      this.tokenId = nft.tokenId;
+      this.nftParam.name = nft.name;
+      this.nftParam.desc = nft.description;
+      this.nftParam.edition = nft.custom_fields.edition;
+      this.nftParam.date = this.formatTime(nft.custom_fields.date);
+      this.nftParam.compiler = nft.custom_fields.compiler;
+      this.nftParam.sex = nft.sex;
+      this.nftParam.country = nft.country;
       swiper.slideTo(index);
     },
     incrementVal() {
@@ -211,6 +278,19 @@ export default {
       this.$router.push("/");
     },
   },
+  mounted() {
+    setTimeout(() => {
+      this.selectedNft = parseInt(this.userNFTsGetter[0].tokenId);
+      this.tokenId = this.userNFTsGetter[0].tokenId;
+      this.nftParam.name = this.userNFTsGetter[0].name;
+      this.nftParam.desc = this.userNFTsGetter[0].description;
+      this.nftParam.edition = this.userNFTsGetter[0].custom_fields.edition;
+      this.nftParam.date = this.formatTime(this.userNFTsGetter[0].custom_fields.date);
+      this.nftParam.compiler = this.userNFTsGetter[0].custom_fields.compiler;
+      this.nftParam.sex = this.userNFTsGetter[0].sex;
+      this.nftParam.country = this.userNFTsGetter[0].country;
+    }, 1000);
+  },
   watch: {
     async userAddressGetter(newVal) {
       if (newVal) {
@@ -222,6 +302,7 @@ export default {
     "bnbPriceGetter",
     "userAddressGetter",
     "userNFTsGetter",
+    "contractAddressGetter"
   ]),
 };
 </script>

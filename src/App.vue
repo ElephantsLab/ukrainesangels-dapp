@@ -28,7 +28,14 @@ export default {
   },
   methods: {
     ...mapActions(["fetchHelpCenters"]),
-    ...mapMutations(["updateTxModal", "updatetxStatusModal", "updateTx", "updateTxFailed", "updateRevertReason", "updateBNBPrice", "setCurrentAddress"]),
+    ...mapMutations(["updateTxModal",
+      "updatetxStatusModal",
+      "updateTx",
+      "updateTxFailed",
+      "updateRevertReason",
+      "updateBNBPrice",
+      "setCurrentAddress",
+      "updateContractAddress"]),
     checkWalletOption(wallet) {
       let _this = this;
 

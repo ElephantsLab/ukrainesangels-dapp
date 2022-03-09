@@ -17,7 +17,8 @@ export default {
         address: undefined,
         chainId: undefined,
         bnbPrice: 0.25,
-        userNFTs: []
+        userNFTs: [],
+        contractAddress: undefined
     },
     mutations: {
         setCurrentAddress(state, val) {
@@ -31,6 +32,9 @@ export default {
         },
         updateUserNFTs(state, val) {
             state.userNFTs = val;
+        },
+        updateContractAddress(state, val) {
+            state.contractAddress = val;
         }
     },
     actions: {
@@ -84,6 +88,9 @@ export default {
         },
         userNFTsGetter(state) {
             return state.userNFTs;
+        },
+        contractAddressGetter(state) {
+            return state.contractAddress;
         }
     }
 }

@@ -19,6 +19,7 @@ export default class Core {
                 this.primaryPovider = new ethers.providers.Web3Provider(window.ethereum);
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
                         this[`provider_${chainId}`]
                     );
