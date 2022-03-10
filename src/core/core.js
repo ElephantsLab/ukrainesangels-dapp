@@ -103,6 +103,7 @@ export default class Core {
     }
 
     connectWallet() {
+        const _this = this;
         if (!localStorage.getItem("address")) {
             window.ethereum
                 .request({ method: "eth_requestAccounts" })
@@ -120,18 +121,23 @@ export default class Core {
                 if (accounts.length === 0) {
                     _this.walletUnlocked = false;
                     localStorage.removeItem("address");
-                    _this.$store.commit("setCurrentAddress", "");
+                    _this.context.setCurrentAddress(undefined);
+                    // _this.$store.commit("setCurrentAddress", "");
 
                     // MetaMask is locked or the user has not connected any accounts
                     // alert('Please connect to MetaMask.');
                 } else if (accounts[0] !== currentAccount) {
                     currentAccount = accounts[0];
                     localStorage.setItem("address", currentAccount);
+                    localStorage.setItem("selectedWallet", "metamask");
+                    _this.context.setCurrentAddress(currentAccount);
 
                     // _this.$root.core.setLangForAddress(localStorage.getItem("lang"), localStorage.getItem('address'));
                     location.reload();
                 } else if (accounts.length > 0) {
                     _this.walletUnlocked = true;
+                    _this.context.setCurrentAddress(accounts[0]);
+                    localStorage.setItem("selectedWallet", "metamask");
                 }
             }
         }
