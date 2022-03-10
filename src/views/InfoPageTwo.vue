@@ -13,7 +13,7 @@
           <div class="section-block section-block-content">
             <p class="heading1">Donate to <br>Charitable Organization</p>
             <p class="body2">
-              Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now! 
+              Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now!
             </p>
               <div class="organization">
                <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization-block">
@@ -30,23 +30,23 @@
             </div>
           </div>
           <div class="section-block section-block-card">
-          <p class="heading2">Donate Crypto Via the Platform</p>
+          <p class="heading2">Or Donate Right via the Platform</p>
           <p class="body2">
-            Your donation will be sent only to trusted crypto charities that sustain Ukraine’s people and army
+            It’s Always Possible to Make Donations on Ukraine’s Angels if It’s More Convenient for You Than Charity Organization Sites.
           </p>
           <div class="card card-donate">
             <div class="title1">make a donation</div>
               <div class="card-input">
                 <div class="input-label">
                   You Will Save Lives No Matter the Amount
-                </div>  
-                <div   class="address"> 
+                </div>
+                <div   class="address">
                   BSC:
-                  <a href="https://bscscan.com/address/0x1cee20367ebda61500dd037a0ba2a9a2b733d391#code" target="_blank" rel="nofollow"> 
+                  <a href="https://bscscan.com/address/0x1cee20367ebda61500dd037a0ba2a9a2b733d391#code" target="_blank" rel="nofollow">
                    <span>0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391</span>
-                  </a>           
+                  </a>
                   <!-- <i class="i-checkbox-multiple-blank-line"></i>   -->
-                </div>                            
+                </div>
                 <div class="input-wrapper input-amount">
                   <input class="input" type="number" min="1" onkeypress="return (event.charCode !== 45 && event.charCode !== 43 && event.charCode !== 101)" v-model="donationAmount">
                   <span class="input-token">BNB</span>

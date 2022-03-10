@@ -28,13 +28,13 @@
                       <img v-bind:src="nft.image" alt="" />
                     </div>
                   </div>
-                  <button class="card card-of-set card-of-set-add">
+                  <a href="#add-angel" class="card card-of-set card-of-set-add">
                     <div class="add">
-                      <a href="#add-angel">
+                      <a >
                         <i class="i-add-line"></i>
                       </a>
                     </div>
-                  </button>
+                  </a>
                   <!--                  <button disabled class="card card-of-set card-of-set-add">-->
                   <!--                    <div class="add">-->
                   <!--                      <a href="#add-angel">-->

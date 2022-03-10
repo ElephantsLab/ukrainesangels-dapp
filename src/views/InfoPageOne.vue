@@ -2,20 +2,20 @@
 <div>
   <header-component/>
   <div  class="main-wrapper info-page-wrapper">
-  <div class="container">     
+  <div class="container">
     <a class="to-main" v-on:click="toMain">
       <div >
         <i class="i-arrow-drop-left-line"></i>
       </div>
       <p class="body3">Go to Home Page</p>
     </a>
-    <div class="section-block-container">   
+    <div class="section-block-container">
       <div class="section-block section-block-content">
-        <p class="heading1">Благодійні організації та достовірна інформація</p>
+        <p class="heading1 new-transform">Благодійні організації та достовірна інформація</p>
         <p class="body2">
-          Наша компанія зібрала для вас необхідну інформацію, яка може бути корисною в умовах війни. 
-          Ми постійно доповнюємо та актуалізовуємо список ресурсів, які включають благодійні фонди, контакти волонтерів та організацій, 
-          яким ми довіряємо. 
+          Наша компанія зібрала для вас необхідну інформацію, яка може бути корисною в умовах війни.
+          Ми постійно доповнюємо та актуалізовуємо список ресурсів, які включають благодійні фонди, контакти волонтерів та організацій,
+          яким ми довіряємо.
         </p>
           <div class="organization">
             <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization-block">
