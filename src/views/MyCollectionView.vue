@@ -14,7 +14,7 @@
             class="screen-my-collection"
             v-if="userNFTsGetter && userNFTsGetter.length"
           >
-            <p class="heading1">My collection</p>
+            <p class="heading1">My Angels</p>
             <div class="my-collection-wrapper">
               <div class="set-part">
                 <div class="set-card-wrapper">
@@ -173,7 +173,7 @@
                     <div class="total-supply">1000 nfts</div>
                   </div>
                   <div class="card-footer">
-                    <div class="input-label">Count of NFT’s</div>
+                    <div class="input-label">NFT Quantity</div>
                     <div class="input-container">
                       <div class="input-wrapper input-count">
                         <button class="btn btn-minus" v-on:click="decrementVal">

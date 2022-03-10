@@ -74,13 +74,13 @@
             <div>
               <a class="drop-link" href="/MyCollection">
                 <span class="content-icon"></span>
-                <p class="dropdown-text">My collection</p>
+                <p class="dropdown-text">My Angels</p>
               </a>
             </div>
             <div>
               <a class="drop-link" v-on:click="logOut">
                 <i class="i-logout-circle-line"></i>
-                <p class="dropdown-text">Disconnect</p>
+                <p class="dropdown-text">Log Out</p>
               </a>
             </div>
           </div>

@@ -10,7 +10,7 @@
               <span>Ukrainian Nation</span>
             </h1>
             <h4 class="body1">
-              We’re here to help Ukrainian people fight off the plague of war
+              We’re here to the help Ukrainian people fight off the plague of war
               afflicting their communities right now. This is the world’s crypto
               family’s contribution to #StopTheWar.
               <br />
