@@ -17,7 +17,8 @@
                         <br/>
                         Glory to Ukraine!
                     </p>
-                    <a v-on:click="openTx" class="btn modal-main-btn">See My Angel</a>
+<!--                  v-on:click="openTx"-->
+                    <a href="/MyCollection" class="btn modal-main-btn">See My Angel</a>
                 </div>
             </div>
             <div class="modal-footer">
