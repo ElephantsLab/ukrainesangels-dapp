@@ -75,6 +75,7 @@
         </div>
       </div>
     </section>
+    <progress max="250" value="50"></progress>
     <section class="section section-buy" id="buy">
       <div class="container">
         <div class="section-content">
