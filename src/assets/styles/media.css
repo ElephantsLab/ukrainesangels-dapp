@@ -382,11 +382,6 @@
         display: block;
     }
 
-    .goal-info-right div {
-        height: 337px;
-
-    }
-
     .progress-result {
         max-width: 100%;
     }
@@ -400,6 +395,16 @@
     .goal-info-right {
         width: 480px;
         margin: 24px auto auto;
+    }
+}
+@media (max-width: 630px) {
+    .img-btn {
+        max-width: 370px;
+        width: 100%;
+    }
+
+    .centered {
+        font-size: 32px;
     }
 }
 

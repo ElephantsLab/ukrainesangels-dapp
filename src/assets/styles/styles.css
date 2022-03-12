@@ -1599,6 +1599,7 @@ i.i-logout-circle-line {
 .card-main-result {
     display: flex;
     justify-content: space-around;
+    margin-top: 22px;
 }
 
 .card-section.info-status {
@@ -1610,7 +1611,7 @@ i.i-logout-circle-line {
 }
 
 .card-main-sold {
-    min-width: calc(114px - 6px);
+    min-width: calc(114px - 10px);
 }
 
 .supply-line{
@@ -1664,10 +1665,7 @@ i.i-logout-circle-line {
     font-size: 14px;
 }
 
-.goal-info-left {
-    max-width: 630px;
-    padding-right: 24px;
-}
+
 
 /*progress bar*/
 
@@ -1712,42 +1710,34 @@ progress[value]::-webkit-progress-value {
     color: rgba(239, 207, 70, 1);
 }
 
-.goal-info-right {
-    height: 100%;
+.goal-info-left {
+    max-width: 630px;
+    width: 100%;
+    padding-right: 24px;
 }
 
-.goal-info-right span{
-    display: block;
-    position: relative;
-    color: rgba(239, 207, 70, 1);
+.img-btn {
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 700;
     font-size: 56px;
+    text-align: center;
     text-transform: uppercase;
-    width: 480px;
-    z-index: 1;
+    width: fit-content;
+    color: #EFCF46;
+}
+
+.goal-info-right {
+    position: relative;
+    text-align: center;
     align-items: center;
-    transform: translate(25%, 40%);
 }
-
-.goal-info-right:before {
-    content: '';
-    position: absolute;
-    background-image: url("../images/bus.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 480px;
-    width: 100%;
-    height: 337px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-
-}
-/*.goal-info-right span:after:before {*/
-/*    content: '4 buses';*/
-/*    position: absolute;*/
-/*}*/
-
-
 
 
 

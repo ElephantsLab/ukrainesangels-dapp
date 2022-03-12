@@ -128,7 +128,8 @@
             </div>
           </div>
           <div class="goal-info-right">
-            <span>4 buses</span>
+            <img src="../assets/images/bus.png" class="img-btn">
+            <div class="centered">4 buses</div>
           </div>
         </div>
       </div>
