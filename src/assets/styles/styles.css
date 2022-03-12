@@ -272,6 +272,7 @@ input,
     line-height: 24px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.5);
+    text-align: left;
 }
 .address span,
 .short-descr {
@@ -898,20 +899,36 @@ input,
     padding-bottom: 76px;
     padding-top: 24px;
 }
+
+.link-second-team,
 .link-team {
     display: block;
     background-color: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-image: url(../images/logo_team.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 8px;
-    margin-top: 24px;
+}
+
+.link-team {
+    background-image: url(../images/logo_team.webp);
     width: 228px;
     height: 64px;
-    margin-bottom: 32px;
 }
+
+.link-second-team {
+    background-image: url("../images/Etis Help 2.png");
+    width: 83px;
+    height: 32px;
+    background-size: inherit;
+}
+
+.goal-team a:last-child {
+    margin-left: 16px;
+}
+
+
 .info-page-wrapper .heading1 + .body2,
 .link-team + .body1 {
     margin-top: 32px;
@@ -1404,12 +1421,12 @@ i.i-logout-circle-line {
 }
 
 .dropdown-content-inner div:first-child {
-    border-radius: 8px 8px 0px  0px;
+    border-radius: 8px 8px 0  0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dropdown-content-inner div:last-child {
-    border-radius: 0px  0px 8px 8px ;
+    border-radius: 0  0 8px 8px ;
 }
 
 .header-main-buttons:hover .dropdown-content {
@@ -1560,7 +1577,7 @@ i.i-logout-circle-line {
     cursor: pointer;
     font-size: 13px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover,
@@ -1569,8 +1586,6 @@ i.i-logout-circle-line {
     background-color: #efcf46;
 }
 
-
-
 .swiper-button-prev.swiper-button-disabled:hover {
     opacity: 1;
 }
@@ -1578,3 +1593,153 @@ i.i-logout-circle-line {
 .heading1.new-transform {
     text-transform: none;
 }
+
+/*new block*/
+
+.card-main-result {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 22px;
+}
+
+.card-section.info-status {
+    display: block;
+}
+
+.card-main-img {
+    margin: auto;
+}
+
+.card-main-sold {
+    min-width: calc(114px - 10px);
+}
+
+.supply-line{
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/*our-goal*/
+
+.section-goal-wrapper {
+    background-color: #0F1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 33px 37px 39px 43px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goal-team-link {
+    margin: 0;
+    width: 130px;
+    height: 48px;
+}
+
+.goal-info-left-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.goal-title {
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #EFCF46;
+}
+
+.goal-info-left-disc {
+    padding-bottom: 32px;
+}
+
+.goal-team {
+    display: flex;
+}
+
+.goal-info-left-disc p {
+    /*max-width: 630px;*/
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+
+
+/*progress bar*/
+
+progress {
+
+}
+.progress-bar {
+    height: 32px;
+    margin-bottom: 35px;
+}
+
+.progress-result {
+    max-width: 630px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 32px;
+}
+
+progress[value]::-webkit-progress-value {
+    position: relative;
+    border-radius: 8px;
+    height: 32px;
+    background: #EFCF46;
+}
+
+.progress-bar-info ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar-info ul li p span {
+    color: white;
+}
+
+.ralsed {
+    color: rgba(239, 207, 70, 1);
+}
+
+.goal-info-left {
+    max-width: 630px;
+    width: 100%;
+    padding-right: 24px;
+}
+
+.img-btn {
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 56px;
+    text-align: center;
+    text-transform: uppercase;
+    width: fit-content;
+    color: #EFCF46;
+}
+
+.goal-info-right {
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+
