@@ -43,6 +43,13 @@
             >Help Desk</a
           >
         </li>
+<!--        <li>-->
+<!--          <a class="header-link"-->
+<!--              v-on:click="this.$router.push('/')"-->
+<!--              href="#our-goal"-->
+<!--              >Our goal</a-->
+<!--          >-->
+<!--        </li>-->
       </nav>
       <div class="header-main-buttons">
         <button
