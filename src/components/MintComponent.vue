@@ -34,14 +34,23 @@
           </div>
           <div class="section-block section-block-card">
             <div class="card card-main">
-              <div class="card-section">
+              <div class="card-section info-status">
                 <div class="card-main-img">
                   <div></div>
                   <div></div>
                   <div></div>
                 </div>
-                <p class="supply-label">Total Supply</p>
-                <div class="total-supply">1000 nfts</div>
+                <div class="card-main-result">
+                  <div class="card-main-result-inner">
+                    <p class="supply-label">Total Supply</p>
+                    <div class="total-supply">10 000</div>
+                  </div>
+                  <div class="supply-line"></div>
+                  <div class="card-main-sold">
+                    <p class="supply-label">Nft’s Sold</p>
+                    <div class="total-supply">40</div>
+                  </div>
+                </div>
               </div>
               <div class="card-footer">
                 <div class="input-label">NFT Quantity</div>
@@ -75,7 +84,55 @@
         </div>
       </div>
     </section>
-    <progress max="250" value="50"></progress>
+    <section class="section section-goal" id="our-goal">
+      <div class="container">
+        <div class="section-goal-wrapper">
+          <div class="goal-info-left">
+            <div class="goal-info-left-title">
+              <p class="goal-title">Our goal</p>
+              <div class="goal-team">
+                <a
+                    href="https://elephantslab.com/"
+                    class="link-team goal-team-link"
+                    target="_blank"
+                    rel="nofollow"
+                ></a>
+                <a
+                    href="https://elephantslab.com/"
+                    class="link-second-team goal-team-link"
+                    target="_blank"
+                    rel="nofollow"
+                ></a>
+              </div>
+            </div>
+            <div class="goal-info-left-disc">
+              <p>
+                Our goal is to help improve the current humanitarian situation in Ukraine.
+                During the war, civillian people are in a very difficult situation. Elephantslab,
+                in partnership with the Etis Charitable Foundation, organizes and supplies humanitarian aid from European countries, from caring people who have expressed their support for the Ukrainians at such a difficult time. To set up quality logistics, we need reliable cars that can quickly and smoothly deliver goods to those who need them. All funds raised from the sale of NFTs will be
+                used to purchase vehicles that will ensure the uninterrupted supply of aid.
+              </p>
+            </div>
+            <div class="progress-bar">
+                  <progress max="630" class="progress-result" value="50"></progress>
+            </div>
+            <div class="progress-bar-info">
+              <ul>
+                <li>
+                  <p>Target:<span> 250 BNB</span></p>
+                </li>
+                <li>
+                  <p class="ralsed">Raised: 50 BNB (20%)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="goal-info-right">
+            <span>4 buses</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section section-buy" id="buy">
       <div class="container">
         <div class="section-content">
