@@ -776,6 +776,7 @@ export default {
   },
   data() {
     return {
+      conf: conf,
       mintVal: 1,
       donationAmount: 0.1,
       isMaxVal: false,
