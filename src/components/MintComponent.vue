@@ -43,12 +43,12 @@
                 <div class="card-main-result">
                   <div class="card-main-result-inner">
                     <p class="supply-label">Total Supply</p>
-                    <div class="total-supply">10 000</div>
+                    <div class="total-supply">1000</div>
                   </div>
                   <div class="supply-line"></div>
                   <div class="card-main-sold">
                     <p class="supply-label">Nft’s Sold</p>
-                    <div class="total-supply">40</div>
+                    <div class="total-supply">{{ totalSupply }}</div>
                   </div>
                 </div>
               </div>
@@ -114,15 +114,15 @@
               </p>
             </div>
             <div class="progress-bar">
-                  <progress max="630" class="progress-result" value="50"></progress>
+                  <progress v-bind:max="conf.GOAL" class="progress-result" v-bind:value="totalDonated"></progress>
             </div>
             <div class="progress-bar-info">
               <ul>
                 <li>
-                  <p>Target:<span> 250 BNB</span></p>
+                  <p>Target:<span> {{ conf.GOAL }} BNB</span></p>
                 </li>
                 <li>
-                  <p class="ralsed">Raised: 50 BNB (20%)</p>
+                  <p class="ralsed">Raised: {{ totalDonated }} BNB ({{ ricedPercentage }}%)</p>
                 </li>
               </ul>
             </div>
@@ -840,6 +840,7 @@ export default {
       totalSupply: 0,
       nftOwnersCount: 0,
       totalDonated: 0,
+      ricedPercentage: 0
     };
   },
   methods: {
@@ -903,6 +904,7 @@ export default {
       this.totalSupply = await this.$root.core.getTotalSupply();
       this.nftOwnersCount = await this.$root.core.getNftOwnersCount();
       this.totalDonated = await this.$root.core.getTotalDonated();
+      this.ricedPercentage = Number((100 - ((conf.GOAL - this.totalDonated) / conf.GOAL) * 100).toFixed(1));
     }, 1500);
   },
 };
