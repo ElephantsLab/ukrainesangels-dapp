@@ -10,7 +10,7 @@
               <span>Ukrainian Nation</span>
             </h1>
             <h4 class="body1">
-              We’re here to the help Ukrainian people fight off the plague of war
+              We’re here to help the Ukrainian people fight off the plague of war
               afflicting their communities right now. This is the world’s crypto
               family’s contribution to #StopTheWar.
               <br />
@@ -98,7 +98,7 @@
                     rel="nofollow"
                 ></a>
                 <a
-                    href="https://elephantslab.com/"
+                    href=""
                     class="link-second-team goal-team-link"
                     target="_blank"
                     rel="nofollow"
@@ -218,8 +218,7 @@
         <div class="section-content center">
           <h2 class="heading2">Or donate trough our platform</h2>
           <p class="body2">
-            If Funds and volunteer organization sites not work<br />
-            you can make donation trough our service
+            It’s Always Possible to Make Donations on Ukraine’s Angels if It’s <br> More Convenient for You Than Charity Organization Sites.
           </p>
         </div>
         <div class="card card-donate">
@@ -713,8 +712,7 @@
             <div class="icon bnb"></div>
             <div class="title1">{{ totalDonated }} BNB</div>
             <div class="short-descr">
-              This much funds have already been sent to the persevering people
-              of Ukraine
+              In donations have already been raised for the needs of the persevering people of Ukraine
             </div>
             <a href="#your-donate" class="btn btn-blue">Donate</a>
           </div>
