@@ -193,6 +193,10 @@ input,
 .info-page-wrapper .heading1 {
     text-transform: capitalize;
 }
+
+.info-page-wrapper .heading1 span {
+    text-transform:none;
+}
 .section-main .heading1 span {
     display: block;
 }
@@ -473,6 +477,10 @@ input,
 .card-main-img + .supply-label,
 .card-main-img + .total-supply {
     margin-top: 24px;
+}
+
+.supply-label {
+    text-align: center;
 }
 .card-donate .title1 + .card-input {
     margin-top: 12px;

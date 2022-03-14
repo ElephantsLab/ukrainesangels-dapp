@@ -11,7 +11,7 @@
         </a>
         <div class="section-block-container">
           <div class="section-block section-block-content">
-            <p class="heading1">Donate to <br>Charitable Organization</p>
+            <p class="heading1">Donate <span>to</span> <br>Charitable Organization</p>
             <p class="body2">
               Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now!
             </p>
