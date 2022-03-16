@@ -27,11 +27,16 @@
               <div class="audit-content">
                 <div class="audit-link">
                   <p class="audit-by">Audited by Vidma.io</p>
-                  <a href="" class="audit-open">Open audited</a>
-                </div>
-                <div class="audit-sait">
-                  <p>Site</p>
-                  <i class="i-share-box-fill"></i>
+                  <div class="audit-link-wrapper">
+                    <div class="audit-open-doc">
+                    <a target="_blank" href="https://drive.google.com/file/d/1IBn-_GvrDMW3PGosO383GqFe9mCUmWwi/view  " class="audit-open">Open audited</a>
+                    <i class="i-download-fill"></i>
+                    </div>
+                    <div class="audit-sait">
+                      <a href="https://www.vidma.io/" target="_blank">Site</a>
+                      <i class="i-share-box-fill"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,7 +128,7 @@
             <div class="progress-bar-info">
               <ul>
                 <li>
-                  <p>Target:<span> {{ conf.GOAL }} BNB</span></p>
+                  <p>Target: <span> {{ conf.GOAL }} BNB</span></p>
                 </li>
                 <li>
                   <p class="ralsed">Raised: {{ totalDonated }} BNB ({{ ricedPercentage }}%)</p>
@@ -791,6 +796,13 @@
                     <path
                       d="M8.50195 26.1115V13.0542H12.1063L12.584 8.5546H8.50195L8.50807 6.30251C8.50807 5.12894 8.61958 4.50012 10.3052 4.50012H12.5585V0H8.95358C4.62353 0 3.09946 2.18279 3.09946 5.85357V8.55511H0.400391V13.0547H3.09946V26.1115H8.50195Z"
                     />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="telegram" href="https://t.me/ukrainesangels" rel="nofollow" target="_blank">
+                  <svg width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.362483 9.24577C2.81774 7.89334 5.55848 6.76459 8.1193 5.63007C12.5249 3.77181 16.948 1.94576 21.4157 0.245724C22.285 -0.0439451 23.8469 -0.327226 24 0.960971C23.9162 2.7844 23.5712 4.59715 23.3345 6.4099C22.7339 10.3963 22.0398 14.3691 21.3629 18.3423C21.1297 19.6658 19.4717 20.351 18.4109 19.504C15.8614 17.7819 13.2924 16.0766 10.7755 14.3146C9.95104 13.4769 10.7156 12.2738 11.4519 11.6756C13.5517 9.60624 15.7786 7.8481 17.7686 5.67181C18.3054 4.37548 16.7193 5.468 16.1962 5.80273C13.3215 7.78369 10.5173 9.88558 7.48649 11.6266C5.93838 12.4788 4.13403 11.7505 2.58662 11.2749C1.19916 10.7005 -0.833964 10.1218 0.362343 9.24586L0.362483 9.24577Z"/>
                   </svg>
                 </a>
               </li>

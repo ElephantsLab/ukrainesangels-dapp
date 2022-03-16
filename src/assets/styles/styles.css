@@ -395,6 +395,11 @@ input,
 .section-block.section-block-card {
     margin-left: 140px;
 }
+
+.section-block.section-block-content {
+    display: grid;
+}
+
 .card {
     background-color: rgba(15, 16, 16, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1759,19 +1764,20 @@ progress[value]::-webkit-progress-value {
 /*audit*/
 .audit-vidma {
     display: flex;
+    margin-top: 36px;
 }
 
 .audit-sait {
     display: flex;
     align-items: center;
+    color: #C4C4C4;
 }
 
-.audit-sait p {
+.audit-sait a {
     margin-right: 11px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #C4C4C4;
 }
 
 .audit-content {
@@ -1780,9 +1786,11 @@ progress[value]::-webkit-progress-value {
 }
 
 .audit-sait i {
-    color: #C4C4C4;
     font-size: 18px;
 }
+
+
+
 
 .audit-by {
     font-size: 12px;
@@ -1791,6 +1799,7 @@ progress[value]::-webkit-progress-value {
     font-style: normal;
     font-weight: 400;
     padding-bottom: 8px;
+    text-align: left;
 }
 
 .audit-open {
@@ -1798,19 +1807,46 @@ progress[value]::-webkit-progress-value {
     line-height: 24px;
     font-style: normal;
     font-weight: 400;
-    color: #EFCF46;
     margin-right: 11px;
+}
+
+.audit-sait:hover,
+.audit-open-doc:hover {
+    color: #EFCF46;
 }
 
 .audit-logo {
     background-color: rgba(15, 16, 16, 1);
-    width: 80px;
     height: 80px;
+    min-width: 80px;
+    width: 80px;
+
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     margin-right: 20px;
-
+    background-image: url("../images/asassasaas.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+.audit-link-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.audit-open-doc {
+    align-items: center;
+    display: flex;
+    margin-right: 27px;
+}
+
+i.i-download-fill {
+    font-size: 19px;
+}
+
 
 
 
