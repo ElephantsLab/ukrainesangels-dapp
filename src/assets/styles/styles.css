@@ -194,6 +194,15 @@ input,
     text-transform: capitalize;
 }
 
+.body1.body-disc {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    max-width: 630px;
+}
+
 .info-page-wrapper .heading1 span {
     text-transform:none;
 }
@@ -1745,6 +1754,62 @@ progress[value]::-webkit-progress-value {
     position: relative;
     text-align: center;
     align-items: center;
+}
+
+/*audit*/
+.audit-vidma {
+    display: flex;
+}
+
+.audit-sait {
+    display: flex;
+    align-items: center;
+}
+
+.audit-sait p {
+    margin-right: 11px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #C4C4C4;
+}
+
+.audit-content {
+    display: flex;
+    align-items: center;
+}
+
+.audit-sait i {
+    color: #C4C4C4;
+    font-size: 18px;
+}
+
+.audit-by {
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.audit-open {
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #EFCF46;
+    margin-right: 11px;
+}
+
+.audit-logo {
+    background-color: rgba(15, 16, 16, 1);
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    margin-right: 20px;
+
 }
 
 

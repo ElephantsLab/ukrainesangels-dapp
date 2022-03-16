@@ -9,27 +9,31 @@
               <span>Help Save</span>
               <span>Ukrainian Nation</span>
             </h1>
-            <h4 class="body1">
-              We’re here to help the Ukrainian people fight off the plague of war
-              afflicting their communities right now. This is the world’s crypto
-              family’s contribution to #StopTheWar.
-              <br />
-              <br />
+            <h4 class="body1 body-disc">
               Buying an NFT from this collection, you save lives. Your financial
-              aid will help sustain those who need it most: the injured, the
-              refugees, and all other Ukrainians affected by indiscriminate
-              Russian aggression.
-              <br />
-              <br />
-              Once the hostilities are quenched, the donations will then be used
-              to rebuild the vital infrastructure: roads, bridges, hospitals,
-              educational facilities, etc., ruined by Russian war criminals.
+              aid will help sustain those who need it most: the injured,
+              the refugees, and all other Ukrainians affected by indiscriminate Russian aggression.
             </h4>
             <div class="btn-wrapper">
               <a href="#angel-collection" class="btn btn-yellow"
                 >Explore Collection</a
               >
               <a href="#your-donate" class="btn btn-blue">Make Donation</a>
+            </div>
+            <div class="audit-vidma">
+              <div class="audit-logo">
+
+              </div>
+              <div class="audit-content">
+                <div class="audit-link">
+                  <p class="audit-by">Audited by Vidma.io</p>
+                  <a href="" class="audit-open">Open audited</a>
+                </div>
+                <div class="audit-sait">
+                  <p>Site</p>
+                  <i class="i-share-box-fill"></i>
+                </div>
+              </div>
             </div>
           </div>
           <div class="section-block section-block-card">
