@@ -107,7 +107,6 @@
                     rel="nofollow"
                 ></a>
                 <a
-                    href=""
                     class="link-second-team goal-team-link"
                     target="_blank"
                     rel="nofollow"
