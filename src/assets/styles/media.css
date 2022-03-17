@@ -338,6 +338,11 @@
         width: calc(100% / 3 - 30px);
         margin-bottom: 60px;
     }
+
+    .audit-vidma {
+        margin: 36px auto auto auto;
+    }
+
     .header-nav {
         margin-left: 20px;
     }
@@ -599,6 +604,10 @@
     .footer-block {
         padding-right: 40px;
     }
+
+    .audit-vidma {
+        margin: 36px 0 0 0;
+    }
     .cards-buy-wrapper,
     .cards-angels-wrapper {
         margin: -20px -10px 20px;
@@ -645,11 +654,23 @@
         height: 184px;
     }
 }
+
+@media (max-width: 361px) {
+    .audit-sait {
+        padding-top: 4px;
+    }
+}
+
 @media (max-width: 580px) {
     .card-main-img div {
         height: 160px;
         width: 110px;
     }
+
+    .section-block.section-block-content {
+        display: block;
+    }
+
     .card-main-img {
         height: 200px;
         max-width: 290px;
