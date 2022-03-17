@@ -225,7 +225,7 @@
     <section class="section section-donate" id="your-donate">
       <div class="container">
         <div class="section-content center">
-          <h2 class="heading2">Or donate trough our platform</h2>
+          <h2 class="heading2">Or Donate Right via the Platform</h2>
           <p class="body2">
             It’s Always Possible to Make Donations on Ukraine’s Angels if It’s <br> More Convenient for You Than Charity Organization Sites.
           </p>

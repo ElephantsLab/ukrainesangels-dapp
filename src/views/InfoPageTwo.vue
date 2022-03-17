@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="section-block section-block-card">
-          <p class="heading2">Or Donate Right via the Platform</p>
+          <p class="heading2">Donate Crypto Via the Platform</p>
           <p class="body2">
             It’s Always Possible to Make Donations on Ukraine’s Angels if It’s More Convenient for You Than Charity Organization Sites.
           </p>
