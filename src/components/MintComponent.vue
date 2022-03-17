@@ -21,20 +21,21 @@
               <a href="#your-donate" class="btn btn-blue">Make Donation</a>
             </div>
             <div class="audit-vidma">
-              <div class="audit-logo">
-
-              </div>
+              <a target="_blank" href="https://www.vidma.io/" class="audit-logo"></a>
               <div class="audit-content">
                 <div class="audit-link">
                   <p class="audit-by">Audited by Vidma.io</p>
                   <div class="audit-link-wrapper">
                     <div class="audit-open-doc">
-                    <a target="_blank" href="https://drive.google.com/file/d/1IBn-_GvrDMW3PGosO383GqFe9mCUmWwi/view  " class="audit-open">Open audited</a>
-                    <i class="i-download-fill"></i>
+                    <a target="_blank" href="https://drive.google.com/file/d/1IBn-_GvrDMW3PGosO383GqFe9mCUmWwi/view  " class="audit-open">Open audited
+                      <i class="i-download-fill"></i>
+                    </a>
+
                     </div>
                     <div class="audit-sait">
-                      <a href="https://www.vidma.io/" target="_blank">Site</a>
+                      <a href="https://www.vidma.io/" target="_blank">Site
                       <i class="i-share-box-fill"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -107,7 +108,6 @@
                     rel="nofollow"
                 ></a>
                 <a
-                    href=""
                     class="link-second-team goal-team-link"
                     target="_blank"
                     rel="nofollow"
