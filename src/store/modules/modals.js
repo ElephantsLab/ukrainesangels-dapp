@@ -4,24 +4,28 @@ export default {
         txStatus: false,
         statusTx: undefined,
         txFailed: false,
-        revertReason: undefined
+        revertReason: undefined,
+        walletChooseModal: false,
     },
     mutations: {
-       updateTxModal(state, val) {
-           state.txModal = val;
-       },
-       updatetxStatusModal(state, val) {
-           state.txStatus = val;
-       },
-       updateTx(state, val) {
-           state.statusTx = val;
-       },
-       updateTxFailed(state, val) {
-           state.txFailed = val;
-       },
-       updateRevertReason(state, val) {
-           state.revertReason = val;
-       }
+        updateTxModal(state, val) {
+            state.txModal = val;
+        },
+        updateWalletChooseModal(state, val) {
+            state.walletChooseModal = val;
+        },
+        updatetxStatusModal(state, val) {
+            state.txStatus = val;
+        },
+        updateTx(state, val) {
+            state.statusTx = val;
+        },
+        updateTxFailed(state, val) {
+            state.txFailed = val;
+        },
+        updateRevertReason(state, val) {
+            state.revertReason = val;
+        },
     },
     actions: {},
     getters: {
@@ -34,11 +38,14 @@ export default {
         statusTxGetter(state) {
             return state.statusTx;
         },
+        statusWalletChooseGetter(state) {
+            return state.walletChooseModal;
+        },
         txFailedGetter(state) {
             return state.txFailed;
         },
         revertReasonGetter(state) {
             return state.revertReason;
-        }
-    }
-}
+        },
+    },
+};
