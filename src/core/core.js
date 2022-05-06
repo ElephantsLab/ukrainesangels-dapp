@@ -6,9 +6,8 @@ import { tokenAbi } from "../assets/abi/tokenAbi";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 
 export default class Core {
-    constructor(vueContext, blockchain = conf.PRIMARY_BLOCKCHAIN.chainId) {
+    constructor(vueContext) {
         this.context = vueContext;
-        this.Config = conf[blockchain];
         this.baseURL = conf.baseUrl;
         this.init();
     }
@@ -16,7 +15,8 @@ export default class Core {
     async init() {
         if (window.localStorage.getItem("selectedWallet") === "metamask" && window.ethereum) {
             const blockchain = Number(window.ethereum.chainId);
-            this.primaryPovider = new ethers.providers.Web3Provider(window.ethereum);
+            this.currentBlockchain = Number(blockchain);
+            this.primaryProvider = new ethers.providers.Web3Provider(window.ethereum);
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                 this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
                 this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
@@ -25,21 +25,23 @@ export default class Core {
                 );
 
                 if (blockchain === Number(chainId)) {
-                    this.provider = this.primaryPovider;
+                    this.provider = this.primaryProvider;
                     this.signer = this.provider.getSigner();
                     this.context.$store.commit("setChainId", chainId);
-                    this.currentBlockchain = Number(blockchain);
+
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
                 } else {
                     this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
                 }
             }
+            return true;
         } else if (window.localStorage.getItem("selectedWallet") === "walletconnect") {
             const rpc = {};
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                 const url = conf.NETWORK_PARAMS.find((el) => Number(el.chainId) === Number(chainId))?.params.rpcUrls[0];
                 rpc[chainId] = url;
             }
+
             this.providerInstance = new WalletConnectProvider({
                 rpc: rpc,
             });
@@ -58,8 +60,10 @@ export default class Core {
             await this.subscribeToEvents();
             const WC_Obj = JSON.parse(window.localStorage.getItem("walletconnect"));
             const blockchain = Number(WC_Obj?.chainId);
+            this.currentBlockchain = Number(blockchain);
+            console.log(this.currentBlockchain);
 
-            this.primaryPovider = new ethers.providers.Web3Provider(this.providerInstance, "any");
+            this.primaryProvider = new ethers.providers.Web3Provider(this.providerInstance, "any");
 
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                 this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
@@ -68,10 +72,10 @@ export default class Core {
                 );
 
                 if (blockchain === Number(chainId)) {
-                    this.provider = this.primaryPovider;
+                    this.provider = this.primaryProvider;
                     this.signer = this.provider.getSigner();
                     this.context.$store.commit("setChainId", chainId);
-                    this.currentBlockchain = Number(blockchain);
+
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].BRNG_TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
                 } else {
                     this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
@@ -84,16 +88,20 @@ export default class Core {
             //     return true
             // }
             return true;
-        } else if (!window.localStorage.getItem("selectedWallet")) {
+        } else {
+            console.log("no?");
+            const blockchain = conf.PRIMARY_BLOCKCHAIN.chainId;
+            this.context.$store.commit("setChainId", Number(blockchain));
+            this.currentBlockchain = Number(blockchain);
             let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
             this.provider = provider;
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                 this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(provider);
             }
             // this.signer = provider.getSigner();
+            return true;
         }
         // console.log(this);
-        return true;
     }
 
     async subscribeToEvents() {
@@ -148,14 +156,13 @@ export default class Core {
             location.reload();
         } else if (address.toLowerCase() === currentAccount.toLowerCase()) {
             this.currentBlockchain = Number(chainId);
-            this.context.$store.commit("setCurrentBlockchain", this.currentBlockchain);
+            this.context.$store.commit("setChainId", this.currentBlockchain);
             this.context.$store.commit("setCurrentAddress", address);
         }
     }
 
-    async changeNetwork(context, blockchain) {
+    async changeNetwork(blockchain) {
         const selectedWallet = window.localStorage.getItem("selectedWallet");
-        let _this = context;
         const networkObject = conf.NETWORK_PARAMS.find((el) => el.symbol === blockchain);
 
         const params = [
@@ -210,40 +217,80 @@ export default class Core {
                 alert("Please install metamask wallet extension");
             }
         } else if (selectedWallet && selectedWallet === "walletconnect") {
-            try {
-                await this.provider.provider.request({
-                    method: "wallet_switchEthereumChain",
-                    params: switchParams,
-                });
+            if (!this.provider) {
+                try {
+                    console.log(this);
+                    await this.primaryProvider.provider.request({
+                        method: "wallet_switchEthereumChain",
+                        params: switchParams,
+                    });
 
-                const highestId = window.setTimeout(() => {
-                    for (let i = highestId; i >= 0; i--) {
-                        // console.log(i);
-                        window.clearInterval(i);
-                    }
-                }, 0);
-            } catch (switchError) {
-                // This error code indicates that the chain has not been added to MetaMask.
-                if (switchError.code === 4902 || switchError?.code?.toString() === "-32603" || switchError.toString().includes("Unrecognized chain")) {
-                    try {
-                        await this.provider.provider.request({
-                            method: "wallet_addEthereumChain",
-                            params: params,
-                        });
+                    const highestId = window.setTimeout(() => {
+                        for (let i = highestId; i >= 0; i--) {
+                            // console.log(i);
+                            window.clearInterval(i);
+                        }
+                    }, 0);
+                } catch (switchError) {
+                    // This error code indicates that the chain has not been added to MetaMask.
+                    if (switchError.code === 4902 || switchError?.code?.toString() === "-32603" || switchError.toString().includes("Unrecognized chain")) {
+                        try {
+                            await this.primaryProvider.provider.request({
+                                method: "wallet_addEthereumChain",
+                                params: params,
+                            });
 
-                        const highestId = window.setTimeout(() => {
-                            for (let i = highestId; i >= 0; i--) {
-                                // console.log(i);
-                                window.clearInterval(i);
-                            }
-                        }, 0);
-                    } catch (addError) {
-                        console.log(addError);
+                            const highestId = window.setTimeout(() => {
+                                for (let i = highestId; i >= 0; i--) {
+                                    // console.log(i);
+                                    window.clearInterval(i);
+                                }
+                            }, 0);
+                        } catch (addError) {
+                            console.log(addError);
+                        }
                     }
+                    console.log(switchError);
+
+                    // handle other "switch" errors
                 }
-                console.log(switchError);
+            } else {
+                try {
+                    console.log(this);
+                    await this.provider.provider.request({
+                        method: "wallet_switchEthereumChain",
+                        params: switchParams,
+                    });
 
-                // handle other "switch" errors
+                    const highestId = window.setTimeout(() => {
+                        for (let i = highestId; i >= 0; i--) {
+                            // console.log(i);
+                            window.clearInterval(i);
+                        }
+                    }, 0);
+                } catch (switchError) {
+                    // This error code indicates that the chain has not been added to MetaMask.
+                    if (switchError.code === 4902 || switchError?.code?.toString() === "-32603" || switchError.toString().includes("Unrecognized chain")) {
+                        try {
+                            await this.provider.provider.request({
+                                method: "wallet_addEthereumChain",
+                                params: params,
+                            });
+
+                            const highestId = window.setTimeout(() => {
+                                for (let i = highestId; i >= 0; i--) {
+                                    // console.log(i);
+                                    window.clearInterval(i);
+                                }
+                            }, 0);
+                        } catch (addError) {
+                            console.log(addError);
+                        }
+                    }
+                    console.log(switchError);
+
+                    // handle other "switch" errors
+                }
             }
         }
     }
@@ -347,6 +394,7 @@ export default class Core {
 
     async getCurrentPrice() {
         try {
+            console.log(this.currentBlockchain);
             const bnbPrice = ethers.utils.formatEther(await this[`token_${this.currentBlockchain}`].price());
             this.context.updateBNBPrice(bnbPrice);
             return bnbPrice;

@@ -38,19 +38,20 @@
     "NETWORK": 56,
     "SCAN_TX": "https://bscscan.com/tx/",
     "SCAN_ADDRESS": "https://bscscan.com/address/",
-    "NETWORK_PARAMS_ASK_TO_CONNECT": {"params":
-    [
-        {
-            "chainId": "0x38",
-            "chainName": "Binance Smart Chain",
-            "nativeCurrency": {
-                "name": "Binance Smart Chain",
-                "symbol": "BNB",
-                "decimals": 18
-            },
-            "rpcUrls": ["https://bscnode.cloud"],
-            "blockExplorerUrls": ["https://bscscan.com/"]
-        }
-    ]
+    "NETWORK_PARAMS_ASK_TO_CONNECT": {
+        "params": [
+            {
+                "chainId": "0x38",
+                "symbol": "BSC",
+                "chainName": "Binance Smart Chain",
+                "nativeCurrency": {
+                    "name": "Binance Smart Chain",
+                    "symbol": "BNB",
+                    "decimals": 18
+                },
+                "rpcUrls": ["https://bscnode.cloud"],
+                "blockExplorerUrls": ["https://bscscan.com/"]
+            }
+        ]
     }
 }

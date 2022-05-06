@@ -130,6 +130,7 @@
             ...mapMutations(["updateWalletChooseModal"]),
             ...mapActions(["connectWallet"]),
             logOut() {
+                debugger;
                 localStorage.removeItem("address");
                 localStorage.removeItem("selectedWallet");
                 location.reload();

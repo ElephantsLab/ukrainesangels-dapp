@@ -1,57 +1,58 @@
 {
-  "PRIMARY_BLOCKCHAIN": {
-    "chainId": "56",
-    "node": "https://bscnode.cloud/"
-  },
-  "BLOCKCHAINS": {
-    "56": "BSC Testnet"
-  },
-  "SUPPORTED_BLOCKCHAINS": [56],
-  "56": {
-    "NAME": "BSC",
-    "SYMBOL": "BSC",
-    "CHAIN_ID": "56",
-    "TOKEN_ADDRESS": "0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391",
-    "DEFAULT_GAS_PRICE_GWEI": "30",
-    "NODE": "https://bscnode.cloud/"
-  },
-  "NETWORK_PARAMS": [
-    {
-      "name": "BSC Mainnet",
-      "symbol": "BSC",
-      "chainId": "0x38",
-      "params": {
-        "chainId": "0x38",
-        "chainName": "Binance SmartChain mainnet",
-        "nativeCurrency": {
-          "name": "Binance",
-          "symbol": "BNB",
-          "decimals": 18
-        },
-        "rpcUrls": ["https://bscnode.cloud/"],
-        "blockExplorerUrls": ["https://bscscan.com/"]
-      }
-    }
-  ],
-  "baseUrl": "https://bridge.bring.finance/api/",
-  "BNBVal": 0.25,
-  "NETWORK": 56,
-  "SCAN_TX": "https://bscscan.com/tx/",
-  "SCAN_ADDRESS": "https://bscscan.com/address/",
-  "NETWORK_PARAMS_ASK_TO_CONNECT": {"params":
-  [
-    {
-      "chainId": "0x38",
-      "chainName": "Binance Smart Chain",
-      "nativeCurrency": {
-        "name": "Binance Smart Chain",
-        "symbol": "BNB",
-        "decimals": 18
-      },
-      "rpcUrls": ["https://bscscan.com/"],
-      "blockExplorerUrls": ["https://bscscan.com/"]
-    }
-  ]
-  },
-  "GOAL": 250
+    "PRIMARY_BLOCKCHAIN": {
+        "chainId": "56",
+        "node": "https://bscnode.cloud/"
+    },
+    "BLOCKCHAINS": {
+        "56": "BSC Testnet"
+    },
+    "SUPPORTED_BLOCKCHAINS": [56],
+    "56": {
+        "NAME": "BSC",
+        "SYMBOL": "BSC",
+        "CHAIN_ID": "56",
+        "TOKEN_ADDRESS": "0x1CEe20367eBdA61500dD037A0ba2a9a2b733D391",
+        "DEFAULT_GAS_PRICE_GWEI": "30",
+        "NODE": "https://bscnode.cloud/"
+    },
+    "NETWORK_PARAMS": [
+        {
+            "name": "BSC Mainnet",
+            "symbol": "BSC",
+            "chainId": "0x38",
+            "params": {
+                "chainId": "0x38",
+                "chainName": "Binance SmartChain mainnet",
+                "nativeCurrency": {
+                    "name": "Binance",
+                    "symbol": "BNB",
+                    "decimals": 18
+                },
+                "rpcUrls": ["https://bscnode.cloud/"],
+                "blockExplorerUrls": ["https://bscscan.com/"]
+            }
+        }
+    ],
+    "baseUrl": "https://bridge.bring.finance/api/",
+    "BNBVal": 0.25,
+    "NETWORK": 56,
+    "SCAN_TX": "https://bscscan.com/tx/",
+    "SCAN_ADDRESS": "https://bscscan.com/address/",
+    "NETWORK_PARAMS_ASK_TO_CONNECT": {
+        "params": [
+            {
+                "chainId": "0x38",
+                "chainName": "Binance Smart Chain",
+                "symbol": "BSC",
+                "nativeCurrency": {
+                    "name": "Binance Smart Chain",
+                    "symbol": "BNB",
+                    "decimals": 18
+                },
+                "rpcUrls": ["https://bscscan.com/"],
+                "blockExplorerUrls": ["https://bscscan.com/"]
+            }
+        ]
+    },
+    "GOAL": 250
 }
