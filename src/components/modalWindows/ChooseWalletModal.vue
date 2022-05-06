@@ -12,9 +12,13 @@
                         Choose either MetaMask wallet extension or WalletConnect to connect the desired wallet application
                         <br />
                     </p>
-                    <a v-on:click="" class="btn modal-main-btn">MetaMask</a>
+                    <a v-on:click="" class="btn connect-meta">
+                      <span class="icon-mt"></span>
+                      MetaMask</a>
                     <br />
-                    <a v-on:click="" class="btn modal-main-btn">WalletConnect</a>
+                    <a v-on:click="" class="btn connect-wallet">
+                      <span class="icon-wtc"></span>
+                      WalletConnect</a>
                 </div>
             </div>
         </div>

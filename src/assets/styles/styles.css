@@ -1680,8 +1680,44 @@ i.i-logout-circle-line {
     display: flex;
 }
 
+.connect-meta {
+    margin-top: 32px;
+}
+.icon-wtc {
+    background-image: url("../images/WalletConnect.svg");
+    height: 36px;
+    min-width: 36px;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+}
+.icon-mt {
+    background-image: url("../images/metamask.svg");
+    height: 36px;
+    min-width: 36px;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+}
+
+.connect-meta,
+.connect-wallet {
+    background: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+}
+
+.connect-meta:hover,
+.connect-wallet:hover {
+    border: 1px solid #EFCF46;
+}
+
+
+
+
 .goal-info-left-disc p {
-    /*max-width: 630px;*/
     font-weight: 400;
     line-height: 20px;
     font-size: 14px;
