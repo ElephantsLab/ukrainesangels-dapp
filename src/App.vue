@@ -20,7 +20,7 @@
     import conf from "./core/Config.json";
     import { mapGetters, mapMutations, mapActions } from "vuex";
     import ChooseWalletModal from "./components/modalWindows/ChooseWalletModal.vue";
-    import Vue from "vue";
+    const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
     export default {
         name: "App",
@@ -153,16 +153,15 @@
         },
         computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter", "statusWalletChooseGetter", "warningModalGetter"]),
         async mounted() {
-            this.$root.TEST = "HELP";
-            setTimeout(async () => {
-                // if (conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
-                //     localStorage.clear();
-                // }
-                if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
-                    alert("Change your wallet extension to Binance Smart Chain network");
-                    await window.ethereum.request({ method: "wallet_addEthereumChain", params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
-                }
-            }, 1000);
+            // setTimeout(async () => {
+            //     // if (conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
+            //     //     localStorage.clear();
+            //     // }
+            //     if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
+            //         alert("Change your wallet extension to Binance Smart Chain network");
+            //         await window.ethereum.request({ method: "wallet_addEthereumChain", params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
+            //     }
+            // }, 1000);
             // this.lang.init();
 
             window.addEventListener("message", async function (e) {
@@ -197,6 +196,12 @@
                                     _this.$root.core = new Core(_this);
                                 });
                                 window.ethereum.on("isConnected", () => window.location.reload());
+
+                                if (window.ethereum.networkVersion && conf.NETWORK !== parseInt(window.ethereum.networkVersion)) {
+                                    alert("Change your wallet extension to Binance Smart Chain network");
+                                    await window.ethereum.request({ method: "wallet_addEthereumChain", params: conf.NETWORK_PARAMS_ASK_TO_CONNECT.params });
+                                    window.location.reload();
+                                }
                             }
                             if (!window.ethereum.chainId) {
                                 throw new Error("no chainId");
@@ -212,15 +217,10 @@
                             _this.$root.core = new Core(_this);
 
                             if (_this.$root.core === undefined) {
-                                console.log("no core error?");
                                 throw Error();
                             }
                             if (currentAccount) {
                                 _this.$store.commit("setCurrentAddress", currentAccount);
-                                // _this.$root.core.fetchActiveClaims(currentAccount, 10000);
-                                // _this.$root.core.fetchContractsReserves(10000);
-                            } else {
-                                // _this.$root.core.fetchContractsReserves(10000);
                             }
                         } else if (window.localStorage.getItem("selectedWallet") === "walletconnect") {
                             const WC_Obj = JSON.parse(window.localStorage.getItem("walletconnect"));
@@ -230,18 +230,25 @@
 
                             _this.setWalletOption(_this.getWalletOption());
                             _this.$root.core = new Core(_this);
+                            await timer(1000);
                             if (_this.$root.core === undefined) {
                                 throw Error();
                             } else {
-                                console.log(_this.$root.core);
                                 _this.$root.core.providerInstance.on("chainChanged", async (_chainId) => {
                                     if (conf.NETWORK !== parseInt(_chainId)) {
                                         alert("Change your wallet extension to Binance Smart Chain network");
-                                        await _this.$root.core.changeNetwork(conf.NETWORK_PARAMS_ASK_TO_CONNECT.params[0].symbol);
+                                        await _this.$root.core.changeNetwork(conf.NETWORK_PARAMS[0].symbol);
+                                        return;
                                     }
-                                    _this.$root.core = null;
-                                    _this.$root.core = new Core(_this);
+
+                                    window.location.reload();
+                                    // _this.$root.core = null;
+                                    // _this.$root.core = new Core(_this);
                                 });
+                                if (Number(WC_Obj.chainId) && conf.NETWORK !== parseInt(WC_Obj.chainId)) {
+                                    alert("Change your wallet extension to Binance Smart Chain network");
+                                    await _this.$root.core.changeNetwork(conf.NETWORK_PARAMS[0].symbol);
+                                }
 
                                 _this.$root.core.providerInstance.on("disconnect", (code, reason) => {
                                     console.log(`connector.on("disconnect")`, code, reason);

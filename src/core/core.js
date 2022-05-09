@@ -42,16 +42,85 @@ export default class Core {
     }
 
     async init() {
-        if (window.localStorage.getItem("selectedWallet") === "metamask" && window.ethereum) {
-            const blockchain = Number(window.ethereum.chainId);
-            this.currentBlockchain = Number(blockchain);
-            this.primaryProvider = new ethers.providers.Web3Provider(window.ethereum);
-            const connected = await this.checkAccount("metamask");
-            if (connected) {
-                debugger;
+        try {
+            if (window.localStorage.getItem("selectedWallet") === "metamask" && window.ethereum) {
+                let blockchain = Number(window.ethereum.chainId);
+                this.isSupported = conf.SUPPORTED_BLOCKCHAINS.find((networkId) => networkId === Number(blockchain));
+
+                this.currentBlockchain = Number(blockchain);
+                this.primaryProvider = new ethers.providers.Web3Provider(window.ethereum);
+                const connected = await this.checkAccount("metamask");
+                if (connected) {
+                    for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                        this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                        this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
+                        this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
+                            this[`provider_${chainId}`]
+                        );
+
+                        if (blockchain === Number(chainId)) {
+                            this.provider = this.primaryProvider;
+                            this.signer = this.provider.getSigner();
+                            this.context.$store.commit("setChainId", chainId);
+
+                            this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
+                        } else {
+                            this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
+                        }
+                        return true;
+                    }
+                } else {
+                    for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                        this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                        this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
+                        this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
+                            this[`provider_${chainId}`]
+                        );
+
+                        if (blockchain === Number(chainId)) {
+                            this.provider = this.primaryProvider;
+                            this.context.$store.commit("setChainId", chainId);
+
+                            this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.provider);
+                        } else {
+                            this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
+                        }
+                        return true;
+                    }
+                }
+            } else if (window.localStorage.getItem("selectedWallet") === "walletconnect") {
+                const rpc = {};
+                for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                    const url = conf.NETWORK_PARAMS.find((el) => Number(el.chainId) === Number(chainId))?.params.rpcUrls[0];
+                    rpc[chainId] = url;
+                }
+
+                this.providerInstance = new WalletConnectProvider({
+                    rpc: rpc,
+                });
+                if (!this.providerInstance.connected) {
+                    try {
+                        // Create a dialogue
+                        await this.providerInstance.enable();
+                    } catch (error) {
+                        if (error.message === "User closed modal") {
+                            window.localStorage.removeItem("address");
+                            window.localStorage.removeItem("walletconnect");
+                            window.localStorage.removeItem("selectedWallet");
+                        }
+                    }
+                }
+                await this.subscribeToEvents();
+                const WC_Obj = JSON.parse(window.localStorage.getItem("walletconnect"));
+                const blockchain = Number(WC_Obj?.chainId);
+
+                this.isSupported = conf.SUPPORTED_BLOCKCHAINS.find((networkId) => networkId === Number(blockchain));
+                this.currentBlockchain = Number(blockchain);
+
+                this.primaryProvider = new ethers.providers.Web3Provider(this.providerInstance, "any");
+
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
-                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
                         this[`provider_${chainId}`]
                     );
@@ -65,92 +134,28 @@ export default class Core {
                     } else {
                         this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
                     }
-                    return true;
                 }
+                // else {
+                //     let provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");;
+                //     this.provider = provider;
+                //     // this.signer = provider.getSigner();
+                //     return true
+                // }
+                return true;
             } else {
+                const blockchain = conf.PRIMARY_BLOCKCHAIN.chainId;
+                this.context.$store.commit("setChainId", Number(blockchain));
+                this.currentBlockchain = Number(blockchain);
+                let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
+                this.provider = provider;
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
-                    this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
-                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
-                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
-                        this[`provider_${chainId}`]
-                    );
-
-                    if (blockchain === Number(chainId)) {
-                        this.provider = this.primaryProvider;
-                        this.context.$store.commit("setChainId", chainId);
-                        console.log("here?");
-                        this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.provider);
-                    } else {
-                        this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
-                    }
-                    return true;
+                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(provider);
                 }
+                // this.signer = provider.getSigner();
+                return true;
             }
-        } else if (window.localStorage.getItem("selectedWallet") === "walletconnect") {
-            const rpc = {};
-            for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
-                const url = conf.NETWORK_PARAMS.find((el) => Number(el.chainId) === Number(chainId))?.params.rpcUrls[0];
-                rpc[chainId] = url;
-            }
-
-            this.providerInstance = new WalletConnectProvider({
-                rpc: rpc,
-            });
-            if (!this.providerInstance.connected) {
-                try {
-                    // Create a dialogue
-                    await this.providerInstance.enable();
-                } catch (error) {
-                    if (error.message === "User closed modal") {
-                        window.localStorage.removeItem("address");
-                        window.localStorage.removeItem("walletconnect");
-                        window.localStorage.removeItem("selectedWallet");
-                    }
-                }
-            }
-            await this.subscribeToEvents();
-            const WC_Obj = JSON.parse(window.localStorage.getItem("walletconnect"));
-            const blockchain = Number(WC_Obj?.chainId);
-            this.currentBlockchain = Number(blockchain);
-            console.log(this.currentBlockchain);
-
-            this.primaryProvider = new ethers.providers.Web3Provider(this.providerInstance, "any");
-
-            for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
-                this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
-                this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
-                    this[`provider_${chainId}`]
-                );
-
-                if (blockchain === Number(chainId)) {
-                    this.provider = this.primaryProvider;
-                    this.signer = this.provider.getSigner();
-                    this.context.$store.commit("setChainId", chainId);
-
-                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
-                } else {
-                    this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
-                }
-            }
-            // else {
-            //     let provider = new ethers.providers.JsonRpcProvider("https://data-seed-prebsc-1-s1.binance.org:8545/");;
-            //     this.provider = provider;
-            //     // this.signer = provider.getSigner();
-            //     return true
-            // }
-            return true;
-        } else {
-            console.log("no?");
-            const blockchain = conf.PRIMARY_BLOCKCHAIN.chainId;
-            this.context.$store.commit("setChainId", Number(blockchain));
-            this.currentBlockchain = Number(blockchain);
-            let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
-            this.provider = provider;
-            for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
-                this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(provider);
-            }
-            // this.signer = provider.getSigner();
-            return true;
+        } catch (error) {
+            console.log(error);
         }
         // console.log(this);
     }
@@ -207,6 +212,7 @@ export default class Core {
             location.reload();
         } else if (address.toLowerCase() === currentAccount.toLowerCase()) {
             this.currentBlockchain = Number(chainId);
+            this.isSupported = conf.SUPPORTED_BLOCKCHAINS.find((networkId) => networkId === Number(chainId));
             this.context.$store.commit("setChainId", this.currentBlockchain);
             this.context.$store.commit("setCurrentAddress", address);
         }
@@ -241,7 +247,6 @@ export default class Core {
                             window.clearInterval(i);
                         }
                     }, 0);
-                    console.log("chain changed");
                 } catch (switchError) {
                     // This error code indicates that the chain has not been added to MetaMask.
                     if (switchError.code === 4902 || switchError?.code?.toString() === "-32603") {
@@ -270,7 +275,6 @@ export default class Core {
         } else if (selectedWallet && selectedWallet === "walletconnect") {
             if (!this.provider) {
                 try {
-                    console.log(this);
                     await this.primaryProvider.provider.request({
                         method: "wallet_switchEthereumChain",
                         params: switchParams,
@@ -307,7 +311,6 @@ export default class Core {
                 }
             } else {
                 try {
-                    console.log(this);
                     await this.provider.provider.request({
                         method: "wallet_switchEthereumChain",
                         params: switchParams,
@@ -445,10 +448,15 @@ export default class Core {
 
     async getCurrentPrice() {
         try {
-            console.log(this.currentBlockchain);
-            const bnbPrice = ethers.utils.formatEther(await this[`token_${this.currentBlockchain}`].price());
-            this.context.updateBNBPrice(bnbPrice);
-            return bnbPrice;
+            if (this.isSupported) {
+                const bnbPrice = ethers.utils.formatEther(await this[`token_${this.currentBlockchain}`].price());
+                this.context.updateBNBPrice(bnbPrice);
+                return bnbPrice;
+            } else {
+                const bnbPrice = ethers.utils.formatEther(await this[`token_${conf.PRIMARY_BLOCKCHAIN.chainId}`].price());
+                this.context.updateBNBPrice(bnbPrice);
+                return bnbPrice;
+            }
         } catch (error) {
             console.log(error);
         }
@@ -501,9 +509,15 @@ export default class Core {
 
     async getTotalSupply() {
         try {
-            const totalSupply = await this[`token_${this.currentBlockchain}`].totalSupply();
-            localStorage.setItem("totalSupply", parseInt(totalSupply).toString());
-            return parseInt(totalSupply);
+            if (this.isSupported) {
+                const totalSupply = await this[`token_${this.currentBlockchain}`].totalSupply();
+                localStorage.setItem("totalSupply", parseInt(totalSupply).toString());
+                return parseInt(totalSupply);
+            } else {
+                const totalSupply = await this[`token_${conf.PRIMARY_BLOCKCHAIN.chainId}`].totalSupply();
+                localStorage.setItem("totalSupply", parseInt(totalSupply).toString());
+                return parseInt(totalSupply);
+            }
         } catch (error) {
             console.log(error);
         }
@@ -511,9 +525,15 @@ export default class Core {
 
     async getNftOwnersCount() {
         try {
-            const nftOwnersCount = await this[`token_${this.currentBlockchain}`].nftOwnersCount();
-            localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount).toString());
-            return parseInt(nftOwnersCount);
+            if (this.isSupported) {
+                const nftOwnersCount = await this[`token_${this.currentBlockchain}`].nftOwnersCount();
+                localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount).toString());
+                return parseInt(nftOwnersCount);
+            } else {
+                const nftOwnersCount = await this[`token_${conf.PRIMARY_BLOCKCHAIN.chainId}`].nftOwnersCount();
+                localStorage.setItem("nftOwnersCount", parseInt(nftOwnersCount).toString());
+                return parseInt(nftOwnersCount);
+            }
         } catch (error) {
             console.log(error);
         }
@@ -521,10 +541,17 @@ export default class Core {
 
     async getTotalDonated() {
         try {
-            const totalDonated = await this[`token_${this.currentBlockchain}`].totalDonated();
-            const totalSupply = Number(parseFloat(ethers.utils.formatEther(totalDonated)).toFixed(4)).toString();
-            localStorage.setItem("totalDonated", totalSupply);
-            return totalSupply;
+            if (this.isSupported) {
+                const totalDonated = await this[`token_${this.currentBlockchain}`].totalDonated();
+                const totalSupply = Number(parseFloat(ethers.utils.formatEther(totalDonated)).toFixed(4)).toString();
+                localStorage.setItem("totalDonated", totalSupply);
+                return totalSupply;
+            } else {
+                const totalDonated = await this[`token_${conf.PRIMARY_BLOCKCHAIN.chainId}`].totalDonated();
+                const totalSupply = Number(parseFloat(ethers.utils.formatEther(totalDonated)).toFixed(4)).toString();
+                localStorage.setItem("totalDonated", totalSupply);
+                return totalSupply;
+            }
         } catch (error) {
             console.log(error);
         }

@@ -43,7 +43,6 @@
             {
                 "chainId": "0x38",
                 "chainName": "Binance Smart Chain",
-                "symbol": "BSC",
                 "nativeCurrency": {
                     "name": "Binance Smart Chain",
                     "symbol": "BNB",
