@@ -1,6 +1,7 @@
 <template>
     <!--  <img alt="Vue logo" src="./assets/logo.png">-->
     <cancel-modal v-if="txFailedGetter" />
+    <warning-modal v-if="warningModalGetter" />
     <success-modal v-if="txModalStatusGetter" />
     <transaction-modal v-if="txModalGetter" />
     <choose-wallet-modal v-if="statusWalletChooseGetter" @setWalletAndAddress="setWalletOption(getWalletOption())" />
@@ -15,6 +16,7 @@
     import TransactionModal from "@/components/modalWindows/TransactionModal";
     import SuccessModal from "@/components/modalWindows/SuccessModal";
     import CancelModal from "@/components/modalWindows/CancelModal";
+    import WarningModal from "@/components/modalWindows/WarningModal";
     import conf from "./core/Config.json";
     import { mapGetters, mapMutations, mapActions } from "vuex";
     import ChooseWalletModal from "./components/modalWindows/ChooseWalletModal.vue";
@@ -29,6 +31,7 @@
             SuccessModal,
             CancelModal,
             ChooseWalletModal,
+            WarningModal,
         },
 
         methods: {
@@ -148,7 +151,7 @@
                 await this.$root.core.changeNetwork(this, blockchain);
             },
         },
-        computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter", "statusWalletChooseGetter"]),
+        computed: mapGetters(["txModalGetter", "txModalStatusGetter", "txFailedGetter", "statusWalletChooseGetter", "warningModalGetter"]),
         async mounted() {
             this.$root.TEST = "HELP";
             setTimeout(async () => {
@@ -227,7 +230,7 @@
 
                             _this.setWalletOption(_this.getWalletOption());
                             _this.$root.core = new Core(_this);
-                            if (_this.$root.$core === undefined) {
+                            if (_this.$root.core === undefined) {
                                 throw Error();
                             } else {
                                 console.log(_this.$root.core);
@@ -253,6 +256,7 @@
                     } else {
                         // _this.showWalletOptions = true;
                         _this.$root.core = new Core(_this);
+                        await _this.$root.core.getCurrentPrice();
                     }
                     setTimeout(async function fetch() {
                         if (_this.$root.core.getCurrentPrice) {

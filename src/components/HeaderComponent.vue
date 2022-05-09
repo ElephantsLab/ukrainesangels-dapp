@@ -29,7 +29,7 @@
             <div class="header-main-buttons">
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
                     <span>Connect Wallet</span>
-                    <span class="icon metamask-img"></span>
+                    <span class="icon" :class="getWalletImg"></span>
                 </button>
                 <div v-else class="btn btn-connect connected" @click="updateWalletChooseModal(true)">
                     <span
@@ -37,7 +37,7 @@
                             userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
                         }}</span
                     >
-                    <span class="icon metamask-img"></span>
+                    <span class="icon" :class="getWalletImg"></span>
                 </div>
                 <div class="dropdown-content">
                     <div class="dropdown-content-inner">
@@ -128,14 +128,21 @@
         },
         methods: {
             ...mapMutations(["updateWalletChooseModal"]),
-            ...mapActions(["connectWallet"]),
+            connectWallet() {
+                this.$store.dispatch("connectWallet");
+            },
             logOut() {
-                debugger;
                 localStorage.removeItem("address");
                 localStorage.removeItem("selectedWallet");
                 location.reload();
             },
         },
-        computed: mapGetters(["userAddressGetter"]),
+        computed: {
+            ...mapGetters(["userAddressGetter"]),
+            getWalletImg() {
+                const selectedWallet = window.localStorage.getItem("selectedWallet");
+                return selectedWallet && selectedWallet === "metamask" ? "icon-mt" : selectedWallet && selectedWallet === "walletconnect" ? "icon-wtc" : "";
+            },
+        },
     };
 </script>

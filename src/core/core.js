@@ -11,30 +11,81 @@ export default class Core {
         this.baseURL = conf.baseUrl;
         this.init();
     }
+    async checkAccount(accountType) {
+        if (window.ethereum && accountType === "metamask") {
+            const connected = window.ethereum
+                .request({ method: "eth_requestAccounts" })
+                .then(handleAccountsChanged)
+                .then((res) => res)
+                .catch((err) => {
+                    console.error(err);
+                    return false;
+                });
+
+            // Note that this event is emitted on page load.
+            // If the array of accounts is non-empty, you're already
+            // connected.
+            window.ethereum.on("accountsChanged", handleAccountsChanged);
+
+            // For now, 'eth_accounts' will continue to always return an array
+            function handleAccountsChanged(accounts) {
+                if (accounts.length === 0) {
+                    return false;
+                    // MetaMask is locked or the user has not connected any accounts
+                    // alert('Please connect to MetaMask.');
+                } else if (accounts.length > 0) {
+                    return true;
+                }
+            }
+            return connected;
+        }
+    }
 
     async init() {
         if (window.localStorage.getItem("selectedWallet") === "metamask" && window.ethereum) {
             const blockchain = Number(window.ethereum.chainId);
             this.currentBlockchain = Number(blockchain);
             this.primaryProvider = new ethers.providers.Web3Provider(window.ethereum);
-            for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
-                this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
-                this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
-                this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
-                    this[`provider_${chainId}`]
-                );
+            const connected = await this.checkAccount("metamask");
+            if (connected) {
+                debugger;
+                for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                    this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
+                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
+                        this[`provider_${chainId}`]
+                    );
 
-                if (blockchain === Number(chainId)) {
-                    this.provider = this.primaryProvider;
-                    this.signer = this.provider.getSigner();
-                    this.context.$store.commit("setChainId", chainId);
+                    if (blockchain === Number(chainId)) {
+                        this.provider = this.primaryProvider;
+                        this.signer = this.provider.getSigner();
+                        this.context.$store.commit("setChainId", chainId);
 
-                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
-                } else {
-                    this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
+                        this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
+                    } else {
+                        this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
+                    }
+                    return true;
+                }
+            } else {
+                for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
+                    this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
+                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
+                        this[`provider_${chainId}`]
+                    );
+
+                    if (blockchain === Number(chainId)) {
+                        this.provider = this.primaryProvider;
+                        this.context.$store.commit("setChainId", chainId);
+                        console.log("here?");
+                        this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.provider);
+                    } else {
+                        this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
+                    }
+                    return true;
                 }
             }
-            return true;
         } else if (window.localStorage.getItem("selectedWallet") === "walletconnect") {
             const rpc = {};
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
@@ -67,7 +118,7 @@ export default class Core {
 
             for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                 this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
-                this[`token_${chainId}`] = new ethers.Contract(conf[chainId].BRNG_TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
+                this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
                     this[`provider_${chainId}`]
                 );
 
@@ -76,7 +127,7 @@ export default class Core {
                     this.signer = this.provider.getSigner();
                     this.context.$store.commit("setChainId", chainId);
 
-                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].BRNG_TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
+                    this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this.provider).connect(this.signer);
                 } else {
                     this[`token_${chainId}`].connect(this[`provider_${chainId}`]);
                 }
@@ -114,7 +165,7 @@ export default class Core {
                 let currentAccount = window.localStorage.getItem("address");
                 console.log(`connector.on("accountsChanged")`);
 
-                const address = accounts[0];
+                const address = accounts[0].toLowerCase();
 
                 if (!currentAccount || address.toLowerCase() !== currentAccount.toLowerCase()) {
                     currentAccount = address;
@@ -147,7 +198,7 @@ export default class Core {
 
     async onSessionUpdate(accounts, chainId) {
         let currentAccount = localStorage.getItem("address");
-        const address = accounts[0];
+        const address = accounts[0].toLowerCase();
         if (!currentAccount || address.toLowerCase() !== currentAccount.toLowerCase()) {
             currentAccount = address;
             localStorage.setItem("address", currentAccount);

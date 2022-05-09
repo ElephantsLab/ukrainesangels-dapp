@@ -18,7 +18,7 @@ export default {
         chainId: undefined,
         bnbPrice: 0.25,
         userNFTs: [],
-        contractAddress: undefined
+        contractAddress: undefined,
     },
     mutations: {
         setCurrentAddress(state, val) {
@@ -35,28 +35,39 @@ export default {
         },
         updateContractAddress(state, val) {
             state.contractAddress = val;
-        }
+        },
     },
     actions: {
         connectWallet() {
-            window.ethereum
-                .request({method: 'eth_requestAccounts'})
-                .then(handleAccountsChanged)
-                .catch((err) => {console.log(err)});
+            const selectedWallet = window.localStorage.getItem("selectedWallet");
+            if (selectedWallet && selectedWallet === "metamask") {
+                window.ethereum
+                    .request({ method: "eth_requestAccounts" })
+                    .then(handleAccountsChanged)
+                    .catch((err) => {
+                        if (err.message.includes("Already processing eth_requestAccounts. Please wait.")) {
+                            this.commit("updateWarningModal", true);
+                            this.commit("updateRevertReason", "Please proceed to your wallet to connect it.");
+                        }
+                    });
 
-            function handleAccountsChanged(accounts) {
-                if (accounts.length > 0) {
-                    localStorage.setItem("selectedWallet", "metamask");
-                    localStorage.setItem("address", accounts[0]);
-                    location.reload();
+                function handleAccountsChanged(accounts) {
+                    if (accounts.length > 0) {
+                        localStorage.setItem("selectedWallet", "metamask");
+                        localStorage.setItem("address", accounts[0]);
+                        location.reload();
+                    }
                 }
+            } else if (selectedWallet && selectedWallet === "walletconnect") {
+                console.log("show wallet option");
+                this.commit("updateWalletChooseModal", true);
+            } else {
+                this.commit("updateWalletChooseModal", true);
             }
         },
         async fetchHelpCenters({ commit }, type) {
             try {
-                let response = await axios.get(
-                    `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${type}!A1%3AL400?key=${API_KEY}`
-                );
+                let response = await axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${type}!A1%3AL400?key=${API_KEY}`);
                 return response.data.values;
             } catch (error) {
                 console.log(error);
@@ -77,7 +88,7 @@ export default {
             } catch (error) {
                 console.log(error);
             }
-        }
+        },
     },
     getters: {
         userAddressGetter(state) {
@@ -91,6 +102,6 @@ export default {
         },
         contractAddressGetter(state) {
             return state.contractAddress;
-        }
-    }
-}
+        },
+    },
+};

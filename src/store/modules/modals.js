@@ -4,6 +4,7 @@ export default {
         txStatus: false,
         statusTx: undefined,
         txFailed: false,
+        warningModal: false,
         revertReason: undefined,
         walletChooseModal: false,
     },
@@ -22,6 +23,9 @@ export default {
         },
         updateTxFailed(state, val) {
             state.txFailed = val;
+        },
+        updateWarningModal(state, val) {
+            state.warningModal = val;
         },
         updateRevertReason(state, val) {
             state.revertReason = val;
@@ -43,6 +47,9 @@ export default {
         },
         txFailedGetter(state) {
             return state.txFailed;
+        },
+        warningModalGetter(state) {
+            return state.warningModal;
         },
         revertReasonGetter(state) {
             return state.revertReason;

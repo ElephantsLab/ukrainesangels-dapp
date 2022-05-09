@@ -693,6 +693,8 @@
         },
         computed: mapGetters(["bnbPriceGetter"]),
         mounted() {
+            let _this = this;
+            console.log(this);
             const savedTotalSupply = localStorage.getItem("totalSupply");
             const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");
             const savedTotalDonated = localStorage.getItem("totalDonated");
@@ -706,14 +708,14 @@
                 this.totalDonated = savedTotalDonated;
             }
             setTimeout(async function init() {
-                if (!this.$root?.core) {
+                if (!_this.$root?.core) {
                     setTimeout(init, 1000);
                     return;
                 }
-                this.totalSupply = await this.$root.core.getTotalSupply();
-                this.nftOwnersCount = await this.$root.core.getNftOwnersCount();
-                this.totalDonated = await this.$root.core.getTotalDonated();
-                this.ricedPercentage = Number((100 - ((conf.GOAL - this.totalDonated) / conf.GOAL) * 100).toFixed(1));
+                _this.totalSupply = await _this.$root.core.getTotalSupply();
+                _this.nftOwnersCount = await _this.$root.core.getNftOwnersCount();
+                _this.totalDonated = await _this.$root.core.getTotalDonated();
+                _this.ricedPercentage = Number((100 - ((conf.GOAL - _this.totalDonated) / conf.GOAL) * 100).toFixed(1));
             }, 1500);
         },
     };

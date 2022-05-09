@@ -32,13 +32,16 @@
     import conf from "../../core/Config.json";
 
     export default {
+        name: "ChooseWalletModal",
+        mounted() {
+            console.log(this.$root);
+        },
         methods: {
             ...mapMutations(["updateWalletChooseModal"]),
             openTx() {
                 window.open(conf.SCAN_TX + this.statusTxGetter);
             },
             async setupDesiredWallet(walletOption) {
-                console.log(this.$attrs);
                 const previousSelection = window.localStorage.getItem("selectedWallet");
                 if (walletOption && previousSelection && walletOption.toLowerCase() === previousSelection.toLowerCase()) {
                     this.$emit("close");
@@ -46,7 +49,7 @@
                 if (walletOption) {
                     if (previousSelection === "walletconnect" && walletOption === "metamask") {
                         window.localStorage.setItem("selectedWallet", walletOption);
-                        await this.$parent.core.killSession();
+                        await this.$root.core.killSession();
                     }
                     window.localStorage.setItem("selectedWallet", walletOption);
                 }
