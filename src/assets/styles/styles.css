@@ -5,7 +5,6 @@
     background-position: top center;
 }
 
-
 .section-collection::before {
     position: absolute;
     content: "";
@@ -204,7 +203,7 @@ input,
 }
 
 .info-page-wrapper .heading1 span {
-    text-transform:none;
+    text-transform: none;
 }
 .section-main .heading1 span {
     display: block;
@@ -950,7 +949,6 @@ input,
     margin-left: 16px;
 }
 
-
 .info-page-wrapper .heading1 + .body2,
 .link-team + .body1 {
     margin-top: 32px;
@@ -1356,7 +1354,7 @@ input,
     padding-right: 354px; */
 }
 
-.center{
+.center {
     text-align: center;
     margin: auto auto 40px auto;
 }
@@ -1407,8 +1405,7 @@ i.i-logout-circle-line {
     color: white;
 }
 
-.dropdown-content div{
-
+.dropdown-content div {
 }
 
 .header-main-buttons {
@@ -1422,7 +1419,6 @@ i.i-logout-circle-line {
     position: absolute;
 
     z-index: 1;
-
 }
 
 .dropdown-content-inner {
@@ -1439,16 +1435,15 @@ i.i-logout-circle-line {
     display: block;
     padding: 20px 24px;
     cursor: pointer;
-
 }
 
 .dropdown-content-inner div:first-child {
-    border-radius: 8px 8px 0  0;
+    border-radius: 8px 8px 0 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dropdown-content-inner div:last-child {
-    border-radius: 0  0 8px 8px ;
+    border-radius: 0 0 8px 8px;
 }
 
 .header-main-buttons:hover .dropdown-content {
@@ -1464,7 +1459,7 @@ i.i-logout-circle-line {
 
 .content-icon::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 24px;
     width: 100%;
     background-repeat: no-repeat;
@@ -1475,7 +1470,7 @@ i.i-logout-circle-line {
 }
 
 .info-about-angel {
-    background: #0F1010;
+    background: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     margin-top: 24px;
@@ -1486,7 +1481,7 @@ i.i-logout-circle-line {
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .info-about-name {
@@ -1494,7 +1489,7 @@ i.i-logout-circle-line {
     padding: 24px 32px;
 }
 
-.info-about-angel-disc ul li{
+.info-about-angel-disc ul li {
     display: flex;
     padding-bottom: 16px;
 }
@@ -1525,7 +1520,6 @@ i.i-logout-circle-line {
     line-height: 24px;
     color: rgba(255, 255, 255, 0.5);
     font-weight: normal;
-
 }
 
 .disc-name-info span {
@@ -1551,7 +1545,7 @@ i.i-logout-circle-line {
     display: none;
 }
 
-.no-angel .section-get-more .get-more-container  .true .heading-angel-status {
+.no-angel .section-get-more .get-more-container .true .heading-angel-status {
     display: block;
     margin-bottom: 16px;
 }
@@ -1569,7 +1563,7 @@ i.i-logout-circle-line {
     text-align: center;
 }
 
-.true .heading2{
+.true .heading2 {
     margin-bottom: 16px;
 }
 
@@ -1586,14 +1580,16 @@ i.i-logout-circle-line {
     text-align-last: center;
 }
 
-.swiper-button-prev, .swiper-button-next,
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled,
 .swiper-button-next .swiper-button-prev.swiper-button-disabled {
     padding: 8px;
     min-width: 40px;
     min-height: 40px;
     padding: 8px;
-    background: #0F1010;
+    background: #0f1010;
     opacity: none;
     border-radius: 8px;
     cursor: pointer;
@@ -1602,8 +1598,10 @@ i.i-logout-circle-line {
     border-radius: 8px;
 }
 
-.swiper-button-prev:hover, .swiper-button-next:hover,
-.swiper-button-next.swiper-button-disabled:hover, .swiper-button-prev.swiper-button-disabled:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-button-next.swiper-button-disabled:hover,
+.swiper-button-prev.swiper-button-disabled:hover,
 .swiper-button-next .swiper-button-prev.swiper-button-disabled {
     background-color: #efcf46;
 }
@@ -1636,7 +1634,7 @@ i.i-logout-circle-line {
     min-width: calc(114px - 10px);
 }
 
-.supply-line{
+.supply-line {
     width: 1px;
     background: rgba(255, 255, 255, 0.1);
 }
@@ -1644,7 +1642,7 @@ i.i-logout-circle-line {
 /*our-goal*/
 
 .section-goal-wrapper {
-    background-color: #0F1010;
+    background-color: #0f1010;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 33px 37px 39px 43px;
@@ -1658,7 +1656,7 @@ i.i-logout-circle-line {
     height: 48px;
 }
 
-.goal-info-left-title{
+.goal-info-left-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1669,7 +1667,7 @@ i.i-logout-circle-line {
     font-weight: 700;
     font-size: 28px;
     text-transform: uppercase;
-    color: #EFCF46;
+    color: #efcf46;
 }
 
 .goal-info-left-disc {
@@ -1711,11 +1709,8 @@ i.i-logout-circle-line {
 
 .connect-meta:hover,
 .connect-wallet:hover {
-    border: 1px solid #EFCF46;
+    border: 1px solid #efcf46;
 }
-
-
-
 
 .goal-info-left-disc p {
     font-weight: 400;
@@ -1723,12 +1718,9 @@ i.i-logout-circle-line {
     font-size: 14px;
 }
 
-
-
 /*progress bar*/
 
 progress {
-
 }
 .progress-bar {
     height: 32px;
@@ -1752,7 +1744,7 @@ progress[value]::-webkit-progress-value {
     position: relative;
     border-radius: 8px;
     height: 32px;
-    background: #EFCF46;
+    background: #efcf46;
 }
 
 .progress-bar-info ul {
@@ -1775,7 +1767,6 @@ progress[value]::-webkit-progress-value {
 }
 
 .img-btn {
-
 }
 
 .centered {
@@ -1788,7 +1779,7 @@ progress[value]::-webkit-progress-value {
     text-align: center;
     text-transform: uppercase;
     width: fit-content;
-    color: #EFCF46;
+    color: #efcf46;
 }
 
 .goal-info-right {
@@ -1806,7 +1797,7 @@ progress[value]::-webkit-progress-value {
 .audit-sait {
     display: flex;
     align-items: center;
-    color: #C4C4C4;
+    color: #c4c4c4;
 }
 
 .audit-sait a {
@@ -1825,13 +1816,10 @@ progress[value]::-webkit-progress-value {
     font-size: 18px;
 }
 
-
-
-
 .audit-by {
     font-size: 12px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-style: normal;
     font-weight: 400;
     padding-bottom: 8px;
@@ -1848,7 +1836,7 @@ progress[value]::-webkit-progress-value {
 
 .audit-sait:hover,
 .audit-open-doc:hover {
-    color: #EFCF46;
+    color: #efcf46;
 }
 
 .audit-logo {
@@ -1882,9 +1870,3 @@ progress[value]::-webkit-progress-value {
 i.i-download-fill {
     font-size: 19px;
 }
-
-
-
-
-
-
