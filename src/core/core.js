@@ -36,7 +36,7 @@ export default class Core {
                 }
             }
             else {
-                let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
+                let provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org/");
                 this.providerAddress = provider;
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(
