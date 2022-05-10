@@ -131,10 +131,16 @@
             connectWallet() {
                 this.$store.dispatch("connectWallet");
             },
-            logOut() {
-                localStorage.removeItem("address");
-                localStorage.removeItem("selectedWallet");
-                location.reload();
+            async logOut() {
+                const selectedWallet = window.localStorage.getItem("selectedWallet");
+
+                if (selectedWallet === "metamask") {
+                    localStorage.removeItem("address");
+                    localStorage.removeItem("selectedWallet");
+                    location.reload();
+                } else if (selectedWallet === "walletconnect") {
+                    await this.$root.core.killSession();
+                }
             },
         },
         computed: {

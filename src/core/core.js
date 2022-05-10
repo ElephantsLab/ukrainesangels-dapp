@@ -146,7 +146,7 @@ export default class Core {
                 const blockchain = conf.PRIMARY_BLOCKCHAIN.chainId;
                 this.context.$store.commit("setChainId", Number(blockchain));
                 this.currentBlockchain = Number(blockchain);
-                let provider = new ethers.providers.JsonRpcProvider("https://bscnode.cloud/");
+                let provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed1.binance.org/");
                 this.provider = provider;
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, provider).connect(provider);

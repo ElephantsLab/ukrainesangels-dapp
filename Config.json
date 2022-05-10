@@ -1,7 +1,7 @@
 {
     "PRIMARY_BLOCKCHAIN": {
         "chainId": "56",
-        "node": "https://bscnode.cloud"
+        "node": "https://bsc-dataseed1.binance.org"
     },
     "BLOCKCHAINS": {
         "56": "BSC Mainnet"
@@ -13,7 +13,7 @@
         "CHAIN_ID": "56",
         "TOKEN_ADDRESS": "0xa6e01Ec211e18E99F98c5954265bdC70e0b67383",
         "DEFAULT_GAS_PRICE_GWEI": "30",
-        "NODE": "https://bscnode.cloud"
+        "NODE": "https://bsc-dataseed1.binance.org"
     },
     "NETWORK_PARAMS": [
         {
@@ -28,7 +28,7 @@
                     "symbol": "BNB",
                     "decimals": 18
                 },
-                "rpcUrls": ["https://bscnode.cloud"],
+                "rpcUrls": ["https://bsc-dataseed1.binance.org"],
                 "blockExplorerUrls": ["https://bscscan.com"]
             }
         }
@@ -49,7 +49,7 @@
                     "symbol": "BNB",
                     "decimals": 18
                 },
-                "rpcUrls": ["https://bscnode.cloud"],
+                "rpcUrls": ["https://bsc-dataseed1.binance.org"],
                 "blockExplorerUrls": ["https://bscscan.com/"]
             }
         ]

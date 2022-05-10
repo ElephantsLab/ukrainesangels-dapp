@@ -128,14 +128,14 @@
                         this.$root.core.init();
                     }
                 } else {
-                    _this.noWallet = true;
+                    // _this.noWallet = true;
                 }
             },
 
             getWalletOption() {
                 const selWallet = localStorage.getItem("selectedWallet");
                 if (!selWallet) {
-                    this.updateWalletChooseModal(true);
+                    // this.updateWalletChooseModal(true);
                     return null;
                 } else {
                     return selWallet;
@@ -257,7 +257,7 @@
                                 });
                             }
                         } else {
-                            _this.noWallet = true;
+                            // _this.noWallet = true;
                             _this.$root.core = new Core(_this);
                         }
                     } else {
@@ -281,7 +281,7 @@
                     console.log(ex);
                     tronConnectAttemptsCounter++;
                     if (tronConnectAttemptsCounter > 5 && ex.message == "No Metamask extension found") {
-                        _this.noWallet = true;
+                        // _this.noWallet = true;
                         _this.$root.core = new Core(_this);
                         await _this.$root.core.getCurrentPrice();
                         return;
