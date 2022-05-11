@@ -61,7 +61,7 @@
                                     <button class="btn btn-speed-amount" v-on:click="(donationAmount = 5), (isMaxVal = false)">5 BNB</button>
                                     <button class="btn btn-speed-amount" v-on:click="getAllBalance">MAX</button>
                                 </div>
-                                <button class="btn btn-submit" v-on:click="makeDonation" :disabled="shouldBeDisabled">Donate</button>
+                                <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
                             </div>
                         </div>
                     </div>
@@ -72,9 +72,8 @@
 </template>
 
 <script>
-    import { mapActions } from "vuex";
+    import { mapActions, mapGetters, mapMutations } from "vuex";
     import HeaderComponent from "@/components/HeaderComponent";
-    import { computed } from "@vue/reactivity";
 
     export default {
         components: {
@@ -89,14 +88,20 @@
         },
         methods: {
             ...mapActions(["fetchHelpCenters"]),
+            ...mapMutations(["updateWalletChooseModal"]),
+
             toMain() {
                 this.$router.push("/");
             },
             async makeDonation() {
-                if (this.donationAmount > 0) {
-                    await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                if (this.userAddressGetter) {
+                    if (this.donationAmount > 0) {
+                        await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                    } else {
+                        alert("enter positive amount only");
+                    }
                 } else {
-                    alert("enter positive amount only");
+                    this.updateWalletChooseModal(true);
                 }
             },
             async getAllBalance() {
@@ -130,6 +135,7 @@
                 }
                 return false;
             },
+            ...mapGetters(["userAddressGetter"]),
         },
     };
 </script>
