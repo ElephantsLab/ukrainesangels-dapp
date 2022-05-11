@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <a class="header-link" href="/MyCollection">
-                        <p class="dropdown-text">My Angels</p>
+                        <p class="dropdown-text">My Collection</p>
                     </a>
                 </li>
                 <!--        <li>-->
@@ -96,7 +96,7 @@
                         </li>
                         <li>
                             <a class="header-link" href="/MyCollection">
-                                <p class="dropdown-text">My Angels</p>
+                                <p class="dropdown-text">My Collection</p>
                             </a>
                         </li>
                     </ul>
@@ -113,8 +113,7 @@
                             >
                             <span class="icon metamask-img"></span>
                         </div>
-                        <button class="my-collections"><span></span>My collection</button>
-                        <button class="disconnect"><i class="i-logout-circle-line"></i>Disconnect</button>
+                        <button v-if="userAddressGetter" class="disconnect" v-on:click="logOut"><i class="i-logout-circle-line"></i>Disconnect</button>
                     </div>
                 </div>
             </div>
