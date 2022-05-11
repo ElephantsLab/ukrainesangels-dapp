@@ -61,7 +61,7 @@
                                     <button class="btn btn-speed-amount" v-on:click="(donationAmount = 5), (isMaxVal = false)">5 BNB</button>
                                     <button class="btn btn-speed-amount" v-on:click="getAllBalance">MAX</button>
                                 </div>
-                                <button class="btn btn-submit" v-on:click="makeDonation" :disabled="shouldBeDisabled">Donate</button>
+                                <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
                             </div>
                         </div>
                     </div>
