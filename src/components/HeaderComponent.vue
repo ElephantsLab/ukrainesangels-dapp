@@ -39,7 +39,7 @@
                     >
                     <span class="icon" :class="getWalletImg"></span>
                 </div>
-                <div class="dropdown-content">
+                <div v-if="userAddressGetter" class="dropdown-content">
                     <div class="dropdown-content-inner">
                         <div>
                             <a class="drop-link" href="/MyCollection">

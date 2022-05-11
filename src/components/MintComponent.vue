@@ -616,14 +616,14 @@
         <section class="section section-help" id="need-help">
             <div class="container">
                 <div class="cards-help-wrapper">
-                    <a href="https://ukrainesangels.com/InfoCenter" class="card card-help card-help-1">
+                    <router-link tag="a" :to="{ name: 'InfoCenter' }" class="card card-help card-help-1">
                         <p class="title">If You Need Help</p>
                         <div class="btn btn-yellow">Help Desk</div>
-                    </a>
-                    <a href="https://ukrainesangels.com/Donate" class="card card-help card-help-2">
+                    </router-link>
+                    <router-link tag="a" :to="{ name: 'Donate' }" class="card card-help card-help-2">
                         <p class="title">If You Want to Help</p>
                         <div class="btn btn-yellow">Donate</div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </section>
