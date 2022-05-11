@@ -560,7 +560,7 @@
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
                         <div class="subtitle">our team</div>
-                        <a href="https://elephantslab.com/" class="link-team" target="_blank" rel="nofollow"></a>
+                        <a href="https://elephantslab.com/" class="link-team our-tm" target="_blank" rel="nofollow"></a>
                         <div class="photo-team photo-team-mobile"></div>
                         <p class="body1">
                             We are a blockchain research and product development company based in Ukraine.

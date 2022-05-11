@@ -932,9 +932,15 @@ input,
     border-radius: 8px;
 }
 
+.link-team.our-tm {
+    background-size: auto;
+}
+
+
 .link-team {
-    background-image: url(../images/logo_team.webp);
+    background-image: url(../images/el.svg);
     width: 228px;
+    background-size: contain;
     height: 64px;
 }
 
@@ -1884,6 +1890,16 @@ i.i-download-fill {
     border-radius: 8px;
     color: #FFFFFF;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ul-flex-column .dropdown-text{
+    margin-left: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.section-block.section-block-content .link-team{
+    margin-top: 24px;
 }
 
 .my-collections span {
