@@ -95,6 +95,11 @@
                         <li>
                             <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#need-help">Help Desk</a>
                         </li>
+                        <li>
+                            <a class="header-link" href="/MyCollection">
+                                <p class="dropdown-text">My Angels</p>
+                            </a>
+                        </li>
                     </ul>
                     <div class="ul-flex-column menu-btn-wrapper">
                         <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">
