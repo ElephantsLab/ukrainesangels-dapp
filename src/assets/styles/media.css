@@ -439,7 +439,8 @@
         margin-left: 12px;
         margin-right: 12px;
     }
-    .menu-btn-wrapper {
+
+    .ul-flex-column.menu-btn-wrapper .btn.btn-connect.connected {
         display: none;
     }
     .link-team,

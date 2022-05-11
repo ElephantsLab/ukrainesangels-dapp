@@ -1718,6 +1718,8 @@ i.i-logout-circle-line {
     font-size: 14px;
 }
 
+
+
 /*progress bar*/
 
 progress {
@@ -1869,4 +1871,30 @@ progress[value]::-webkit-progress-value {
 
 i.i-download-fill {
     font-size: 19px;
+}
+
+.my-collections{
+    margin-bottom: 10px;
+}
+
+.my-collections,
+.disconnect {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.my-collections span {
+    background-image: url("../images/drop-icon.png");
+    height: 24px;
+    min-width: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.disconnect i{
+    margin-right: 10px;
 }

@@ -29,7 +29,6 @@
             <div class="header-main-buttons">
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
                     <span>Connect Wallet</span>
-                    <span class="icon" :class="getWalletImg"></span>
                 </button>
                 <div v-else class="btn btn-connect connected" @click="updateWalletChooseModal(true)">
                     <span
@@ -110,6 +109,8 @@
                             >
                             <span class="icon metamask-img"></span>
                         </div>
+                        <button class="my-collections"><span></span>My collection</button>
+                        <button class="disconnect"><i class="i-logout-circle-line"></i>Disconnect</button>
                     </div>
                 </div>
             </div>
