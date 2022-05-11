@@ -72,9 +72,8 @@
 </template>
 
 <script>
-    import { mapActions } from "vuex";
+    import { mapActions, mapGetters, mapMutations } from "vuex";
     import HeaderComponent from "@/components/HeaderComponent";
-    import { computed } from "@vue/reactivity";
 
     export default {
         components: {
@@ -89,14 +88,20 @@
         },
         methods: {
             ...mapActions(["fetchHelpCenters"]),
+            ...mapMutations(["updateWalletChooseModal"]),
+
             toMain() {
                 this.$router.push("/");
             },
             async makeDonation() {
-                if (this.donationAmount > 0) {
-                    await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                if (this.userAddressGetter) {
+                    if (this.donationAmount > 0) {
+                        await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                    } else {
+                        alert("enter positive amount only");
+                    }
                 } else {
-                    alert("enter positive amount only");
+                    this.updateWalletChooseModal(true);
                 }
             },
             async getAllBalance() {
@@ -130,6 +135,7 @@
                 }
                 return false;
             },
+            ...mapGetters(["userAddressGetter"]),
         },
     };
 </script>

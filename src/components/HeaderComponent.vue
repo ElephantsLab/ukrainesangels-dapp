@@ -18,6 +18,11 @@
                 <li>
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a>
                 </li>
+                <li>
+                    <a class="header-link" href="/MyCollection">
+                        <p class="dropdown-text">My Angels</p>
+                    </a>
+                </li>
                 <!--        <li>-->
                 <!--          <a class="header-link"-->
                 <!--              v-on:click="this.$router.push('/')"-->
@@ -41,12 +46,6 @@
                 </div>
                 <div v-if="userAddressGetter" class="dropdown-content">
                     <div class="dropdown-content-inner">
-                        <div>
-                            <a class="drop-link" href="/MyCollection">
-                                <span class="content-icon"></span>
-                                <p class="dropdown-text">My Angels</p>
-                            </a>
-                        </div>
                         <div>
                             <a class="drop-link" v-on:click="logOut">
                                 <i class="i-logout-circle-line"></i>

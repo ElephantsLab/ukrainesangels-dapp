@@ -220,7 +220,7 @@
                             <button class="btn btn-speed-amount" v-on:click="(donationAmount = 5), (isMaxVal = false)">5 BNB</button>
                             <button class="btn btn-speed-amount" v-on:click="getAllBalance">MAX</button>
                         </div>
-                        <button class="btn btn-submit" v-on:click="makeDonation" :disabled="shouldBeDisabled">Donate</button>
+                        <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
                     </div>
                 </div>
             </div>
@@ -633,7 +633,7 @@
 <script>
     const conf = require("../core/Config.json");
     import SocialLinks from "@/components/SocialLinks.vue";
-    import { mapGetters } from "vuex";
+    import { mapGetters, mapMutations } from "vuex";
 
     export default {
         components: {
@@ -652,15 +652,20 @@
             };
         },
         methods: {
+            ...mapMutations(["updateWalletChooseModal"]),
             async mint() {
-                if (this.mintVal < 1) {
-                    alert("enter positive amount only");
-                    return;
-                }
-                if (this.mintVal <= 1) {
-                    await this.$root.core.mint(this.bnbPriceGetter);
+                if (this.userAddressGetter) {
+                    if (this.mintVal < 1) {
+                        alert("enter positive amount only");
+                        return;
+                    }
+                    if (this.mintVal <= 1) {
+                        await this.$root.core.mint(this.bnbPriceGetter);
+                    } else {
+                        await this.$root.core.buyMore(this.mintVal);
+                    }
                 } else {
-                    await this.$root.core.buyMore(this.mintVal);
+                    this.updateWalletChooseModal(true);
                 }
             },
             incrementVal() {
@@ -674,10 +679,14 @@
                 }
             },
             async makeDonation() {
-                if (this.donationAmount > 0) {
-                    await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                if (this.userAddressGetter) {
+                    if (this.donationAmount > 0) {
+                        await this.$root.core.donate(parseFloat(this.donationAmount), this.isMaxVal);
+                    } else {
+                        alert("enter positive amount only");
+                    }
                 } else {
-                    alert("enter positive amount only");
+                    this.updateWalletChooseModal(true);
                 }
             },
             async getAllBalance() {
@@ -692,7 +701,7 @@
             },
         },
         computed: {
-            ...mapGetters(["bnbPriceGetter"]),
+            ...mapGetters(["bnbPriceGetter", "userAddressGetter"]),
             shouldBeDisabled() {
                 const selectedWallet = window.localStorage.getItem("selectedWallet");
                 console.log(selectedWallet);
