@@ -121,12 +121,14 @@ export default class Core {
 
                 for (let chainId of conf.SUPPORTED_BLOCKCHAINS) {
                     this[`provider_${chainId}`] = new ethers.providers.JsonRpcProvider(`${conf[chainId].NODE}`);
+                    this.context.updateContractAddress(conf[chainId].TOKEN_ADDRESS);
                     this[`token_${chainId}`] = new ethers.Contract(conf[chainId].TOKEN_ADDRESS, tokenAbi, this[`provider_${chainId}`]).connect(
                         this[`provider_${chainId}`]
                     );
 
                     if (blockchain === Number(chainId)) {
                         this.provider = this.primaryProvider;
+
                         this.signer = this.provider.getSigner();
                         this.context.$store.commit("setChainId", chainId);
 

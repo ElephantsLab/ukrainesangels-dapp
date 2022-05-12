@@ -19,9 +19,9 @@
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a>
                 </li>
                 <li>
-                    <a class="header-link" href="/MyCollection">
+                    <router-link tag="a" :to="{ name: 'MyCollection' }" class="header-link">
                         <p class="dropdown-text">My Collection</p>
-                    </a>
+                    </router-link>
                 </li>
                 <!--        <li>-->
                 <!--          <a class="header-link"-->
@@ -95,9 +95,9 @@
                             <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#need-help">Help Desk</a>
                         </li>
                         <li>
-                            <a class="header-link" href="/MyCollection">
+                            <router-link tag="a" :to="{ name: 'MyCollection' }" class="header-link">
                                 <p class="dropdown-text">My Collection</p>
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                     <div class="ul-flex-column menu-btn-wrapper">

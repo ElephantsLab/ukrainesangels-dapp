@@ -297,7 +297,11 @@
                 this.$router.push("/");
             },
         },
-        mounted() {
+        async mounted() {
+            if (this.userAddressGetter) {
+                await this.fetchNFTByUser(this.userAddressGetter);
+            }
+
             setTimeout(() => {
                 if (!this.userNFTsGetter[0]) return;
                 if (this.userNFTsGetter[0].tokenId.toString().length == 1) {
@@ -321,6 +325,7 @@
         },
         watch: {
             async userAddressGetter(newVal) {
+                console.log(newVal);
                 if (newVal) {
                     await this.fetchNFTByUser(newVal);
                 }
