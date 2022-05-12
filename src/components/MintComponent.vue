@@ -215,17 +215,17 @@
                             <span class="input-token">BNB</span>
                         </div>
                         <div class="speed-amount-container">
-                            <button class="btn btn-speed-amount" v-on:click="(donationAmount = 0.1), (isMaxVal = false)"
-                                    :class="{ active: isActive }" @click="isActive = !isActive">0.1 BNB
+                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 0.1}" v-on:click="(donationAmount = 0.1), (isMaxVal = false)">
+                              0.1 BNB
                             </button>
-                            <button class="btn btn-speed-amount" v-on:click="(donationAmount = 1), (isMaxVal = false)"
-                                    :class="{ active: isActive }" @click="isActive = !isActive">1 BNB
+                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 1}" v-on:click="(donationAmount = 1), (isMaxVal = false)">
+                              1 BNB
                             </button>
-                            <button class="btn btn-speed-amount" v-on:click="(donationAmount = 5), (isMaxVal = false)"
-                                    :class="{ active: isActive }" @click="isActive = !isActive">5 BNB
+                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 5}" v-on:click="(donationAmount = 5), (isMaxVal = false)">
+                              5 BNB
                             </button>
-                            <button class="btn btn-speed-amount" v-on:click="getAllBalance"
-                                    :class="{ active: isActive }" @click="isActive = !isActive">MAX
+                            <button class="btn btn-speed-amount" v-on:click="getAllBalance" :class="{active: isMaxVal}">
+                              MAX
                             </button>
                         </div>
                         <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
@@ -658,7 +658,6 @@
                 nftOwnersCount: 0,
                 totalDonated: 0,
                 ricedPercentage: 0,
-                isActive: true
             };
         },
         methods: {

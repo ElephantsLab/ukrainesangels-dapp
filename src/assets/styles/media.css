@@ -570,6 +570,12 @@
     }
 }
 
+@media (max-width: 767.50px) {
+    .header-main-buttons {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-block {
         padding-right: 40px;
@@ -610,9 +616,6 @@
     }
     .section-situation .section-block-container {
         align-items: flex-start;
-    }
-    .header-main-buttons {
-        display: none;
     }
     .card-help {
         border-color: #efcf46;
