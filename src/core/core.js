@@ -410,10 +410,11 @@ export default class Core {
         } catch (error) {
             this.connectWallet();
             this.context.updateTxFailed(true);
-            if (error.data && error.data.message) {
+            if (error.toString().includes("insufficient funds for intrinsic transaction cost")) {
+                this.context.updateRevertReason("Insufficient funds for intrinsic transaction cost");
+            } else if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
             } else if (error.message) {
-                this.context.updateRevertReason(error.message);
             }
             console.log(error);
         }
@@ -489,12 +490,14 @@ export default class Core {
         } catch (error) {
             this.connectWallet();
             this.context.updateTxFailed(true);
-            if (error.data && error.data.message) {
+            console.log(error);
+            if (error.toString().includes("insufficient funds for transfer")) {
+                this.context.updateRevertReason("Insufficient funds for transfer");
+            } else if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
             } else if (error.message) {
                 this.context.updateRevertReason(error.message);
             }
-            console.log(error);
         }
     }
 
