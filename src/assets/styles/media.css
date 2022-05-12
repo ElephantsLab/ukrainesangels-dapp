@@ -228,26 +228,7 @@
 }
 
 @media (min-width: 768px) {
-    .card-angel .btn.btn-yellow:hover,
-    .card-help .btn.btn-yellow:hover,
-    .btn.btn-connect:not(.btn-connected):hover,
-    .section-main .btn-wrapper .btn.btn-yellow:hover,
-    .input-count .btn.btn-plus:hover,
-    .input-wrapper.input-count .btn:hover,
-    .modal-main-btn:hover,
-    .btn-see-all:hover,
-    .btn-submit:hover {
-        background: #ffcf00;
-        color: #0f1010;
-        transition: 0.2s;
-    }
-    .btn-arrow:not(:disabled):hover,
-    .card-of-set-add:not(:disabled):hover .add {
-        background: #efcf46;
-        border-color: #efcf46;
-        color: #0f1010;
-        transition: 0.2s;
-    }
+
     .header-link:hover,
     .header-link:active,
     .footer-link:hover,
@@ -265,19 +246,7 @@
         color: #efcf46;
         transition: 0.2s;
     }
-    .card.card-buy:hover,
-    .btn-speed-amount:hover,
-    .card-help:hover,
-    .link-team:hover,
-    .link-second-team:hover,
-    input:active,
-    input:focus,
-    .card-of-set-add:not(:disabled):hover,
-    .to-main:hover div,
-    a.organization-block:hover {
-        border-color: #efcf46;
-        transition: 0.2s;
-    }
+
     .ul-social-list a:hover {
         border: 1px solid #efcf46;
         transition: 0.2s;

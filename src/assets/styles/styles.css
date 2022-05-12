@@ -374,8 +374,10 @@ input,
     background-color: #efcf46;
     color: #0f1010;
 }
+.input-count .btn.btn-plus,
 .input-count .btn.btn-minus {
     background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
 }
 .btn-speed-amount {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -930,6 +932,46 @@ input,
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 8px;
+}
+
+.card-angel .btn.btn-yellow:hover,
+.card-help .btn.btn-yellow:hover,
+.btn.btn-connect:not(.btn-connected):hover,
+.section-main .btn-wrapper .btn.btn-yellow:hover,
+.input-count .btn.btn-plus:hover,
+.input-wrapper.input-count .btn:hover,
+.modal-main-btn:hover,
+.btn-see-all:hover,
+.btn-submit:hover {
+    background: #ffcf00;
+    color: #0f1010;
+    transition: 0.2s;
+}
+
+.card.card-buy:hover,
+.btn-speed-amount:hover,
+.card-help:hover,
+.link-team:hover,
+.link-second-team:hover,
+input:active,
+input:focus,
+.card-of-set-add:not(:disabled):hover,
+.to-main:hover div,
+a.organization-block:hover {
+    border-color: #efcf46;
+    transition: 0.2s;
+}
+
+.btn.btn-speed-amount.active {
+    border-color: #efcf46;
+}
+
+.btn-arrow:not(:disabled):hover,
+.card-of-set-add:not(:disabled):hover .add {
+    background: #efcf46;
+    border-color: #efcf46;
+    color: #0f1010;
+    transition: 0.2s;
 }
 
 .link-team.our-tm {
