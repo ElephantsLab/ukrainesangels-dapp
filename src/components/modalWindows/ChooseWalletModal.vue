@@ -42,6 +42,9 @@
                 window.open(conf.SCAN_TX + this.statusTxGetter);
             },
             async setupDesiredWallet(walletOption) {
+                if (walletOption === "metamask" && !window.ethereum) {
+                    window.open(`https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn`, "_blank");
+                }
                 const previousSelection = window.localStorage.getItem("selectedWallet");
                 if (walletOption && previousSelection && walletOption.toLowerCase() === previousSelection.toLowerCase()) {
                     this.$emit("close");

@@ -353,7 +353,7 @@ export default class Core {
 
     connectWallet() {
         const _this = this;
-        if (!localStorage.getItem("address")) {
+        if (!localStorage.getItem("address") && window.localStorage.getItem("selectedWallet") === "metamask") {
             window.ethereum
                 .request({ method: "eth_requestAccounts" })
                 .then(handleAccountsChanged)
@@ -440,7 +440,9 @@ export default class Core {
         } catch (error) {
             this.connectWallet();
             this.context.updateTxFailed(true);
-            if (error.data && error.data.message) {
+            if (error.toString().includes("insufficient funds for transfer")) {
+                this.context.updateRevertReason("Insufficient funds for transfer");
+            } else if (error.data && error.data.message) {
                 this.context.updateRevertReason(error.data.message);
             } else if (error.message) {
                 this.context.updateRevertReason(error.message);

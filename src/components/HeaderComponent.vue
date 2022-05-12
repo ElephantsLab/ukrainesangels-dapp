@@ -103,9 +103,8 @@
                     <div class="ul-flex-column menu-btn-wrapper">
                         <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">
                             <span>Connect Wallet</span>
-                            <span class="icon"></span>
                         </button>
-                        <div v-else class="btn btn-connect connected" v-on:click="logOut">
+                        <div v-else class="btn btn-connect connected" v-on:click="updateWalletChooseModal(true)">
                             <span
                                 >{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
                                     userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]

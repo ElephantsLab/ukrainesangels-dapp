@@ -40,7 +40,7 @@ export default {
     actions: {
         connectWallet() {
             const selectedWallet = window.localStorage.getItem("selectedWallet");
-            if (selectedWallet && selectedWallet === "metamask") {
+            if (selectedWallet && selectedWallet === "metamask" && window.ethereum) {
                 window.ethereum
                     .request({ method: "eth_requestAccounts" })
                     .then(handleAccountsChanged)
@@ -59,7 +59,6 @@ export default {
                     }
                 }
             } else if (selectedWallet && selectedWallet === "walletconnect") {
-                console.log("show wallet option");
                 this.commit("updateWalletChooseModal", true);
             } else {
                 this.commit("updateWalletChooseModal", true);
