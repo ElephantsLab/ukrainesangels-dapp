@@ -181,7 +181,7 @@
                         </div>
                     </a>
                 </div>
-                <a href="https://ukrainesangels.com/Donate" class="btn btn-see-all"> See All Charities </a>
+                <router-link tag="a" :to="{ name: 'Donate' }" class="btn btn-see-all"> See All Charities </router-link>
             </div>
         </section>
         <section class="section section-donate" id="your-donate">
@@ -215,18 +215,28 @@
                             <span class="input-token">BNB</span>
                         </div>
                         <div class="speed-amount-container">
-                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 0.1}" v-on:click="(donationAmount = 0.1), (isMaxVal = false)">
-                              0.1 BNB
+                            <button
+                                class="btn btn-speed-amount"
+                                :class="{ active: donationAmount === 0.1 }"
+                                v-on:click="(donationAmount = 0.1), (isMaxVal = false)"
+                            >
+                                0.1 BNB
                             </button>
-                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 1}" v-on:click="(donationAmount = 1), (isMaxVal = false)">
-                              1 BNB
+                            <button
+                                class="btn btn-speed-amount"
+                                :class="{ active: donationAmount === 1 }"
+                                v-on:click="(donationAmount = 1), (isMaxVal = false)"
+                            >
+                                1 BNB
                             </button>
-                            <button class="btn btn-speed-amount" :class="{active: donationAmount === 5}" v-on:click="(donationAmount = 5), (isMaxVal = false)">
-                              5 BNB
+                            <button
+                                class="btn btn-speed-amount"
+                                :class="{ active: donationAmount === 5 }"
+                                v-on:click="(donationAmount = 5), (isMaxVal = false)"
+                            >
+                                5 BNB
                             </button>
-                            <button class="btn btn-speed-amount" v-on:click="getAllBalance" :class="{active: isMaxVal}">
-                              MAX
-                            </button>
+                            <button class="btn btn-speed-amount" v-on:click="getAllBalance" :class="{ active: isMaxVal }">MAX</button>
                         </div>
                         <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
                     </div>
@@ -648,7 +658,6 @@
             SocialLinks,
         },
         data() {
-
             return {
                 conf: conf,
                 mintVal: 1,
