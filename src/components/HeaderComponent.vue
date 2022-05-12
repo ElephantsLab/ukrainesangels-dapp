@@ -103,7 +103,7 @@
                     <div class="ul-flex-column menu-btn-wrapper">
                         <button v-if="!userAddressGetter" class="btn btn-connect connected" v-on:click="connectWallet">
                             <span>Connect Wallet</span>
-                            <span class="icon metamask-img"></span>
+                            <span class="icon"></span>
                         </button>
                         <div v-else class="btn btn-connect connected" v-on:click="logOut">
                             <span
@@ -111,7 +111,7 @@
                                     userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
                                 }}</span
                             >
-                            <span class="icon metamask-img"></span>
+                            <span class="icon" :class="getWalletImg"></span>
                         </div>
                         <button v-if="userAddressGetter" class="disconnect" v-on:click="logOut"><i class="i-logout-circle-line"></i>Disconnect</button>
                     </div>
