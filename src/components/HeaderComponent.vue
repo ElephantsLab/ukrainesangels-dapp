@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <router-link tag="a" :to="{ name: 'MyCollection' }" class="header-link">
-                        <p class="dropdown-text">My Collection</p>
+                        <a>My Collection</a>
                     </router-link>
                 </li>
                 <!--        <li>-->

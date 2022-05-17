@@ -229,6 +229,7 @@
 
 @media (min-width: 768px) {
 
+    .header-nav li,
     .header-link:hover,
     .header-link:active,
     .footer-link:hover,
