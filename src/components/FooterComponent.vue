@@ -13,6 +13,11 @@
                         <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#angel-collection">Collection</a></li>
                         <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#your-donate">Donation</a></li>
                         <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a></li>
+                        <li>
+                          <router-link tag="a" :to="{ name: 'MyCollection' }" class="footer-link">
+                            <a>My Collection</a>
+                          </router-link>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-block">
