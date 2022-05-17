@@ -10,21 +10,52 @@ export default {
     },
     mutations: {
         updateTxModal(state, val) {
+            const body = document.body;
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
             state.txModal = val;
         },
         updateWalletChooseModal(state, val) {
+            const body = document.body;
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
             state.walletChooseModal = val;
         },
         updatetxStatusModal(state, val) {
+            const body = document.body;
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
             state.txStatus = val;
         },
         updateTx(state, val) {
             state.statusTx = val;
         },
         updateTxFailed(state, val) {
+            const body = document.body;
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
+
             state.txFailed = val;
         },
         updateWarningModal(state, val) {
+            const body = document.body;
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
             state.warningModal = val;
         },
         updateRevertReason(state, val) {
