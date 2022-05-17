@@ -19,6 +19,7 @@ export default {
         bnbPrice: 0.25,
         userNFTs: [],
         contractAddress: undefined,
+        lang: "en",
     },
     mutations: {
         setCurrentAddress(state, val) {
@@ -36,8 +37,15 @@ export default {
         updateContractAddress(state, val) {
             state.contractAddress = val;
         },
+        setLanguage(state, lang) {
+            state.lang = lang;
+        },
     },
     actions: {
+        updateLanguage({ commit }, lang) {
+            commit("setLanguage", lang);
+            localStorage.setItem("lang", lang);
+        },
         connectWallet() {
             const selectedWallet = window.localStorage.getItem("selectedWallet");
             if (selectedWallet && selectedWallet === "metamask" && window.ethereum) {
@@ -101,6 +109,9 @@ export default {
         },
         contractAddressGetter(state) {
             return state.contractAddress;
+        },
+        getLanguage(state) {
+            return state.lang;
         },
     },
 };
