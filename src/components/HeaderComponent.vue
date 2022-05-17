@@ -146,6 +146,18 @@
                 }
             },
         },
+        mounted() {
+            const navLinks = document.getElementsByClassName("header-link");
+            console.log(navLinks);
+            for (let link of navLinks) {
+                link.addEventListener("click", function () {
+                    for (let neigbors of navLinks) {
+                        neigbors.classList.remove("active");
+                    }
+                    link.classList.add("active");
+                });
+            }
+        },
         computed: {
             ...mapGetters(["userAddressGetter"]),
             getWalletImg() {
