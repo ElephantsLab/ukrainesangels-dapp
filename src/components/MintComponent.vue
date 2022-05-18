@@ -533,6 +533,16 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="section-block-nft section-block-nft-desktop">
+                <div class="block-nft" v-for="(nft, index) in mediaNFT">
+                    <div class="body3">{{ lang.get("ANGEL") }} #{{ index + 1 }}</div>
+                    <img :src="nft.imgLink" alt="" />
+                    <a :href="nft.socLink1" target="_blank">Link #1</a>
+                    <a :href="nft.socLink2" target="_blank">Link #2</a>
+                </div>
+            </div>
+        </section>
         <section class="section section-team" id="our-team">
             <div class="container">
                 <div class="section-block-container">
@@ -597,7 +607,7 @@
 <script>
     const conf = require("../core/Config.json");
     import SocialLinks from "@/components/SocialLinks.vue";
-    import { mapGetters, mapMutations } from "vuex";
+    import { mapGetters, mapMutations, mapActions } from "vuex";
     import MultiLang from "../core/multilang.js";
     export default {
         components: {
@@ -605,6 +615,7 @@
         },
         data() {
             return {
+                lang: new MultiLang(this),
                 conf: conf,
                 mintVal: 1,
                 donationAmount: 0.1,
@@ -613,11 +624,12 @@
                 nftOwnersCount: 0,
                 totalDonated: 0,
                 ricedPercentage: 0,
-                lang: new MultiLang(this),
+                mediaNFT: [],
             };
         },
         methods: {
             ...mapMutations(["updateWalletChooseModal"]),
+            ...mapActions(["fetchMediaNFT"]),
             async mint() {
                 if (this.userAddressGetter) {
                     if (this.mintVal < 1) {
@@ -677,13 +689,15 @@
                 return true;
             },
         },
-        mounted() {
+        async mounted() {
             let _this = this;
             this.lang.init();
             console.log(this);
             const savedTotalSupply = localStorage.getItem("totalSupply");
             const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");
             const savedTotalDonated = localStorage.getItem("totalDonated");
+            this.mediaNFT = await this.fetchMediaNFT("MediaNFT");
+
             if (savedTotalSupply) {
                 this.totalSupply = savedTotalSupply;
             }

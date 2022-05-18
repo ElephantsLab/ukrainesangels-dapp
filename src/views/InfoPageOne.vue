@@ -44,14 +44,13 @@
             return {
                 links: [],
                 lang: new MultiLang(this),
-                mediaNFT: [],
             };
         },
         components: {
             HeaderComponent,
         },
         methods: {
-            ...mapActions(["fetchHelpCenters", "fetchMediaNFT"]),
+            ...mapActions(["fetchHelpCenters"]),
             toMain() {
                 this.$router.push("/");
             },
@@ -67,8 +66,6 @@
         async mounted() {
             this.lang.init();
             this.parseLinks(await this.fetchHelpCenters("infoCenter"));
-            this.mediaNFT = await this.fetchMediaNFT("MediaNFT");
-            console.log(this.mediaNFT);
         },
     };
 </script>
