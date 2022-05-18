@@ -85,7 +85,6 @@ export default {
                 let arrayOfNFT = [];
                 let response = await axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${type}!A1%3AL400?key=${API_KEY}`);
                 for (let nft of response.data.values) {
-                    console.log(nft);
                     const nftObj = {
                         name: nft[0],
                         imgLink: nft[1],
