@@ -4,9 +4,6 @@
             <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
             <nav class="header-nav">
                 <li>
-                    <a class="header-link" v-on:click="this.$router.push('/')" href="#our-mission">{{ lang.get("OUR_MISSION") }}</a>
-                </li>
-                <li>
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</a>
                 </li>
                 <li>

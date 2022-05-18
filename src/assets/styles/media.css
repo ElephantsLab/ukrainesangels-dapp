@@ -351,6 +351,7 @@
     .section-block-container .organization-block {
         margin-left: auto;
         margin-right: auto;
+        text-align: left;
     }
 
     .section-goal-wrapper {

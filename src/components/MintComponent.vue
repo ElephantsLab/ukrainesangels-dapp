@@ -176,10 +176,11 @@
                         </div>
                     </a>
                 </div>
+              <div id="your-donate"></div>
                 <router-link tag="a" :to="{ name: 'Donate' }" class="btn btn-see-all"> {{ lang.get("SEE_ALL") }} </router-link>
             </div>
         </section>
-        <section class="section section-donate" id="your-donate">
+        <section class="section section-donate">
             <div class="container">
                 <div class="section-content center">
                     <h2 class="heading2">{{ lang.get("DONATE_VIA_PLATFORM") }}</h2>
@@ -244,17 +245,15 @@
                         <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_1')"></h4>
                     </div>
                     <div class="section-block section-block-card">
-                        <!-- <video src=""></video> -->
-
-                        <!-- https://youtu.be/FYlg-7AsGlY -->
-                        <iframe
-                            src="https://www.youtube.com/embed/FYlg-7AsGlY"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                        <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                      <iframe
+                              src="https://www.youtube.com/embed/Dk7KHT9lBKc"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer;
+                              autoplay; clipboard-write;
+                              encrypted-media; gyroscope;
+                              picture-in-picture" allowfullscreen>
+                      </iframe>
                         <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_2')"></h4>
                     </div>
                 </div>

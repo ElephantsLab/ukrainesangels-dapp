@@ -1015,6 +1015,9 @@ a.organization-block:hover {
     width: fit-content;
     margin-top: auto;
 }
+
+
+
 .card-help .title {
     color: #fff;
     padding-right: 10%;
@@ -1150,6 +1153,7 @@ a.organization-block:hover {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 .modal-center .modal-main-btn {
     width: fit-content;
@@ -1622,7 +1626,7 @@ i.i-logout-circle-line {
 }
 
 .swiper-slide img {
-    width: 210px;
+    width: 271px;
 }
 
 .swiper {
@@ -1955,4 +1959,9 @@ i.i-download-fill {
 
 .disconnect i {
     margin-right: 10px;
+}
+
+.section-situation iframe {
+    width: 620px;
+    height: 380px;
 }
