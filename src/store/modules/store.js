@@ -93,7 +93,7 @@ export default {
                         socLink1: nft[3],
                         socLink2: nft[4],
                     };
-                    debugger;
+
                     arrayOfNFT.push(nftObj);
                 }
 
