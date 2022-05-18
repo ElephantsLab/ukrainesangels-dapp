@@ -80,6 +80,28 @@ export default {
                 console.log(error);
             }
         },
+        async fetchMediaNFT({ commit }, type) {
+            try {
+                let arrayOfNFT = [];
+                let response = await axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${type}!A1%3AL400?key=${API_KEY}`);
+                for (let nft of response.data.values) {
+                    console.log(nft);
+                    const nftObj = {
+                        name: nft[0],
+                        imgLink: nft[1],
+                        mainUrl: nft[2],
+                        socLink1: nft[3],
+                        socLink2: nft[4],
+                    };
+                    debugger;
+                    arrayOfNFT.push(nftObj);
+                }
+
+                return arrayOfNFT;
+            } catch (error) {
+                console.log(error);
+            }
+        },
         async fetchNFTByUser({ commit }, address) {
             try {
                 const responseNFTs = await axios.get(BASE_URL + "getNFTByAddress?address=" + address.toLowerCase());
