@@ -1965,3 +1965,23 @@ i.i-download-fill {
     width: 620px;
     height: 380px;
 }
+
+.language-change {
+    display: flex;
+    margin-right: 20px;
+    padding: 5px 8px;
+    border-radius: 7px;
+    border: 2px solid #efcf46;
+}
+
+.language-ua {
+    margin-left: 10px;
+}
+
+.language-ua.active,
+.language-eng.active {
+    background-color: #efcf46;
+    color: #0f1010;
+    border-radius: 7px;
+    padding: 5px;
+}
