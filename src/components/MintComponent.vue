@@ -10,7 +10,7 @@
                             <span>{{ lang.get("UKRAINIAN_NATION") }}</span>
                         </h1>
                         <h4 class="body1 body-disc">
-                            {{ lang.get("HELP_DESK") }}
+                            {{ lang.get("HELP_DESC") }}
                         </h4>
                         <div class="btn-wrapper">
                             <a href="#angel-collection" class="btn btn-yellow">{{ lang.get("EXPLORE_COLLECTION") }}</a>
@@ -169,9 +169,9 @@
                         </div>
                         <div class="card-insert savelife"><div></div></div>
                         <div class="card-content">
-                            <p class="body3">{{ lang.get("COME_BACK_ALIVE_DESC") }}</p>
+                            <p class="body3">{{ lang.get("COME_BACK_ALIVE") }}</p>
                             <p class="short-descr">
-                                {{ lang.get("") }}
+                                {{ lang.get("COME_BACK_ALIVE_DESC") }}
                             </p>
                         </div>
                     </a>
@@ -182,7 +182,7 @@
         <section class="section section-donate" id="your-donate">
             <div class="container">
                 <div class="section-content center">
-                    <h2 class="heading2">{{ lang.get("DONATE_VIA_PLATFORM_@") }}</h2>
+                    <h2 class="heading2">{{ lang.get("DONATE_VIA_PLATFORM") }}</h2>
                     <p class="body2" v-html="lang.get('DONATION_OPTIONS')"></p>
                 </div>
                 <div class="card card-donate">
@@ -241,7 +241,7 @@
                     <div class="section-block section-block-content">
                         <div class="subtitle">{{ lang.get("SITUATION_IN_UKRAINE") }}</div>
                         <div class="title-date heading1">{{ lang.get("THE_DATE") }}</div>
-                        <h4 class="body1" v-html="lang.get('ITUATION_IN_UKRAINE_DESC_1')"></h4>
+                        <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_1')"></h4>
                     </div>
                     <div class="section-block section-block-card">
                         <!-- <video src=""></video> -->
