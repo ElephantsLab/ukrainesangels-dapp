@@ -7,14 +7,15 @@
                     <div>
                         <i class="i-arrow-drop-left-line"></i>
                     </div>
-                    <p class="body3">Go to Home Page</p>
+                    <p class="body3">{{ lang.get("GO_TO_HOME") }}</p>
                 </a>
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <p class="heading1">Donate <span>to</span> <br />Charitable Organization</p>
+                        <p class="heading1">
+                            {{ lang.get("DONATE") }} <span>{{ lang.get("TO") }}</span> <br />{{ lang.get("CHARITY_ORGS") }}
+                        </p>
                         <p class="body2">
-                            Help the people of Ukraine get through by donating to one of Ukraine’s or the world’s frontline charities directing aid right into
-                            the country. Here’s the list of the certified ones you can choose. Don’t hesitate, Ukraine needs our involvement now!
+                            {{ lang.get("CHARITY_ORGS_DESC") }}
                         </p>
                         <div class="organization">
                             <a v-for="link in links" v-bind:key="link" v-bind:href="link[3]" target="_blank" rel="nofollow" class="organization-block">
@@ -30,14 +31,14 @@
                         </div>
                     </div>
                     <div class="section-block section-block-card">
-                        <p class="heading2">Donate Crypto Via the Platform</p>
+                        <p class="heading2">{{ lang.get("DONATE_VIA_PLATFORM") }}</p>
                         <p class="body2">
-                            It’s Always Possible to Make Donations on Ukraine’s Angels if It’s More Convenient for You Than Charity Organization Sites.
+                            {{ lang.get("DONATE_VIA_PLATFORM_DESC") }}
                         </p>
                         <div class="card card-donate">
-                            <div class="title1">make a donation</div>
+                            <div class="title1">{{ lang.get("MAKE_A_DONATION") }}</div>
                             <div class="card-input">
-                                <div class="input-label">You Will Save Lives No Matter the Amount</div>
+                                <div class="input-label">{{ lang.get("MAKE_A_DONATION_DESC") }}</div>
                                 <div class="address">
                                     BSC:
                                     <a href="https://bscscan.com/address/0x1cee20367ebda61500dd037a0ba2a9a2b733d391#code" target="_blank" rel="nofollow">
@@ -59,9 +60,9 @@
                                     <button class="btn btn-speed-amount" v-on:click="(donationAmount = 0.1), (isMaxVal = false)">0.1 BNB</button>
                                     <button class="btn btn-speed-amount" v-on:click="(donationAmount = 1), (isMaxVal = false)">1 BNB</button>
                                     <button class="btn btn-speed-amount" v-on:click="(donationAmount = 5), (isMaxVal = false)">5 BNB</button>
-                                    <button class="btn btn-speed-amount" v-on:click="getAllBalance">MAX</button>
+                                    <button class="btn btn-speed-amount" v-on:click="getAllBalance">{{ lang.get("MAX") }}</button>
                                 </div>
-                                <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
+                                <button class="btn btn-submit" v-on:click="makeDonation">{{ lang.get("DONATE") }}</button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +75,7 @@
 <script>
     import { mapActions, mapGetters, mapMutations } from "vuex";
     import HeaderComponent from "@/components/HeaderComponent";
-
+    import MultiLang from "../core/multilang";
     export default {
         components: {
             HeaderComponent,
@@ -84,6 +85,7 @@
                 donationAmount: 0.1,
                 isMaxVal: false,
                 links: [],
+                lang: new MultiLang(this),
             };
         },
         methods: {
@@ -124,6 +126,7 @@
             },
         },
         async mounted() {
+            this.lang.init();
             this.parseLinks(await this.fetchHelpCenters("Donate"));
         },
         computed: {

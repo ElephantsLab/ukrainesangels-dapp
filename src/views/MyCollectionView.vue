@@ -7,11 +7,11 @@
                     <div>
                         <i class="i-arrow-drop-left-line"></i>
                     </div>
-                    <p class="body3">Go to Home Page</p>
+                    <p class="body3">{{ lang.get("GO_TO_HOME") }}</p>
                 </a>
                 <div class="status-block">
                     <section class="screen-my-collection" v-if="userNFTsGetter && userNFTsGetter.length">
-                        <p class="heading1">My Angels</p>
+                        <p class="heading1">{{ lang.get("MY_ANGELS") }}</p>
                         <div class="my-collection-wrapper">
                             <div class="set-part">
                                 <div class="set-card-wrapper">
@@ -64,12 +64,12 @@
                                 </div>
                                 <div class="info-about-angel">
                                     <div class="info-about-name">
-                                        <p>Angel #{{ selectedNft }}</p>
+                                        <p>{{ lang.get("ANGEL") }} #{{ selectedNft }}</p>
                                     </div>
                                     <div class="info-about-angel-disc" v-if="nftParam.name">
                                         <ul>
                                             <li>
-                                                <p class="disc-name width">Contract Address</p>
+                                                <p class="disc-name width">{{ lang.get("CONTRACT_ADDRESS") }}</p>
                                                 <p class="disc-name-info">
                                                     <span
                                                         >{{
@@ -83,43 +83,43 @@
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Blockchain</p>
-                                                <p class="disc-name-info">Binance Smart Chain</p>
+                                                <p class="disc-name width">{{ lang.get("BLOCKCHAIN") }}</p>
+                                                <p class="disc-name-info">{{ lang.get("BSC") }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Token ID</p>
+                                                <p class="disc-name width">{{ lang.get("TOKEN_ID") }}</p>
                                                 <p class="disc-name-info">{{ tokenId }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Token Standard</p>
+                                                <p class="disc-name width">{{ lang.get("TOKEN_STANDART") }}</p>
                                                 <p class="disc-name-info">ERC-721</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Name</p>
+                                                <p class="disc-name width">{{ lang.get("NAME") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.name }}</p>
                                             </li>
                                             <li class="stroke">
-                                                <p class="disc-name colum">Description</p>
+                                                <p class="disc-name colum">{{ lang.get("DESC") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.desc }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Edition</p>
+                                                <p class="disc-name width">{{ lang.get("EDITION") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.edition }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Date</p>
+                                                <p class="disc-name width">{{ lang.get("DATE") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.date }}</p>
                                             </li>
                                             <li class="stroke">
-                                                <p class="disc-name colum-two">Compiler</p>
+                                                <p class="disc-name colum-two">{{ lang.get("COMPILER") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.compiler }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Sex</p>
+                                                <p class="disc-name width">{{ lang.get("SEX") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.sex }}</p>
                                             </li>
                                             <li>
-                                                <p class="disc-name width">Country</p>
+                                                <p class="disc-name width">{{ lang.get("COUNTRY") }}</p>
                                                 <p class="disc-name-info">{{ nftParam.country }}</p>
                                             </li>
                                         </ul>
@@ -131,22 +131,22 @@
                     <section class="section section-get-more" id="add-angel">
                         <div class="get-more-container">
                             <div class="section-content true">
-                                <p v-if="userNFTsGetter && userNFTsGetter.length" class="heading2">Upgrade your collection</p>
+                                <p v-if="userNFTsGetter && userNFTsGetter.length" class="heading2">{{ lang.get("UPGRADE_COLLECTION") }}</p>
                                 <!--                heading-angel-status-->
                                 <p v-else class="heading2">
-                                    You don’t have any NFT.<br />
-                                    Upgrade your collection
+                                    {{ lang.get("NO_NFT") }}<br />
+                                    {{ lang.get("UPGRADE_COLLECTION") }}
                                 </p>
-                                <p class="body2">Each Angel makes somebody’s situation a little more hopeful</p>
+                                <p class="body2">{{ lang.get("NFT_DESC_CAB") }}</p>
                             </div>
                             <div class="section-card">
                                 <div class="card card-collection">
                                     <div class="card-section">
-                                        <p class="supply-label">Total Supply</p>
-                                        <div class="total-supply">1000 nfts</div>
+                                        <p class="supply-label">{{ lang.get("TOTAL_SUPPLY") }}</p>
+                                        <div class="total-supply">1000 {{ lang.get("NFTS") }}</div>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="input-label">NFT Quantity</div>
+                                        <div class="input-label">{{ lang.get("NFT_QUANTITY") }}</div>
                                         <div class="input-container">
                                             <div class="input-wrapper input-count">
                                                 <button class="btn btn-minus" v-on:click="decrementVal">
@@ -157,10 +157,10 @@
                                                     <i class="i-add-line"></i>
                                                 </button>
                                             </div>
-                                            <button class="btn btn-submit" v-on:click="mint">Mint</button>
+                                            <button class="btn btn-submit" v-on:click="mint">{{ lang.get("MINT") }}</button>
                                         </div>
                                         <div class="input-total">
-                                            Mint 1 NFT for
+                                            {{ lang.get("MINT_FOR") }}
                                             <span>{{ bnbPriceGetter }} BNB</span>
                                         </div>
                                     </div>
@@ -175,6 +175,7 @@
 </template>
 
 <script>
+    import MultiLang from "../core/multilang";
     import HeaderComponent from "@/components/HeaderComponent";
     import { mapGetters, mapActions, mapMutations } from "vuex";
     import "vue3-carousel/dist/carousel.css";
@@ -188,6 +189,7 @@
     export default {
         data() {
             return {
+                lang: new MultiLang(this),
                 mintVal: 1,
                 NFTs: [],
                 selectedNft: 0,
@@ -298,6 +300,7 @@
             },
         },
         async mounted() {
+            this.lang.init();
             if (this.userAddressGetter) {
                 await this.fetchNFTByUser(this.userAddressGetter);
             }

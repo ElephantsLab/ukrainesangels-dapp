@@ -7,9 +7,9 @@
             <div class="modal-content">
                 <div class="modal-center">
                     <div class="modal-main-icon modal-icon-trans-proces"></div>
-                    <div class="modal-name">Please choose a wallet</div>
+                    <div class="modal-name">{{ lang.get("PLEASE_CHOOSE_WALLET") }}</div>
                     <p class="modal-p">
-                        Choose either MetaMask wallet extension or WalletConnect to connect the desired wallet application
+                        {{ lang.get("CHOOSE_WALLET_DESC") }}
                         <br />
                     </p>
                     <a v-on:click="setupDesiredWallet('metamask'), $emit('setWalletAndAddress')" class="btn connect-meta">
@@ -28,13 +28,19 @@
 </template>
 
 <script>
+    import MultiLang from "../../core/multilang.js";
     import { mapMutations, mapGetters } from "vuex";
     import conf from "../../core/Config.json";
 
     export default {
         name: "ChooseWalletModal",
         mounted() {
-            console.log(this.$root);
+            this.lang.init();
+        },
+        data: function () {
+            return {
+                lang: new MultiLang(this),
+            };
         },
         methods: {
             ...mapMutations(["updateWalletChooseModal"]),

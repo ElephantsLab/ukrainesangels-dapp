@@ -10,39 +10,48 @@
                         <i class="i-close-circle-fill"></i>
                     </div>
                     <div class="modal-name">
-                        Transaction Failed
+                        {{ lang.get("TRANS_FAILED") }}
                     </div>
-                    <p class="modal-p" v-if="!revertReasonGetter" >
-                        Oops! Something went wrong.
-                        <br>                     
-                        Most likely, you don’t have enough BNB in your wallet.
+                    <p class="modal-p" v-if="!revertReasonGetter">
+                        {{ lang.get("TRANS_OOPS") }}
+                        <br />
+                        {{ lang.get("NOT_ENOUGH_BALANCE") }}
                     </p>
-                  <p class="modal-p" v-else>{{ revertReasonGetter }}</p>
-                    <a v-if="statusTxGetter" v-on:click="openTx" class="btn modal-main-btn">Try Again</a>
+                    <p class="modal-p" v-else>{{ revertReasonGetter }}</p>
+                    <a v-if="statusTxGetter" v-on:click="openTx" class="btn modal-main-btn">{{ lang.get("TRY_AGAIN") }}</a>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-import SocialLinks from '@/components/SocialLinks.vue'
-import {mapGetters, mapMutations} from "vuex";
-import conf from "../../core/Config.json";
+    import MultiLang from "../../core/multilang.js";
+    import SocialLinks from "@/components/SocialLinks.vue";
+    import { mapGetters, mapMutations } from "vuex";
+    import conf from "../../core/Config.json";
 
-export default ({
-  components: {
-    SocialLinks,
-  },
-  methods: {
-    ...mapMutations(["updateTxFailed", "updateRevertReason"]),
-    openTx() {
-      window.open(conf.SCAN_TX + this.statusTxGetter);
-    },
-    closeModal() {
-      this.updateTxFailed(false);
-      this.updateRevertReason(undefined);
-    }
-  },
-  computed: mapGetters(["statusTxGetter", "revertReasonGetter"])
-})
+    export default {
+        data: function () {
+            return {
+                lang: new MultiLang(this),
+            };
+        },
+        components: {
+            SocialLinks,
+        },
+        mounted() {
+            this.lang.init();
+        },
+        methods: {
+            ...mapMutations(["updateTxFailed", "updateRevertReason"]),
+            openTx() {
+                window.open(conf.SCAN_TX + this.statusTxGetter);
+            },
+            closeModal() {
+                this.updateTxFailed(false);
+                this.updateRevertReason(undefined);
+            },
+        },
+        computed: mapGetters(["statusTxGetter", "revertReasonGetter"]),
+    };
 </script>

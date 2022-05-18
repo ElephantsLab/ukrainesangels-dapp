@@ -6,29 +6,43 @@
                     <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
                 </div>
                 <div class="footer-block">
-                    <span class="footer-block-name">Navigation</span>
+                    <span class="footer-block-name">{{ lang.get("NAVIGATION") }}</span>
                     <ul class="ul-flex-column">
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#our-mission">Our Mission</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#situation">Situation in Ukraine</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#angel-collection">Collection</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#your-donate">Donation</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">Help Desk</a></li>
                         <li>
-                          <router-link tag="a" :to="{ name: 'MyCollection' }" class="footer-link">
-                            <a>My Collection</a>
-                          </router-link>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#our-mission">{{ lang.get("OUR_MISSION") }}</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#angel-collection">{{ lang.get("COLLECTION") }}</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#your-donate">{{ lang.get("DONATION") }}</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">{{ lang.get("HELP_DESK") }}</a>
+                        </li>
+                        <li>
+                            <router-link tag="a" :to="{ name: 'MyCollection' }" class="footer-link">
+                                <a>{{ lang.get("MY_COLLECTION") }}</a>
+                            </router-link>
                         </li>
                     </ul>
                 </div>
                 <div class="footer-block">
-                    <span class="footer-block-name">useful links</span>
+                    <span class="footer-block-name">{{ lang.get("USEFULL_LINKS") }}</span>
                     <ul class="ul-flex-column">
-                        <li><a class="footer-link" v-on:click="this.$router.push('/InfoCenter')">If You Need Help</a></li>
-                        <li><a class="footer-link" v-on:click="this.$router.push('/Donate')">If You Want to Help</a></li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/InfoCenter')">{{ lang.get("NEED_HELP") }}</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/Donate')">{{ lang.get("WANT_HELP") }}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-block">
-                    <span class="footer-block-name">Social media</span>
+                    <span class="footer-block-name">{{ lang.get("SOCIAL_NETWORKS") }}</span>
                     <social-links />
                 </div>
             </div>
@@ -38,10 +52,18 @@
 
 <script>
     import SocialLinks from "@/components/SocialLinks";
-
+    import MultiLang from "../core/multilang.js";
     export default {
         components: {
             SocialLinks,
+        },
+        data() {
+            return {
+                lang: new MultiLang(this),
+            };
+        },
+        mounted() {
+            this.lang.init();
         },
     };
 </script>

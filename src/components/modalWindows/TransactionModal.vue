@@ -8,14 +8,10 @@
                 <div class="modal-center">
                     <div class="modal-main-icon modal-icon-trans-proces"></div>
                     <div class="modal-name">
-                        Your Transaction Is Being Processed
+                        {{ lang.get("PENDING_TRANS") }}
                     </div>
-                    <p class="modal-p">
-                        Thank you for being there in times of need.
-                        <br>
-                        Your charity will take effect in less than half a minute.
-                    </p>
-                    <a v-on:click="openTx" class="btn modal-main-btn">Transaction</a>
+                    <p class="modal-p" v-html="lang.get('PENDING_TRANS_DESC')"></p>
+                    <a v-on:click="openTx" class="btn modal-main-btn">{{ lang.get("TRANSACTION") }}</a>
                 </div>
             </div>
         </div>
@@ -23,16 +19,25 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
-import conf from "../../core/Config.json";
+    import MultiLang from "../../core/multilang.js";
+    import { mapMutations, mapGetters } from "vuex";
+    import conf from "../../core/Config.json";
 
-export default {
-  methods: {
-    ...mapMutations(["updateTxModal"]),
-    openTx() {
-      window.open(conf.SCAN_TX + this.statusTxGetter);
-    }
-  },
-  computed: mapGetters(["statusTxGetter"])
-}
+    export default {
+        data() {
+            return {
+                lang: new MultiLang(this),
+            };
+        },
+        mounted() {
+            this.lang.init();
+        },
+        methods: {
+            ...mapMutations(["updateTxModal"]),
+            openTx() {
+                window.open(conf.SCAN_TX + this.statusTxGetter);
+            },
+        },
+        computed: mapGetters(["statusTxGetter"]),
+    };
 </script>

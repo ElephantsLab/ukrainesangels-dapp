@@ -10,48 +10,49 @@
                         <i class="i-checkbox-circle-fill"></i>
                     </div>
                     <div class="modal-name">
-                        Transaction Successful
+                        {{ lang.get("TRANS_SUCCESS") }}
                     </div>
-                    <p class="modal-p">
-                        Congratulations on joining the ranks of Ukraine’s Angels.
-                        <br/>
-                        Glory to Ukraine!
-                    </p>
-<!--                  v-on:click="openTx"-->
-                    <a href="/MyCollection" class="btn modal-main-btn">See My Angel</a>
+                    <p class="modal-p" v-html="lang.get('TRANS_SUCCESS_DESC')"></p>
+                    <!--                  v-on:click="openTx"-->
+                    <a href="/MyCollection" class="btn modal-main-btn">{{ lang.get("SEE_MY_ANGELS") }}</a>
                 </div>
             </div>
             <div class="modal-footer">
                 <div class="modal-center">
                     <p class="modal-p">
-                        Tell Everybody, Let’s Save Ukraine Together!
+                        {{ lang.get("TELL_EVERYBODY") }}
                     </p>
-                    <social-links/>
+                    <social-links />
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
-import SocialLinks from '@/components/SocialLinks.vue'
-import { mapMutations, mapGetters } from "vuex";
-import conf from "../../core/Config.json";
+    import MultiLang from "../../core/multilang.js";
+    import SocialLinks from "@/components/SocialLinks.vue";
+    import { mapMutations, mapGetters } from "vuex";
+    import conf from "../../core/Config.json";
 
-export default ({
-  data() {
-    return {
-      conf: conf
-    }
-  },
-  components: {
-    SocialLinks,
-  },
-  methods: {
-      ...mapMutations(["updatetxStatusModal"]),
-    openTx() {
-        window.open(conf.SCAN_TX + this.statusTxGetter);
-    }
-  },
-  computed: mapGetters(["statusTxGetter"])
-})
+    export default {
+        data() {
+            return {
+                conf: conf,
+                lang: new MultiLang(this),
+            };
+        },
+        components: {
+            SocialLinks,
+        },
+        methods: {
+            ...mapMutations(["updatetxStatusModal"]),
+            openTx() {
+                window.open(conf.SCAN_TX + this.statusTxGetter);
+            },
+        },
+        mounted() {
+            this.lang.init();
+        },
+        computed: mapGetters(["statusTxGetter"]),
+    };
 </script>

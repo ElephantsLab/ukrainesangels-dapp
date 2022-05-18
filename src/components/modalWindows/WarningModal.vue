@@ -9,16 +9,17 @@
                     <div class="modal-main-icon modal-icon-cancel">
                         <i class="i-alarm-warning-line"></i>
                     </div>
-                    <div class="modal-name">Looks like you already have a pending request in your wallet.</div>
+                    <div class="modal-name">{{ lang.get("PENDING_WALLET_REQUEST") }}</div>
 
                     <p class="modal-p">{{ revertReasonGetter }}</p>
-                    <a v-if="warningModalGetter" v-on:click="closeModal" class="btn modal-main-btn">Got it!</a>
+                    <a v-if="warningModalGetter" v-on:click="closeModal" class="btn modal-main-btn">{{ lang.get("GOT_IT") }}</a>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+    import MultiLang from "../../core/multilang.js";
     import SocialLinks from "@/components/SocialLinks.vue";
     import { mapGetters, mapMutations } from "vuex";
     import conf from "../../core/Config.json";
@@ -26,6 +27,11 @@
     export default {
         components: {
             SocialLinks,
+        },
+        data() {
+            return {
+                lang: new MultiLang(this),
+            };
         },
         methods: {
             ...mapMutations(["updateWarningModal", "updateRevertReason"]),

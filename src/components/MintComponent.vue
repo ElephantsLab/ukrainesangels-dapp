@@ -4,37 +4,36 @@
             <div class="container">
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <div class="subtitle">Our Mission</div>
+                        <div class="subtitle">{{ lang.get("OUR_MISSION") }}</div>
                         <h1 class="heading1">
-                            <span>Help Save</span>
-                            <span>Ukrainian Nation</span>
+                            <span>{{ lang.get("HELP") }} {{ lang.get("SAVE") }}</span>
+                            <span>{{ lang.get("UKRAINIAN_NATION") }}</span>
                         </h1>
                         <h4 class="body1 body-disc">
-                            Buying an NFT from this collection, you save lives. Your financial aid will help sustain those who need it most: the injured, the
-                            refugees, and all other Ukrainians affected by indiscriminate Russian aggression.
+                            {{ lang.get("HELP_DESK") }}
                         </h4>
                         <div class="btn-wrapper">
-                            <a href="#angel-collection" class="btn btn-yellow">Explore Collection</a>
-                            <a href="#your-donate" class="btn btn-blue">Make Donation</a>
+                            <a href="#angel-collection" class="btn btn-yellow">{{ lang.get("EXPLORE_COLLECTION") }}</a>
+                            <a href="#your-donate" class="btn btn-blue">{{ lang.get("MAKE_A_DONATION") }}</a>
                         </div>
                         <div class="audit-vidma">
                             <a target="_blank" href="https://www.vidma.io/" class="audit-logo"></a>
                             <div class="audit-content">
                                 <div class="audit-link">
-                                    <p class="audit-by">Audited by Vidma.io</p>
+                                    <p class="audit-by">{{ lang.get("AUDITED_BY") }}</p>
                                     <div class="audit-link-wrapper">
                                         <div class="audit-open-doc">
                                             <a
                                                 target="_blank"
                                                 href="https://drive.google.com/file/d/1IBn-_GvrDMW3PGosO383GqFe9mCUmWwi/view  "
                                                 class="audit-open"
-                                                >Open audited
+                                                >{{ lang.get("OPEN_AUDIT") }}
                                                 <i class="i-download-fill"></i>
                                             </a>
                                         </div>
                                         <div class="audit-sait">
                                             <a href="https://www.vidma.io/" target="_blank"
-                                                >Site
+                                                >{{ lang.get("SITE") }}
                                                 <i class="i-share-box-fill"></i>
                                             </a>
                                         </div>
@@ -53,18 +52,18 @@
                                 </div>
                                 <div class="card-main-result">
                                     <div class="card-main-result-inner">
-                                        <p class="supply-label">Total Supply</p>
+                                        <p class="supply-label">{{ lang.get("TOTAL_SUPPLY") }}</p>
                                         <div class="total-supply">1000</div>
                                     </div>
                                     <div class="supply-line"></div>
                                     <div class="card-main-sold">
-                                        <p class="supply-label">Nft’s Sold</p>
+                                        <p class="supply-label">{{ lang.get("NFT_SOLD") }}</p>
                                         <div class="total-supply">{{ totalSupply }}</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <div class="input-label">NFT Quantity</div>
+                                <div class="input-label">{{ lang.get("NFT_QUANTITY") }}</div>
                                 <div class="input-container">
                                     <div class="input-wrapper input-count">
                                         <button class="btn btn-minus" v-on:click="decrementVal">
@@ -83,10 +82,10 @@
                                             <i class="i-add-line"></i>
                                         </button>
                                     </div>
-                                    <button class="btn btn-submit" v-on:click="mint">Mint</button>
+                                    <button class="btn btn-submit" v-on:click="mint">{{ lang.get("MINT") }}</button>
                                 </div>
                                 <div class="input-total">
-                                    Mint 1 NFT for
+                                    {{ lang.get("MINT_FOR") }}
                                     <span>{{ bnbPriceGetter }} BNB</span>
                                 </div>
                             </div>
@@ -100,7 +99,7 @@
                 <div class="section-goal-wrapper">
                     <div class="goal-info-left">
                         <div class="goal-info-left-title">
-                            <p class="goal-title">Our goal</p>
+                            <p class="goal-title">{{ lang.get("OUR_GOAL") }}</p>
                             <div class="goal-team">
                                 <a href="https://elephantslab.com/" class="link-team goal-team-link" target="_blank" rel="nofollow"></a>
                                 <a class="link-second-team goal-team-link" target="_blank" rel="nofollow"></a>
@@ -108,11 +107,7 @@
                         </div>
                         <div class="goal-info-left-disc">
                             <p>
-                                Our goal is to help improve the current humanitarian situation in Ukraine. During the war, civillian people are in a very
-                                difficult situation. Elephantslab, in partnership with the Etis Charitable Foundation, organizes and supplies humanitarian aid
-                                from European countries, from caring people who have expressed their support for the Ukrainians at such a difficult time. To set
-                                up quality logistics, we need reliable cars that can quickly and smoothly deliver goods to those who need them. All funds raised
-                                from the sale of NFTs will be used to purchase vehicles that will ensure the uninterrupted supply of aid.
+                                {{ lang.get("OUR_GOAL_DESC") }}
                             </p>
                         </div>
                         <div class="progress-bar">
@@ -122,18 +117,18 @@
                             <ul>
                                 <li>
                                     <p>
-                                        Target: <span> {{ conf.GOAL }} BNB</span>
+                                        {{ lang.get("TARGET") }}: <span> {{ conf.GOAL }} BNB</span>
                                     </p>
                                 </li>
                                 <li>
-                                    <p class="ralsed">Raised: {{ totalDonated }} BNB ({{ ricedPercentage }}%)</p>
+                                    <p class="ralsed">{{ lang.get("RAISED") }}: {{ totalDonated }} BNB ({{ ricedPercentage }}%)</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="goal-info-right">
                         <img src="../assets/images/bus.png" class="img-btn" />
-                        <div class="centered">4 buses</div>
+                        <div class="centered">4 {{ lang.get("BUSES") }}</div>
                     </div>
                 </div>
             </div>
@@ -141,62 +136,59 @@
         <section class="section section-buy" id="buy">
             <div class="container">
                 <div class="section-content">
-                    <h2 class="heading2">More Options to Save the Life of Ukraine</h2>
-                    <p class="body2">You Can Donate to the World’s Leading Charitable Foundations and Volunteer Organizations</p>
+                    <h2 class="heading2">{{ lang.get("MORE_OPTION_1") }}</h2>
+                    <p class="body2">{{ lang.get("MORE_OPTION_2") }}</p>
                 </div>
                 <div class="cards-buy-wrapper">
                     <a href="https://unchain.fund/" target="_blank" rel="nofollow" class="card card-buy">
                         <div class="card-label">
-                            <span class="tiny-text"> <i class="i-checkbox-circle-fill"></i> Verified </span>
+                            <span class="tiny-text"> <i class="i-checkbox-circle-fill"></i> {{ lang.get("VERIFIED") }} </span>
                             <i class="i-share-box-fill"></i>
                         </div>
                         <div class="card-insert unchain"><div></div></div>
                         <div class="card-content">
-                            <p class="body3">Unchain</p>
-                            <p class="short-Deskr">A charity project created by blockchain activists to support Ukrainian people in these crisis times.</p>
+                            <p class="body3">{{ lang.get("UNCHAIN") }}</p>
+                            <p class="short-Deskr">{{ lang.get("UNCHAIN_DESC") }}</p>
                         </div>
                     </a>
                     <a href="https://nowarua.com/" target="_blank" rel="nofollow" class="card card-buy">
                         <div class="card-label">
-                            <p class="tiny-text"><i class="i-checkbox-circle-fill"></i> Verified</p>
+                            <p class="tiny-text"><i class="i-checkbox-circle-fill"></i> {{ lang.get("VERIFIED") }}</p>
                             <i class="i-share-box-fill"></i>
                         </div>
                         <div class="card-insert btc-alpha"><div></div></div>
                         <div class="card-content">
                             <p class="body3">#nowarua</p>
-                            <p class="short-descr">A European cryptocurrency exchange. Accepts crypto-donations to protect against the war in Ukraine.</p>
+                            <p class="short-descr">{{ lang.get("NOWARUA") }}</p>
                         </div>
                     </a>
                     <a href="https://www.comebackalive.in.ua/" target="_blank" rel="nofollow" class="card card-buy">
                         <div class="card-label">
-                            <p class="tiny-text"><i class="i-checkbox-circle-fill"></i> Verified</p>
+                            <p class="tiny-text"><i class="i-checkbox-circle-fill"></i> {{ lang.get("VERIFIED") }}</p>
                             <i class="i-share-box-fill"></i>
                         </div>
                         <div class="card-insert savelife"><div></div></div>
                         <div class="card-content">
-                            <p class="body3">Come Back Alive</p>
+                            <p class="body3">{{ lang.get("COME_BACK_ALIVE_DESC") }}</p>
                             <p class="short-descr">
-                                The foundation works to make the Ukrainian Army effective, strengthening it with millions of contributions.
+                                {{ lang.get("") }}
                             </p>
                         </div>
                     </a>
                 </div>
-                <router-link tag="a" :to="{ name: 'Donate' }" class="btn btn-see-all"> See All Charities </router-link>
+                <router-link tag="a" :to="{ name: 'Donate' }" class="btn btn-see-all"> {{ lang.get("SEE_ALL") }} </router-link>
             </div>
         </section>
         <section class="section section-donate" id="your-donate">
             <div class="container">
                 <div class="section-content center">
-                    <h2 class="heading2">Or Donate Right via the Platform</h2>
-                    <p class="body2">
-                        It’s Always Possible to Make Donations on Ukraine’s Angels if It’s <br />
-                        More Convenient for You Than Charity Organization Sites.
-                    </p>
+                    <h2 class="heading2">{{ lang.get("DONATE_VIA_PLATFORM_@") }}</h2>
+                    <p class="body2" v-html="lang.get('DONATION_OPTIONS')"></p>
                 </div>
                 <div class="card card-donate">
-                    <div class="title1">make a donation</div>
+                    <div class="title1">{{ lang.get("MAKE_A_DONATION") }}</div>
                     <div class="card-input">
-                        <div class="input-label">You Will Save Lives No Matter the Amount</div>
+                        <div class="input-label">{{ lang.get("AMOUNT_DOES_NOT_MATTER") }}</div>
                         <div class="address">
                             BSC:
                             <a href="https://bscscan.com/address/0x1cee20367ebda61500dd037a0ba2a9a2b733d391#code" target="_blank" rel="nofollow">
@@ -236,9 +228,9 @@
                             >
                                 5 BNB
                             </button>
-                            <button class="btn btn-speed-amount" v-on:click="getAllBalance" :class="{ active: isMaxVal }">MAX</button>
+                            <button class="btn btn-speed-amount" v-on:click="getAllBalance" :class="{ active: isMaxVal }">{{ lang.get("MAX") }}</button>
                         </div>
-                        <button class="btn btn-submit" v-on:click="makeDonation">Donate</button>
+                        <button class="btn btn-submit" v-on:click="makeDonation">{{ lang.get("DONATE") }}</button>
                     </div>
                 </div>
             </div>
@@ -247,21 +239,9 @@
             <div class="container">
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <div class="subtitle">Situation in Ukraine</div>
-                        <div class="title-date heading1">Feb. 24, 2022</div>
-                        <h4 class="body1">
-                            The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a
-                            declaration.
-                            <br />
-                            <br />
-                            The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back
-                            into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
-                            <br />
-                            <br />
-                            For that, the two aggressors are now determined to soak Ukraine in the blood of its own people. Invaders kill and maim civilians,
-                            women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity
-                            considers normal life. They torchure Ukraine.
-                        </h4>
+                        <div class="subtitle">{{ lang.get("SITUATION_IN_UKRAINE") }}</div>
+                        <div class="title-date heading1">{{ lang.get("THE_DATE") }}</div>
+                        <h4 class="body1" v-html="lang.get('ITUATION_IN_UKRAINE_DESC_1')"></h4>
                     </div>
                     <div class="section-block section-block-card">
                         <!-- <video src=""></video> -->
@@ -275,19 +255,7 @@
                             allowfullscreen
                         ></iframe>
                         <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/FYlg-7AsGlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <h4 class="body1">
-                            The date Ukraine was stripped of its peaceful existence by Russia-Belarus joint military invasion. At 4:00 AM, without a
-                            declaration.
-                            <br />
-                            <br />
-                            The two repressive governments have long been plotting an offensive intended to conquer and coerce the free people of Ukraine back
-                            into the atrocities of autocracy and corruption, depriving Ukrainians of European values that they hold so close to their hearts.
-                            <br />
-                            <br />
-                            For that, the two aggressors are now determined to soak Ukraine in the blood of its own people. Invaders kill and maim civilians,
-                            women and children, cowardly shelling their communities, destroying dwellings, hospitals, schools and everything that humanity
-                            considers normal life. They torchure Ukraine.
-                        </h4>
+                        <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_2')"></h4>
                     </div>
                 </div>
             </div>
@@ -424,26 +392,26 @@
                 </div>
                 <div class="container-stop-war">
                     <div class="text-wrapper">
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
-                        <span>BREAKING NEWS: RUSSIA INVADES UKRAINE</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
+                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
                     </div>
                 </div>
             </div>
@@ -452,39 +420,32 @@
             <div class="container">
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <div class="subtitle">Collection</div>
-                        <h1 class="heading1">1000 nfts</h1>
-                        <h4 class="body1">
-                            Each NFT portrays a character of Ukraine’s heroic defender: either a man or a woman in front of one of the world’s most celebrated
-                            landmarks. The character can hold any paraphernalia pertaining to victory achievement, from a rifle to the Dove of Peace.
-                            <br />
-                            <br />
-                            Buying one of the collection’s NFTs you become a true Angel of Ukraine. You do your part to shield the peace and prosperity of
-                            Ukraine and Europe on the whole.
-                        </h4>
+                        <div class="subtitle">{{ lang.get("COLLECTION") }}</div>
+                        <h1 class="heading1">1000 {{ lang.get("NFTS") }}</h1>
+                        <h4 class="body1" v-html="lang.get('ABOUT_NFT_COLLECTION')"></h4>
                         <div class="section-block-nft">
                             <div class="block-nft">
-                                <div class="body3">Angel #0001</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0001</div>
                                 <div class="nft-img-mask nft-img-mask-1"></div>
                             </div>
                             <div class="block-nft">
-                                <div class="body3">Angel #0002</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0002</div>
                                 <div class="nft-img-mask nft-img-mask-2"></div>
                             </div>
                             <div class="block-nft">
-                                <div class="body3">Angel #0003</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0003</div>
                                 <div class="nft-img-mask nft-img-mask-3"></div>
                             </div>
                             <div class="block-nft">
-                                <div class="body3">Angel #0004</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0004</div>
                                 <div class="nft-img-mask nft-img-mask-4"></div>
                             </div>
                             <div class="block-nft">
-                                <div class="body3">Angel #0005</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0005</div>
                                 <div class="nft-img-mask nft-img-mask-5"></div>
                             </div>
                             <div class="block-nft">
-                                <div class="body3">Angel #0006</div>
+                                <div class="body3">{{ lang.get("ANGEL") }} #0006</div>
                                 <div class="nft-img-mask nft-img-mask-6"></div>
                             </div>
                         </div>
@@ -492,11 +453,11 @@
                     <div class="section-block section-block-card">
                         <div class="card card-collection">
                             <div class="card-section">
-                                <p class="supply-label">Total Supply</p>
-                                <div class="total-supply">1000 nfts</div>
+                                <p class="supply-label">{{ lang.get("TOTAL_SUPPLY") }}</p>
+                                <div class="total-supply">1000 {{ lang.get("NFTS") }}</div>
                             </div>
                             <div class="card-footer">
-                                <div class="input-label">NFT Quantity</div>
+                                <div class="input-label">{{ lang.get("NFT_QUANTITY") }}</div>
                                 <div class="input-container">
                                     <div class="input-wrapper input-count">
                                         <button class="btn btn-minus" v-on:click="decrementVal">
@@ -507,10 +468,10 @@
                                             <i class="i-add-line"></i>
                                         </button>
                                     </div>
-                                    <button class="btn btn-submit" v-on:click="mint">Mint</button>
+                                    <button class="btn btn-submit" v-on:click="mint">{{ lang.get("MINT") }}</button>
                                 </div>
                                 <div class="input-total">
-                                    Mint 1 NFT for
+                                    {{ lang.get("MINT_FOR") }}
                                     <span>{{ bnbPriceGetter }} BNB</span>
                                 </div>
                             </div>
@@ -519,27 +480,27 @@
                 </div>
                 <div class="section-block-nft section-block-nft-desktop">
                     <div class="block-nft">
-                        <div class="body3">Angel #0001</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0001</div>
                         <div class="nft-img-mask nft-img-mask-1"></div>
                     </div>
                     <div class="block-nft">
-                        <div class="body3">Angel #0002</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0002</div>
                         <div class="nft-img-mask nft-img-mask-2"></div>
                     </div>
                     <div class="block-nft">
-                        <div class="body3">Angel #0003</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0003</div>
                         <div class="nft-img-mask nft-img-mask-3"></div>
                     </div>
                     <div class="block-nft">
-                        <div class="body3">Angel #0004</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0004</div>
                         <div class="nft-img-mask nft-img-mask-4"></div>
                     </div>
                     <div class="block-nft">
-                        <div class="body3">Angel #0005</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0005</div>
                         <div class="nft-img-mask nft-img-mask-5"></div>
                     </div>
                     <div class="block-nft">
-                        <div class="body3">Angel #0006</div>
+                        <div class="body3">{{ lang.get("ANGEL") }} #0006</div>
                         <div class="nft-img-mask nft-img-mask-6"></div>
                     </div>
                 </div>
@@ -548,27 +509,27 @@
         <section class="section section-angels" id="help-in-numbers">
             <div class="container">
                 <div class="section-content">
-                    <h2 class="subtitle">help in numbers</h2>
-                    <p class="heading1">our angels</p>
+                    <h2 class="subtitle">{{ lang.get("HELP_IN_NUMBERS") }}</h2>
+                    <p class="heading1">{{ lang.get("OUR_ANGELS") }}</p>
                 </div>
                 <div class="cards-angels-wrapper">
                     <div class="card card-angel">
                         <div class="icon intersect"></div>
-                        <div class="title1">{{ totalSupply }} nfts</div>
-                        <div class="short-descr">Have been bought by people from around the world to make their solidarity palpable</div>
-                        <a class="btn btn-yellow" href="#angel-collection">View Collection</a>
+                        <div class="title1">{{ totalSupply }} {{ lang.get("NFTS") }}</div>
+                        <div class="short-descr">{{ lang.get("ABOUT_ANGELS_PARTISIPANTS_1") }}</div>
+                        <a class="btn btn-yellow" href="#angel-collection">{{ lang.get("VIEW_COLLECTION") }}</a>
                     </div>
                     <div class="card card-angel">
                         <div class="icon uk-angels"></div>
-                        <div class="title1">{{ nftOwnersCount }} angels</div>
-                        <div class="short-descr">Have contributed to turn the Ukrainian sky clear and blue again</div>
-                        <a href="#our-mission" class="btn btn-yellow">Become an Angel</a>
+                        <div class="title1">{{ nftOwnersCount }} {{ lang.get("ANGELS") }}</div>
+                        <div class="short-descr">{{ lang.get("ABOUT_ANGELS_PARTISIPANTS_2") }}</div>
+                        <a href="#our-mission" class="btn btn-yellow">{{ lang.get("BECOME_AN_ANGEL") }}</a>
                     </div>
                     <div class="card card-angel">
                         <div class="icon bnb"></div>
                         <div class="title1">{{ totalDonated }} BNB</div>
-                        <div class="short-descr">In donations have already been raised for the needs of the persevering people of Ukraine</div>
-                        <a href="#your-donate" class="btn btn-blue">Donate</a>
+                        <div class="short-descr">{{ lang.get("DONATE_PROMO") }}</div>
+                        <a href="#your-donate" class="btn btn-blue">{{ lang.get("DONATE") }}</a>
                     </div>
                 </div>
             </div>
@@ -577,24 +538,10 @@
             <div class="container">
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <div class="subtitle">our team</div>
+                        <div class="subtitle">{{ lang.get("OUR_TEAM") }}</div>
                         <a href="https://elephantslab.com/" class="link-team our-tm" target="_blank" rel="nofollow"></a>
                         <div class="photo-team photo-team-mobile"></div>
-                        <p class="body1">
-                            We are a blockchain research and product development company based in Ukraine.
-                            <br />
-                            <br />
-                            Our site states our mission is to seamlessly integrate cryptotechnologies into the world. It’s true. Yet today we are up against a
-                            life-threatening challenge. And it’s our duty to deal with it, applying blockchain technology, of course.
-                            <br />
-                            <br />
-                            This project is part of a swift response pack our team undertook to save Ukraine, ease our people’s suffering and protect Europe’s
-                            easternmost borders. We are Ukraine’s vigilant cyber force, we’re its reliable home front. Today, we’re fighting for its digital
-                            freedom. Today, Ukraine needs our involvement most.
-                            <br />
-                            <br />
-                            And we deliver.
-                        </p>
+                        <p class="body1" v-html="lang.get('OUR_DESC')"></p>
                         <ul class="ul-social-list">
                             <li>
                                 <a class="twitter" href="https://twitter.com/ElephantsLab" rel="nofollow" target="_blank">
@@ -635,12 +582,12 @@
             <div class="container">
                 <div class="cards-help-wrapper">
                     <router-link tag="a" :to="{ name: 'InfoCenter' }" class="card card-help card-help-1">
-                        <p class="title">If You Need Help</p>
-                        <div class="btn btn-yellow">Help Desk</div>
+                        <p class="title">{{ lang.get("NEED_HELP") }}</p>
+                        <div class="btn btn-yellow">{{ lang.get("HELP_DESK") }}</div>
                     </router-link>
                     <router-link tag="a" :to="{ name: 'Donate' }" class="card card-help card-help-2">
-                        <p class="title">If You Want to Help</p>
-                        <div class="btn btn-yellow">Donate</div>
+                        <p class="title">{{ lang.get("WANT_HELP") }}</p>
+                        <div class="btn btn-yellow">{{ lang.get("DONATE") }}</div>
                     </router-link>
                 </div>
             </div>
@@ -652,7 +599,7 @@
     const conf = require("../core/Config.json");
     import SocialLinks from "@/components/SocialLinks.vue";
     import { mapGetters, mapMutations } from "vuex";
-
+    import MultiLang from "../core/multilang.js";
     export default {
         components: {
             SocialLinks,
@@ -667,6 +614,7 @@
                 nftOwnersCount: 0,
                 totalDonated: 0,
                 ricedPercentage: 0,
+                lang: new MultiLang(this),
             };
         },
         methods: {
@@ -732,6 +680,7 @@
         },
         mounted() {
             let _this = this;
+            this.lang.init();
             console.log(this);
             const savedTotalSupply = localStorage.getItem("totalSupply");
             const savedNftOwnersCount = localStorage.getItem("nftOwnersCount");
