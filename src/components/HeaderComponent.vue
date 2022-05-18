@@ -4,9 +4,6 @@
             <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
             <nav class="header-nav">
                 <li>
-                    <a class="header-link" v-on:click="this.$router.push('/')" href="#our-mission">{{ lang.get("OUR_MISSION") }}</a>
-                </li>
-                <li>
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</a>
                 </li>
                 <li>
@@ -31,11 +28,16 @@
                 <!--          >-->
                 <!--        </li>-->
             </nav>
-            <button @click="setLang('en')"><span>ENG</span></button>
-            <br />
-            &sbquo;
-            <button @click="setLang('ua')">UA</button>
-
+            <div class="language-change">
+              <button :class="{active: selectedLang === 'en'}"
+                  class="language-eng" @click="setLang('en')">
+                ENG
+              </button>
+              <button :class="{active: selectedLang === 'ua'}"
+                  class="language-ua" @click="setLang('ua')">
+                UA
+              </button>
+            </div>
             <div class="header-main-buttons">
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
                     <span>{{ lang.get("CONNECT_WALLET") }}</span>
