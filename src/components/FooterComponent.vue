@@ -57,6 +57,7 @@
 <script>
     import SocialLinks from "@/components/SocialLinks";
     import MultiLang from "../core/multilang.js";
+    const timer = (ms) => new Promise((res) => setTimeout(res, ms));
     export default {
         components: {
             SocialLinks,
@@ -66,12 +67,12 @@
                 lang: new MultiLang(this),
             };
         },
-        mounted() {
+        async mounted() {
             this.lang.init();
+            await timer(300);
             const navLinks = Array.from(window.document.getElementsByClassName("header-link"));
             const footerLinks = window.document.getElementsByClassName("footer-link");
 
-            console.log(navLinks);
             for (let footerLink of footerLinks) {
                 footerLink.addEventListener("click", function (e) {
                     for (let neigbors of navLinks) {
