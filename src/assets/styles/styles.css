@@ -2043,8 +2043,8 @@ i.i-download-fill {
     border-radius: 8px;
 }
 
-.i-twitter-fill,
-.i-telegram-fill {
+.twitter .i-twitter-fill,
+.telegram .i-telegram-fill {
     font-size: 24px;
     margin-right: 8px;
 }
@@ -2067,7 +2067,6 @@ i.i-download-fill {
     width: 156px;
     height: 226px;
     background-size: contain;
-    background-image: url("../images/set_nft/14.png");
     background-repeat: no-repeat;
     background-position: center;
 }
