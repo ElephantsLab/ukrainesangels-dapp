@@ -132,6 +132,7 @@
 <script>
     import { mapActions, mapGetters, mapMutations } from "vuex";
     import MultiLang from "../core/multilang.js";
+    const timer = (ms) => new Promise((res) => setTimeout(res, ms));
     export default {
         data() {
             return {
@@ -176,12 +177,13 @@
             this.lang.init();
             this.selectedLang = localStorage.getItem("lang");
             const navLinks = document.getElementsByClassName("header-link");
-            console.log(navLinks);
+
             for (let link of navLinks) {
                 link.addEventListener("click", function () {
                     for (let neigbors of navLinks) {
                         neigbors.classList.remove("active");
                     }
+
                     link.classList.add("active");
                 });
             }
@@ -191,6 +193,39 @@
             getWalletImg() {
                 const selectedWallet = window.localStorage.getItem("selectedWallet");
                 return selectedWallet && selectedWallet === "metamask" ? "icon-mt" : selectedWallet && selectedWallet === "walletconnect" ? "icon-wtc" : "";
+            },
+        },
+        watch: {
+            mobileMenu: async function (val) {
+                const body = document.body;
+                if (val === true) {
+                    body.style.overflow = "hidden";
+
+                    // const mobileLinks = document.getElementsByClassName("nav-mob-link");
+
+                    // console.log(mobileLinks);
+                    // for (let mobileLink of mobileLinks) {
+                    //     mobileLink.addEventListener("click", function () {
+                    //         for (let neigborsMobile of mobileLinks) {
+                    //             neigborsMobile.classList.remove("active");
+                    //         }
+
+                    //         mobileLink.classList.add("active");
+                    //         debugger;
+                    //     });
+                    // }
+                }
+                // else {
+                //     console.log("listenerRemoved");
+                //     const mobileLinks = document.getElementsByClassName("nav-mob-link");
+                //     console.log("links removed", mobileLinks);
+                //     for (let mobileLink of mobileLinks) {
+                //         mobileLink.removeEventListener("click", () => {
+                //             return;
+                //         });
+                //     }
+                //     body.style.overflow = "auto";
+                // }
             },
         },
     };
