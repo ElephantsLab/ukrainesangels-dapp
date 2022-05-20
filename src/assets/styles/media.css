@@ -764,3 +764,13 @@
         height: 45px;
     }
 }
+
+@media (max-width: 1368px) {
+    .card-angel-collections {
+        justify-content: center;
+    }
+
+    .card-nft {
+        margin-right: 30px;
+    }
+}
