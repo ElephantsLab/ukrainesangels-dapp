@@ -4,7 +4,7 @@
             <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
             <nav class="header-nav">
                 <li>
-                    <a class="header-link" v-on:click="this.$router.push('/')" href="#help-in-numbers">Our Angels</a>
+                    <a class="header-link" v-on:click="this.$router.push('/')" href="#help-in-numbers">{{ lang.get("OUR_ANGELS") }}</a>
                 </li>
                 <li>
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#angel-collection">{{ lang.get("COLLECTION") }}</a>
@@ -81,8 +81,8 @@
                 <div class="container">
                     <ul class="ul-flex-column">
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#our-mission" id="our-mission">{{
-                                lang.get("OUR_MISSION")
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#help-in-numbers" id="help-in-numbers">{{
+                                lang.get("OUR_ANGELS")
                             }}</a>
                         </li>
                         <li>
