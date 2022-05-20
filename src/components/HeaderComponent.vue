@@ -29,16 +29,16 @@
                 <!--        </li>-->
             </nav>
             <div class="header-main-buttons">
-              <div class="language-change">
-                <button :class="{ active: selectedLang === 'en' }" class="language-eng" @click="setLang('en')">ENG</button>
-                <button :class="{ active: selectedLang === 'ua' }" class="language-ua" @click="setLang('ua')">UA</button>
-              </div>
+                <div class="language-change">
+                    <button :class="{ active: selectedLang === 'en' }" class="language-eng" @click="setLang('en')">ENG</button>
+                    <button :class="{ active: selectedLang === 'ua' }" class="language-ua" @click="setLang('ua')">UA</button>
+                </div>
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
                     <span>{{ lang.get("CONNECT_WALLET") }}</span>
                 </button>
                 <div v-else class="btn btn-connect connected" @click="updateWalletChooseModal(true)">
                     <span>
-                      {{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
+                        {{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
                             userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
                         }}
                     </span>
@@ -81,25 +81,29 @@
                 <div class="container">
                     <ul class="ul-flex-column">
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#our-mission">{{
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#our-mission" id="our-mission">{{
                                 lang.get("OUR_MISSION")
                             }}</a>
                         </li>
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#situation">{{
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#situation" id="situation">{{
                                 lang.get("SITUATION_IN_UKRAINE")
                             }}</a>
                         </li>
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#angel-collection">{{
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#angel-collection" id="angel-collection">{{
                                 lang.get("COLLECTION")
                             }}</a>
                         </li>
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#your-donate">{{ lang.get("DONATION") }}</a>
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#your-donate" id="your-donate">{{
+                                lang.get("DONATION")
+                            }}</a>
                         </li>
                         <li>
-                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#need-help">{{ lang.get("HELP_DESK") }}</a>
+                            <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#need-help" id="need-help">{{
+                                lang.get("HELP_DESK")
+                            }}</a>
                         </li>
                         <li>
                             <router-link tag="a" :to="{ name: 'MyCollection' }" class="header-link">
@@ -200,6 +204,12 @@
                 const body = document.body;
                 if (val === true) {
                     body.style.overflow = "hidden";
+                    await timer(500);
+                    const href = window.document.location.hash.replace("#", "");
+                    console.log(href);
+                    if (href) {
+                        window.document.getElementById(href).classList.add("active");
+                    }
 
                     // const mobileLinks = document.getElementsByClassName("nav-mob-link");
 
