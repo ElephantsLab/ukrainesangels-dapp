@@ -176,7 +176,7 @@
                         </div>
                     </a>
                 </div>
-              <div id="your-donate"></div>
+                <div id="your-donate"></div>
                 <router-link tag="a" :to="{ name: 'Donate' }" class="btn btn-see-all"> {{ lang.get("SEE_ALL") }} </router-link>
             </div>
         </section>
@@ -245,15 +245,17 @@
                         <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_1')"></h4>
                     </div>
                     <div class="section-block section-block-card">
-                      <iframe
-                              src="https://www.youtube.com/embed/Dk7KHT9lBKc"
-                              title="YouTube video player"
-                              frameborder="0"
-                              allow="accelerometer;
+                        <iframe
+                            src="https://www.youtube.com/embed/Dk7KHT9lBKc"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer;
                               autoplay; clipboard-write;
                               encrypted-media; gyroscope;
-                              picture-in-picture" allowfullscreen>
-                      </iframe>
+                              picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
                         <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_2')"></h4>
                     </div>
                 </div>
@@ -533,181 +535,43 @@
                 </div>
             </div>
         </section>
-      <section class="collection-card-nft">
-        <div class="container">
-          <div class="card-angel-collections">
-            <div class="card-nft">
-              <a class="bg-card">
-                <span class="bg-card-nft"></span>
-              </a>
-              <p class="name-card-nft">
-                {{ lang.get("ANGEL") }} #{{ index + 1 }}
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
+        <section class="collection-card-nft">
+            <div class="container">
+                <div class="card-angel-collections">
+                    <div v-for="(nft, index) in mediaNFT" class="card-nft">
+                        <a class="bg-card">
+                            <img class="bg-card-nft" :src="nft.imgLink" />
+                        </a>
+                        <p class="name-card-nft">
+                            {{ nft.name }}
+                        </p>
+                        <p class="card-disc">
+                            {{ nft.desc }}
+                        </p>
+                        <div class="card-link">
+                            <a :href="nft.socLink1" target="_blank" class="twitter">
+                                <i class="i-twitter-fill"></i>
+                                Twitter
+                            </a>
+                            <a :href="nft.socLink2" target="_blank" class="telegram">
+                                <i class="i-telegram-fill"></i>
+                                Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-            <div class="card-nft">
-              <a class="bg-card">
-                      <span class="bg-card-nft">
-
-                      </span>
-              </a>
-              <p class="name-card-nft">
-                Angel #0002
-              </p>
-              <p class="card-disc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec urna
-              </p>
-              <div class="card-link">
-                <a href="" class="twitter">
-                  <i class="i-twitter-fill"></i>
-                  Twitter
-                </a>
-                <a href="" class="telegram">
-                  <i class="i-telegram-fill"></i>
-                  Telegram
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-<!--        <section>-->
-<!--            <div class="section-block-nft section-block-nft-desktop">-->
-<!--                <div class="block-nft" v-for="(nft, index) in mediaNFT">-->
-<!--                    <div class="body3">{{ lang.get("ANGEL") }} #{{ index + 1 }}</div>-->
-<!--                    <img :src="nft.imgLink" alt="" />-->
-<!--                    <a :href="nft.socLink1" target="_blank">Link #1</a>-->
-<!--                    <a :href="nft.socLink2" target="_blank">Link #2</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+        </section>
+        <!--        <section>-->
+        <!--            <div class="section-block-nft section-block-nft-desktop">-->
+        <!--                <div class="block-nft" v-for="(nft, index) in mediaNFT">-->
+        <!--                    <div class="body3">{{ lang.get("ANGEL") }} #{{ index + 1 }}</div>-->
+        <!--                    <img :src="nft.imgLink" alt="" />-->
+        <!--                    <a :href="nft.socLink1" target="_blank">Link #1</a>-->
+        <!--                    <a :href="nft.socLink2" target="_blank">Link #2</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
         <section class="section section-team" id="our-team">
             <div class="container">
                 <div class="section-block-container">

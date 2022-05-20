@@ -120,7 +120,7 @@
                             <span class="icon" :class="getWalletImg"></span>
                         </div>
                         <button v-if="userAddressGetter" class="disconnect" v-on:click="logOut">
-                            <i class="i-logout-circle-line"></i>{{ lang.get("DISCONNECT") }}
+                            <i class="i-logout-circle-line"></i>{{ lang.get("DISSCONNECT") }}
                         </button>
                     </div>
                 </div>
