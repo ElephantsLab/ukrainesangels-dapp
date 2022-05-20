@@ -29,14 +29,8 @@
                 <!--        </li>-->
             </nav>
             <div class="language-change">
-              <button :class="{active: selectedLang === 'en'}"
-                  class="language-eng" @click="setLang('en')">
-                ENG
-              </button>
-              <button :class="{active: selectedLang === 'ua'}"
-                  class="language-ua" @click="setLang('ua')">
-                UA
-              </button>
+                <button :class="{ active: selectedLang === 'en' }" class="language-eng" @click="setLang('en')">ENG</button>
+                <button :class="{ active: selectedLang === 'ua' }" class="language-ua" @click="setLang('ua')">UA</button>
             </div>
             <div class="header-main-buttons">
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
@@ -98,7 +92,7 @@
                         </li>
                         <li>
                             <a class="nav-mob-link" v-on:click="this.$router.push('/'), (mobileMenu = false)" href="#angel-collection">{{
-                                lange.get("COLLECTION")
+                                lang.get("COLLECTION")
                             }}</a>
                         </li>
                         <li>

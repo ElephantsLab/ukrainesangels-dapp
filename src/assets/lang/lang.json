@@ -101,8 +101,8 @@
         "TRANS_OOPS": "Oops! Something went wrong.",
         "NOT_ENOUGH_BALANCE": "Most likely, you don’t have enough BNB in your wallet.",
         "TRY_AGAIN": "Try again",
-        "CHARITY_ORGS_IF_HELP_NEEDED": "",
-        "CHARITY_ORGS_IF_HELP_NEEDED_DESC": ""
+        "CHARITY_ORGS_IF_HELP_NEEDED": "Charitable organizations and reliable information",
+        "CHARITY_ORGS_IF_HELP_NEEDED_DESC": "Our company has gathered reliable information that can be useful for you in wartime. We are constantly updating and correcting the list of resources, which include charitable foundations, contacts of volunteers, and organizations that we trust."
     },
     "ua": {
         "GO_TO_HOME": "Головна",
@@ -129,14 +129,14 @@
         "NFTS": "nfts",
         "MINT": "Створити",
         "MINT_FOR": "Створи 1 NFT за",
-        "DONATE": "Пожертвуйте",
+        "DONATE": "Пожертвувати",
         "TO": "на",
         "CHARITY_ORGS": "Благодійну організацію",
         "CHARITY_ORGS_DESC": "Ви завжди можете пожертвувати кошти на Янголів країни у зручний для вас спосіб, безпосередньо скориставшись нашим сайтом",
         "DONATE_VIA_PLATFORM": "Донатьте використовуючи платформу",
         "DONATE_VIA_PLATFORM_DESC": "Ви завжди можете пожертвувати кошти на Янголів країни у зручний для вас спосіб, безпосередньо скориставшись нашим сайтом",
         "MAKE_A_DONATION": "Внести пожертву",
-        "DONATION": "ВНЕСОК",
+        "DONATION": "Внесок",
         "MAKE_A_DONATION_DESC": "Ви врятуєте життя незалежно від внесеної суми",
         "MAX": "Макс.",
         "OUR_MISSION": "Наша Місія",
