@@ -4,7 +4,7 @@
             <a v-on:click="this.$router.push('/')" class="header-logo logo"></a>
             <nav class="header-nav">
                 <li>
-                    <a class="header-link" v-on:click="this.$router.push('/')" href="#situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</a>
+                    <a class="header-link" v-on:click="this.$router.push('/')" href="#help-in-numbers">Our Angels</a>
                 </li>
                 <li>
                     <a class="header-link" v-on:click="this.$router.push('/')" href="#angel-collection">{{ lang.get("COLLECTION") }}</a>

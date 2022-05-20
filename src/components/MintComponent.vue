@@ -240,8 +240,7 @@
             <div class="container">
                 <div class="section-block-container">
                     <div class="section-block section-block-content">
-                        <div class="subtitle">{{ lang.get("SITUATION_IN_UKRAINE") }}</div>
-                        <div class="title-date heading1">{{ lang.get("THE_DATE") }}</div>
+                        <div class="subtitle situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</div>
                         <h4 class="body1" v-html="lang.get('SITUATION_IN_UKRAINE_DESC_1')"></h4>
                     </div>
                     <div class="section-block section-block-card">

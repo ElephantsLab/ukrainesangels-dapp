@@ -712,6 +712,12 @@ input,
     background-repeat: no-repeat;
     background-position: center bottom;
 }
+.subtitle.situation {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 48px;
+    margin-bottom: 20px;
+}
 .section-help {
     background-image: url(../images/bg-help.webp);
     background-size: cover;
