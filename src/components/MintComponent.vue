@@ -561,6 +561,9 @@
                                 Telegram
                             </a>
                         </div>
+                        <button class="mobile-buy">
+                            Buy NFT
+                        </button>
                     </div>
                 </div>
             </div>

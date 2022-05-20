@@ -28,20 +28,20 @@
                 <!--          >-->
                 <!--        </li>-->
             </nav>
-            <div class="language-change">
+            <div class="header-main-buttons">
+              <div class="language-change">
                 <button :class="{ active: selectedLang === 'en' }" class="language-eng" @click="setLang('en')">ENG</button>
                 <button :class="{ active: selectedLang === 'ua' }" class="language-ua" @click="setLang('ua')">UA</button>
-            </div>
-            <div class="header-main-buttons">
+              </div>
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
                     <span>{{ lang.get("CONNECT_WALLET") }}</span>
                 </button>
                 <div v-else class="btn btn-connect connected" @click="updateWalletChooseModal(true)">
-                    <span
-                        >{{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
+                    <span>
+                      {{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
                             userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
-                        }}</span
-                    >
+                        }}
+                    </span>
                     <span class="icon" :class="getWalletImg"></span>
                 </div>
                 <div v-if="userAddressGetter" class="dropdown-content">
