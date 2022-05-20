@@ -9,19 +9,23 @@
                     <span class="footer-block-name">{{ lang.get("NAVIGATION") }}</span>
                     <ul class="ul-flex-column">
                         <li>
-                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#our-mission">{{ lang.get("OUR_MISSION") }}</a>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#help-in-numbers" id="our-mission">{{ lang.get("OUR_ANGELS") }}</a>
+                        </li>
+                        <!-- <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#situation" id="situation">{{
+                                lang.get("SITUATION_IN_UKRAINE")
+                            }}</a>
+                        </li> -->
+                        <li>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#angel-collection" id="angel-collection">{{
+                                lang.get("COLLECTION")
+                            }}</a>
                         </li>
                         <li>
-                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#situation">{{ lang.get("SITUATION_IN_UKRAINE") }}</a>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#your-donate" id="your-donate">{{ lang.get("DONATION") }}</a>
                         </li>
                         <li>
-                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#angel-collection">{{ lang.get("COLLECTION") }}</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#your-donate">{{ lang.get("DONATION") }}</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help">{{ lang.get("HELP_DESK") }}</a>
+                            <a class="footer-link" v-on:click="this.$router.push('/')" href="#need-help" id="need-help">{{ lang.get("HELP_DESK") }}</a>
                         </li>
                         <li>
                             <router-link tag="a" :to="{ name: 'MyCollection' }" class="footer-link">
@@ -64,6 +68,21 @@
         },
         mounted() {
             this.lang.init();
+            const navLinks = Array.from(window.document.getElementsByClassName("header-link"));
+            const footerLinks = window.document.getElementsByClassName("footer-link");
+
+            console.log(navLinks);
+            for (let footerLink of footerLinks) {
+                footerLink.addEventListener("click", function (e) {
+                    for (let neigbors of navLinks) {
+                        neigbors.classList.remove("active");
+                    }
+
+                    const navLink = navLinks.find((el) => el.href === e.target.href);
+
+                    navLink.classList.add("active");
+                });
+            }
         },
     };
 </script>
