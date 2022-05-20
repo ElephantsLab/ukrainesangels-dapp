@@ -89,8 +89,9 @@ export default {
                         name: nft[0],
                         imgLink: nft[1],
                         mainUrl: nft[2],
-                        socLink1: nft[3],
-                        socLink2: nft[4],
+                        desc: nft[3],
+                        socLink1: nft[4],
+                        socLink2: nft[5],
                     };
 
                     arrayOfNFT.push(nftObj);
