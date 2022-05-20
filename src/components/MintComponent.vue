@@ -541,6 +541,11 @@
                     <div v-for="(nft, index) in mediaNFT" class="card-nft">
                         <a class="bg-card">
                             <img class="bg-card-nft" :src="nft.imgLink" />
+                          <div class="blur-nft">
+                            <button class="by-nft">
+                              Buy NFT
+                            </button>
+                          </div>
                         </a>
                         <p class="name-card-nft">
                             {{ nft.name }}

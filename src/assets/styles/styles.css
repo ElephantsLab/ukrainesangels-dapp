@@ -2043,8 +2043,8 @@ i.i-download-fill {
     border-radius: 8px;
 }
 
-.i-twitter-fill,
-.i-telegram-fill {
+.twitter .i-twitter-fill,
+.telegram .i-telegram-fill {
     font-size: 24px;
     margin-right: 8px;
 }
@@ -2064,16 +2064,14 @@ i.i-download-fill {
 
 .bg-card-nft {
     display: block;
-    width: 156px;
     height: 226px;
     background-size: contain;
-    background-image: url("../images/set_nft/14.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .card-nft {
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 .card-nft {
@@ -2083,10 +2081,49 @@ i.i-download-fill {
 .card-angel-collections {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 
 .collection-card-nft {
     background-color: #202421;
     margin-bottom: 50px;
+}
+
+.card-nft:hover .blur-nft {
+    display: flex;
+}
+
+.card-nft:hover {
+
+}
+
+.bg-card {
+    position: relative;
+}
+
+.blur-nft {
+    display: none;
+    background: #0F1010;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.by-nft {
+    width: 220px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #0487CF;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 10;
 }
