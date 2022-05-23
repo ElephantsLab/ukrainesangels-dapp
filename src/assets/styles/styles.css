@@ -1485,7 +1485,8 @@ i.i-logout-circle-line {
 }
 
 .dropdown-content-inner {
-    margin-top: 150px;
+    margin-top: 15px;
+    margin-left: 30px;
     background: rgba(40, 40, 40, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -1509,7 +1510,7 @@ i.i-logout-circle-line {
     border-radius: 0 0 8px 8px;
 }
 
-.header-main-buttons:hover .dropdown-content {
+.button-lock:hover .dropdown-content {
     display: block;
 }
 
