@@ -180,17 +180,17 @@
         mounted() {
             this.lang.init();
             this.selectedLang = localStorage.getItem("lang");
-            const navLinks = document.getElementsByClassName("header-link");
+            // const navLinks = document.getElementsByClassName("header-link");
 
-            for (let link of navLinks) {
-                link.addEventListener("click", function () {
-                    for (let neigbors of navLinks) {
-                        neigbors.classList.remove("active");
-                    }
+            // for (let link of navLinks) {
+            //     link.addEventListener("click", function () {
+            //         for (let neigbors of navLinks) {
+            //             neigbors.classList.remove("active");
+            //         }
 
-                    link.classList.add("active");
-                });
-            }
+            //         link.classList.add("active");
+            //     });
+            // }
         },
         computed: {
             ...mapGetters(["userAddressGetter"]),
@@ -204,12 +204,6 @@
                 const body = document.body;
                 if (val === true) {
                     body.style.overflow = "hidden";
-                    await timer(500);
-                    const href = window.document.location.hash.replace("#", "");
-                    console.log(href);
-                    if (href) {
-                        window.document.getElementById(href).classList.add("active");
-                    }
 
                     // const mobileLinks = document.getElementsByClassName("nav-mob-link");
 
@@ -224,6 +218,8 @@
                     //         debugger;
                     //     });
                     // }
+                } else {
+                    body.style.overflow = "auto";
                 }
                 // else {
                 //     console.log("listenerRemoved");
