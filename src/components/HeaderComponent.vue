@@ -201,25 +201,13 @@
         },
         watch: {
             mobileMenu: async function (val) {
-                const body = document.body;
+                const body = document.querySelector("body");
                 if (val === true) {
                     body.style.overflow = "hidden";
-
-                    // const mobileLinks = document.getElementsByClassName("nav-mob-link");
-
-                    // console.log(mobileLinks);
-                    // for (let mobileLink of mobileLinks) {
-                    //     mobileLink.addEventListener("click", function () {
-                    //         for (let neigborsMobile of mobileLinks) {
-                    //             neigborsMobile.classList.remove("active");
-                    //         }
-
-                    //         mobileLink.classList.add("active");
-                    //         debugger;
-                    //     });
-                    // }
+                    // alert(document.body.style.position);
                 } else {
                     body.style.overflow = "auto";
+                    // alert(document.body.style.position);
                 }
                 // else {
                 //     console.log("listenerRemoved");
