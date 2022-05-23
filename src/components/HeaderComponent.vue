@@ -33,29 +33,30 @@
                     <button :class="{ active: selectedLang === 'en' }" class="language-eng" @click="setLang('en')">ENG</button>
                     <button :class="{ active: selectedLang === 'ua' }" class="language-ua" @click="setLang('ua')">UA</button>
                 </div>
+              <div class="button-lock">
                 <button v-if="!userAddressGetter" class="btn btn-connect" v-on:click="connectWallet">
-                    <span>{{ lang.get("CONNECT_WALLET") }}</span>
+                  <span>{{ lang.get("CONNECT_WALLET") }}</span>
                 </button>
                 <div v-else class="btn btn-connect connected" @click="updateWalletChooseModal(true)">
                     <span>
                         {{ userAddressGetter[0] + userAddressGetter[1] + userAddressGetter[2] + userAddressGetter[3] + userAddressGetter[4] }}...{{
-                            userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
-                        }}
+                        userAddressGetter[39] + userAddressGetter[40] + userAddressGetter[41]
+                      }}
                     </span>
-                    <span class="icon" :class="getWalletImg"></span>
+                  <span class="icon" :class="getWalletImg"></span>
                 </div>
                 <div v-if="userAddressGetter" class="dropdown-content">
-                    <div class="dropdown-content-inner">
-                        <div>
-                            <a class="drop-link" v-on:click="logOut">
-                                <i class="i-logout-circle-line"></i>
-                                <p class="dropdown-text">{{ lang.get("LOG_OUT") }}</p>
-                            </a>
-                        </div>
+                  <div class="dropdown-content-inner">
+                    <div>
+                      <a class="drop-link" v-on:click="logOut">
+                        <i class="i-logout-circle-line"></i>
+                        <p class="dropdown-text">{{ lang.get("LOG_OUT") }}</p>
+                      </a>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-
             <div class="mobile-menu-status">
                 <!-- TODO: если нажимаем сюда <div class="mobile-menu"> показать -->
                 <button v-on:click="mobileMenu = true" class="btn-mob-menu">
