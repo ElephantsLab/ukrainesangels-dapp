@@ -1473,7 +1473,6 @@ i.i-logout-circle-line {
 }
 
 .header-main-buttons {
-    position: relative;
     display: flex;
 }
 
@@ -1486,7 +1485,7 @@ i.i-logout-circle-line {
 }
 
 .dropdown-content-inner {
-    margin-top: 32px;
+    margin-top: 150px;
     background: rgba(40, 40, 40, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -2078,6 +2077,11 @@ i.i-download-fill {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.twitter.link,
+.telegram.link,
+.facebook.link {
+    padding: 0;
 }
 
 .card-nft {
