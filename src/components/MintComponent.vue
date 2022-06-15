@@ -534,7 +534,7 @@
                 </div>
             </div>
         </section>
-        <section class="collection-card-nft">
+        <!-- <section class="collection-card-nft">
             <div class="container">
                 <div class="card-angel-collections">
                     <div v-for="(nft, index) in mediaNFT" class="card-nft">
@@ -566,17 +566,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--        <section>-->
-        <!--            <div class="section-block-nft section-block-nft-desktop">-->
-        <!--                <div class="block-nft" v-for="(nft, index) in mediaNFT">-->
-        <!--                    <div class="body3">{{ lang.get("ANGEL") }} #{{ index + 1 }}</div>-->
-        <!--                    <img :src="nft.imgLink" alt="" />-->
-        <!--                    <a :href="nft.socLink1" target="_blank">Link #1</a>-->
-        <!--                    <a :href="nft.socLink2" target="_blank">Link #2</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </section>-->
+        </section> -->
         <section class="section section-team" id="our-team">
             <div class="container">
                 <div class="section-block-container">
