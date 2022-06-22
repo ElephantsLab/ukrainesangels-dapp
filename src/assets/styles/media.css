@@ -248,6 +248,7 @@
     .ul-social-list a:hover {
         border: 1px solid #efcf46;
         transition: 0.2s;
+        filter: none;
     }
     .ul-social-list a:hover svg {
         fill: #efcf46;
