@@ -128,7 +128,7 @@
                     </div>
                     <div class="goal-info-right">
                         <img src="../assets/images/bus.png" class="img-btn" />
-                        <div class="centered">4 {{ lang.get("BUSES") }}</div>
+                        <div class="centered">5 {{ lang.get("BUSES") }}</div>
                     </div>
                 </div>
             </div>
@@ -263,32 +263,28 @@
         <section class="section-stop-war" id="stop-war">
             <div class="stop-war-wrapper">
                 <div class="container-img">
-                    <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
-                        <img src="@/assets/images/set_war/1.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-1.jpeg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
-                        <img src="@/assets/images/set_war/2.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-2.jpg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
-                        <img src="@/assets/images/set_war/4.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-3.jpg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://www.nytimes.com/news-event/ukraine-russia">
-                        <img src="@/assets/images/set_war/5.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-4.jpg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
-                        <img src="@/assets/images/set_war/6.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-5.jpg" alt="" />
                     </a>
-                    <a
-                        rel="nofollow"
-                        target="_blank"
-                        href="https://www.wsj.com/articles/at-ukrainian-border-overwhelmed-guards-volunteers-confront-exodus-of-refugees-fleeing-war-11646320646"
-                    >
-                        <img src="@/assets/images/set_war/7.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-6.jpg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://edition.cnn.com/2022/02/14/world/gallery/ukraine-russia-crisis/index.html">
-                        <img src="@/assets/images/set_war/8.webp" alt="" />
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/action/action-7.jpg" alt="" />
                     </a>
-                    <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
+                    <!-- <a rel="nofollow" target="_blank" href="https://www.bbc.com/news/world-60525350">
                         <img src="@/assets/images/set_war/9.png" alt="" />
                     </a>
                     <a rel="nofollow" target="_blank" href="https://www.washingtonpost.com/world/ukraine-russia/">
@@ -388,31 +384,7 @@
                     </a>
                     <a rel="nofollow" target="_blank" href="https://www.thetimes.co.uk/">
                         <img src="@/assets/images/set_war/18.png" alt="" />
-                    </a>
-                </div>
-                <div class="container-stop-war">
-                    <div class="text-wrapper">
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                        <span>{{ lang.get("BREAKIN_NEWS") }}</span>
-                    </div>
+                    </a> -->
                 </div>
             </div>
         </section>

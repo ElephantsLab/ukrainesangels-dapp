@@ -841,7 +841,7 @@ input,
     animation-play-state: paused;
 }
 .container-img {
-    height: 240px;
+    height: 270px;
 }
 .container-img img {
     height: 100%;
@@ -1831,6 +1831,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .img-btn {
+    max-width: 80%;
 }
 
 .centered {
@@ -2158,4 +2159,3 @@ i.i-download-fill {
     background-repeat: no-repeat;
     filter: grayscale(100%);
 }
-
