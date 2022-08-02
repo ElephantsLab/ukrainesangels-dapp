@@ -263,6 +263,15 @@
         <section class="section-stop-war" id="stop-war">
             <div class="stop-war-wrapper">
                 <div class="container-img">
+                      <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/3.jpg" alt="" />
+                      </a>
+                      <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/принтер.jpg" alt="" />
+                      </a>
+                      <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
+                        <img src="@/assets/images/photo_2022-07-12_12-00-24.jpg" alt="" />
+                      </a>
                     <a rel="nofollow" target="_blank" href="https://twitter.com/UKRAINESANGELS">
                         <img src="@/assets/images/action/action-1.jpeg" alt="" />
                     </a>
