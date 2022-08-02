@@ -827,6 +827,7 @@ input,
     flex-wrap: nowrap;
     position: absolute;
     animation-play-state: running;
+    justify-content: center;
 }
 .container-stop-war .text-wrapper
 {
