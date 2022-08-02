@@ -800,7 +800,6 @@ input,
 }
 .section-stop-war {
     position: relative;
-    height: 304px;
     overflow: hidden;
     background: #0f1010;
 }
@@ -818,8 +817,19 @@ input,
 .stop-war-wrapper:nth-child(2) {
     left: 50%;
 }
-.container-stop-war .text-wrapper,
+
 .container-img {
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+    flex-wrap: nowrap;
+    position: absolute;
+    animation-play-state: running;
+}
+.container-stop-war .text-wrapper
+{
     left: 0;
     display: flex;
     justify-content: space-between;
@@ -829,7 +839,6 @@ input,
     flex-wrap: nowrap;
     position: absolute;
     animation-play-state: running;
-    /* animation: scroll 14s linear 0s infinite; */
 }
 .stop-war-wrapper:nth-child(2) .container-stop-war .text-wrapper,
 .stop-war-wrapper:nth-child(2) .container-img {
@@ -1831,7 +1840,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .img-btn {
-    max-width: 80%;
+    max-width: 500px;
 }
 
 .centered {
@@ -1851,6 +1860,12 @@ progress[value]::-webkit-progress-value {
     position: relative;
     text-align: center;
     align-items: center;
+    display: flex;
+
+}
+
+.goal-info-right img {
+    border-radius: 8px;
 }
 
 /*audit*/
