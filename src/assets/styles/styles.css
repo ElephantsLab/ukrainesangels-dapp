@@ -147,6 +147,7 @@ header .btn {
 .btn.btn-connect {
     border: 1px solid #efcf46;
     color: #fff;
+    min-width: 224px;
     cursor: pointer;
 }
 .btn.btn-connect > .icon {
@@ -1850,7 +1851,7 @@ progress[value]::-webkit-progress-value {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 700;
-    font-size: 56px;
+    font-size: 43px;
     text-align: center;
     text-transform: uppercase;
     width: fit-content;

@@ -16,6 +16,12 @@
         padding: 0 64px;
     }
 }
+
+@media (max-width: 699px) {
+    .centered {
+        font-size: 30px;
+    }
+}
 @media screen and (min-width: 992px) and (max-width: 1298px) {
     .container {
         max-width: 1200px;
@@ -379,7 +385,13 @@
     }
 
     .centered {
-        font-size: 32px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 418px) {
+    .centered {
+        font-size: 17px;
     }
 }
 
