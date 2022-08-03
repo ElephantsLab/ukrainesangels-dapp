@@ -49,15 +49,15 @@ export default {
 
             state.txFailed = val;
         },
-        // updateWarningModal(state, val) {
-        //     const body = document.querySelector("body");
-        //     if (val === true) {
-        //         body.style.overflow = "hidden";
-        //     } else {
-        //         body.style.overflow = "auto";
-        //     }
-        //     state.warningModal = val;
-        // },
+        updateWarningModal(state, val) {
+            const body = document.querySelector("body");
+            if (val === true) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
+            state.warningModal = val;
+        },
         updateRevertReason(state, val) {
             state.revertReason = val;
         },
