@@ -128,7 +128,7 @@
                     </div>
                     <div class="goal-info-right">
                         <img src="../assets/images/bus.png" class="img-btn" />
-                        <div class="centered">5 {{ lang.get("BUSES") }}</div>
+                        <div class="centered"> <p>5 {{ lang.get("BUSES") }}</p></div>
                     </div>
                 </div>
             </div>
