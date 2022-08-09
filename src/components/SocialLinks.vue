@@ -22,7 +22,7 @@
             </a>
         </li>
         <li>
-          <a class="instagram link" href="https://www.instagram.com/ukraines_angels/" rel="nofollow" target="_blank">
+          <a class="instagram link" href="https://www.instagram.com/the_wing_of_help/" rel="nofollow" target="_blank">
           </a>
         </li>
     </ul>

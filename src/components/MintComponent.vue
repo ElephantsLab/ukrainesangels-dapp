@@ -110,25 +110,10 @@
                                 {{ lang.get("OUR_GOAL_DESC") }}
                             </p>
                         </div>
-                        <div class="progress-bar">
-                            <progress v-bind:max="conf.GOAL" class="progress-result" v-bind:value="totalDonated"></progress>
-                        </div>
-                        <div class="progress-bar-info">
-                            <ul>
-                                <li>
-                                    <p>
-                                        {{ lang.get("TARGET") }}: <span> {{ conf.GOAL }} BNB</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p class="ralsed">{{ lang.get("RAISED") }}: {{ totalDonated }} BNB ({{ ricedPercentage }}%)</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="goal-info-right">
                         <img src="../assets/images/bus.png" class="img-btn" />
-                        <div class="centered"> <p>5 {{ lang.get("BUSES") }}</p></div>
+                        <div class="centered"> <p>{{ lang.get("BUSES") }}</p></div>
                     </div>
                 </div>
             </div>
@@ -260,6 +245,57 @@
                 </div>
             </div>
         </section>
+      <section>
+        <div class="card card-slider">
+          <div class="card-slider-container">
+            <swiper :resizeObserver="false" :slidesPerView="5" :spaceBetween="10" class="mySwiper">
+              <swiper-slide >
+                  <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+              <swiper-slide >
+                <div class="cards-help-wrapper-photo"></div>
+              </swiper-slide>
+
+            </swiper>
+          </div>
+        </div>
+      </section>
         <section class="section-stop-war" id="stop-war">
             <div class="stop-war-wrapper">
                 <div class="container-img">
@@ -595,14 +631,7 @@
         <section class="section section-help" id="need-help">
             <div class="container">
                 <div class="cards-help-wrapper">
-                    <router-link tag="a" :to="{ name: 'InfoCenter' }" class="card card-help card-help-1">
-                        <p class="title">{{ lang.get("NEED_HELP") }}</p>
-                        <div class="btn btn-yellow">{{ lang.get("HELP_DESK") }}</div>
-                    </router-link>
-                    <router-link tag="a" :to="{ name: 'Donate' }" class="card card-help card-help-2">
-                        <p class="title">{{ lang.get("WANT_HELP") }}</p>
-                        <div class="btn btn-yellow">{{ lang.get("DONATE") }}</div>
-                    </router-link>
+
                 </div>
             </div>
         </section>
@@ -614,9 +643,20 @@
     import SocialLinks from "@/components/SocialLinks.vue";
     import { mapGetters, mapMutations, mapActions } from "vuex";
     import MultiLang from "../core/multilang.js";
+    import "swiper/css";
+    import "vue3-carousel/dist/carousel.css";
+
+    import "swiper/css/pagination";
+    import "swiper/css/navigation";
+    import { Swiper, SwiperSlide } from "swiper/vue";
+    import { Pagination, Navigation } from "swiper";
     export default {
         components: {
             SocialLinks,
+            Navigation,
+            Pagination,
+            SwiperSlide,
+            Swiper,
         },
         data() {
             return {
@@ -630,6 +670,7 @@
                 totalDonated: 0,
                 ricedPercentage: 0,
                 mediaNFT: [],
+                customSwiper: undefined
             };
         },
         methods: {
