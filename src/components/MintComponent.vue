@@ -245,57 +245,57 @@
                 </div>
             </div>
         </section>
-      <section>
-        <div class="card card-slider">
-          <div class="card-slider-container">
-            <swiper :resizeObserver="false" :slidesPerView="5" :spaceBetween="10" class="mySwiper">
-              <swiper-slide >
-                  <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
-              <swiper-slide >
-                <div class="cards-help-wrapper-photo"></div>
-              </swiper-slide>
+<!--      <section>-->
+<!--        <div class="card card-slider">-->
+<!--          <div class="card-slider-container">-->
+<!--            <swiper :resizeObserver="false" :slidesPerView="5" :spaceBetween="10" class="mySwiper">-->
+<!--              <swiper-slide >-->
+<!--                  <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
+<!--              <swiper-slide >-->
+<!--                <div class="cards-help-wrapper-photo"></div>-->
+<!--              </swiper-slide>-->
 
-            </swiper>
-          </div>
-        </div>
-      </section>
+<!--            </swiper>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
         <section class="section-stop-war" id="stop-war">
             <div class="stop-war-wrapper">
                 <div class="container-img">
