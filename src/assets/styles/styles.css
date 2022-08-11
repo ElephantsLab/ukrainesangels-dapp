@@ -1012,10 +1012,21 @@ a.organization-block:hover {
 }
 
 .link-second-team {
-    background-image: url("../images/Etis Help 2.png");
+    background-image: url("../images/крило допомоги лого_Монтажная область 1.svg");
     width: 83px;
     height: 32px;
-    background-size: inherit;
+    background-size: cover;
+}
+
+.dia {
+    display: flex;
+}
+
+.cards-help-wrapper-photo {
+    background-image: url("../images/3 SLIDER.jpg");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
 }
 
 .goal-team a:last-child {
@@ -1723,6 +1734,7 @@ i.i-logout-circle-line {
     padding: 33px 37px 39px 43px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .goal-team-link {
